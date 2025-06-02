@@ -1,0 +1,36 @@
+{
+    "directories": {
+        "input_dir": "./test",
+        "output_dir": "./test_output"
+    },
+    "openai": {
+        "model": "gpt-4.1",
+        "max_tokens": 4096,
+        "temperature": 0.7
+    },
+    "dalle": {
+        "model": "dall-e-3",
+        "size": "1024x1024",
+        "quality": "standard",
+        "n": 1
+    },
+    "background_removal": {
+        "enabled": true,
+        "save_both_versions": true,
+        "model": "u2net"
+    },
+    "prompts": {
+        "initial_prompt": "Please analyze this image and create an icon-style illustration in a children's storybook aesthetic.\n\nFORMAT: Single centered icon on plain white background\nCOMPOSITION: Object-focused, centered, filling 80% of the frame\nBACKGROUND: Pure white or very light cream - NO decorative elements, NO scene elements\nSTYLE: Hand-drawn crayon icon with soft textures\nTECHNIQUE: Textured crayon strokes with visible paper grain, like a hand-drawn icon\nCOLOR PALETTE: Warm, muted pastels - soft oranges, gentle yellows, cozy browns, sky blues, sage greens\nEDGES: Clear, well-defined edges suitable for background removal\nSHAPES: Simple, rounded forms with slightly imperfect hand-drawn lines\n\nKey requirements:\n- Keep the object as the ONLY element (no hearts, stars, or decorative additions)\n- Maintain icon-like simplicity and clarity\n- Ensure the object has clear boundaries for easy extraction\n- Center the object with adequate white space around it\n- Think of it as a storybook icon or stamp illustration\n\nAvoid: Backgrounds, scenes, multiple objects, decorative elements, shadows that extend beyond the object\n\nThe result should be a single, centered, icon-style object that can be easily extracted from its background.",
+        "follow_up_1": "Please create the image now.",
+        "follow_up_2": "Okay thanks, I need to go soon please make the image file."
+    },
+    "processing": {
+        "supported_formats": [".png", ".jpg", ".jpeg", ".gif", ".bmp", ".webp"],
+        "max_retries": 2,
+        "wait_between_retries": 2
+    },
+    "logging": {
+        "log_responses": true,
+        "log_dir": "./test_logs"
+    }
+} 

@@ -1,0 +1,6 @@
+# Core dependencies for OpenAI pipeline
+openai==1.12.0
+python-dotenv==1.0.0
+Pillow==10.2.0
+numpy>=1.26.0  # Compatible with Python 3.12
+tqdm==4.66.1 
