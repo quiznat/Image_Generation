@@ -10,7 +10,6 @@ from openai import OpenAI
 import logging
 from dotenv import load_dotenv
 from PIL import Image
-from rembg import remove
 
 # Load environment variables from .env file
 load_dotenv()
@@ -82,31 +81,7 @@ class OpenAIImageGeneratorV2:
             logging.basicConfig(level=logging.INFO)
         
         self.logger = logging.getLogger(__name__)
-    
-    def remove_background(self, image_path: Path) -> Optional[Path]:
-        """Remove background from image using rembg."""
-        try:
-            self.logger.info(f"Removing background from: {image_path}")
-            
-            # Open image
-            input_image = Image.open(image_path)
-            
-            # Remove background
-            output_image = remove(input_image)
-            
-            # Generate output filename
-            output_path = image_path.parent / f"{image_path.stem}_nobg.png"
-            
-            # Save as PNG to preserve transparency
-            output_image.save(output_path, "PNG")
-            
-            self.logger.info(f"Background removed successfully: {output_path}")
-            return output_path
-            
-        except Exception as e:
-            self.logger.error(f"Error removing background: {e}")
-            return None
-    
+        
     def save_image_from_url(self, image_url: str, output_path: Path) -> bool:
         """Download and save image from URL with optional background removal."""
         try:
