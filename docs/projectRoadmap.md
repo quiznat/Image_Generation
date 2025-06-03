@@ -15,12 +15,24 @@
 - **Status**: ✅ Done
 - **Notes**: Priority: H, Primary pipeline validated. Fixed proxy issues, generated 138 test images successfully with v2_simple pipeline. Completed 2024-12-29
 
+#### [ROAD-011]: Vision-Enhanced Pipeline Development
+- **Desc**: Implement intelligent GPT-4 Vision analysis workflow for context-aware generation
+- **Tech**: OpenAI GPT-4V, DALL-E 3, prompt engineering, nested folder support
+- **Status**: ✅ Done
+- **Notes**: Priority: H, Vision workflow completed. Fixed proxy issues, removed background removal, enhanced nested folder support. Two production pipelines available: v1 (vision) and v2_simple (filename). Completed 2025-06-02
+
 ### Phase 2: Enhancement (Current Focus)
 #### [ROAD-003]: Batch Processing Optimization
 - **Desc**: Implement efficient batch processing for 100+ images
 - **Tech**: Async processing, queue management, progress tracking
 - **Status**: ⏳ Planned
-- **Notes**: Priority: H, Required for production use
+- **Notes**: Priority: M, Both v1 and v2 scripts handle nested folders, focus on performance optimization
+
+#### [ROAD-012]: Quality Comparison and Benchmarking
+- **Desc**: Compare quality and performance between v1 (vision) and v2_simple (filename) pipelines
+- **Tech**: Image analysis, cost tracking, performance metrics
+- **Status**: ⏳ Planned
+- **Notes**: Priority: H, Determine optimal usage patterns for each pipeline
 
 #### [ROAD-004]: Automated Quality Control
 - **Desc**: Implement automated checks for centering, white background, single object
@@ -32,20 +44,26 @@
 - **Desc**: Add cost tracking, estimation, and optimization features
 - **Tech**: API usage tracking, database, reporting
 - **Status**: ⏳ Planned
-- **Notes**: Priority: M, Important for budget management
+- **Notes**: Priority: M, Important for budget management, especially for v1 vision workflow
 
 ### Phase 3: User Experience
 #### [ROAD-006]: Web Interface Development
 - **Desc**: Build Streamlit UI for easy interaction
 - **Tech**: Streamlit, FastAPI
 - **Status**: ⏳ Planned
-- **Notes**: Priority: M, Nice-to-have for non-technical users
+- **Notes**: Priority: L, Nice-to-have for non-technical users
 
 #### [ROAD-007]: Prompt Template Library
 - **Desc**: Create library of optimized prompts for different object types
 - **Tech**: JSON templates, categorization
 - **Status**: ⏳ Planned
 - **Notes**: Priority: L, Improve consistency across object types
+
+#### [ROAD-013]: Hybrid Pipeline Implementation
+- **Desc**: Implement intelligent fallback from v2_simple to v1 vision for failed generations
+- **Tech**: Error handling, pipeline orchestration
+- **Status**: ⏳ Planned
+- **Notes**: Priority: M, Combine speed of v2 with intelligence of v1
 
 ### Phase 4: Production
 #### [ROAD-008]: CI/CD Pipeline

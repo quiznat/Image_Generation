@@ -10,7 +10,6 @@ from openai import OpenAI
 import logging
 from dotenv import load_dotenv
 from PIL import Image
-from rembg import remove
 
 # Load environment variables from .env file
 load_dotenv()
@@ -38,13 +37,6 @@ class OpenAIImageGenerator:
                         "quality": "standard",
                         "n": 1
                     }
-                # Add background removal settings if not present
-                if "background_removal" not in config:
-                    config["background_removal"] = {
-                        "enabled": True,
-                        "save_both_versions": True,
-                        "model": "u2net"  # rembg model
-                    }
                 return config
         except Exception as e:
             print(f"Error loading config: {e}")
@@ -61,13 +53,18 @@ class OpenAIImageGenerator:
                 "quality": "standard",
                 "n": 1
             },
-            "background_removal": {
-                "enabled": True,
-                "save_both_versions": True,
-                "model": "u2net"
-            },
             "prompts": {
-                "initial_prompt": "Please analyze this image and describe what kind of improved or artistic variation would be interesting to create.",
+                "vision_analysis_prompt": "Analyze this image and describe what you see. Focus on the main object and provide a clear, detailed description that would help create an improved version for educational content for toddlers. Be specific about colors, shapes, and characteristics.",
+                
+                "dalle_wrapper_prompt": [
+                    "Create a colorful crayon drawing based on this description: [CHATGPT_DESCRIPTION]",
+                    "Style: Simple, friendly cartoon drawing for toddlers, as if drawn with crayons or colored pencils",
+                    "Format: Single object centered on plain white background, filling about 80% of the image space",
+                    "Quality: Bold, clean lines with bright, vibrant colors",
+                    "Aesthetic: Child-friendly, warm, playful, and educational",
+                    "Size: 1024x1024 pixels, no framing or borders"
+                ],
+                
                 "follow_up_1": "Please create the image now.",
                 "follow_up_2": "Okay thanks, I need to go soon please make the image file."
             },
@@ -84,7 +81,20 @@ class OpenAIImageGenerator:
         api_key = os.getenv("OPENAI_API_KEY")
         if not api_key or api_key == "your-api-key-here":
             raise ValueError("OPENAI_API_KEY not found in .env file or not set properly. Please add your API key to the .env file.")
-        return OpenAI(api_key=api_key)
+        
+        # Handle potential proxy issues by explicitly configuring httpx
+        try:
+            # Try direct initialization first
+            return OpenAI(api_key=api_key)
+        except TypeError as e:
+            if "proxies" in str(e):
+                # If there's a proxy issue, try with custom httpx client
+                import httpx
+                # Create httpx client without proxy
+                http_client = httpx.Client(trust_env=False)
+                return OpenAI(api_key=api_key, http_client=http_client)
+            else:
+                raise
     
     def setup_directories(self):
         """Create necessary directories if they don't exist."""
@@ -102,16 +112,31 @@ class OpenAIImageGenerator:
             log_dir = Path(self.config["logging"]["log_dir"])
             log_file = log_dir / f"image_generation_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"
             
+            # Create handlers with UTF-8 encoding
+            file_handler = logging.FileHandler(log_file, encoding='utf-8')
+            stream_handler = logging.StreamHandler()
+            # Set encoding for console output if possible
+            try:
+                stream_handler.stream.reconfigure(encoding='utf-8')
+            except AttributeError:
+                pass  # Older Python versions
+            
             logging.basicConfig(
                 level=logging.INFO,
                 format='%(asctime)s - %(levelname)s - %(message)s',
-                handlers=[
-                    logging.FileHandler(log_file),
-                    logging.StreamHandler()
-                ]
+                handlers=[file_handler, stream_handler]
             )
         else:
-            logging.basicConfig(level=logging.INFO)
+            # Set up basic logging with UTF-8 support
+            handler = logging.StreamHandler()
+            try:
+                handler.stream.reconfigure(encoding='utf-8')
+            except AttributeError:
+                pass  # Older Python versions
+            logging.basicConfig(
+                level=logging.INFO,
+                handlers=[handler]
+            )
         
         self.logger = logging.getLogger(__name__)
     
@@ -119,30 +144,6 @@ class OpenAIImageGenerator:
         """Encode image to base64 string."""
         with open(image_path, "rb") as image_file:
             return base64.b64encode(image_file.read()).decode('utf-8')
-    
-    def remove_background(self, image_path: Path) -> Optional[Path]:
-        """Remove background from image using rembg."""
-        try:
-            self.logger.info(f"Removing background from: {image_path}")
-            
-            # Open image
-            input_image = Image.open(image_path)
-            
-            # Remove background
-            output_image = remove(input_image)
-            
-            # Generate output filename
-            output_path = image_path.parent / f"{image_path.stem}_nobg.png"
-            
-            # Save as PNG to preserve transparency
-            output_image.save(output_path, "PNG")
-            
-            self.logger.info(f"Background removed successfully: {output_path}")
-            return output_path
-            
-        except Exception as e:
-            self.logger.error(f"Error removing background: {e}")
-            return None
     
     def save_image_from_url(self, image_url: str, output_path: Path) -> bool:
         """Download and save image from URL."""
@@ -154,20 +155,6 @@ class OpenAIImageGenerator:
                 f.write(response.content)
             
             self.logger.info(f"Saved generated image to: {output_path}")
-            
-            # Handle background removal if enabled
-            if self.config.get("background_removal", {}).get("enabled", False):
-                bg_removed_path = self.remove_background(output_path)
-                
-                if bg_removed_path:
-                    # If not saving both versions, replace the original
-                    if not self.config["background_removal"].get("save_both_versions", True):
-                        output_path.unlink()  # Delete original
-                        bg_removed_path.rename(output_path)  # Rename nobg version
-                        self.logger.info(f"Replaced original with background-removed version")
-                else:
-                    self.logger.warning("Background removal failed, keeping original image")
-            
             return True
         except Exception as e:
             self.logger.error(f"Error saving image from URL: {e}")
@@ -175,7 +162,7 @@ class OpenAIImageGenerator:
     
     def analyze_image(self, image_path: Path) -> Optional[str]:
         """Analyze the image and get a description for DALL-E generation."""
-        self.logger.info(f"Analyzing image: {image_path}")
+        self.logger.info(f"Analyzing image with GPT-4 Vision: {image_path}")
         
         base64_image = self.encode_image_to_base64(image_path)
         
@@ -185,7 +172,7 @@ class OpenAIImageGenerator:
                 "content": [
                     {
                         "type": "text",
-                        "text": self.config["prompts"]["initial_prompt"]
+                        "text": self.config["prompts"]["vision_analysis_prompt"]
                     },
                     {
                         "type": "image_url",
@@ -206,27 +193,35 @@ class OpenAIImageGenerator:
             )
             
             description = response.choices[0].message.content
-            self.logger.info(f"Image analysis: {description[:200]}...")
+            self.logger.info(f"GPT-4 Vision analysis: {description[:200]}...")
             return description
             
         except Exception as e:
             self.logger.error(f"Error analyzing image: {e}")
             return None
     
-    def process_single_image(self, image_path: Path, relative_path: Path = None) -> bool:
-        """Process a single image: generate a new version directly with DALL-E."""
-        self.logger.info(f"Processing image: {image_path}")
+    def wrap_description_for_dalle(self, chatgpt_description: str) -> str:
+        """Wrap the ChatGPT description in a DALL-E prompt template."""
+        prompt_template = self.config["prompts"]["dalle_wrapper_prompt"]
         
-        # Extract object description from filename (without extension)
-        object_description = image_path.stem.replace("_", " ").replace("-", " ")
-        self.logger.info(f"Object description from filename: {object_description}")
+        # Handle prompt as array or string
+        if isinstance(prompt_template, list):
+            prompt_template = "\n".join(prompt_template)
         
-        # Get the prompt template and replace [OBJECT_DESCRIPTION]
-        prompt_template = self.config["prompts"]["initial_prompt"]
-        dalle_prompt = prompt_template.replace("[OBJECT_DESCRIPTION]", object_description)
+        # Replace the placeholder with the actual description
+        dalle_prompt = prompt_template.replace("[CHATGPT_DESCRIPTION]", chatgpt_description)
         
-        # Determine output path with subfolder structure
+        self.logger.info(f"Wrapped DALL-E prompt ({len(dalle_prompt)} chars):")
+        self.logger.info("=" * 60)
+        self.logger.info(dalle_prompt)
+        self.logger.info("=" * 60)
+        
+        return dalle_prompt
+    
+    def get_output_path(self, image_path: Path, relative_path: Path = None) -> Path:
+        """Generate the output path for the generated image."""
         output_dir = Path(self.config["directories"]["output_dir"])
+        
         if relative_path and relative_path.parent != Path("."):
             # Create subfolder structure in output directory
             output_subfolder = output_dir / relative_path.parent
@@ -236,9 +231,29 @@ class OpenAIImageGenerator:
         
         # Generate output filename
         output_filename = f"{image_path.stem}_generated_{datetime.now().strftime('%Y%m%d_%H%M%S')}.png"
-        output_path = output_subfolder / output_filename
+        return output_subfolder / output_filename
+
+    def process_single_image(self, image_path: Path, relative_path: Path = None) -> bool:
+        """Process a single image: analyze with GPT-4V, wrap response, generate with DALL-E."""
+        self.logger.info(f"Processing image: {image_path}")
         
-        # Generate image directly with DALL-E
+        # Step 1: Analyze the image with GPT-4 Vision
+        self.logger.info("Step 1: Analyzing image with GPT-4 Vision...")
+        chatgpt_description = self.analyze_image(image_path)
+        
+        if not chatgpt_description:
+            self.logger.error("Failed to analyze image with GPT-4 Vision")
+            return False
+        
+        # Step 2: Wrap the ChatGPT response in a DALL-E prompt template
+        self.logger.info("Step 2: Wrapping description for DALL-E...")
+        dalle_prompt = self.wrap_description_for_dalle(chatgpt_description)
+        
+        # Step 3: Generate output path
+        output_path = self.get_output_path(image_path, relative_path)
+        
+        # Step 4: Generate image with DALL-E
+        self.logger.info("Step 3: Generating image with DALL-E...")
         return self.generate_image_with_dalle(dalle_prompt, output_path)
     
     def generate_image_with_dalle(self, dalle_prompt: str, output_path: Path) -> bool:
@@ -300,19 +315,15 @@ class OpenAIImageGenerator:
             image_files.extend(input_dir.rglob(f"*{format}"))
             image_files.extend(input_dir.rglob(f"*{format.upper()}"))
         
-        # Remove duplicates while preserving order
-        seen = set()
-        unique_image_files = []
-        for img in image_files:
-            if img not in seen:
-                seen.add(img)
-                unique_image_files.append(img)
-        image_files = unique_image_files
+        # Remove duplicates
+        image_files = list(set(image_files))
         
         if not image_files:
             self.logger.warning(f"No image files found in {input_dir}")
-            print(f"\nPlease place image files in the '{input_dir}' directory or its subdirectories.")
+            print(f"\nNo images found in '{input_dir}' or its subdirectories")
             print(f"Supported formats: {', '.join(supported_formats)}")
+            print("\nNote: This tool uses GPT-4 Vision to analyze images before generation!")
+            print("Workflow: Image → GPT-4V Analysis → Wrap Description → DALL-E Generation")
             return
         
         # Group files by directory for better progress display
@@ -325,7 +336,9 @@ class OpenAIImageGenerator:
             files_by_dir[dir_path].append((image_file, relative_path))
         
         self.logger.info(f"Found {len(image_files)} image(s) in {len(files_by_dir)} directories")
-        print(f"\n📸 Processing {len(image_files)} image(s) from {len(files_by_dir)} directories...")
+        print(f"\n🔍 [Vision-Enhanced] Found {len(image_files)} image(s) in {len(files_by_dir)} directories")
+        print("📋 [Workflow] GPT-4V Analysis → Wrap Description → DALL-E Generation")
+        print("⚠️  [Note] This is slower but more intelligent than v2_simple\n")
         
         # Process each image
         success_count = 0
@@ -335,22 +348,23 @@ class OpenAIImageGenerator:
             if str(dir_path) != ".":
                 print(f"\n📁 Processing directory: {dir_path}")
             
-            for image_file, relative_path in files:
+            for image_file, relative_path in sorted(files):
                 total_processed += 1
-                print(f"\n[{total_processed}/{len(image_files)}] Processing: {relative_path}")
+                print(f"\n[{total_processed}/{len(image_files)}] {relative_path}")
                 
                 if self.process_single_image(image_file, relative_path):
                     success_count += 1
-                    print(f"✅ Successfully generated new image")
+                    print(f"    ✅ Generated successfully")
                 else:
-                    print(f"❌ Failed to generate image")
+                    print(f"    ❌ Generation failed")
                 
                 # Small delay between images to avoid rate limits
                 if total_processed < len(image_files):
                     time.sleep(2)
         
-        print(f"\n🎉 Processing complete: {success_count}/{len(image_files)} images generated successfully")
-        print(f"📁 Output directory: {self.config['directories']['output_dir']}")
+        print(f"\n🎉 [COMPLETE] Generated: {success_count}/{len(image_files)} images")
+        print(f"📁 [OUTPUT] Directory: {self.config['directories']['output_dir']}")
+        print(f"💡 [TIP] Use Canva for background removal if needed")
         self.logger.info(f"Processing complete: {success_count}/{len(image_files)} images processed successfully")
 
 

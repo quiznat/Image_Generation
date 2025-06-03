@@ -58,6 +58,30 @@ _This file will contain completed tasks as they are finished from currentTask.md
 - **Status**: ❌ Abandoned
 - **Notes**: Results were unacceptable for children's content. SD generated complex scenes with multiple objects despite clear prompts. Quality far below DALL-E 3 output. Decision made to focus exclusively on OpenAI pipeline. Completed 2024-12-29
 
+### [TASK-001]: Fixed Vision Workflow in openai_image_generator.py
+- **Desc**: Corrected the GPT-4 Vision → DALL-E workflow to properly use ChatGPT analysis
+- **Tech**: OpenAI GPT-4V, DALL-E 3, prompt engineering
+- **Status**: ✅ Done
+- **Notes**: Fixed process_single_image() to actually use analyze_image() method, separated vision_analysis_prompt from dalle_wrapper_prompt, added proper prompt wrapping mechanism. Impact: Enables intelligent, context-aware image generation. Completed 2025-06-02
+
+### [TASK-002]: Removed Background Removal from Pipeline
+- **Desc**: Cleaned up automatic background removal functionality, manual Canva workflow preferred
+- **Tech**: rembg removal, config cleanup, code simplification
+- **Status**: ✅ Done
+- **Notes**: Removed rembg import and remove_background() method, cleaned up save_image_from_url() logic, removed background_removal config sections. Impact: Simplified pipeline, better quality control via manual processing. Completed 2025-06-02
+
+### [TASK-003]: Fixed Proxy Error in Vision Workflow
+- **Desc**: Applied proxy fix from v2_simple to openai_image_generator.py to resolve httpx client error
+- **Tech**: OpenAI client initialization, httpx proxy handling
+- **Status**: ✅ Done
+- **Notes**: Added try/catch with fallback to httpx.Client(trust_env=False), handles "unexpected keyword argument 'proxies'" error. Impact: Vision workflow fully operational across different network configurations. Completed 2025-06-02
+
+### [TASK-004]: Enhanced Nested Folder Support in Vision Workflow
+- **Desc**: Improved nested folder processing in v1 script with better duplicate handling and cleaner output
+- **Tech**: Path handling, directory traversal, UTF-8 logging
+- **Status**: ✅ Done
+- **Notes**: Enhanced duplicate removal using list(set()) for efficiency, added UTF-8 logging support, improved progress display. Impact: Maintains proper subfolder structure in test_output/assets/[category]/, handles 16 themed categories seamlessly. Completed 2025-06-02
+
 ### Example Format:
 <!-- 
 ### [ID]: Feature/Bug Name
