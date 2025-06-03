@@ -15,18 +15,10 @@
         "n": 1
     },
     "prompts": {
-        "vision_analysis_prompt": "Analyze this image and describe what you see. Focus on the main object and provide a clear, detailed description that would help create an improved version for educational content for toddlers. Be specific about colors, shapes, and characteristics. Describe what makes this object appealing and how it could be enhanced for children's learning materials.",
+        "vision_analysis_prompt": "Analyze this image and describe what you see. Focus on the main object and provide a clear, detailed description to help Dall-e create an improved version keeping the same style and colors. Be specific about colors, shapes, and ratio of object to background and characteristics.",
         
         "dalle_wrapper_prompt": [
-            "Create a colorful crayon drawing based on this description: [CHATGPT_DESCRIPTION]",
-            "",
-            "STYLE: Hand-drawn crayon with soft textures, a children's storybook illustration",
-            "FORMAT: Single centered icon on plain white background",
-            "COMPOSITION: Object-focused, centered, filling 80% of the frame",
-            "BACKGROUND: Pure white - NO decorative elements, NO scene elements",
-            "TECHNIQUE: Textured crayon strokes with visible paper grain",
-            "EDGES: Clear, well-defined edges suitable for background removal",
-            "SHAPES: Simple, rounded forms with slightly imperfect hand-drawn lines"
+            "[CHATGPT_DESCRIPTION]"
         ],
         
         "follow_up_1": "Please create the image now.",

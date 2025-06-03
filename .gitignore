@@ -31,9 +31,7 @@ build/
 Thumbs.db
 
 # Test outputs
-test/
-test_output/
-test_logs/
+test*/
 *.log
 
 # Model weights (large files)
