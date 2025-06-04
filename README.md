@@ -43,6 +43,26 @@ python src/openai_image_generator_v2_simple.py
 - **Speed**: Faster (single DALL-E call)
 - **Consistency**: Direct style application from configuration
 
+### 🔄 Loop Processor: Evolution Chain (Experimental)
+**Best for**: AI evolution experiments, iterative style development, research analysis
+```bash
+# Windows
+run_loop_processor.bat
+
+# Direct Python
+python src/loop_processor.py
+```
+**Workflow**: Linear Chain Processing
+- Loop 1: `test_loop/` → GPT-4V Analysis → DALL-E → `test_loop/1/`
+- Loop 2: `test_loop/1/` → GPT-4V Analysis → DALL-E → `test_loop/2/`
+- Loop N: `test_loop/(N-1)/` → GPT-4V Analysis → DALL-E → `test_loop/N/`
+
+**Features**:
+- **Cost**: Controlled (80 total images for 8 inputs)
+- **Workers**: 2-worker parallel processing
+- **Resume**: Configurable start loop (`config/loop_processor_config.json`)
+- **Purpose**: Study how AI interprets and evolves image styles over iterations
+
 ## 📋 Table of Contents
 
 - [Quick Start](#-quick-start)
@@ -121,13 +141,13 @@ test_output/assets/Category_2/object2_generated_*.png
 
 ### Pipeline Comparison
 
-| Feature | V1 Vision | V2 Simple |
-|---------|-----------|-----------|
-| **Analysis** | GPT-4 Vision | Filename only |
-| **Context** | Full image understanding | Object name |
-| **Cost** | ~$0.06-0.10/image | ~$0.04-0.08/image |
-| **Speed** | Slower | Faster |
-| **Best For** | Complex/contextual styles | Consistent style application |
+| Feature | V1 Vision | V2 Simple | Loop Processor |
+|---------|-----------|-----------|----------------|
+| **Analysis** | GPT-4 Vision | Filename only | GPT-4 Vision |
+| **Context** | Full image understanding | Object name | Full + evolution |
+| **Cost** | ~$0.06-0.10/image | ~$0.04-0.08/image | ~$0.06-0.10/image |
+| **Speed** | Slower | Faster | Moderate (2 workers) |
+| **Best For** | Complex/contextual styles | Consistent style application | AI evolution research |
 
 ## 🎨 Style Customization
 
@@ -166,6 +186,22 @@ The system is currently configured for **children's crayon-style educational con
             "[Your style-specific instructions]",
             "[Your format and composition rules]"
         ]
+    }
+}
+```
+
+#### Loop Processor (`config/loop_processor_config.json`):
+```json
+{
+    "loop_settings": {
+        "start_loop": 1,
+        "end_loop": 10,
+        "pause_between_iterations": 5,
+        "source_directory": "./test_loop"
+    },
+    "prompts": {
+        "vision_analysis_prompt": "Analyze this image and describe what you see...",
+        "dalle_wrapper_prompt": ["[CHATGPT_DESCRIPTION]"]
     }
 }
 ```
@@ -290,10 +326,12 @@ python scripts/test_prompt_config.py
 |----------|-------|---------------|-----------|
 | **V1 Vision** | 20-30 seconds | $0.06-0.10 | GPT-4V + DALL-E |
 | **V2 Simple** | 5-10 seconds | $0.04-0.08 | DALL-E only |
+| **Loop Processor** | 15-25 seconds | $0.06-0.10 | GPT-4V + DALL-E |
 
 ### Batch Processing
 - **V1**: ~2 seconds delay between images (rate limiting)
 - **V2**: ~2 seconds delay between images (rate limiting)
+- **Loop Processor**: 2-worker parallel processing with 3s offset
 - **Nested folders**: Automatically maintains directory structure
 - **API limits**: Check your OpenAI account limits
 
@@ -304,6 +342,7 @@ Image_Generation_/
 ├── src/                              # Source code
 │   ├── openai_image_generator.py     # V1: Vision-enhanced pipeline  
 │   ├── openai_image_generator_v2_simple.py # V2: Fast pipeline
+│   ├── loop_processor.py             # Loop: Evolution chain processor
 │   └── openai_image_processor.py     # Legacy (replaced by V1)
 ├── scripts/                          # Utility scripts
 │   ├── test_vision_workflow.py       # Test V1 workflow
@@ -312,58 +351,15 @@ Image_Generation_/
 │   └── monitor_progress.py          # Progress monitoring
 ├── config/                          # Configuration files
 │   ├── image_processing_config.json # V1 configuration
-│   └── image_processing_config-v2.json # V2 configuration
+│   ├── image_processing_config-v2.json # V2 configuration
+│   └── loop_processor_config.json   # Loop processor configuration
 ├── test/assets/[categories]/         # Input images (nested structure)
 ├── test_output/assets/[categories]/  # Generated images (preserves structure)
+├── test_loop/                       # Loop processor input/output
+│   ├── 1/, 2/, 3/, ..., 10/         # Evolution chain outputs
 ├── docs/                            # Documentation & project tracking
 ├── run_image_generator.bat          # Windows batch (V1 vision)
 ├── run_image_generator_v2.bat       # Windows batch (V2 simple)
+├── run_loop_processor.bat           # Windows batch (Loop processor)
 └── .env                             # API keys (create this)
 ```
-
-## 🤝 Contributing
-
-1. Check `docs/currentTask.md` for active work
-2. Review `docs/projectRoadmap.md` for planned features
-3. Follow the principles in `docs/Pillars.md`
-4. Update documentation when making changes
-
-## 📝 Quick Commands Reference
-
-```bash
-# Production Pipelines
-run_image_generator.bat          # V1: Vision-enhanced (context-aware)
-run_image_generator_v2.bat       # V2: Simple (consistent style)
-
-# Testing & Validation
-python scripts/test_vision_workflow.py     # Test V1 workflow
-python scripts/verify_openai_setup.py      # Verify API setup
-python scripts/debug_openai.py             # Debug connections
-
-# Direct Python Execution
-python src/openai_image_generator.py       # V1: Vision pipeline
-python src/openai_image_generator_v2_simple.py # V2: Simple pipeline
-```
-
-## 🔗 Project Updates
-
-> **Latest (2025-06-02)**: 
-> - ✅ **V1 Vision Pipeline**: Corrected GPT-4V → DALL-E workflow now fully operational
-> - ✅ **Proxy Issues**: Fixed across both pipelines with httpx fallback
-> - ✅ **Configuration-Driven**: Fully customizable style and workflow via config files
-> - ✅ **Nested Folders**: Both pipelines support full directory tree processing
-> - ✅ **Documentation**: Complete workflow documentation and testing scripts
-
-> **Previous (2024-12-29)**: After extensive testing, this project focuses exclusively on OpenAI DALL-E pipeline, which provides superior results compared to local Stable Diffusion alternatives.
-
-## 🎯 Example Use Cases
-
-**Current Configuration**: Children's educational crayon-style illustrations
-**Potential Configurations**:
-- **Sci-fi concept art**: Futuristic vehicles, alien landscapes, cyberpunk aesthetics
-- **Technical illustrations**: Clean diagrams, architectural drawings, engineering schematics  
-- **Fantasy art**: Dragons, magical creatures, mystical environments
-- **Product photography**: Professional product shots, e-commerce imagery
-- **Abstract art**: Non-representational compositions, artistic expressions
-
-Simply modify the prompt templates in your configuration files to adapt the system for any artistic style or use case.

@@ -8,6 +8,7 @@
 - **src/openai_image_generator_v2_simple.py**: Direct filename-to-DALL-E generation without background removal (v2 PRODUCTION)
 - **src/openai_image_generator_v2.py**: Direct DALL-E generation with rembg support (legacy)
 - **src/openai_image_processor.py**: Legacy GPT-4 Vision analysis (broken - replaced by v1)
+- **src/loop_processor.py**: Configurable loop processor using 2-worker pipeline for iterative AI evolution chains (LOOP PRODUCTION)
 
 ### Scripts
 - **scripts/test_vision_workflow.py**: Test the corrected v1 vision workflow
@@ -21,11 +22,13 @@
 ### Configuration
 - **config/image_processing_config.json**: Configuration for v1 vision pipeline and pipelined version (currently set for crayon-style children's content)
 - **config/image_processing_config-v2.json**: Configuration for v2 simple pipeline (currently set for crayon-style children's content)
+- **config/loop_processor_config.json**: Configuration for loop processor with start/end loop settings and dedicated prompts
 
 ### Batch Scripts
 - **run_image_generator.bat**: Windows batch file for v1 vision pipeline (single-threaded)
 - **run_image_generator_pipelined.bat**: Windows batch file for v1 parallel pipeline (TRIPLE THREAT - 3 workers)
 - **run_image_generator_v2.bat**: Windows batch file for v2 simple pipeline
+- **run_loop_processor.bat**: Windows batch file for loop processor (LINEAR CHAIN - 2 workers)
 
 ### Documentation
 - **README.md**: Comprehensive documentation (general-purpose, configurable system)
@@ -43,6 +46,7 @@ openai_image_generator_pipelined.py -> openai, PIL, dotenv, httpx, threading, qu
 openai_image_generator_v2_simple.py -> openai, PIL, dotenv, httpx
 openai_image_generator_v2.py -> openai, PIL, dotenv, rembg
 openai_image_processor.py -> openai, PIL, dotenv (legacy/broken)
+loop_processor.py -> openai, PIL, dotenv, threading, queue
 
 test_vision_workflow.py -> openai_image_generator.py
 verify_openai_setup.py -> openai, dotenv
@@ -54,10 +58,12 @@ test_single_generation.py -> openai_image_generator_v2_simple.py
 run_image_generator.bat -> openai_image_generator.py
 run_image_generator_pipelined.bat -> openai_image_generator_pipelined.py
 run_image_generator_v2.bat -> openai_image_generator_v2_simple.py
+run_loop_processor.bat -> loop_processor.py
 
 config/image_processing_config.json -> openai_image_generator.py
 config/image_processing_config.json -> openai_image_generator_pipelined.py
 config/image_processing_config-v2.json -> openai_image_generator_v2_simple.py
+config/loop_processor_config.json -> loop_processor.py
 ```
 
 ### Input/Output Flow
@@ -66,6 +72,7 @@ config/image_processing_config-v2.json -> openai_image_generator_v2_simple.py
 test/assets/[category]/ -> openai_image_generator.py -> test_output/assets/[category]/
 test/assets/[category]/ -> openai_image_generator_pipelined.py -> test_output/assets/[category]/
 test/assets/[category]/ -> openai_image_generator_v2_simple.py -> test_output/assets/[category]/
+test_loop/ -> loop_processor.py -> test_loop/1/, test_loop/2/, ..., test_loop/10/
 ```
 
 ### Production Pipelines
@@ -91,11 +98,21 @@ Filename → Apply Style Template → DALL-E Generation → Output
 Cost: Lower | Speed: Faster | Consistency: Direct style application
 ```
 
+#### Loop Processing Workflow (Evolution Chain)
+```
+2 Workers: Linear chain iterations with configurable start point
+Loop 1: test_loop/ → GPT-4V Analysis → DALL-E → test_loop/1/
+Loop 2: test_loop/1/ → GPT-4V Analysis → DALL-E → test_loop/2/
+Loop N: test_loop/(N-1)/ → GPT-4V Analysis → DALL-E → test_loop/N/
+Cost: Controlled | Speed: 2-worker parallel | Purpose: AI evolution experiments
+```
+
 ### Key Relationships
-- Both production pipelines support nested folder structures
+- All production pipelines support nested folder structures
 - All generators read from `.env` for API key
-- Both pipelines handle proxy issues with httpx fallback
+- All pipelines handle proxy issues with httpx fallback
 - V1 provides intelligent context analysis, V2 provides speed and consistency
+- Loop processor enables iterative AI evolution with cost control
 - Style and format fully configurable via JSON configuration files
 - Test scripts validate specific functionality
-- Current configuration optimized for children's crayon-style educational content 
+- Current configuration optimized for children's crayon-style educational content

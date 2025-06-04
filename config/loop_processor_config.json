@@ -1,0 +1,38 @@
+{
+    "loop_settings": {
+        "start_loop": 1,
+        "end_loop": 10,
+        "pause_between_iterations": 5,
+        "source_directory": "./test_loop"
+    },
+    "openai": {
+        "model": "gpt-4o",
+        "max_tokens": 4096,
+        "temperature": 0.7
+    },
+    "dalle": {
+        "model": "dall-e-3",
+        "size": "1024x1024",
+        "quality": "standard",
+        "n": 1
+    },
+    "prompts": {
+        "vision_analysis_prompt": "Analyze this image and describe what you see. Focus on the main object and provide a clear, detailed description to help Dall-e create an improved version keeping the same style and colors. Be specific about colors, shapes, and ratio of object to background and characteristics.",
+        
+        "dalle_wrapper_prompt": [
+            "[CHATGPT_DESCRIPTION]"
+        ],
+        
+        "follow_up_1": "Please create the image now.",
+        "follow_up_2": "Okay thanks, I need to go soon please make the image file."
+    },
+    "processing": {
+        "supported_formats": [".png", ".jpg", ".jpeg", ".gif", ".bmp", ".webp"],
+        "max_retries": 2,
+        "wait_between_retries": 2
+    },
+    "logging": {
+        "log_responses": true,
+        "log_dir": "./test_logs"
+    }
+} 
