@@ -109,7 +109,7 @@ python scripts/create_evolution_animation.py
 
 - Python 3.12+
 - OpenAI API key with DALL-E 3 access
-- 5GB free disk space
+- 1GB free disk space
 
 ### Basic Setup
 
@@ -352,7 +352,7 @@ python scripts/fix_loop_filenames.py
 | Component | Minimum | Recommended |
 |-----------|---------|-------------|
 | RAM | 4GB | 8GB |
-| Storage | 5GB | 10GB |
+| Storage | 1GB | 2GB |
 | Python | 3.8+ | 3.12+ |
 | Internet | Required | High-speed |
 
