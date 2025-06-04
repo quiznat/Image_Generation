@@ -18,13 +18,14 @@
 - **scripts/test_prompt_config.py**: Validate DALL-E prompts from configuration
 - **scripts/test_single_generation.py**: Test single image generation with prompt logging
 - **scripts/verify_rembg_setup.py**: Test rembg background removal setup (legacy)
-- **scripts/create_evolution_animation.py**: Create animated GIFs and grid montages from loop processor output
+- **scripts/create_evolution_animation.py**: Create animated GIFs and grid montages from loop processor output (supports unlimited iterations)
 - **scripts/fix_loop_filenames.py**: Fix inconsistent filename patterns in loop iteration directories
 
 ### Configuration
 - **config/image_processing_config.json**: Configuration for v1 vision pipeline and pipelined version (currently set for crayon-style children's content)
 - **config/image_processing_config-v2.json**: Configuration for v2 simple pipeline (currently set for crayon-style children's content)
 - **config/loop_processor_config.json**: Configuration for loop processor with start/end loop settings and dedicated prompts
+- **config/animation_config.json**: Configuration for animation creator with interpolation settings and timing controls
 
 ### Batch Scripts
 - **run_image_generator.bat**: Windows batch file for v1 vision pipeline (single-threaded)
@@ -57,7 +58,7 @@ debug_openai.py -> openai, dotenv, httpx
 monitor_progress.py -> pathlib, datetime
 test_prompt_config.py -> json, pathlib
 test_single_generation.py -> openai_image_generator_v2_simple.py
-create_evolution_animation.py -> PIL, pathlib, datetime
+create_evolution_animation.py -> PIL, pathlib, datetime, numpy, json
 fix_loop_filenames.py -> pathlib, re
 
 run_image_generator.bat -> openai_image_generator.py
@@ -70,6 +71,7 @@ config/image_processing_config.json -> openai_image_generator.py
 config/image_processing_config.json -> openai_image_generator_pipelined.py
 config/image_processing_config-v2.json -> openai_image_generator_v2_simple.py
 config/loop_processor_config.json -> loop_processor.py
+config/animation_config.json -> create_evolution_animation.py
 ```
 
 ### Input/Output Flow
@@ -78,8 +80,8 @@ config/loop_processor_config.json -> loop_processor.py
 test/assets/[category]/ -> openai_image_generator.py -> test_output/assets/[category]/
 test/assets/[category]/ -> openai_image_generator_pipelined.py -> test_output/assets/[category]/
 test/assets/[category]/ -> openai_image_generator_v2_simple.py -> test_output/assets/[category]/
-test_loop/ -> loop_processor.py -> test_loop/1/, test_loop/2/, ..., test_loop/10/
-test_loop/ + test_loop/1/../10/ -> create_evolution_animation.py -> evolution_animations/[name]_evolution.gif, [name]_grid.png
+test_loop/ -> loop_processor.py -> test_loop/1/, test_loop/2/, ..., test_loop/N/
+test_loop/ + test_loop/1/../N/ -> create_evolution_animation.py -> evolution_animations/[name]_evolution.gif, [name]_grid.png
 ```
 
 ### Production Pipelines
@@ -111,7 +113,15 @@ Cost: Lower | Speed: Faster | Consistency: Direct style application
 Loop 1: test_loop/ → GPT-4V Analysis → DALL-E → test_loop/1/
 Loop 2: test_loop/1/ → GPT-4V Analysis → DALL-E → test_loop/2/
 Loop N: test_loop/(N-1)/ → GPT-4V Analysis → DALL-E → test_loop/N/
-Cost: Controlled | Speed: 2-worker parallel | Purpose: AI evolution experiments
+Cost: Controlled | Speed: 2-worker parallel | Purpose: AI evolution experiments (unlimited iterations)
+```
+
+#### Animation Creation Workflow (Visualization with Interpolation)
+```
+test_loop/ + test_loop/1/../N/ → Auto-detect iterations → Frame Interpolation → Create Smooth GIFs + Grids
+Input: Original + unlimited iterations | Output: Smooth animated evolution chains
+Features: Crossfade/Morph transitions, configurable steps, dual timing (hold/transition)
+Cost: Free (local processing) | Speed: Fast | Quality: Seamless morphing between frames
 ```
 
 ### Key Relationships
@@ -119,7 +129,8 @@ Cost: Controlled | Speed: 2-worker parallel | Purpose: AI evolution experiments
 - All generators read from `.env` for API key
 - All pipelines handle proxy issues with httpx fallback
 - V1 provides intelligent context analysis, V2 provides speed and consistency
-- Loop processor enables iterative AI evolution with cost control
+- Loop processor enables iterative AI evolution with cost control (unlimited iterations)
+- Animation creator visualizes unlimited evolution chains with auto-sizing
 - Style and format fully configurable via JSON configuration files
 - Test scripts validate specific functionality
 - Current configuration optimized for children's crayon-style educational content

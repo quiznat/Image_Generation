@@ -1,0 +1,28 @@
+{
+    "animation_settings": {
+        "base_directory": "./test_loop",
+        "output_directory": "./evolution_animations",
+        "hold_duration": 1600,
+        "transition_duration": 16,
+        "size": [512, 512],
+        "max_iterations": null,
+        "interpolation": "morph",
+        "interpolation_steps": 12,
+        "grid_only": false,
+        "animation_only": true
+    },
+    "timing_explanation": {
+        "hold_duration": "How long each main evolution frame is displayed (milliseconds)",
+        "transition_duration": "How long each interpolated transition frame is displayed (milliseconds)"
+    },
+    "interpolation_options": {
+        "none": "No interpolation - original slideshow style",
+        "crossfade": "Simple crossfade blending between frames",
+        "morph": "Advanced morphing with smooth easing"
+    },
+    "quality_settings": {
+        "image_size": [512, 512],
+        "grid_image_size": [256, 256],
+        "gaussian_blur_radius": 0.5
+    }
+} 

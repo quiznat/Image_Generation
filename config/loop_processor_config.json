@@ -1,7 +1,7 @@
 {
     "loop_settings": {
         "start_loop": 1,
-        "end_loop": 10,
+        "end_loop": 20,
         "pause_between_iterations": 5,
         "source_directory": "./test_loop"
     },

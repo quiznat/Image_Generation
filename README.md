@@ -72,7 +72,7 @@ python src/loop_processor.py
 - **Resume**: Configurable start loop (`config/loop_processor_config.json`)
 - **Purpose**: Study how AI interprets and evolves image styles over iterations
 
-### 🎬 Animation Creator: Evolution Visualization
+### 🎬 Animation Creator: Evolution Visualization with Smooth Transitions
 **Best for**: Visualizing AI evolution chains, research presentation, analyzing iteration patterns
 ```bash
 # Windows
@@ -81,17 +81,22 @@ create_evolution_animation.bat
 # Direct Python
 python scripts/create_evolution_animation.py
 ```
-**Workflow**: Animation Generation
-- **Input**: Original images + Loop iterations (L1→L10)
-- **Output**: Animated GIFs showing Original → L1 → L2 → ... → L10
-- **Bonus**: Grid montages with all 11 frames side-by-side
+**Workflow**: Smooth Animation Generation with Frame Interpolation
+- **Input**: Original images + Loop iterations (L1→L2→L3→...→LN)
+- **Output**: Smooth animated GIFs with seamless transitions (unlimited iterations)
+- **Bonus**: Grid montages with all frames side-by-side
 
 **Features**:
-- **Auto-Discovery**: Finds evolution chains automatically
-- **11-Frame Animation**: Original + 10 iterations (complete story)
-- **Configurable**: Adjustable speed, size, and output formats
-- **Multiple Formats**: Both animated GIFs and static grid layouts
-- **Filename Utilities**: Automatic cleanup of inconsistent naming
+- **🎬 Frame Interpolation**: Crossfade and morph transitions for smooth evolution visualization
+- **⚙️ JSON Configuration**: Complete control via `config/animation_config.json`
+- **⏱️ Dual Timing**: Separate hold duration (main frames) vs transition duration (morphing)
+- **✨ Advanced Morphing**: Smooth easing functions with gaussian blur for natural transitions
+- **📊 Auto-Discovery**: Finds evolution chains automatically, detects any number of iterations
+- **🔢 Unlimited Frames**: Original + N iterations (supports 10, 20, 50+ iterations)
+- **📐 Dynamic Layout**: Auto-calculates optimal grid size based on iteration count
+- **🎛️ Configurable**: Adjustable interpolation steps (1-50+ between each frame)
+- **📁 Multiple Formats**: Both smooth animated GIFs and static grid layouts
+- **🔧 Filename Utilities**: Automatic cleanup of inconsistent naming
 
 ## 📋 Table of Contents
 
@@ -133,7 +138,7 @@ source .venv/bin/activate # Linux/Mac
 
 3. **Install dependencies**:
 ```bash
-pip install -r requirements-minimal.txt
+pip install -r requirements.txt
 ```
 
 4. **Set up environment variables**:
@@ -177,7 +182,7 @@ test_output/assets/Category_2/object2_generated_*.png
 | **Context** | Full image understanding | Object name | Full + evolution | Evolution chains |
 | **Cost** | ~$0.06-0.10/image | ~$0.04-0.08/image | ~$0.06-0.10/image | Free (local processing) |
 | **Speed** | Slower | Faster | Moderate (2 workers) | Fast (no API calls) |
-| **Best For** | Complex/contextual styles | Consistent style application | AI evolution research | Visualizing results |
+| **Best For** | Complex/contextual styles | Consistent style application | AI evolution research | Visualizing unlimited iterations |
 
 ## 🎨 Style Customization
 
@@ -236,6 +241,29 @@ The system is currently configured for **children's crayon-style educational con
 }
 ```
 
+#### Animation Creator (`config/animation_config.json`):
+```json
+{
+    "animation_settings": {
+        "base_directory": "./test_loop",
+        "output_directory": "./evolution_animations",
+        "hold_duration": 2000,
+        "transition_duration": 10,
+        "size": [512, 512],
+        "max_iterations": null,
+        "interpolation": "morph",
+        "interpolation_steps": 25,
+        "grid_only": false,
+        "animation_only": false
+    }
+}
+```
+**Key Settings**:
+- **interpolation**: "none", "crossfade", or "morph" for transition style
+- **interpolation_steps**: Number of frames between each evolution step (1-50+)
+- **hold_duration**: Time main frames are displayed (milliseconds)
+- **transition_duration**: Speed of morphing frames (milliseconds)
+
 ### Pipeline Features
 
 - **Nested folder support**: Maintains directory structure in output
@@ -288,7 +316,6 @@ Uses direct filename-to-style mapping:
 
 **Configurable post-processing workflow**:
 
-- **Background removal**: Manual or automated options
 - **Format conversion**: Multiple output format support
 - **Quality control**: Configurable validation criteria
 
@@ -316,6 +343,9 @@ python scripts/test_prompt_config.py
 
 # Create evolution animations (after loop processing)
 python scripts/create_evolution_animation.py
+
+# Create animations with specific iteration limit
+python scripts/create_evolution_animation.py --max-iterations 15
 
 # Fix inconsistent loop filenames (if needed)
 python scripts/fix_loop_filenames.py
@@ -385,7 +415,7 @@ Image_Generation_/
 │   ├── verify_openai_setup.py       # API verification
 │   ├── debug_openai.py              # Connection debugging
 │   ├── monitor_progress.py          # Progress monitoring
-│   ├── create_evolution_animation.py # Evolution animation creator
+│   ├── create_evolution_animation.py # Evolution animation creator (unlimited iterations)
 │   └── fix_loop_filenames.py        # Fix inconsistent loop filenames
 ├── config/                          # Configuration files
 │   ├── image_processing_config.json # V1 configuration
@@ -394,10 +424,10 @@ Image_Generation_/
 ├── test/assets/[categories]/         # Input images (nested structure)
 ├── test_output/assets/[categories]/  # Generated images (preserves structure)
 ├── test_loop/                       # Loop processor input/output
-│   ├── 1/, 2/, 3/, ..., 10/         # Evolution chain outputs
+│   ├── 1/, 2/, 3/, ..., N/          # Evolution chain outputs (unlimited)
 ├── evolution_animations/            # Animation output directory
-│   ├── [name]_evolution_*.gif       # Animated evolution chains
-│   └── [name]_grid_*.png           # Grid montages
+│   ├── [name]_evolution_*.gif       # Animated evolution chains (unlimited frames)
+│   └── [name]_grid_*.png           # Auto-sized grid montages
 ├── docs/                            # Documentation & project tracking
 ├── run_image_generator.bat          # Windows batch (V1 vision)
 ├── run_image_generator_v2.bat       # Windows batch (V2 simple)

@@ -100,6 +100,34 @@ _This file will contain completed tasks as they are finished from currentTask.md
 - **Status**: ✅ Done
 - **Notes**: Built `scripts/create_evolution_animation.py` with `create_evolution_animation.bat` launcher. Features: auto-discovery of evolution chains, 11-frame animations (original + L1→L10), animated GIFs with configurable speed/size, grid montages for side-by-side comparison, filename fixing utility for consistent naming. Includes `scripts/fix_loop_filenames.py` for cleaning inconsistent naming patterns. Impact: Enables visual analysis of AI interpretation evolution across iterations. Completed 2025-01-30
 
+### [DEP-001]: Requirements File Consolidation
+- **Desc**: Consolidated requirements files and cleaned up unused/speculative dependencies
+- **Tech**: Python package management, dependency optimization
+- **Status**: ✅ Done
+- **Notes**: Merged `requirements.txt` and `requirements-minimal.txt` into single clean file with only actually used dependencies. Removed commented speculative packages (rembg, streamlit, opencv, pytest). Final dependencies: openai, python-dotenv, Pillow, numpy, requests, httpx, tqdm. Updated README to use single requirements file. Impact: Simplified installation process and eliminated dependency bloat. Completed 2025-01-30
+
+### [ANIM-002]: Unlimited Iterations Animation Support
+- **Desc**: Enhanced evolution animation creator to support unlimited iterations instead of hardcoded 10-iteration limit
+- **Tech**: Dynamic range detection, auto-grid calculation, argument parsing
+- **Status**: ✅ Done
+- **Notes**: Updated `scripts/create_evolution_animation.py` to auto-detect available iterations (supports 10, 20, 50+ iterations). Features: auto-detection of max iterations up to 100, dynamic grid layout calculation (e.g., 7×3 for 21 frames), `--max-iterations` parameter for manual control, updated documentation and help text. Removed hardcoded range(1,11) and fixed 6×2 grid limitations. Impact: Enables visualization of extended AI evolution experiments without script modifications. Completed 2025-01-30
+
+### [ANIM-003]: Smooth Animation Transitions ✅ COMPLETED (2025-06-03)
+- **Desc**: Enhanced evolution animations with frame interpolation for smooth transitions, replacing slideshow format with fluid morphing
+- **Tech**: NumPy array blending, PIL ImageFilter, JSON config, crossfade/morph algorithms, separate timing controls
+- **Status**: ✅ Done
+- **Impact**: Evolution animations now display seamless transitions between iterations instead of choppy slideshows
+- **Files Modified**:
+  - `scripts/create_evolution_animation.py` - Added interpolation functions and dual timing
+  - `config/animation_config.json` - New JSON configuration system
+- **Key Features**:
+  - Frame interpolation with crossfade and morph modes
+  - Configurable interpolation steps (1-50+ transitions between frames)
+  - Separate timing: hold_duration for main frames, transition_duration for morphing
+  - Per-frame GIF durations for proper timing control
+  - Advanced morphing with smooth easing and gaussian blur
+- **Usage**: `python scripts/create_evolution_animation.py` (uses config/animation_config.json)
+
 ### Example Format:
 <!-- 
 ### [ID]: Feature/Bug Name

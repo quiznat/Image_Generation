@@ -17,8 +17,21 @@
 - **Deps**: PIL/Pillow
 
 - **Tech**: NumPy 1.26+
-- **Role**: Array operations for image processing
+- **Role**: Array operations for image processing and frame interpolation
 - **Deps**: numpy
+
+### Animation & Visualization
+- **Tech**: Animated GIF Creation
+- **Role**: Evolution timeline visualization with frame interpolation
+- **Deps**: PIL.Image, numpy for blending
+
+- **Tech**: Frame Interpolation
+- **Role**: Smooth transitions between evolution frames
+- **Patterns**: Crossfade blending, morphing with easing functions
+
+- **Tech**: JSON Configuration
+- **Role**: Animation settings management
+- **Files**: config/animation_config.json
 
 ### Environment Management
 - **Tech**: python-dotenv 1.0.0

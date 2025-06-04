@@ -1,22 +1,19 @@
-# Core dependencies for OpenAI pipeline
+# OpenAI Image Generation System - Dependencies
+# All packages required for V1, V2, Loop Processor, and Animation Creator
+
+# Core OpenAI API
 openai==1.12.0
+
+# Environment and configuration
 python-dotenv==1.0.0
+
+# Image processing
 Pillow==10.2.0
-numpy>=1.26.0  # Compatible with Python 3.12
-httpx  # For proxy handling
-requests  # For downloading images
+numpy>=1.26.0
 
-# Utilities
+# HTTP requests and downloads
+requests==2.32.3
+httpx==0.28.1
+
+# Progress bars and utilities
 tqdm==4.66.1
-
-# Optional background removal (if needed)
-# rembg==2.0.56
-
-# Optional for future enhancements
-# streamlit==1.31.0  # For web interface
-# opencv-python==4.9.0.80  # For image quality checks
-
-# Development tools (optional)
-# pytest==8.0.0
-# black==24.1.1
-# flake8==7.0.0 
