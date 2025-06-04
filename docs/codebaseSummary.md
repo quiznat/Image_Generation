@@ -18,6 +18,8 @@
 - **scripts/test_prompt_config.py**: Validate DALL-E prompts from configuration
 - **scripts/test_single_generation.py**: Test single image generation with prompt logging
 - **scripts/verify_rembg_setup.py**: Test rembg background removal setup (legacy)
+- **scripts/create_evolution_animation.py**: Create animated GIFs and grid montages from loop processor output
+- **scripts/fix_loop_filenames.py**: Fix inconsistent filename patterns in loop iteration directories
 
 ### Configuration
 - **config/image_processing_config.json**: Configuration for v1 vision pipeline and pipelined version (currently set for crayon-style children's content)
@@ -29,6 +31,7 @@
 - **run_image_generator_pipelined.bat**: Windows batch file for v1 parallel pipeline (TRIPLE THREAT - 3 workers)
 - **run_image_generator_v2.bat**: Windows batch file for v2 simple pipeline
 - **run_loop_processor.bat**: Windows batch file for loop processor (LINEAR CHAIN - 2 workers)
+- **create_evolution_animation.bat**: Windows batch file for evolution animation creator
 
 ### Documentation
 - **README.md**: Comprehensive documentation (general-purpose, configurable system)
@@ -54,11 +57,14 @@ debug_openai.py -> openai, dotenv, httpx
 monitor_progress.py -> pathlib, datetime
 test_prompt_config.py -> json, pathlib
 test_single_generation.py -> openai_image_generator_v2_simple.py
+create_evolution_animation.py -> PIL, pathlib, datetime
+fix_loop_filenames.py -> pathlib, re
 
 run_image_generator.bat -> openai_image_generator.py
 run_image_generator_pipelined.bat -> openai_image_generator_pipelined.py
 run_image_generator_v2.bat -> openai_image_generator_v2_simple.py
 run_loop_processor.bat -> loop_processor.py
+create_evolution_animation.bat -> create_evolution_animation.py
 
 config/image_processing_config.json -> openai_image_generator.py
 config/image_processing_config.json -> openai_image_generator_pipelined.py
@@ -73,6 +79,7 @@ test/assets/[category]/ -> openai_image_generator.py -> test_output/assets/[cate
 test/assets/[category]/ -> openai_image_generator_pipelined.py -> test_output/assets/[category]/
 test/assets/[category]/ -> openai_image_generator_v2_simple.py -> test_output/assets/[category]/
 test_loop/ -> loop_processor.py -> test_loop/1/, test_loop/2/, ..., test_loop/10/
+test_loop/ + test_loop/1/../10/ -> create_evolution_animation.py -> evolution_animations/[name]_evolution.gif, [name]_grid.png
 ```
 
 ### Production Pipelines

@@ -13,6 +13,15 @@ This project offers **two production-ready, configurable pipelines** using OpenA
 
 **Current Configuration**: Set up for children's crayon-style educational content, but easily adaptable for sci-fi art, photorealistic images, abstract art, or any other style.
 
+## 🚀 Four Main Capabilities
+
+This system provides **four distinct capabilities** for AI-powered image generation and analysis:
+
+1. **🔍 V1 Vision Pipeline** - Intelligent context-aware generation
+2. **⚡ V2 Simple Pipeline** - Fast batch processing  
+3. **🔄 Loop Processor** - AI evolution experiments
+4. **🎬 Animation Creator** - Visualize evolution chains
+
 ## 🚀 Two Production Pipelines
 
 ### 🔍 V1: Vision-Enhanced Pipeline (Intelligent)
@@ -62,6 +71,27 @@ python src/loop_processor.py
 - **Workers**: 2-worker parallel processing
 - **Resume**: Configurable start loop (`config/loop_processor_config.json`)
 - **Purpose**: Study how AI interprets and evolves image styles over iterations
+
+### 🎬 Animation Creator: Evolution Visualization
+**Best for**: Visualizing AI evolution chains, research presentation, analyzing iteration patterns
+```bash
+# Windows
+create_evolution_animation.bat
+
+# Direct Python
+python scripts/create_evolution_animation.py
+```
+**Workflow**: Animation Generation
+- **Input**: Original images + Loop iterations (L1→L10)
+- **Output**: Animated GIFs showing Original → L1 → L2 → ... → L10
+- **Bonus**: Grid montages with all 11 frames side-by-side
+
+**Features**:
+- **Auto-Discovery**: Finds evolution chains automatically
+- **11-Frame Animation**: Original + 10 iterations (complete story)
+- **Configurable**: Adjustable speed, size, and output formats
+- **Multiple Formats**: Both animated GIFs and static grid layouts
+- **Filename Utilities**: Automatic cleanup of inconsistent naming
 
 ## 📋 Table of Contents
 
@@ -141,13 +171,13 @@ test_output/assets/Category_2/object2_generated_*.png
 
 ### Pipeline Comparison
 
-| Feature | V1 Vision | V2 Simple | Loop Processor |
-|---------|-----------|-----------|----------------|
-| **Analysis** | GPT-4 Vision | Filename only | GPT-4 Vision |
-| **Context** | Full image understanding | Object name | Full + evolution |
-| **Cost** | ~$0.06-0.10/image | ~$0.04-0.08/image | ~$0.06-0.10/image |
-| **Speed** | Slower | Faster | Moderate (2 workers) |
-| **Best For** | Complex/contextual styles | Consistent style application | AI evolution research |
+| Feature | V1 Vision | V2 Simple | Loop Processor | Animation Creator |
+|---------|-----------|-----------|----------------|-------------------|
+| **Analysis** | GPT-4 Vision | Filename only | GPT-4 Vision | Pattern matching |
+| **Context** | Full image understanding | Object name | Full + evolution | Evolution chains |
+| **Cost** | ~$0.06-0.10/image | ~$0.04-0.08/image | ~$0.06-0.10/image | Free (local processing) |
+| **Speed** | Slower | Faster | Moderate (2 workers) | Fast (no API calls) |
+| **Best For** | Complex/contextual styles | Consistent style application | AI evolution research | Visualizing results |
 
 ## 🎨 Style Customization
 
@@ -283,6 +313,12 @@ python scripts/monitor_progress.py
 
 # Test prompt configuration
 python scripts/test_prompt_config.py
+
+# Create evolution animations (after loop processing)
+python scripts/create_evolution_animation.py
+
+# Fix inconsistent loop filenames (if needed)
+python scripts/fix_loop_filenames.py
 ```
 
 ## 🐛 Troubleshooting
@@ -348,7 +384,9 @@ Image_Generation_/
 │   ├── test_vision_workflow.py       # Test V1 workflow
 │   ├── verify_openai_setup.py       # API verification
 │   ├── debug_openai.py              # Connection debugging
-│   └── monitor_progress.py          # Progress monitoring
+│   ├── monitor_progress.py          # Progress monitoring
+│   ├── create_evolution_animation.py # Evolution animation creator
+│   └── fix_loop_filenames.py        # Fix inconsistent loop filenames
 ├── config/                          # Configuration files
 │   ├── image_processing_config.json # V1 configuration
 │   ├── image_processing_config-v2.json # V2 configuration
@@ -357,9 +395,13 @@ Image_Generation_/
 ├── test_output/assets/[categories]/  # Generated images (preserves structure)
 ├── test_loop/                       # Loop processor input/output
 │   ├── 1/, 2/, 3/, ..., 10/         # Evolution chain outputs
+├── evolution_animations/            # Animation output directory
+│   ├── [name]_evolution_*.gif       # Animated evolution chains
+│   └── [name]_grid_*.png           # Grid montages
 ├── docs/                            # Documentation & project tracking
 ├── run_image_generator.bat          # Windows batch (V1 vision)
 ├── run_image_generator_v2.bat       # Windows batch (V2 simple)
 ├── run_loop_processor.bat           # Windows batch (Loop processor)
+├── create_evolution_animation.bat   # Windows batch (Animation creator)
 └── .env                             # API keys (create this)
 ```

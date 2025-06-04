@@ -266,7 +266,7 @@ class LoopImageProcessor:
                 output_path.unlink()  # Clean up failed file
             return False
 
-    def worker_complete_workflow(self, worker_id: int, work_queue: queue.Queue):
+    def worker_complete_workflow(self, worker_id: int, work_queue: queue.Queue, iteration_num: int):
         """Worker thread that handles complete workflow: GPT-4V analysis → DALL-E generation."""
         self.logger.info(f"🚀 Worker-{worker_id} started")
         
@@ -301,9 +301,18 @@ class LoopImageProcessor:
                 # Step 3: DALL-E Generation
                 self.logger.info(f"🎨 [Worker-{worker_id}] Starting generation for {relative_path}")
                 
-                # Generate output path
-                timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-                output_filename = f"{image_path.stem}_generated_{timestamp}.png"
+                # Generate output path with SHORT filename
+                # Extract original base name (remove all previous generation suffixes)
+                base_name = image_path.stem
+                # Remove any previous generation timestamps/suffixes
+                if "_generated_" in base_name:
+                    base_name = base_name.split("_generated_")[0]
+                if "_L" in base_name and base_name.endswith(base_name.split("_L")[-1]):
+                    # Remove previous loop indicators like "_L1", "_L2", etc.
+                    base_name = "_L".join(base_name.split("_L")[:-1])
+                
+                # Create short, clean filename: original_name_L{loop_number}.png
+                output_filename = f"{base_name}_L{iteration_num}.png"
                 output_path = output_dir / output_filename
                 
                 # Generate image
@@ -390,12 +399,12 @@ class LoopImageProcessor:
         # Start parallel worker threads
         worker1_thread = threading.Thread(
             target=self.worker_complete_workflow, 
-            args=(1, self.worker1_queue), 
+            args=(1, self.worker1_queue, iteration_num), 
             name=f"Worker1-Iter{iteration_num}"
         )
         worker2_thread = threading.Thread(
             target=self.worker_complete_workflow, 
-            args=(2, self.worker2_queue), 
+            args=(2, self.worker2_queue, iteration_num), 
             name=f"Worker2-Iter{iteration_num}"
         )
         
