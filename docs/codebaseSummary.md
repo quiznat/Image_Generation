@@ -4,7 +4,7 @@
 
 ### Core Image Generators
 - **src/openai_image_generator.py**: Vision-enhanced DALL-E generator with GPT-4V analysis workflow (v1 PRODUCTION)
-- **src/openai_image_generator_pipelined.py**: Parallel 3-worker vision-enhanced generator with optimal throughput (v1 PARALLEL PRODUCTION)
+- **src/openai_image_generator_pipelined.py**: Parallel 2-worker vision-enhanced generator with optimal throughput (v1 PARALLEL PRODUCTION)
 - **src/openai_image_generator_v2_simple.py**: GPT-4.1 enhanced image processor with 2-worker parallel processing using responses API (v2 PRODUCTION)
 - **src/openai_image_generator_v2.py**: Direct DALL-E generation with rembg support (legacy)
 - **src/openai_image_processor.py**: Legacy GPT-4 Vision analysis (broken - replaced by v1)
@@ -29,7 +29,7 @@
 
 ### Batch Scripts
 - **run_image_generator.bat**: Windows batch file for v1 vision pipeline (single-threaded)
-- **run_image_generator_pipelined.bat**: Windows batch file for v1 parallel pipeline (TRIPLE THREAT - 3 workers)
+- **run_image_generator_pipelined.bat**: Windows batch file for v1 parallel pipeline (2-worker parallel processing)
 - **run_image_generator_v2.bat**: Windows batch file for v2 GPT-4.1 enhanced pipeline (2 workers)
 - **run_loop_processor.bat**: Windows batch file for loop processor (LINEAR CHAIN - 2 workers with GPT-4.1)
 - **create_evolution_animation.bat**: Windows batch file for evolution animation creator
@@ -92,13 +92,12 @@ Input Image → GPT-4V Analysis → Wrap in Style Template → DALL-E Generation
 Cost: Higher | Speed: Slower | Adaptability: Context-aware style application
 ```
 
-#### V1 Parallel Workflow (Intelligent - TRIPLE THREAT)
+#### V1 Parallel Workflow (Intelligent - Dual Worker Processing)
 ```
-3 Workers: Each handling complete workflow
-Worker-1: Images 1,4,7... → GPT-4V Analysis → DALL-E Generation → Output
-Worker-2: Images 2,5,8... → GPT-4V Analysis → DALL-E Generation → Output  
-Worker-3: Images 3,6,9... → GPT-4V Analysis → DALL-E Generation → Output
-Cost: Higher | Speed: Optimized for batches | Throughput: Maximum API utilization
+2 Workers: Each handling complete workflow
+Worker-1: Images 1,3,5... → GPT-4V Analysis → DALL-E Generation → Output
+Worker-2: Images 2,4,6... → GPT-4V Analysis → DALL-E Generation → Output  
+Cost: Higher | Speed: Optimized for batches | Throughput: Balanced API utilization
 ```
 
 #### V2 Enhanced Workflow (GPT-4.1 with 2-Worker Parallel Processing)

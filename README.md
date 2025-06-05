@@ -30,7 +30,7 @@ This system provides **four distinct capabilities** for AI-powered image generat
 # Windows - Single-threaded
 run_image_generator.bat
 
-# Windows - 3-worker parallel (TRIPLE THREAT)
+# Windows - 2-worker parallel processing
 run_image_generator_pipelined.bat
 
 # Direct Python
@@ -42,7 +42,7 @@ python src/openai_image_generator_pipelined.py
 - **Speed**: Slower (GPT-4V + DALL-E calls)
 - **Adaptability**: Analyzes input context and adapts to configured style
 - **Technology**: DALL-E 3 with GPT-4 Vision analysis
-- **Parallel Options**: Single-threaded or 3-worker parallel processing
+- **Parallel Options**: Single-threaded or 2-worker parallel processing
 
 ### ⚡ V2: Enhanced Pipeline (Fast) 
 **Best for**: Batch processing, image enhancement, high-volume generation with parallel processing
@@ -56,7 +56,7 @@ python src/openai_image_generator_v2_simple.py
 **Workflow**: Image Analysis & Enhancement with GPT-4.1
 - **Input**: Images from target directories → GPT-4.1 Analysis & Generation → Enhanced Output
 - **Cost**: Moderate (~$0.04-0.08 per image)
-- **Speed**: Fast (2-worker parallel processing with 3-second offset)
+- **Speed**: Fast (2-worker parallel processing with optimized startup)
 - **Enhancement**: GPT-4.1 analyzes and improves colors, clarity, and composition
 - **Technology**: GPT-4.1 responses API with built-in image generation tools
 
@@ -186,15 +186,15 @@ test_output/assets/Category_2/object2_generated_*.png
 
 ### Pipeline Comparison
 
-| Feature | V1 Vision | V2 Simple | Loop Processor | Animation Creator |
-|---------|-----------|-----------|----------------|-------------------|
+| Feature | V1 Vision | V2 Enhanced | Loop Processor | Animation Creator |
+|---------|-----------|-------------|----------------|-------------------|
 | **Analysis** | GPT-4 Vision | GPT-4.1 Vision | GPT-4.1 Vision | Pattern matching |
 | **Context** | Full image understanding | Image enhancement | Full + evolution | Evolution chains |
 | **Cost** | ~$0.06-0.10/image | ~$0.04-0.08/image | ~$0.04-0.08/image | Free (local processing) |
 | **Speed** | Slower | Fast (2 workers) | Moderate (2 workers) | Fast (no API calls) |
 | **Best For** | Complex/contextual styles | Image enhancement & batch processing | AI evolution research | Visualizing unlimited iterations |
 | **Technology** | DALL-E 3 (Direct) | GPT-4.1 responses API | GPT-4.1 responses API | N/A |
-| **Parallel Processing** | 3 workers (pipelined version) | 2 workers | 2 workers | N/A |
+| **Parallel Processing** | 2 workers (pipelined version) | 2 workers | 2 workers | N/A |
 
 ## 🎨 Style Customization
 
@@ -300,11 +300,11 @@ The system is currently configured for **children's crayon-style educational con
 - **Proxy handling**: Automatic network configuration
 
 ### Tips for Best Results
-- **V1 Vision**: Place any image, system analyzes content and applies your configured style
-- **V2 Simple**: Use descriptive filenames for best object recognition
-- Organize by category in subfolders for better output management
+- **V1 Vision**: Upload any image; the system analyzes content and applies your configured style
+- **V2 Enhanced**: Optimized for image enhancement and quality improvement workflows
+- Organize images by category in subfolders for better output management
 - Process similar objects in batches for consistency
-- Customize prompts in config files to match your desired aesthetic
+- Customize prompts in configuration files to match your desired aesthetic
 
 ## 🔧 Configuration Details
 

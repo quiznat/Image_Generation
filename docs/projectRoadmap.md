@@ -32,13 +32,13 @@
 - **Desc**: Implement parallel worker system to maximize API throughput while managing rate limits
 - **Tech**: Threading, queue management, staggered processing, OpenAI API optimization
 - **Status**: ✅ Done
-- **Notes**: Priority: H, Created pipelined system with 3-worker architecture. Worker distribution: W1 (images 1,4,7...), W2 (images 2,5,8...), W3 (images 3,6,9...). Each worker handles complete GPT-4V analysis → DALL-E generation workflow. Staggered startup prevents initial rate limiting. Found optimal balance at 3 workers (TRIPLE THREAT) after testing 2, 3, and 4 worker configurations. Completed 2025-06-02
+- **Notes**: Priority: H, Created pipelined system with 2-worker architecture. Worker distribution: W1 (images 1,3,5...), W2 (images 2,4,6...). Each worker handles complete GPT-4V analysis → DALL-E generation workflow. Staggered startup prevents initial rate limiting. Standardized 2-worker parallel processing for consistent performance across all pipelines. Completed 2025-06-02
 
 #### [ROAD-003]: Batch Processing Optimization
 - **Desc**: Implement efficient batch processing for 100+ images
 - **Tech**: Async processing, queue management, progress tracking
 - **Status**: ✅ Done
-- **Notes**: Priority: M, Completed via parallel processing implementation. Both v1 and v2 scripts handle nested folders with parallel workers for maximum performance. TRIPLE THREAT mode provides optimal throughput without rate limit spam
+- **Notes**: Priority: M, Completed via parallel processing implementation. Both v1 and v2 scripts handle nested folders with parallel workers for maximum performance. Dual worker architecture provides optimal throughput with reliable consistency
 
 ### Phase 3: Analysis & Quality (Current Focus)
 #### [ROAD-012]: Quality Comparison and Benchmarking
