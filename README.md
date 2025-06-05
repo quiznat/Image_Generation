@@ -1,10 +1,10 @@
 # Image Generation System
 
-A comprehensive, configurable OpenAI DALL-E 3 based system for creating consistent, high-quality illustrations with customizable styles and workflows. Features both **intelligent vision analysis** and **fast filename-based** generation pipelines.
+A comprehensive, configurable OpenAI image generation system featuring multiple AI-powered pipelines with customizable styles and workflows. Supports both **DALL-E 3** and **GPT-4.1 responses API** with built-in image generation tools.
 
 ## 🎨 Overview
 
-This project offers **two production-ready, configurable pipelines** using OpenAI's DALL-E 3:
+This project offers **three production-ready, configurable pipelines** for AI-powered image generation:
 - **Style**: Fully customizable via configuration files
 - **Format**: Configurable output specifications  
 - **Purpose**: Adaptable to any image generation use case
@@ -17,28 +17,34 @@ This project offers **two production-ready, configurable pipelines** using OpenA
 
 This system provides **four distinct capabilities** for AI-powered image generation and analysis:
 
-1. **🔍 V1 Vision Pipeline** - Intelligent context-aware generation
-2. **⚡ V2 Simple Pipeline** - Fast batch processing  
-3. **🔄 Loop Processor** - AI evolution experiments
+1. **🔍 V1 Vision Pipeline** - Intelligent context-aware generation with DALL-E 3
+2. **⚡ V2 Enhanced Pipeline** - Fast image enhancement with GPT-4.1  
+3. **🔄 Loop Processor** - AI evolution experiments with GPT-4.1
 4. **🎬 Animation Creator** - Visualize evolution chains
 
-## 🚀 Two Production Pipelines
+## 🚀 Three Production Pipelines
 
 ### 🔍 V1: Vision-Enhanced Pipeline (Intelligent)
 **Best for**: Complex objects, style-aware generation, context-sensitive workflows
 ```bash
-# Windows
+# Windows - Single-threaded
 run_image_generator.bat
+
+# Windows - 3-worker parallel (TRIPLE THREAT)
+run_image_generator_pipelined.bat
 
 # Direct Python
 python src/openai_image_generator.py
+python src/openai_image_generator_pipelined.py
 ```
-**Workflow**: Input Image → GPT-4V Analysis → Wrap in Style Template → DALL-E Generation
+**Workflow**: Input Image → GPT-4V Analysis → Wrap in Style Template → DALL-E 3 Generation
 - **Cost**: Higher (~$0.06-0.10 per image)
 - **Speed**: Slower (GPT-4V + DALL-E calls)
 - **Adaptability**: Analyzes input context and adapts to configured style
+- **Technology**: DALL-E 3 with GPT-4 Vision analysis
+- **Parallel Options**: Single-threaded or 3-worker parallel processing
 
-### ⚡ V2: Simple Pipeline (Fast) 
+### ⚡ V2: Enhanced Pipeline (Fast) 
 **Best for**: Batch processing, image enhancement, high-volume generation with parallel processing
 ```bash
 # Windows  
@@ -52,6 +58,7 @@ python src/openai_image_generator_v2_simple.py
 - **Cost**: Moderate (~$0.04-0.08 per image)
 - **Speed**: Fast (2-worker parallel processing with 3-second offset)
 - **Enhancement**: GPT-4.1 analyzes and improves colors, clarity, and composition
+- **Technology**: GPT-4.1 responses API with built-in image generation tools
 
 ### 🔄 Loop Processor: Evolution Chain (Experimental)
 **Best for**: AI evolution experiments, iterative enhancement development, research analysis
@@ -72,7 +79,7 @@ python src/loop_processor.py
 - **Workers**: 2-worker parallel processing
 - **Resume**: Configurable start loop (`config/loop_processor_config.json`)
 - **Purpose**: Study how AI interprets and evolves image styles over iterations
-- **Technology**: Uses GPT-4.1 responses API with built-in image generation tools
+- **Technology**: GPT-4.1 responses API with built-in image generation tools
 
 ### 🎬 Animation Creator: Evolution Visualization with Smooth Transitions
 **Best for**: Visualizing AI evolution chains, research presentation, analyzing iteration patterns
