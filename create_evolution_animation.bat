@@ -9,6 +9,7 @@ echo    1. Find all evolution chains in .\test_loop\
 echo    2. Create animated GIFs showing AI evolution
 echo    3. Create grid montages of all iterations
 echo    4. Save results to .\evolution_animations\
+echo    5. Create multiple versions (full-size + web-optimized)
 echo.
 pause
 
@@ -18,13 +19,17 @@ if exist ".venv\Scripts\activate.bat" (
     call .venv\Scripts\activate.bat
 )
 
-REM Run the evolution animation creator
+echo.
+echo 🎬 Creating evolution animations (multiple versions from config)...
+REM Run the evolution animation creator - it will create all configured versions
 python scripts\create_evolution_animation.py
 
 echo.
 echo ✅ Evolution animations complete!
 echo 📁 Check .\evolution_animations\ for results
-echo 🎬 Animated GIFs show the progression loop by loop
-echo 🖼️  Grid images show all 10 iterations at once
+echo 🎬 Full-size GIFs (512x512): Original quality
+echo 📱 Web GIFs (400x400): Optimized for sharing/previews  
+echo 🖼️  Grid images show all iterations at once
+echo 📝 Edit config\animation_config.json to customize settings
 echo.
 pause 

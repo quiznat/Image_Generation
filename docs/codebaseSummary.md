@@ -18,14 +18,14 @@
 - **scripts/test_prompt_config.py**: Validate DALL-E prompts from configuration
 - **scripts/test_single_generation.py**: Test single image generation with prompt logging
 - **scripts/verify_rembg_setup.py**: Test rembg background removal setup (legacy)
-- **scripts/create_evolution_animation.py**: Create animated GIFs and grid montages from loop processor output (supports unlimited iterations)
+- **scripts/create_evolution_animation.py**: Create animated GIFs and grid montages from loop processor output. Supports unlimited iterations and multiple output configurations (e.g., for web, high-quality) via its config file.
 - **scripts/fix_loop_filenames.py**: Fix inconsistent filename patterns in loop iteration directories
 
 ### Configuration
 - **config/image_processing_config.json**: Configuration for v1 vision pipeline and pipelined version (currently set for crayon-style children's content)
 - **config/image_processing_config-v2.json**: Configuration for v2 simple pipeline (currently set for crayon-style children's content)
 - **config/loop_processor_config.json**: Configuration for loop processor with start/end loop settings and dedicated prompts
-- **config/animation_config.json**: Configuration for animation creator with interpolation settings and timing controls
+- **config/animation_config.json**: Configuration for animation creator, including interpolation, timing, and multiple output version definitions (e.g., 'Full Quality', 'Web Optimized').
 
 ### Batch Scripts
 - **run_image_generator.bat**: Windows batch file for v1 vision pipeline (single-threaded)
@@ -120,7 +120,7 @@ Cost: Controlled | Speed: 2-worker parallel | Purpose: AI evolution experiments 
 ```
 test_loop/ + test_loop/1/../N/ → Auto-detect iterations → Frame Interpolation → Create Smooth GIFs + Grids
 Input: Original + unlimited iterations | Output: Smooth animated evolution chains
-Features: Crossfade/Morph transitions, configurable steps, dual timing (hold/transition)
+Features: Crossfade/Morph transitions, configurable steps, dual timing (hold/transition), multiple output configurations (e.g., full-size, web-optimized).
 Cost: Free (local processing) | Speed: Fast | Quality: Seamless morphing between frames
 ```
 

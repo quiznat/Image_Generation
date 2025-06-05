@@ -30,25 +30,12 @@ def load_config(config_path: str = "config/animation_config.json") -> dict:
         print(f"✅ Loaded config from: {config_path}")
         return config
     except FileNotFoundError:
-        print(f"⚠️  Config file not found: {config_path}")
-        print("   Using default settings...")
-        return {
-            "animation_settings": {
-                "base_directory": "./test_loop",
-                "output_directory": "./evolution_animations", 
-                "duration": 800,
-                "size": [512, 512],
-                "max_iterations": None,
-                "interpolation": "none",
-                "interpolation_steps": 3,
-                "grid_only": False,
-                "animation_only": False
-            }
-        }
+        print(f"❌ Config file not found: {config_path}")
+        return None
     except json.JSONDecodeError as e:
         print(f"❌ Error parsing config file: {e}")
-        print("   Using default settings...")
-        return load_config()  # Return defaults
+        print("   Please check the JSON syntax in the config file")
+        return None
 
 
 def find_evolution_chains(base_dir: Path, max_iterations: int = None) -> dict:
@@ -270,43 +257,51 @@ def create_morph_frames(img1: Image.Image, img2: Image.Image, steps: int = 3) ->
 def main():
     # Load configuration first
     config = load_config()
+    if config is None:
+        print("❌ Could not load configuration. Please fix the config file and try again.")
+        return
+        
     settings = config["animation_settings"]
     
     parser = argparse.ArgumentParser(description='Create evolution animations from loop processor output')
     parser.add_argument('--config', type=str, default='config/animation_config.json', help='Configuration file path')
     parser.add_argument('--base-dir', type=str, default=settings["base_directory"], help='Base directory containing loop iterations')
     parser.add_argument('--output-dir', type=str, default=settings["output_directory"], help='Output directory for animations')
-    parser.add_argument('--hold-duration', type=int, default=settings["hold_duration"], help='Hold time for main frames (ms)')
-    parser.add_argument('--transition-duration', type=int, default=settings["transition_duration"], help='Duration for transition frames (ms)')
-    parser.add_argument('--size', type=int, nargs=2, default=settings["size"], help='Animation size (width height)')
     parser.add_argument('--max-iterations', type=int, default=settings["max_iterations"], help='Maximum iteration to process (auto-detect if not specified)')
-    parser.add_argument('--interpolation', type=str, choices=['none', 'crossfade', 'morph'], default=settings["interpolation"], 
-                       help='Frame interpolation mode')
-    parser.add_argument('--interpolation-steps', type=int, default=settings["interpolation_steps"], 
-                       help='Number of interpolation frames between each transition')
-    parser.add_argument('--grid-only', action='store_true', default=settings["grid_only"], help='Create only grid images, no animations')
-    parser.add_argument('--animation-only', action='store_true', default=settings["animation_only"], help='Create only animations, no grids')
     
     args = parser.parse_args()
     
     # If a different config file is specified, reload it
     if args.config != 'config/animation_config.json':
         config = load_config(args.config)
+        if config is None:
+            print("❌ Could not load specified configuration. Exiting.")
+            return
         settings = config["animation_settings"]
+    
+    # Get output configurations - this should be in the config file
+    if "output_configurations" not in config:
+        print("❌ Config file missing 'output_configurations' section")
+        return
+        
+    output_configs = config["output_configurations"]
     
     print(f"🎬 Animation Settings:")
     print(f"   📁 Input: {args.base_dir}")
     print(f"   📤 Output: {args.output_dir}")  
-    print(f"   ⏱️  Hold duration: {args.hold_duration}ms")
-    print(f"   ⏱️  Transition duration: {args.transition_duration}ms")
-    print(f"   📐 Size: {args.size[0]}x{args.size[1]}")
-    print(f"   ✨ Interpolation: {args.interpolation} ({args.interpolation_steps} steps)")
+    print(f"   ⏱️  Hold duration: {settings['hold_duration']}ms")
+    print(f"   ⏱️  Transition duration: {settings['transition_duration']}ms")
+    print(f"   ✨ Interpolation: {settings['interpolation']} ({settings['interpolation_steps']} steps)")
+    print(f"   🎯 Configurations: {len(output_configs)} versions")
+    for config_item in output_configs:
+        size_str = f"{config_item['size'][0]}x{config_item['size'][1]}"
+        print(f"      • {config_item['name']}: {size_str} {config_item['description']}")
     
     base_dir = Path(args.base_dir)
     output_dir = Path(args.output_dir)
     output_dir.mkdir(exist_ok=True)
     
-    print(f"🔍 Looking for evolution chains in: {base_dir}")
+    print(f"\n🔍 Looking for evolution chains in: {base_dir}")
     
     # Find all evolution chains
     chains = find_evolution_chains(base_dir, args.max_iterations)
@@ -348,50 +343,65 @@ def main():
                 else:
                     print(f"   L{i}: ❌ Missing")
         
-        # Create animated GIF
-        if not args.grid_only:
-            gif_path = output_dir / f"{base_name}_evolution_{timestamp}.gif"
-            print(f"🎥 Creating animation: {gif_path}")
+        # Process each output configuration
+        for config_item in output_configs:
+            config_name = config_item['name']
+            config_size = tuple(config_item['size'])
+            config_suffix = config_item['suffix']
+            grid_size = tuple(config_item['grid_image_size'])
             
-            success = create_animated_gif(
-                [p for p in image_paths if p], 
-                gif_path, 
-                hold_duration=args.hold_duration,
-                transition_duration=args.transition_duration,
-                size=tuple(args.size),
-                interpolation_mode=args.interpolation,
-                interpolation_steps=args.interpolation_steps
-            )
+            print(f"\n   🎯 Creating {config_name} version ({config_size[0]}x{config_size[1]})...")
             
-            if success:
-                print(f"✅ Animation created: {gif_path}")
-            else:
-                print(f"❌ Failed to create animation")
-        
-        # Create grid image
-        if not args.animation_only:
-            grid_path = output_dir / f"{base_name}_grid_{timestamp}.png"
-            print(f"🖼️  Creating grid: {grid_path}")
+            # Create animated GIF
+            if not settings["grid_only"]:
+                gif_filename = f"{base_name}_evolution{config_suffix}_{timestamp}.gif"
+                gif_path = output_dir / gif_filename
+                print(f"      🎥 Animation: {gif_filename}")
+                
+                success = create_animated_gif(
+                    [p for p in image_paths if p], 
+                    gif_path, 
+                    hold_duration=settings["hold_duration"],
+                    transition_duration=settings["transition_duration"],
+                    size=config_size,
+                    interpolation_mode=settings["interpolation"],
+                    interpolation_steps=settings["interpolation_steps"]
+                )
+                
+                if success:
+                    print(f"         ✅ Animation created")
+                else:
+                    print(f"         ❌ Failed to create animation")
             
-            success = create_grid_image(
-                [p for p in image_paths if p],
-                grid_path,
-                grid_size=None,  # Auto-calculate based on number of images
-                image_size=(256, 256)
-            )
-            
-            if success:
-                print(f"✅ Grid created: {grid_path}")
-            else:
-                print(f"❌ Failed to create grid")
+            # Create grid image
+            if not settings["animation_only"]:
+                grid_filename = f"{base_name}_grid{config_suffix}_{timestamp}.png"
+                grid_path = output_dir / grid_filename
+                print(f"      🖼️  Grid: {grid_filename}")
+                
+                success = create_grid_image(
+                    [p for p in image_paths if p],
+                    grid_path,
+                    grid_size=None,  # Auto-calculate based on number of images
+                    image_size=grid_size
+                )
+                
+                if success:
+                    print(f"         ✅ Grid created")
+                else:
+                    print(f"         ❌ Failed to create grid")
     
     print(f"\n🎉 Evolution visualization complete!")
     print(f"📁 Output directory: {output_dir}")
-    print(f"🎬 Animated GIFs: Show Original → L1 → L2 → ... → L{max_found} ({max_found + 1} frames)")
-    if args.interpolation != "none":
-        total_interpolated = (max_found) * args.interpolation_steps
-        print(f"✨ Interpolation: {args.interpolation} mode with {args.interpolation_steps} steps (+{total_interpolated} transition frames)")
-    print(f"🖼️  Grid images: Auto-sized layout for all frames")
+    print(f"🎬 Created {len(output_configs)} versions for each evolution chain:")
+    for config_item in output_configs:
+        size_str = f"{config_item['size'][0]}x{config_item['size'][1]}"
+        suffix_str = f" (suffix: {config_item['suffix']})" if config_item['suffix'] else ""
+        print(f"   • {config_item['name']}: {size_str}{suffix_str}")
+    print(f"📊 Total frames per animation: Original → L1 → L2 → ... → L{max_found} ({max_found + 1} frames)")
+    if settings["interpolation"] != "none":
+        total_interpolated = (max_found) * settings["interpolation_steps"]
+        print(f"✨ Interpolation: {settings['interpolation']} mode with {settings['interpolation_steps']} steps (+{total_interpolated} transition frames)")
 
 
 if __name__ == "__main__":

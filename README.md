@@ -89,6 +89,7 @@ python scripts/create_evolution_animation.py
 **Features**:
 - **🎬 Frame Interpolation**: Crossfade and morph transitions for smooth evolution visualization
 - **⚙️ JSON Configuration**: Complete control via `config/animation_config.json`
+- **✨ Multiple Output Versions**: Generate different sizes and qualities (e.g., 'Full Quality', 'Web Optimized') for animations and grids. These versions are defined in the `output_configurations` array within `config/animation_config.json`, allowing customization for various use cases like web sharing or high-resolution archiving.
 - **⏱️ Dual Timing**: Separate hold duration (main frames) vs transition duration (morphing)
 - **✨ Advanced Morphing**: Smooth easing functions with gaussian blur for natural transitions
 - **📊 Auto-Discovery**: Finds evolution chains automatically, detects any number of iterations
