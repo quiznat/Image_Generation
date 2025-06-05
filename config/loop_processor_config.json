@@ -1,7 +1,7 @@
 {
     "loop_settings": {
         "start_loop": 1,
-        "end_loop": 100,
+        "end_loop": 6,
         "pause_between_iterations": 1,
         "source_directory": "./test_loop"
     },
@@ -10,21 +10,12 @@
         "max_tokens": 4096,
         "temperature": 0.7
     },
-    "dalle": {
-        "model": "dall-e-3",
-        "size": "1024x1024",
-        "quality": "standard",
-        "n": 1
+    "gpt_4_1_config": {
+        "model": "gpt-4.1-mini",
+        "user_prompt_template": "A vivid, high-resolution image of [DESCRIPTION]"
     },
     "prompts": {
-        "vision_analysis_prompt": "Analyze this image and describe what you see. Provide a clear, detailed description. Be specific about style, colors, shapes, ratios and characteristics.",
-        
-        "dalle_wrapper_prompt": [
-            "[CHATGPT_DESCRIPTION]"
-        ],
-        
-        "follow_up_1": "Please create the image now.",
-        "follow_up_2": "Okay thanks, I need to go soon please make the image file."
+        "vision_analysis_prompt": "Analyze this image and describe what you see. Provide a clear, verbose and detailed description so the generator can understand and improve the image. Be specific about style, colors, shapes, ratios and characteristics."
     },
     "processing": {
         "supported_formats": [".png", ".jpg", ".jpeg", ".gif", ".bmp", ".webp"],

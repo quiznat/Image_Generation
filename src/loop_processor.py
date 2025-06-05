@@ -13,6 +13,7 @@ import logging
 from dotenv import load_dotenv
 from PIL import Image
 import shutil
+import argparse
 
 # Load environment variables from .env file
 load_dotenv()
@@ -22,89 +23,45 @@ class LoopImageProcessor:
     
     def __init__(self, config_path: str = "config/loop_processor_config.json"):
         """Initialize the loop processor."""
-        self.config = self.load_config(config_path)
-        self.client = self.initialize_openai_client()
-        self.setup_logging()
-        
-        # Source directory (configurable now)
-        self.source_dir = Path(self.config["loop_settings"]["source_directory"])
-        
-        # Loop settings
-        self.start_loop = self.config["loop_settings"]["start_loop"]
-        self.end_loop = self.config["loop_settings"]["end_loop"]
-        self.pause_between_iterations = self.config["loop_settings"]["pause_between_iterations"]
-        
-        # Parallel processing queues - each worker gets its own queue
-        self.worker1_queue = queue.Queue()
-        self.worker2_queue = queue.Queue()
-        self.results_queue = queue.Queue()
-        
-        # Pipeline control
-        self.workers_complete = threading.Event()
-        self.shutdown_requested = threading.Event()
+        try:
+            self.config = self.load_config(config_path)
+            self.setup_logging()
+            self.client = self.initialize_openai_client()
+            
+            # Source directory (configurable now)
+            self.source_dir = Path(self.config["loop_settings"]["source_directory"])
+            
+            # Loop settings
+            self.start_loop = self.config["loop_settings"]["start_loop"]
+            self.end_loop = self.config["loop_settings"]["end_loop"]
+            self.pause_between_iterations = self.config["loop_settings"]["pause_between_iterations"]
+            
+            # Parallel processing queues - each worker gets its own queue
+            self.worker1_queue = queue.Queue()
+            self.worker2_queue = queue.Queue()
+            self.results_queue = queue.Queue()
+            
+            # Pipeline control
+            self.workers_complete = threading.Event()
+            self.shutdown_requested = threading.Event()
+        except (FileNotFoundError, json.JSONDecodeError, KeyError) as e:
+            # If config loading or key access fails, log the error and stop initialization.
+            logging.basicConfig(level=logging.CRITICAL, format='%(asctime)s - %(levelname)s - %(message)s')
+            logging.critical(f"Failed to initialize LoopImageProcessor due to a configuration error: {e}")
+            # Re-raise the exception to ensure the script terminates.
+            raise
         
     def load_config(self, config_path: str) -> Dict:
-        """Load configuration from JSON file."""
-        try:
-            with open(config_path, 'r', encoding='utf-8') as f:
-                config = json.load(f)
-                # Validate required sections
-                if "loop_settings" not in config:
-                    config["loop_settings"] = {
-                        "start_loop": 1,
-                        "end_loop": 10,
-                        "pause_between_iterations": 5,
-                        "source_directory": "./test_loop"
-                    }
-                if "dalle" not in config:
-                    config["dalle"] = {
-                        "model": "dall-e-3",
-                        "size": "1024x1024",
-                        "quality": "standard",
-                        "n": 1
-                    }
-                return config
-        except Exception as e:
-            print(f"Error loading config: {e}")
-            return self.get_default_config()
-    
-    def get_default_config(self) -> Dict:
-        """Return default configuration."""
-        return {
-            "loop_settings": {
-                "start_loop": 1,
-                "end_loop": 10,
-                "pause_between_iterations": 5,
-                "source_directory": "./test_loop"
-            },
-            "openai": {"model": "gpt-4o", "max_tokens": 4096, "temperature": 0.7},
-            "dalle": {
-                "model": "dall-e-3",
-                "size": "1024x1024",
-                "quality": "standard",
-                "n": 1
-            },
-            "prompts": {
-                "vision_analysis_prompt": "Analyze this image and describe what you see. Focus on the main object and provide a clear, detailed description that would help create an improved version for educational content for toddlers. Be specific about colors, shapes, and characteristics.",
-                
-                "dalle_wrapper_prompt": [
-                    "Create a colorful crayon drawing based on this description: [CHATGPT_DESCRIPTION]",
-                    "Style: Simple, friendly cartoon drawing for toddlers, as if drawn with crayons or colored pencils",
-                    "Format: Single object centered on plain white background, filling about 80% of the image space",
-                    "Quality: Bold, clean lines with bright, vibrant colors",
-                    "Aesthetic: Child-friendly, warm, playful, and educational",
-                    "Size: 1024x1024 pixels, no framing or borders"
-                ],
-                
-                "follow_up_1": "Please create the image now.",
-                "follow_up_2": "Okay thanks, I need to go soon please make the image file."
-            },
-            "processing": {
-                "supported_formats": [".png", ".jpg", ".jpeg"],
-                "max_retries": 2,
-                "wait_between_retries": 2
-            }
-        }
+        """
+        Load configuration from JSON file.
+        This method will raise an exception if the file is not found or is invalid.
+        """
+        logging.info(f"Attempting to load configuration from: {config_path}")
+        with open(config_path, 'r', encoding='utf-8') as f:
+            config = json.load(f)
+        logging.info("✅ Configuration loaded successfully.")
+        # Basic validation can be added here if needed, e.g., checking for essential keys
+        return config
     
     def initialize_openai_client(self) -> OpenAI:
         """Initialize OpenAI client with proxy handling."""
@@ -115,9 +72,10 @@ class LoopImageProcessor:
         try:
             # Try with default settings first
             client = OpenAI(api_key=api_key)
+            self.logger.info("✅ OpenAI client initialized successfully.")
             return client
         except Exception as e:
-            print(f"Initial client creation failed: {e}")
+            self.logger.warning(f"Initial client creation failed: {e}. Falling back to proxy bypass.")
             try:
                 # Fallback: disable proxy trust
                 import httpx
@@ -125,20 +83,19 @@ class LoopImageProcessor:
                     api_key=api_key,
                     http_client=httpx.Client(trust_env=False)
                 )
-                print("✅ OpenAI client initialized with proxy bypass")
+                self.logger.info("✅ OpenAI client initialized with proxy bypass.")
                 return client
             except Exception as fallback_e:
-                print(f"Fallback client creation failed: {fallback_e}")
+                self.logger.error(f"Fallback client creation failed: {fallback_e}")
                 raise
 
     def setup_logging(self):
-        """Setup logging configuration."""
+        """Setup logging configuration based on the config file."""
+        log_dir = Path(self.config["logging"]["log_dir"])
+        log_dir.mkdir(exist_ok=True)
+
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        log_file = f"./test_logs/loop_processor_{timestamp}.log"
-        
-        # Create logs directory if it doesn't exist
-        logs_dir = Path("./test_logs")
-        logs_dir.mkdir(exist_ok=True)
+        log_file = log_dir / f"loop_processor_{timestamp}.log"
         
         logging.basicConfig(
             level=logging.INFO,
@@ -149,7 +106,7 @@ class LoopImageProcessor:
             ]
         )
         self.logger = logging.getLogger(__name__)
-        self.logger.info(f"Loop processor initialized - Log: {log_file}")
+        self.logger.info(f"Logging configured. Log file at: {log_file}")
 
     def encode_image_to_base64(self, image_path: Path) -> str:
         """Encode image to base64 string."""
@@ -191,54 +148,62 @@ class LoopImageProcessor:
             self.logger.error(f"Error analyzing image {image_path}: {e}")
             return None
 
-    def wrap_description_for_dalle(self, chatgpt_description: str) -> str:
-        """Wrap ChatGPT description in DALL-E prompt format."""
-        dalle_prompt_template = "\n".join(self.config["prompts"]["dalle_wrapper_prompt"])
-        dalle_prompt = dalle_prompt_template.replace("[CHATGPT_DESCRIPTION]", chatgpt_description)
-        
-        self.logger.info(f"DALL-E prompt created")
-        return dalle_prompt
+    def generate_image_with_gpt4_tool(self, description: str, output_path: Path) -> bool:
+        """
+        Generates an image using the GPT-4.1 Responses API.
+        This follows the official documentation for direct image generation.
+        """
+        config = self.config.get("gpt_4_1_config")
+        if not config:
+            self.logger.error("Configuration for 'gpt_4_1_config' is missing.")
+            return False
 
-    def generate_image_with_dalle(self, dalle_prompt: str, output_path: Path) -> bool:
-        """Generate image using DALL-E and save to output path."""
-        attempts = 1
-        
-        while attempts <= self.config["processing"]["max_retries"] + 1:
-            try:
-                self.logger.info(f"DALL-E generation attempt {attempts}")
-                
-                # Generate image with DALL-E
-                response = self.client.images.generate(
-                    model=self.config["dalle"]["model"],
-                    prompt=dalle_prompt,
-                    size=self.config["dalle"]["size"],
-                    quality=self.config["dalle"]["quality"],
-                    n=self.config["dalle"]["n"]
-                )
-                
-                # Get the image URL
-                if response.data and len(response.data) > 0:
-                    image_url = response.data[0].url
-                    
-                    if self.save_image_from_url(image_url, output_path):
-                        self.logger.info(f"Successfully generated and saved: {output_path}")
-                        return True
-                
-                # If we didn't get an image, increment attempts
-                attempts += 1
-                if attempts <= self.config["processing"]["max_retries"]:
-                    self.logger.info(f"No image generated, trying follow-up...")
-                    time.sleep(self.config["processing"]["wait_between_retries"])
-                
-            except Exception as e:
-                self.logger.error(f"Error generating image: {e}")
-                attempts += 1
-                
-                if attempts <= self.config["processing"]["max_retries"]:
-                    time.sleep(self.config["processing"]["wait_between_retries"])
-        
-        self.logger.warning(f"Failed to generate image after {attempts} attempts")
+        # Use the template from the config to create the final prompt
+        prompt = config["user_prompt_template"].replace("[DESCRIPTION]", description)
+        self.logger.info(f"Generating image with prompt: '{prompt}'")
+
+        try:
+            response = self.client.responses.create(
+                model=config["model"],
+                input=prompt,
+                tools=[{"type": "image_generation"}]
+            )
+
+            # Extract the base64 image data from the response output
+            image_data = [
+                output.result
+                for output in response.output
+                if output.type == "image_generation_call"
+            ]
+
+            if image_data:
+                image_base64 = image_data[0]
+                if self.save_image_from_base64(image_base64, output_path):
+                    self.logger.info(f"Successfully generated and saved image: {output_path}")
+                    return True
+                else:
+                    self.logger.error("Failed to save base64 image.")
+            else:
+                self.logger.warning("API response did not contain an image generation call result.")
+
+        except AttributeError:
+            self.logger.critical("FATAL: The 'client.responses.create' method does not exist. Your OpenAI library version may be out of date.")
+            return False
+        except Exception as e:
+            self.logger.error(f"An exception occurred during image generation: {e}", exc_info=True)
+
         return False
+
+    def save_image_from_base64(self, image_base64: str, output_path: Path) -> bool:
+        """Decode and save a base64 string as an image file."""
+        try:
+            output_path.parent.mkdir(parents=True, exist_ok=True)
+            with open(output_path, "wb") as f:
+                f.write(base64.b64decode(image_base64))
+            return True
+        except Exception as e:
+            self.logger.error(f"Error saving base64 encoded image to {output_path}: {e}")
+            return False
 
     def save_image_from_url(self, image_url: str, output_path: Path) -> bool:
         """Download and save image from URL."""
@@ -295,10 +260,7 @@ class LoopImageProcessor:
                 
                 self.logger.info(f"✅ [Worker-{worker_id}] Analysis complete for {relative_path}")
                 
-                # Step 2: Wrap description for DALL-E
-                dalle_prompt = self.wrap_description_for_dalle(description)
-                
-                # Step 3: DALL-E Generation
+                # Step 2: Generate image using the new GPT-4.1 tool method
                 self.logger.info(f"🎨 [Worker-{worker_id}] Starting generation for {relative_path}")
                 
                 # Generate output path with SHORT filename
@@ -316,7 +278,7 @@ class LoopImageProcessor:
                 output_path = output_dir / output_filename
                 
                 # Generate image
-                success = self.generate_image_with_dalle(dalle_prompt, output_path)
+                success = self.generate_image_with_gpt4_tool(description, output_path)
                 
                 if success:
                     self.logger.info(f"✅ [Worker-{worker_id}] Complete workflow success: {output_path}")
@@ -503,15 +465,20 @@ class LoopImageProcessor:
 
 def main():
     """Main function to run the loop processor."""
+    parser = argparse.ArgumentParser(description="Run the Loop Image Processor.")
+    parser.add_argument(
+        '--config', 
+        type=str, 
+        default='config/loop_processor_config.json',
+        help='Path to the configuration file (e.g., config/loop_processor_config_gpt4.1.json)'
+    )
+    args = parser.parse_args()
+
     try:
-        processor = LoopImageProcessor()
+        processor = LoopImageProcessor(config_path=args.config)
         processor.run_loop()
-    except KeyboardInterrupt:
-        print("\n🛑 Process interrupted by user")
     except Exception as e:
-        print(f"❌ Error: {e}")
-        import traceback
-        traceback.print_exc()
+        logging.error(f"❌ Script failed to complete due to an unhandled exception: {e}")
 
 
 if __name__ == "__main__":

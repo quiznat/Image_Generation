@@ -1,25 +1,20 @@
 @echo off
 echo.
-echo === OpenAI Image Generator V2 ===
+echo === OpenAI Image Generator V2 (GPT-4.1 Enhanced) ===
 echo.
-echo This version:
-echo - Goes directly to DALL-E (no GPT-4 analysis)
-echo - Uses filename as object description
-echo - Prevents style drift for consistent results
-echo - No background removal (use Canva later)
+echo This tool will:
+echo 1. Analyze your images with GPT-4.1 vision
+echo 2. Generate improved versions using GPT-4.1's image generation tool
+echo 3. Process images with 2-worker parallel pipeline for speed
+echo 4. Save enhanced images with better colors, clarity, and composition
 echo.
-echo Example: "courthouse.png" becomes "courthouse" in the prompt
-echo.
-echo Make sure to:
-echo 1. Name your files descriptively (e.g., "red_barn.png", "happy_sun.jpg")
-echo 2. Place images in the 'test' directory
-echo 3. Set your OPENAI_API_KEY in the .env file
+echo Make sure your OPENAI_API_KEY is set in the .env file!
+echo And ensure you have the latest OpenAI library with responses API support.
 echo.
 pause
 
 python src/openai_image_generator_v2_simple.py
 
 echo.
-echo Process complete. Check 'test_output' for results.
-echo Use Canva or remove.bg for background removal.
+echo Process complete! Check the 'test_output' folder for improved images.
 pause 

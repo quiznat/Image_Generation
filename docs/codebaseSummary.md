@@ -5,10 +5,10 @@
 ### Core Image Generators
 - **src/openai_image_generator.py**: Vision-enhanced DALL-E generator with GPT-4V analysis workflow (v1 PRODUCTION)
 - **src/openai_image_generator_pipelined.py**: Parallel 3-worker vision-enhanced generator with optimal throughput (v1 PARALLEL PRODUCTION)
-- **src/openai_image_generator_v2_simple.py**: Direct filename-to-DALL-E generation without background removal (v2 PRODUCTION)
+- **src/openai_image_generator_v2_simple.py**: GPT-4.1 enhanced image processor with 2-worker parallel processing using responses API (v2 PRODUCTION)
 - **src/openai_image_generator_v2.py**: Direct DALL-E generation with rembg support (legacy)
 - **src/openai_image_processor.py**: Legacy GPT-4 Vision analysis (broken - replaced by v1)
-- **src/loop_processor.py**: Configurable loop processor using 2-worker pipeline for iterative AI evolution chains (LOOP PRODUCTION)
+- **src/loop_processor.py**: Configurable loop processor using GPT-4.1 responses API with 2-worker pipeline for iterative AI evolution chains (LOOP PRODUCTION)
 
 ### Scripts
 - **scripts/test_vision_workflow.py**: Test the corrected v1 vision workflow
@@ -23,15 +23,15 @@
 
 ### Configuration
 - **config/image_processing_config.json**: Configuration for v1 vision pipeline and pipelined version (currently set for crayon-style children's content)
-- **config/image_processing_config-v2.json**: Configuration for v2 simple pipeline (currently set for crayon-style children's content)
-- **config/loop_processor_config.json**: Configuration for loop processor with start/end loop settings and dedicated prompts
+- **config/image_processing_config-v2.json**: Configuration for v2 GPT-4.1 enhanced pipeline with image analysis and generation settings
+- **config/loop_processor_config.json**: Configuration for loop processor with GPT-4.1 responses API settings, start/end loop settings, and vision analysis prompts
 - **config/animation_config.json**: Configuration for animation creator, including interpolation, timing, and multiple output version definitions (e.g., 'Full Quality', 'Web Optimized').
 
 ### Batch Scripts
 - **run_image_generator.bat**: Windows batch file for v1 vision pipeline (single-threaded)
 - **run_image_generator_pipelined.bat**: Windows batch file for v1 parallel pipeline (TRIPLE THREAT - 3 workers)
-- **run_image_generator_v2.bat**: Windows batch file for v2 simple pipeline
-- **run_loop_processor.bat**: Windows batch file for loop processor (LINEAR CHAIN - 2 workers)
+- **run_image_generator_v2.bat**: Windows batch file for v2 GPT-4.1 enhanced pipeline (2 workers)
+- **run_loop_processor.bat**: Windows batch file for loop processor (LINEAR CHAIN - 2 workers with GPT-4.1)
 - **create_evolution_animation.bat**: Windows batch file for evolution animation creator
 
 ### Documentation
@@ -47,10 +47,10 @@
 ```
 openai_image_generator.py -> openai, PIL, dotenv, httpx
 openai_image_generator_pipelined.py -> openai, PIL, dotenv, httpx, threading, queue
-openai_image_generator_v2_simple.py -> openai, PIL, dotenv, httpx
+openai_image_generator_v2_simple.py -> openai, PIL, dotenv, httpx, threading, queue, base64
 openai_image_generator_v2.py -> openai, PIL, dotenv, rembg
 openai_image_processor.py -> openai, PIL, dotenv (legacy/broken)
-loop_processor.py -> openai, PIL, dotenv, threading, queue
+loop_processor.py -> openai, PIL, dotenv, threading, queue, base64
 
 test_vision_workflow.py -> openai_image_generator.py
 verify_openai_setup.py -> openai, dotenv
@@ -101,19 +101,23 @@ Worker-3: Images 3,6,9... → GPT-4V Analysis → DALL-E Generation → Output
 Cost: Higher | Speed: Optimized for batches | Throughput: Maximum API utilization
 ```
 
-#### V2 Simple Workflow (Fast)
+#### V2 Enhanced Workflow (GPT-4.1 with 2-Worker Parallel Processing)
 ```
-Filename → Apply Style Template → DALL-E Generation → Output
-Cost: Lower | Speed: Faster | Consistency: Direct style application
+2 Workers: Each handling complete GPT-4.1 responses API workflow
+Worker-1: Images 1,3,5... → GPT-4.1 Analysis & Generation → Enhanced Output
+Worker-2: Images 2,4,6... → GPT-4.1 Analysis & Generation → Enhanced Output
+Cost: Moderate | Speed: Fast parallel processing | Enhancement: Improved colors, clarity, composition
+Technology: Uses client.responses.create with image generation tools
 ```
 
-#### Loop Processing Workflow (Evolution Chain)
+#### Loop Processing Workflow (Evolution Chain with GPT-4.1)
 ```
-2 Workers: Linear chain iterations with configurable start point
-Loop 1: test_loop/ → GPT-4V Analysis → DALL-E → test_loop/1/
-Loop 2: test_loop/1/ → GPT-4V Analysis → DALL-E → test_loop/2/
-Loop N: test_loop/(N-1)/ → GPT-4V Analysis → DALL-E → test_loop/N/
-Cost: Controlled | Speed: 2-worker parallel | Purpose: AI evolution experiments (unlimited iterations)
+2 Workers: Linear chain iterations with GPT-4.1 responses API
+Loop 1: test_loop/ → GPT-4.1 Vision Analysis → GPT-4.1 Image Generation → test_loop/1/
+Loop 2: test_loop/1/ → GPT-4.1 Vision Analysis → GPT-4.1 Image Generation → test_loop/2/
+Loop N: test_loop/(N-1)/ → GPT-4.1 Vision Analysis → GPT-4.1 Image Generation → test_loop/N/
+Cost: Controlled (GPT-4.1 pricing) | Speed: 2-worker parallel | Technology: responses API with image generation tools
+Purpose: AI evolution experiments (unlimited iterations)
 ```
 
 #### Animation Creation Workflow (Visualization with Interpolation)
@@ -128,9 +132,10 @@ Cost: Free (local processing) | Speed: Fast | Quality: Seamless morphing between
 - All production pipelines support nested folder structures
 - All generators read from `.env` for API key
 - All pipelines handle proxy issues with httpx fallback
-- V1 provides intelligent context analysis, V2 provides speed and consistency
+- V1 provides intelligent context analysis with DALL-E, V2 and Loop provide GPT-4.1 enhancement and evolution
+- V2 and Loop processor use GPT-4.1 responses API with built-in image generation tools
 - Loop processor enables iterative AI evolution with cost control (unlimited iterations)
 - Animation creator visualizes unlimited evolution chains with auto-sizing
 - Style and format fully configurable via JSON configuration files
-- Test scripts validate specific functionality
-- Current configuration optimized for children's crayon-style educational content
+- V2 and Loop processors support 2-worker parallel processing for improved throughput
+- Current V1 configuration optimized for children's crayon-style educational content

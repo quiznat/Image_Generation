@@ -3,35 +3,9 @@
       "input_dir": "./test",
       "output_dir": "./test_output"
     },
-    "openai": {
-      "model": "gpt-4.1",
-      "max_tokens": 4096,
-      "temperature": 0
-    },
-    "dalle": {
-      "model": "dall-e-3",
-      "size": "1024x1024",
-      "quality": "hd",
-      "n": 1
-    },
-    "background_removal": {
-      "enabled": true,
-      "save_both_versions": true,
-      "model": "u2net"
-    },
-    "prompts": {
-    "initial_prompt": [
-        "A colorful crayon drawing of a single object: [OBJECT_NAME], as if created by a child, with bold lines and bright, vibrant colors.",
-        "The image should be simple and playful, designed as a picture flash card for toddlers.",
-        "Only the [OBJECT_NAME] should be visible, centered and filling 80% of the image space.",
-        "FORMAT: Square 1024x1024 pixels.",
-        "BACKGROUND: Plain white background.",
-        "STYLE: Soft, childlike, warm, and playful, with a clear crayon texture.",
-        "LIGHTING: Flat, soft lighting with no shadows or highlights.",
-        "FRAMING: No framing."
-    ],
-      "follow_up_1": "Please create the image now.",
-      "follow_up_2": "Okay thanks, I need to go soon please make the image file."
+    "gpt_4_1_config": {
+      "model": "gpt-4.1-mini",
+      "analysis_and_generation_prompt": "Analyze this image carefully and then create an improved, high-quality version. Enhance the colors, clarity, and composition while maintaining the original subject matter. Create a vivid, appealing image that would be perfect for educational content."
     },
     "processing": {
       "supported_formats": [".png", ".jpg", ".jpeg", ".gif", ".bmp", ".webp"],

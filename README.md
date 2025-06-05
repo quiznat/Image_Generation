@@ -39,7 +39,7 @@ python src/openai_image_generator.py
 - **Adaptability**: Analyzes input context and adapts to configured style
 
 ### ⚡ V2: Simple Pipeline (Fast) 
-**Best for**: Batch processing, consistent style application, high-volume generation
+**Best for**: Batch processing, image enhancement, high-volume generation with parallel processing
 ```bash
 # Windows  
 run_image_generator_v2.bat
@@ -47,13 +47,14 @@ run_image_generator_v2.bat
 # Direct Python
 python src/openai_image_generator_v2_simple.py
 ```
-**Workflow**: Filename → Apply Style Template → DALL-E Generation
-- **Cost**: Lower (~$0.04-0.08 per image)
-- **Speed**: Faster (single DALL-E call)
-- **Consistency**: Direct style application from configuration
+**Workflow**: Image Analysis & Enhancement with GPT-4.1
+- **Input**: Images from target directories → GPT-4.1 Analysis & Generation → Enhanced Output
+- **Cost**: Moderate (~$0.04-0.08 per image)
+- **Speed**: Fast (2-worker parallel processing with 3-second offset)
+- **Enhancement**: GPT-4.1 analyzes and improves colors, clarity, and composition
 
 ### 🔄 Loop Processor: Evolution Chain (Experimental)
-**Best for**: AI evolution experiments, iterative style development, research analysis
+**Best for**: AI evolution experiments, iterative enhancement development, research analysis
 ```bash
 # Windows
 run_loop_processor.bat
@@ -61,16 +62,17 @@ run_loop_processor.bat
 # Direct Python
 python src/loop_processor.py
 ```
-**Workflow**: Linear Chain Processing
-- Loop 1: `test_loop/` → GPT-4V Analysis → DALL-E → `test_loop/1/`
-- Loop 2: `test_loop/1/` → GPT-4V Analysis → DALL-E → `test_loop/2/`
-- Loop N: `test_loop/(N-1)/` → GPT-4V Analysis → DALL-E → `test_loop/N/`
+**Workflow**: Linear Chain Processing with GPT-4.1
+- Loop 1: `test_loop/` → GPT-4.1 Vision Analysis → GPT-4.1 Image Generation → `test_loop/1/`
+- Loop 2: `test_loop/1/` → GPT-4.1 Vision Analysis → GPT-4.1 Image Generation → `test_loop/2/`
+- Loop N: `test_loop/(N-1)/` → GPT-4.1 Vision Analysis → GPT-4.1 Image Generation → `test_loop/N/`
 
 **Features**:
-- **Cost**: Controlled (80 total images for 8 inputs)
+- **Cost**: Controlled (GPT-4.1 responses API pricing)
 - **Workers**: 2-worker parallel processing
 - **Resume**: Configurable start loop (`config/loop_processor_config.json`)
 - **Purpose**: Study how AI interprets and evolves image styles over iterations
+- **Technology**: Uses GPT-4.1 responses API with built-in image generation tools
 
 ### 🎬 Animation Creator: Evolution Visualization with Smooth Transitions
 **Best for**: Visualizing AI evolution chains, research presentation, analyzing iteration patterns
@@ -179,11 +181,13 @@ test_output/assets/Category_2/object2_generated_*.png
 
 | Feature | V1 Vision | V2 Simple | Loop Processor | Animation Creator |
 |---------|-----------|-----------|----------------|-------------------|
-| **Analysis** | GPT-4 Vision | Filename only | GPT-4 Vision | Pattern matching |
-| **Context** | Full image understanding | Object name | Full + evolution | Evolution chains |
-| **Cost** | ~$0.06-0.10/image | ~$0.04-0.08/image | ~$0.06-0.10/image | Free (local processing) |
-| **Speed** | Slower | Faster | Moderate (2 workers) | Fast (no API calls) |
-| **Best For** | Complex/contextual styles | Consistent style application | AI evolution research | Visualizing unlimited iterations |
+| **Analysis** | GPT-4 Vision | GPT-4.1 Vision | GPT-4.1 Vision | Pattern matching |
+| **Context** | Full image understanding | Image enhancement | Full + evolution | Evolution chains |
+| **Cost** | ~$0.06-0.10/image | ~$0.04-0.08/image | ~$0.04-0.08/image | Free (local processing) |
+| **Speed** | Slower | Fast (2 workers) | Moderate (2 workers) | Fast (no API calls) |
+| **Best For** | Complex/contextual styles | Image enhancement & batch processing | AI evolution research | Visualizing unlimited iterations |
+| **Technology** | DALL-E 3 (Direct) | GPT-4.1 responses API | GPT-4.1 responses API | N/A |
+| **Parallel Processing** | 3 workers (pipelined version) | 2 workers | 2 workers | N/A |
 
 ## 🎨 Style Customization
 
@@ -216,12 +220,18 @@ The system is currently configured for **children's crayon-style educational con
 #### V2 Simple Pipeline (`config/image_processing_config-v2.json`):
 ```json
 {
-    "prompts": {
-        "initial_prompt": [
-            "A [STYLE] of a single object: [OBJECT_NAME]",
-            "[Your style-specific instructions]",
-            "[Your format and composition rules]"
-        ]
+    "directories": {
+        "input_dir": "./test",
+        "output_dir": "./test_output"
+    },
+    "gpt_4_1_config": {
+        "model": "gpt-4.1-mini",
+        "analysis_and_generation_prompt": "Analyze this image carefully and then create an improved, high-quality version. Enhance the colors, clarity, and composition while maintaining the original subject matter."
+    },
+    "processing": {
+        "supported_formats": [".png", ".jpg", ".jpeg", ".gif", ".bmp", ".webp"],
+        "max_retries": 2,
+        "wait_between_retries": 2
     }
 }
 ```
@@ -235,9 +245,17 @@ The system is currently configured for **children's crayon-style educational con
         "pause_between_iterations": 5,
         "source_directory": "./test_loop"
     },
+    "openai": {
+        "model": "gpt-4.1",
+        "max_tokens": 4096,
+        "temperature": 0.7
+    },
+    "gpt_4_1_config": {
+        "model": "gpt-4.1-mini",
+        "user_prompt_template": "A vivid, high-resolution image of [DESCRIPTION]"
+    },
     "prompts": {
-        "vision_analysis_prompt": "Analyze this image and describe what you see...",
-        "dalle_wrapper_prompt": ["[CHATGPT_DESCRIPTION]"]
+        "vision_analysis_prompt": "Analyze this image and describe what you see. Provide a clear, verbose and detailed description so the generator can understand and improve the image."
     }
 }
 ```
