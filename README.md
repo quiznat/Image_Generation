@@ -224,7 +224,7 @@ The system is currently configured for **children's crayon-style educational con
 }
 ```
 
-#### V2 Simple Pipeline (`config/image_processing_config-v2.json`):
+#### V2 Enhanced Pipeline (`config/image_processing_config-v2.json`):
 ```json
 {
     "directories": {
@@ -233,7 +233,7 @@ The system is currently configured for **children's crayon-style educational con
     },
     "gpt_4_1_config": {
         "model": "gpt-4.1-mini",
-        "analysis_and_generation_prompt": "Analyze this image carefully and then create an improved, high-quality version. Enhance the colors, clarity, and composition while maintaining the original subject matter."
+        "analysis_and_generation_prompt": "Analyze this image carefully and then create an improved, high-quality version. Enhance the colors, clarity, and composition while maintaining the original subject matter. Generate the image at 1024x1024 pixels resolution for optimal quality."
     },
     "processing": {
         "supported_formats": [".png", ".jpg", ".jpeg", ".gif", ".bmp", ".webp"],
@@ -259,7 +259,7 @@ The system is currently configured for **children's crayon-style educational con
     },
     "gpt_4_1_config": {
         "model": "gpt-4.1-mini",
-        "user_prompt_template": "A vivid, high-resolution image of [DESCRIPTION]"
+        "user_prompt_template": "Create a vivid, high-resolution image of [DESCRIPTION]. Generate the image at 1024x1024 pixels resolution for optimal quality."
     },
     "prompts": {
         "vision_analysis_prompt": "Analyze this image and describe what you see. Provide a clear, verbose and detailed description so the generator can understand and improve the image."

@@ -5,7 +5,7 @@
     },
     "gpt_4_1_config": {
       "model": "gpt-4.1-mini",
-      "analysis_and_generation_prompt": "Analyze this image carefully and then create an improved, high-quality version. Enhance the colors, clarity, and composition while maintaining the original subject matter. Create a vivid, appealing image that would be perfect for educational content."
+      "analysis_and_generation_prompt": "Analyze this image carefully and then create an improved, high-quality version. Enhance the colors, clarity, and composition while maintaining the original subject matter. Create a vivid, appealing image that would be perfect for educational content. Generate the image at 1024x1024 pixels resolution for optimal quality."
     },
     "processing": {
       "supported_formats": [".png", ".jpg", ".jpeg", ".gif", ".bmp", ".webp"],
@@ -16,5 +16,5 @@
       "log_responses": true,
       "log_dir": "./test_logs"
     }
-  }
+}
   

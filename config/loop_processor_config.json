@@ -1,8 +1,8 @@
 {
     "loop_settings": {
         "start_loop": 1,
-        "end_loop": 6,
-        "pause_between_iterations": 1,
+        "end_loop": 10,
+        "pause_between_iterations": 5,
         "source_directory": "./test_loop"
     },
     "openai": {
@@ -12,10 +12,10 @@
     },
     "gpt_4_1_config": {
         "model": "gpt-4.1-mini",
-        "user_prompt_template": "A vivid, high-resolution image of [DESCRIPTION]"
+        "user_prompt_template": "Create a vivid, high-resolution image of [DESCRIPTION]. Generate the image at 1024x1024 pixels resolution."
     },
     "prompts": {
-        "vision_analysis_prompt": "Analyze this image and describe what you see. Provide a clear, verbose and detailed description so the generator can understand and improve the image. Be specific about style, colors, shapes, ratios and characteristics."
+        "vision_analysis_prompt": "Analyze this image and describe what you see. Provide a clear, verbose and detailed description so the generator can understand and improve the image."
     },
     "processing": {
         "supported_formats": [".png", ".jpg", ".jpeg", ".gif", ".bmp", ".webp"],
