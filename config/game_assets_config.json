@@ -1,0 +1,36 @@
+{
+    "directories": {
+        "assets_json_dir": "./game_assets",
+        "output_dir": "./game_output"
+    },
+    "openai": {
+        "vision_model": "gpt-4o",
+        "generation_model": "gpt-4o-mini",
+        "max_tokens": 4096,
+        "temperature": 0.7
+    },
+    "dalle": {
+        "model": "dall-e-3",
+        "size": "1024x1024",
+        "quality": "hd",
+        "n": 1
+    },
+    "art_direction": {
+        "global_style": "2D game art, clean vector style, vibrant colors",
+        "global_requirements": [
+            "Transparent or solid color background suitable for game sprites",
+            "Consistent lighting from top-left",
+            "Clear silhouette for game readability"
+        ]
+    },
+    "processing": {
+        "supported_formats": [".png", ".jpg", ".jpeg"],
+        "max_retries": 2,
+        "wait_between_retries": 2,
+        "parallel_workers": 2
+    },
+    "logging": {
+        "log_responses": true,
+        "log_dir": "./game_logs"
+    }
+}

@@ -150,12 +150,12 @@ class LoopImageProcessor:
 
     def generate_image_with_gpt4_tool(self, description: str, output_path: Path) -> bool:
         """
-        Generates an image using the GPT-4.1 Responses API.
+        Generates an image using the GPT-4o Responses API.
         This follows the official documentation for direct image generation.
         """
-        config = self.config.get("gpt_4_1_config")
+        config = self.config.get("gpt_4o_config")
         if not config:
-            self.logger.error("Configuration for 'gpt_4_1_config' is missing.")
+            self.logger.error("Configuration for 'gpt_4o_config' is missing.")
             return False
 
         # Use the template from the config to create the final prompt
@@ -260,7 +260,7 @@ class LoopImageProcessor:
                 
                 self.logger.info(f"✅ [Worker-{worker_id}] Analysis complete for {relative_path}")
                 
-                # Step 2: Generate image using the new GPT-4.1 tool method
+                # Step 2: Generate image using the GPT-4o tool method
                 self.logger.info(f"🎨 [Worker-{worker_id}] Starting generation for {relative_path}")
                 
                 # Generate output path with SHORT filename
