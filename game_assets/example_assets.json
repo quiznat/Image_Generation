@@ -1,0 +1,67 @@
+{
+    "project": "Example Game",
+    "art_direction": {
+        "style": "Stylized 2D cartoon, bold outlines, cel-shaded",
+        "color_palette": "Warm and inviting with accent colors",
+        "mood": "Friendly and approachable"
+    },
+    "categories": {
+        "characters": {
+            "category_style": "Expressive faces, simple but appealing designs",
+            "assets": [
+                {
+                    "id": "hero_idle",
+                    "name": "Hero Character - Idle Pose",
+                    "description": "A brave young adventurer standing in a relaxed idle pose, wearing simple traveling clothes and a small backpack",
+                    "size": "1024x1024",
+                    "tags": ["character", "hero", "idle"]
+                },
+                {
+                    "id": "hero_attack",
+                    "name": "Hero Character - Attack Pose",
+                    "description": "The same hero character mid-swing with a wooden sword, dynamic action pose",
+                    "size": "1024x1024",
+                    "tags": ["character", "hero", "action"]
+                }
+            ]
+        },
+        "items": {
+            "category_style": "Clean icons with subtle drop shadows, consistent perspective",
+            "assets": [
+                {
+                    "id": "sword_wooden",
+                    "name": "Wooden Sword",
+                    "description": "A simple wooden practice sword, slightly worn",
+                    "size": "512x512",
+                    "tags": ["weapon", "starter", "melee"]
+                },
+                {
+                    "id": "potion_health",
+                    "name": "Health Potion",
+                    "description": "A small glass bottle filled with glowing red liquid, corked",
+                    "size": "512x512",
+                    "tags": ["consumable", "healing"]
+                }
+            ]
+        },
+        "environment": {
+            "category_style": "Painterly backgrounds with depth, soft edges",
+            "assets": [
+                {
+                    "id": "bg_forest",
+                    "name": "Forest Background",
+                    "description": "A peaceful forest clearing with dappled sunlight filtering through trees",
+                    "size": "1920x1080",
+                    "tags": ["background", "nature", "forest"]
+                },
+                {
+                    "id": "tile_grass",
+                    "name": "Grass Tile",
+                    "description": "A seamless grass tile with subtle variation, top-down perspective",
+                    "size": "256x256",
+                    "tags": ["tile", "terrain", "grass"]
+                }
+            ]
+        }
+    }
+}
