@@ -16,7 +16,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 class OpenAIImageGeneratorV2Simple:
-    """Generate new images using GPT-4.1 built-in image generation tool with 2-worker parallel processing."""
+    """Generate new images using GPT-4o built-in image generation tool with 2-worker parallel processing."""
     
     def __init__(self, config_path: str = "config/image_processing_config-v2.json"):
         """Initialize the image generator with configuration."""
@@ -41,11 +41,11 @@ class OpenAIImageGeneratorV2Simple:
                 return config
         except Exception as e:
             print(f"Error loading config: {e}")
-            # Return minimal default config for GPT-4.1 image generation
+            # Return minimal default config for GPT-4o image generation
             return {
                 "directories": {"input_dir": "./test", "output_dir": "./test_output"},
-                "gpt_4_1_config": {
-                    "model": "gpt-4.1-mini",
+                "gpt_4o_config": {
+                    "model": "gpt-4o-mini",
                     "analysis_and_generation_prompt": "Analyze this image and then create an improved, high-quality version with better colors, clarity, and composition."
                 },
                 "processing": {"supported_formats": [".png", ".jpg", ".jpeg"], "max_retries": 2, "wait_between_retries": 2},
@@ -128,7 +128,7 @@ class OpenAIImageGeneratorV2Simple:
             return False
     
     def worker_process_image(self, worker_id: int, work_queue: queue.Queue):
-        """Worker thread that processes images using GPT-4.1 image generation tool."""
+        """Worker thread that processes images using GPT-4o image generation tool."""
         self.logger.info(f"🚀 Worker-{worker_id} started")
         
         while not self.shutdown_requested.is_set():
@@ -145,10 +145,10 @@ class OpenAIImageGeneratorV2Simple:
                 
                 self.logger.info(f"🔍 [Worker-{worker_id}] Processing {relative_path} ({image_index})")
                 
-                # Get configuration for GPT-4.1
-                gpt_config = self.config.get("gpt_4_1_config")
+                # Get configuration for GPT-4o
+                gpt_config = self.config.get("gpt_4o_config")
                 if not gpt_config:
-                    self.logger.error("Configuration for 'gpt_4_1_config' is missing.")
+                    self.logger.error("Configuration for 'gpt_4o_config' is missing.")
                     self.results_queue.put((image_path, relative_path, image_index, False, "Config missing"))
                     work_queue.task_done()
                     continue
@@ -171,7 +171,7 @@ class OpenAIImageGeneratorV2Simple:
                 output_filename = f"{image_path.stem}_improved_{datetime.now().strftime('%Y%m%d_%H%M%S')}.png"
                 output_path = output_subfolder / output_filename
                 
-                # Generate improved image using GPT-4.1 responses API with image generation tool
+                # Generate improved image using GPT-4o responses API with image generation tool
                 attempts = 0
                 max_retries = self.config["processing"]["max_retries"]
                 success = False
@@ -180,7 +180,7 @@ class OpenAIImageGeneratorV2Simple:
                     try:
                         self.logger.info(f"✨ [Worker-{worker_id}] Generating improved image (attempt {attempts + 1})")
                         
-                        # Call GPT-4.1 with the image and ask it to generate an improved version
+                        # Call GPT-4o with the image and ask it to generate an improved version
                         response = self.client.responses.create(
                             model=gpt_config["model"],
                             input=[
@@ -261,11 +261,11 @@ class OpenAIImageGeneratorV2Simple:
             self.logger.warning(f"No image files found in {input_dir}")
             print(f"\nNo images found in '{input_dir}'")
             print(f"Supported formats: {', '.join(supported_formats)}")
-            print("\nThis tool analyzes your images and creates improved versions using GPT-4.1!")
+            print("\nThis tool analyzes your images and creates improved versions using GPT-4o!")
             return
         
         print(f"\n📷 Found {len(image_files)} image(s)")
-        print("🤖 Using GPT-4.1 with built-in image generation tool")
+        print("🤖 Using GPT-4o with built-in image generation tool")
         print("⚡ Processing with 2-worker parallel pipeline")
         print("✨ Analyzing and improving each image...\n")
         
@@ -371,7 +371,7 @@ class OpenAIImageGeneratorV2Simple:
 
 def main():
     """Main function to run the image generator."""
-    print("=== OpenAI Image Generator V2 (GPT-4.1 Enhanced) ===")
+    print("=== OpenAI Image Generator V2 (GPT-4o Enhanced) ===")
     print("Analyzes your images and creates improved versions")
     print("=" * 55)
     

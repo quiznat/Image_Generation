@@ -6,12 +6,12 @@
         "source_directory": "./test_loop"
     },
     "openai": {
-        "model": "gpt-4.1",
+        "model": "gpt-4o",
         "max_tokens": 4096,
         "temperature": 0.7
     },
-    "gpt_4_1_config": {
-        "model": "gpt-4.1-mini",
+    "gpt_4o_config": {
+        "model": "gpt-4o-mini",
         "user_prompt_template": "Create a vivid, high-resolution image of [DESCRIPTION]. Generate the image at 1024x1024 pixels resolution."
     },
     "prompts": {
