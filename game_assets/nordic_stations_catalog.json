@@ -1,0 +1,248 @@
+{
+  "project": "Santas Nordic Workshop Stations",
+  "art_direction": {
+    "style": "Scandinavian storybook illustration; watercolor + gouache on textured paper; fine ink linework; soft ambient light; muted natural colors; medium detail",
+    "palette": "Pine greens, birch whites, oak browns, soot blacks, wool greys, ice blues",
+    "lighting": "Ambient first; lineage-specific lighting per category",
+    "avoid": "photorealism, 3D render, neon colors, hyper-detail, extreme contrast, glossy plastic, modern materials"
+  },
+  "categories": {
+    "nisse_stations": {
+      "category_style": "Nisse lineage crafting station icon. Front-facing view, 512x512, clean silhouette. Fast-hald square forms, stout proportions, straight boards, peg joinery. Hearth-warm lighting with cozy soot tones. Knit patterns, patched leather, iron hooks.",
+      "assets": [
+        {
+          "id": "hewing_bench",
+          "name": "Hewing Bench",
+          "description": "A Nisse crafting station: Hewing Bench (Höggvabekkr) | Function: Hew material to working size using rive (split) and hew (square) techniques | SHAPE LAW: \"Fast-hald\" square forms—stout proportions, straight boards, peg joinery, visible repairs | MATERIALS: oak, wool, leather, iron, tallow | MOTIFS: knit patterns, patched leather, iron hooks, practical storage geometry | LIGHTING: Hearth-warm, cozy soot, soft bounce light | Nordic flavor: Höggva means 'to hew' - the rhythmic bite of the bearded axe against the grain",
+          "size": "512x512",
+          "lineage": "nisse",
+          "tech_pack": "hearth",
+          "era": 1,
+          "norse_name": "Höggvabekkr"
+        },
+        {
+          "id": "joiners_bench",
+          "name": "Joiner's Bench",
+          "description": "A Nisse crafting station: Joiner's Bench (Snikkarabekkr) | Function: Give form to material through carving (Sníða), turning (Renna), bending (Sveigja), pressing (Þrýsta), and embossing (Grafning) | SHAPE LAW: \"Fast-hald\" square forms—stout proportions, straight boards, peg joinery, visible repairs | MATERIALS: oak, wool, leather, iron, tallow | MOTIFS: knit patterns, patched leather, iron hooks, practical storage geometry | LIGHTING: Hearth-warm, cozy soot, soft bounce light | Nordic flavor: Snikkar is the master joiner - one who transforms rough billets into objects of beauty",
+          "size": "512x512",
+          "lineage": "nisse",
+          "tech_pack": "hearth",
+          "era": 1,
+          "norse_name": "Snikkarabekkr"
+        },
+        {
+          "id": "mill",
+          "name": "Mill",
+          "description": "A Nisse crafting station: Mill | Function: Mechanical processing—pressing and grinding | SHAPE LAW: \"Fast-hald\" square forms—stout proportions, straight boards, peg joinery, visible repairs | MATERIALS: oak, wool, leather, iron, tallow | MOTIFS: knit patterns, patched leather, iron hooks, practical storage geometry | LIGHTING: Hearth-warm, cozy soot, soft bounce light",
+          "size": "512x512",
+          "lineage": "nisse",
+          "tech_pack": "pigment",
+          "era": 1
+        },
+        {
+          "id": "wash_basin",
+          "name": "Wash Basin",
+          "description": "A Nisse crafting station: Wash Basin | Function: Water processing—hot or cold water transforms materials | SHAPE LAW: \"Fast-hald\" square forms—stout proportions, straight boards, peg joinery, visible repairs | MATERIALS: oak, wool, leather, iron, tallow | MOTIFS: knit patterns, patched leather, iron hooks, practical storage geometry | LIGHTING: Hearth-warm, cozy soot, soft bounce light",
+          "size": "512x512",
+          "lineage": "nisse",
+          "tech_pack": "wool",
+          "era": 1
+        },
+        {
+          "id": "cauldron",
+          "name": "Cauldron",
+          "description": "A Nisse crafting station: Cauldron | Function: Heat and liquid transformations—rendering, tanning, mixing | SHAPE LAW: \"Fast-hald\" square forms—stout proportions, straight boards, peg joinery, visible repairs | MATERIALS: oak, wool, leather, iron, tallow | MOTIFS: knit patterns, patched leather, iron hooks, practical storage geometry | LIGHTING: Hearth-warm, cozy soot, soft bounce light",
+          "size": "512x512",
+          "lineage": "nisse",
+          "tech_pack": "hearth",
+          "era": 1
+        },
+        {
+          "id": "spinning_wheel",
+          "name": "Spinning Wheel",
+          "description": "A Nisse crafting station: Spinning Wheel | Function: Spin fiber into thread/spool | SHAPE LAW: \"Fast-hald\" square forms—stout proportions, straight boards, peg joinery, visible repairs | MATERIALS: oak, wool, leather, iron, tallow | MOTIFS: knit patterns, patched leather, iron hooks, practical storage geometry | LIGHTING: Hearth-warm, cozy soot, soft bounce light",
+          "size": "512x512",
+          "lineage": "nisse",
+          "tech_pack": "wool",
+          "era": 1
+        },
+        {
+          "id": "loom",
+          "name": "Loom",
+          "description": "A Nisse crafting station: Loom | Function: Weave thread into cloth | SHAPE LAW: \"Fast-hald\" square forms—stout proportions, straight boards, peg joinery, visible repairs | MATERIALS: oak, wool, leather, iron, tallow | MOTIFS: knit patterns, patched leather, iron hooks, practical storage geometry | LIGHTING: Hearth-warm, cozy soot, soft bounce light",
+          "size": "512x512",
+          "lineage": "nisse",
+          "tech_pack": "wool",
+          "era": 1
+        },
+        {
+          "id": "hackle",
+          "name": "Hackle",
+          "description": "A Nisse crafting station: Hackle | Function: Comb flax fibers to separate fine from coarse | SHAPE LAW: \"Fast-hald\" square forms—stout proportions, straight boards, peg joinery, visible repairs | MATERIALS: oak, wool, leather, iron, tallow | MOTIFS: knit patterns, patched leather, iron hooks, practical storage geometry | LIGHTING: Hearth-warm, cozy soot, soft bounce light",
+          "size": "512x512",
+          "lineage": "nisse",
+          "tech_pack": "flax",
+          "era": 2
+        },
+        {
+          "id": "twisting",
+          "name": "Twisting",
+          "description": "A Nisse crafting station: Twisting | Function: Twist fibers into cord | SHAPE LAW: \"Fast-hald\" square forms—stout proportions, straight boards, peg joinery, visible repairs | MATERIALS: oak, wool, leather, iron, tallow | MOTIFS: knit patterns, patched leather, iron hooks, practical storage geometry | LIGHTING: Hearth-warm, cozy soot, soft bounce light",
+          "size": "512x512",
+          "lineage": "nisse",
+          "tech_pack": "flax",
+          "era": 2
+        },
+        {
+          "id": "joinery_bench",
+          "name": "Joinery Bench",
+          "description": "A Nisse crafting station: Joinery Bench | Function: Join boards and panels with adhesive | SHAPE LAW: \"Fast-hald\" square forms—stout proportions, straight boards, peg joinery, visible repairs | MATERIALS: oak, wool, leather, iron, tallow | MOTIFS: knit patterns, patched leather, iron hooks, practical storage geometry | LIGHTING: Hearth-warm, cozy soot, soft bounce light",
+          "size": "512x512",
+          "lineage": "nisse",
+          "tech_pack": "framing",
+          "era": 3
+        },
+        {
+          "id": "subassembly_bench",
+          "name": "Subassembly Bench",
+          "description": "A Nisse crafting station: Subassembly Bench | Function: Pre-build modules for complex toys | SHAPE LAW: \"Fast-hald\" square forms—stout proportions, straight boards, peg joinery, visible repairs | MATERIALS: oak, wool, leather, iron, tallow | MOTIFS: knit patterns, patched leather, iron hooks, practical storage geometry | LIGHTING: Hearth-warm, cozy soot, soft bounce light",
+          "size": "512x512",
+          "lineage": "nisse",
+          "tech_pack": "subassembly",
+          "era": 3
+        },
+        {
+          "id": "assembly_bench",
+          "name": "Assembly Bench",
+          "description": "A Nisse crafting station: Assembly Bench | Function: Final toy assembly with paint application | SHAPE LAW: \"Fast-hald\" square forms—stout proportions, straight boards, peg joinery, visible repairs | MATERIALS: oak, wool, leather, iron, tallow | MOTIFS: knit patterns, patched leather, iron hooks, practical storage geometry | LIGHTING: Hearth-warm, cozy soot, soft bounce light",
+          "size": "512x512",
+          "lineage": "nisse",
+          "tech_pack": "hearth",
+          "era": 1
+        },
+        {
+          "id": "wrap_station",
+          "name": "Wrap Station",
+          "description": "A Nisse crafting station: Wrap Station | Function: Package finished toys | SHAPE LAW: \"Fast-hald\" square forms—stout proportions, straight boards, peg joinery, visible repairs | MATERIALS: oak, wool, leather, iron, tallow | MOTIFS: knit patterns, patched leather, iron hooks, practical storage geometry | LIGHTING: Hearth-warm, cozy soot, soft bounce light",
+          "size": "512x512",
+          "lineage": "nisse",
+          "tech_pack": "hearth",
+          "era": 1
+        },
+        {
+          "id": "santas_sleigh",
+          "name": "Santa's Sleigh",
+          "description": "A Nisse crafting station: Santa's Sleigh | Function: Deliver wrapped gifts | SHAPE LAW: \"Fast-hald\" square forms—stout proportions, straight boards, peg joinery, visible repairs | MATERIALS: oak, wool, leather, iron, tallow | MOTIFS: knit patterns, patched leather, iron hooks, practical storage geometry | LIGHTING: Hearth-warm, cozy soot, soft bounce light",
+          "size": "512x512",
+          "lineage": "nisse",
+          "tech_pack": "hearth",
+          "era": 1
+        },
+        {
+          "id": "reclamation_bin",
+          "name": "Reclamation Bin",
+          "description": "A Nisse crafting station: Reclamation Bin | Function: Disassemble toys and return materials to stock | SHAPE LAW: \"Fast-hald\" square forms—stout proportions, straight boards, peg joinery, visible repairs | MATERIALS: oak, wool, leather, iron, tallow | MOTIFS: knit patterns, patched leather, iron hooks, practical storage geometry | LIGHTING: Hearth-warm, cozy soot, soft bounce light",
+          "size": "512x512",
+          "lineage": "nisse",
+          "tech_pack": "hearth",
+          "era": 1
+        }
+      ]
+    },
+    "svartalfar_stations": {
+      "category_style": "Svartálfar lineage crafting station icon. Front-facing view, 512x512, clean silhouette. Geometric Dark—hard angles, riveted planes, block silhouettes. Ember low-key lighting with heavy shadows. Soot bands, verdigris hints, tar-black leather.",
+      "assets": [
+        {
+          "id": "forge",
+          "name": "Forge",
+          "description": "A Svartálfar crafting station: Forge | Function: High-heat work—metal shaping, case-hardening, tempering, and glass melting | SHAPE LAW: \"Geometric Dark\"—hard angles, riveted planes, block silhouettes, carved symbols | MATERIALS: iron, steel, charcoal, tar, stone | MOTIFS: soot bands, verdigris hints, tar-black leather, kiln-slit lighting | LIGHTING: Low-key warm ember sources with heavy shadow massing",
+          "size": "512x512",
+          "lineage": "svartalfar",
+          "tech_pack": "bog_iron",
+          "era": 4
+        },
+        {
+          "id": "bloomery",
+          "name": "Bloomery",
+          "description": "A Svartálfar crafting station: Bloomery | Function: Smelt bog iron ore into workable metal | SHAPE LAW: \"Geometric Dark\"—hard angles, riveted planes, block silhouettes, carved symbols | MATERIALS: iron, steel, charcoal, tar, stone | MOTIFS: soot bands, verdigris hints, tar-black leather, kiln-slit lighting | LIGHTING: Low-key warm ember sources with heavy shadow massing",
+          "size": "512x512",
+          "lineage": "svartalfar",
+          "tech_pack": "bog_iron",
+          "era": 4
+        },
+        {
+          "id": "anvil",
+          "name": "Anvil",
+          "description": "A Svartálfar crafting station: Anvil | Function: Cold-work iron bloom into bar stock | SHAPE LAW: \"Geometric Dark\"—hard angles, riveted planes, block silhouettes, carved symbols | MATERIALS: iron, steel, charcoal, tar, stone | MOTIFS: soot bands, verdigris hints, tar-black leather, kiln-slit lighting | LIGHTING: Low-key warm ember sources with heavy shadow massing",
+          "size": "512x512",
+          "lineage": "svartalfar",
+          "tech_pack": "bog_iron",
+          "era": 4
+        },
+        {
+          "id": "marvering_stone",
+          "name": "Marvering Stone",
+          "description": "A Svartálfar crafting station: Marvering Stone | Function: Shape hot glass on a cool stone surface | SHAPE LAW: \"Geometric Dark\"—hard angles, riveted planes, block silhouettes, carved symbols | MATERIALS: iron, steel, charcoal, tar, stone | MOTIFS: soot bands, verdigris hints, tar-black leather, kiln-slit lighting | LIGHTING: Low-key warm ember sources with heavy shadow massing",
+          "size": "512x512",
+          "lineage": "svartalfar",
+          "tech_pack": "glass",
+          "era": 4
+        },
+        {
+          "id": "clockwork_bench",
+          "name": "Clockwork Bench",
+          "description": "A Svartálfar crafting station: Clockwork Bench | Function: Assemble clockwork cores | SHAPE LAW: \"Geometric Dark\"—hard angles, riveted planes, block silhouettes, carved symbols | MATERIALS: iron, steel, charcoal, tar, stone | MOTIFS: soot bands, verdigris hints, tar-black leather, kiln-slit lighting | LIGHTING: Low-key warm ember sources with heavy shadow massing",
+          "size": "512x512",
+          "lineage": "svartalfar",
+          "tech_pack": "clockwork",
+          "era": 5
+        }
+      ]
+    },
+    "stores": {
+      "category_style": "Material store icon. Front-facing view, 512x512, clean silhouette. Each store uses its own lineage visual style (see individual descriptions). Magical/ethereal feel as stores are run by mythical creatures.",
+      "assets": [
+        {
+          "id": "ljosalfar",
+          "name": "Ljosalfar Haven",
+          "description": "A Ljósálfar crafting station: Ljosalfar Haven (Ljosalfar Hofn) | Function: Wood, resin, berries, and forest materials from the Light Elves | SHAPE LAW: Organic \"whiplash\" curves, no right angles, forms follow wood grain | MATERIALS: birch, pine, resin, berries, linen | MOTIFS: birch bark layering, resin-gold inlays, light/leaf filigree | LIGHTING: Cool daylight with warm sun accents; airy and overexposed",
+          "size": "512x512",
+          "lineage": "ljosalfar",
+          "tech_pack": "hearth",
+          "era": 1,
+          "norse_name": "Ljosalfar Hofn"
+        },
+        {
+          "id": "nisse",
+          "name": "Nisse Pantry",
+          "description": "A Nisse crafting station: Nisse Pantry (Nisse Bur) | Function: Animal products, dairy, and farm goods from the Barn Spirits | SHAPE LAW: \"Fast-hald\" square forms—stout proportions, straight boards, peg joinery, visible repairs | MATERIALS: oak, wool, leather, iron, tallow | MOTIFS: knit patterns, patched leather, iron hooks, practical storage geometry | LIGHTING: Hearth-warm, cozy soot, soft bounce light",
+          "size": "512x512",
+          "lineage": "nisse",
+          "tech_pack": "hearth",
+          "era": 1,
+          "norse_name": "Nisse Bur"
+        },
+        {
+          "id": "svartalfar",
+          "name": "Svartalfar Vault",
+          "description": "A Svartálfar crafting station: Svartalfar Vault (Svartalfar Hvelr) | Function: Earth minerals, ores, and deep materials from the Dark Elves | SHAPE LAW: \"Geometric Dark\"—hard angles, riveted planes, block silhouettes, carved symbols | MATERIALS: iron, steel, charcoal, tar, stone | MOTIFS: soot bands, verdigris hints, tar-black leather, kiln-slit lighting | LIGHTING: Low-key warm ember sources with heavy shadow massing",
+          "size": "512x512",
+          "lineage": "svartalfar",
+          "tech_pack": "distillation",
+          "era": 3,
+          "norse_name": "Svartalfar Hvelr"
+        },
+        {
+          "id": "marmennill",
+          "name": "Marmennill Sea-Larder",
+          "description": "A Marmennill crafting station: Marmennill Sea-Larder (Marmennill Sjobuor) | Function: Sea materials, fish products, and coastal resources from the Mermen | SHAPE LAW: \"Pressure-Hardened\"—smooth hydrodynamic forms, minimal protrusions, restrained spiral motifs | MATERIALS: bone, isinglass, seal leather, whale ivory, driftwood | MOTIFS: translucent skins/isinglass, bone fasteners, wet stone, waterline reflections | LIGHTING: Cold diffuse light + faint underwater glow; always damp and quiet",
+          "size": "512x512",
+          "lineage": "marmennill",
+          "tech_pack": "sea",
+          "era": 4,
+          "norse_name": "Marmennill Sjobuor"
+        }
+      ]
+    }
+  }
+}

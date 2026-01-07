@@ -1,0 +1,3146 @@
+{
+  "version": "1.0",
+  "extracted_from": "santas_nordic_workshop_gdd_v1.md",
+  "toys": {
+    "toy_id": {
+      "id": "toy_id",
+      "name": "Toy Name",
+      "tier": 1,
+      "era": 1,
+      "parts": 5,
+      "processing": [
+        {
+          "station": "Station Name",
+          "mode": "mode_name",
+          "input": "material",
+          "output": "component",
+          "qty": 1,
+          "note": "Optional note"
+        }
+      ],
+      "assembly": {
+        "inputs": [
+          "component_1",
+          "component_2",
+          "raw_material"
+        ],
+        "output": "toy_id"
+      },
+      "tech": [
+        "Tech Pack Name"
+      ],
+      "flavor_text": "Design rationale and gameplay implications"
+    },
+    "ironwood_totems": {
+      "id": "ironwood_totems",
+      "name": "Ironwood Totems",
+      "tier": 1,
+      "era": 1,
+      "parts": 2,
+      "processing": [
+        {
+          "station": "Hewing Bench",
+          "mode": "hew",
+          "input": "log (oak)",
+          "output": "set_of_blocks",
+          "note": "H\u00f6ggva: We hew the oak log down to three identical cubes using axe, measuring by eye and hand-span."
+        },
+        {
+          "station": "Cauldron",
+          "mode": "mix",
+          "input": "pine_resin + tallow",
+          "output": "resin_seal",
+          "note": "Soft seal protects corners from chipping, safe for small hands"
+        }
+      ],
+      "assembly": {
+        "inputs": [
+          "set_of_blocks",
+          "resin_seal"
+        ],
+        "output": "ironwood_totems",
+        "note": "Dip each block in warm resin_seal, wipe excess. The seal soaks into end-grain, hardens to a satin finish. Stack to dry\u2014they'll click together with satisfying weight."
+      },
+      "tech": [],
+      "flavor_text": "Every fortress begins with a single stone. A child who masters these blocks learns the first law of creation: what stands must first be stacked.",
+      "final_visual": {
+        "The Blocks": "3 identically-sized oak cubes, honey-gold with visible grain. Corners slightly softened by the resin coating.",
+        "The Finish": "Satin sheen from resin_seal\u2014not glossy, not matte. Warm to the touch.",
+        "The Weight": "Satisfyingly heavy. These are serious blocks.",
+        "The Scent": "Forest pine and beeswax warmth."
+      }
+    },
+    "sun_wheel_chaser": {
+      "id": "sun_wheel_chaser",
+      "name": "Sun-Wheel Chaser (S\u00f3lhj\u00f3l)",
+      "tier": 1,
+      "era": 1,
+      "parts": 3,
+      "processing": [
+        {
+          "station": "Hewing Bench",
+          "mode": "hew",
+          "input": "log (ash)",
+          "output": "squared_rod",
+          "note": "H\u00f6ggva: Split and square the ash log in one action. The grain must run continuous\u2014a sawn rod will snap under bending, but a hewn billet will yield to the sun's curve."
+        },
+        {
+          "station": "Cauldron",
+          "mode": "seethe",
+          "input": "squared_rod",
+          "output": "supple_rod",
+          "note": "Boil the rod in water until the lignin softens. We seethe the wood until it yields like wet leather in the hands."
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "bend",
+          "input": "supple_rod",
+          "output": "ash_hoop",
+          "note": "Sveigja: Pin the hot rod into a circular frame while steam still rises. Force it into its 'memory' before it cools."
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "stick (birch)",
+          "output": "guide_stick",
+          "note": "Sn\u00ed\u00f0a: Carve the birch to a squared grip that won't slip in a frozen mitten, leaving the natural Y-fork at the tip to cradle the hoop."
+        }
+      ],
+      "assembly": {
+        "inputs": [
+          "ash_hoop",
+          "guide_stick",
+          "sinew"
+        ],
+        "output": "sun_wheel_chaser",
+        "note": "Carve a scarf joint where the hoop ends meet so the circle remains flush. Bind with wet sinew\u2014as it dries, it shrinks and bites into the ash with a serpent's grip. The guide_stick stays separate."
+      },
+      "tech": [],
+      "flavor_text": "The Sun-Wheel is the ghost of the summer sun. By chasing it across the winter rime, the children keep the path warm for the light's return in the spring.",
+      "final_visual": {
+        "The Hoop": "Golden-grey ash, bound in a perfect circle with a seamless scarf joint and dark sinew wraps.",
+        "The Stick": "Silver birch with a squared handle and a bone-white Y-fork at the tip.",
+        "The Motion": "Balanced and swift, leaping over roots and stones as if it has a spirit of its own.",
+        "The Sound": "A soft rumble on packed snow, a clatter on frozen earth.",
+        "The Scent": "The smell of boiled wood, forest resin, and the salt of dried sinew."
+      }
+    },
+    "yule_wreath": {
+      "id": "yule_wreath",
+      "name": "Yule Wreath",
+      "tier": 1,
+      "era": 1,
+      "parts": 6,
+      "processing": [
+        {
+          "station": "Joiner's Bench",
+          "mode": "plait",
+          "input": "branch (birch) (\u00d73)",
+          "output": "wreath_base",
+          "note": "Fl\u00e9tta: Braid three green birch wands together while the sap is alive. A single bent branch is weak, but a trinity of braided birch creates a circle that will never lose its heart."
+        }
+      ],
+      "assembly": {
+        "inputs": [
+          "wreath_base",
+          "birch_bark",
+          "pine_needles",
+          "pine_resin",
+          "rowan_berry",
+          "sinew"
+        ],
+        "output": "yule_wreath",
+        "note": "Bind the braid's ends with sinew to close the circle. Tuck pine_needles into the plait for greenery. Use pine_resin as the Forest's Glue to seat the rowan_berries\u2014the blood of the earth in the snow."
+      },
+      "tech": [],
+      "flavor_text": "The wreath is a physical manifestation of the Endless Cycle. It signals the Gift-Bringer will once again fulfill the Compact, a wheel of hope until the light returns.",
+      "final_visual": {
+        "The Base": "Three intertwined birch branches forming an 8-inch ring. The pale bark shows through the greenery.",
+        "The Greenery": "Pine needles tucked throughout, still fragrant. Birch bark curls add white contrast.",
+        "The Berries": "Clusters of rowan berries\u2014bright red against the green and white, held fast by amber resin.",
+        "The Scent": "Pine and birch, with the sweet sticky note of fresh resin.",
+        "Hanging": "A loop of sinew at the top for the door."
+      }
+    },
+    "north_wind_whirler": {
+      "id": "north_wind_whirler",
+      "name": "North-Wind Whirler",
+      "tier": 1,
+      "era": 1,
+      "parts": 4,
+      "processing": [
+        {
+          "station": "Hewing Bench",
+          "mode": "hew",
+          "input": "log (maple)",
+          "output": "top_rough_out",
+          "note": "H\u00f6ggva: Hew the dense maple log into a rough octagonal blank on the H\u00f6ggvabekkr. The mass is there\u2014the body shape with its stem socket waiting to be turned."
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "turn",
+          "input": "top_rough_out",
+          "output": "top_carved",
+          "note": "Renna: Shape the spinning blank on the pole lathe (Rennubekkr) at the Snikkarabekkr. Wide at equator, tapered to needle-point, with the stem socket carved at crown."
+        },
+        {
+          "station": "Cauldron",
+          "mode": "bleach",
+          "input": "top_carved + lye + milk",
+          "output": "top_bleached",
+          "note": "Hv\u00edta: Submerge the wood in the Ketill to bleach it white. We use the action of Sj\u00f3\u00f0a (seething) to drive the milk into the grain."
+        },
+        {
+          "station": "Cauldron",
+          "mode": "mix",
+          "input": "pine_resin + tallow",
+          "output": "resin_seal",
+          "note": "Blanda: Mix the resin and fat over the fire to create a hard-wearing guard for the wood."
+        }
+      ],
+      "assembly": {
+        "inputs": [
+          "top_bleached",
+          "resin_seal"
+        ],
+        "output": "north_wind_whirler",
+        "note": "Dip the spin-tip in the warm seal. The amber resin against the bleached white body is the mark of a master Snikkari."
+      },
+      "tech": [],
+      "flavor_text": "When the whirler hums, the winter spirits are listening. Children race these across frozen lakes to see whose can outrun the setting sun.",
+      "final_visual": {
+        "The Body": "Dense maple (Hlynr), widest at the equator. Brilliant white like a frost-giant's tooth.",
+        "The Stem": "Integrated handle carved directly from the heartwood for a palm-launch.",
+        "The Tip": "A dark, glass-like amber point that bites into the ice.",
+        "The Motion": "A white blur that hums as it sleeps.",
+        "The Scent": "Cold milk, maple sap, and the sting of pine pitch."
+      }
+    },
+    "aurora_callers": {
+      "id": "aurora_callers",
+      "name": "Aurora Callers",
+      "tier": 1,
+      "era": 1,
+      "parts": 4,
+      "processing": [
+        {
+          "station": "Hewing Bench",
+          "mode": "hew",
+          "input": "log (pine)",
+          "output": "swan_family_rough_outs",
+          "note": "H\u00f6ggva: Hew the pine log into blocky rough-outs\u2014one mother swan shape, three cygnet masses. The sk\u00ed\u00f0 still holds the bark but shows the forms waiting within."
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "swan_family_rough_outs",
+          "output": "swan_family_carved",
+          "note": "Sn\u00ed\u00f0a: On the shaving horse, pull the drawknife to release the graceful curves. The mother's arched neck, the cygnets' teardrop bodies\u2014pine yields easily to the blade."
+        },
+        {
+          "station": "Cauldron",
+          "mode": "bleach",
+          "input": "swan_family_carved + lye + milk",
+          "output": "swan_family_bleached",
+          "note": "Hv\u00edta: Submerge the carved swans in lye and milk. The alkaline solution bleaches pine to frost-white while milk proteins soften the grain for a matte finish."
+        },
+        {
+          "station": "Cauldron",
+          "mode": "mix",
+          "input": "pine_resin + tallow",
+          "output": "resin_seal",
+          "note": "Final waterproof coat for bath use"
+        }
+      ],
+      "assembly": {
+        "inputs": [
+          "swan_family_bleached",
+          "resin_seal"
+        ],
+        "output": "aurora_callers",
+        "note": "Brush warm resin_seal over the bleached swan family. The seal locks in the frost-white finish and waterproofs the toys for bath play. The cygnets nest against the mother's flanks."
+      },
+      "tech": [],
+      "flavor_text": "Legend says the Northern Lights were born from swans trapped in the ice\u2014their frantic wings painting the shimmering sky. These frost-white bath toys represent the trapped swans.",
+      "final_visual": {
+        "Mother Swan": "Graceful arched neck, wings folded. Pure frost-white from the lye-milk soak with a subtle amber sheen from the resin seal.",
+        "The Cygnets": "Three small teardrop shapes with upturned heads. They bob around the mother in the water.",
+        "The Finish": "Matte white under glossy seal. Waterproof\u2014these are bath toys.",
+        "In Water": "They float upright, the pine's natural buoyancy keeping them stable. Push one down and it pops back up.",
+        "The Scent": "Pine and resin\u2014the forest captured in the bath."
+      }
+    },
+    "frost_voice_chime": {
+      "id": "frost_voice_chime",
+      "name": "Frost-Voice Chime",
+      "tier": 1,
+      "era": 1,
+      "parts": 5,
+      "processing": [
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "log (birch)",
+          "output": "tuned_bars",
+          "note": "Birch is a resonant tonewood; five bars carved to graduated lengths, notched underneath to tune each pitch"
+        },
+        {
+          "station": "Hewing Bench",
+          "mode": "rive",
+          "input": "log (pine)",
+          "output": "sound_box",
+          "note": "Pine rived into a shallow trough\u2014the hollow amplifies and warms the tone"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "mix",
+          "input": "lye + tallow",
+          "output": "lye_soap",
+          "note": "Thin coating seals the bars without dampening vibration"
+        }
+      ],
+      "assembly": {
+        "inputs": [
+          "tuned_bars",
+          "sound_box",
+          "sinew",
+          "birch_bark",
+          "lye_soap"
+        ],
+        "output": "frost_voice_chime",
+        "note": "Lay birch_bark strips across the sound_box as cushioning rails\u2014this lets bars ring freely. Rest tuned_bars across the rails, spacing evenly. Loop sinew loosely through each bar's center notch to keep them in place without binding. Rub lye_soap lightly over the bars' striking surfaces. A small birch stick serves as the mallet."
+      },
+      "tech": [],
+      "flavor_text": "The sound of cracking ice, captured in wood. The children play songs that keep the darkness at bay, each note rings with defiance against the longest night.",
+      "final_visual": {
+        "The Bars": "Five birch bars, pale and smooth, arranged shortest to longest. Each has a subtle notch underneath where the pitch was tuned.",
+        "The Box": "Pine sound box, open-topped trough. The grain runs lengthwise to direct the sound upward.",
+        "The Rails": "Birch bark strips cushion the bars, letting them vibrate freely.",
+        "The Mallet": "A simple birch stick, included. Rounded tip for a soft strike.",
+        "The Sound": "Clear, bell-like tones. The pentatonic scale\u2014no wrong notes, only winter songs."
+      }
+    },
+    "light_bringer_candle": {
+      "id": "light_bringer_candle",
+      "name": "Light-Bringer Candle",
+      "tier": 2,
+      "era": 1,
+      "parts": 6,
+      "processing": [
+        {
+          "station": "Hewing Bench",
+          "mode": "hew",
+          "input": "log (oak)",
+          "output": "pedestal_blank",
+          "note": "H\u00f6ggva: On the H\u00f6ggvabekkr, rive the oak to find the straight heart-grain and hew it into a heavy, squared block. This ensures the base will never crack from the candle's heat."
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "pedestal_blank",
+          "output": "oak_pedestal",
+          "note": "Sn\u00ed\u00f0a: At the Snikkarabekkr, carve the deep socket to hold the tallow and a wide, steady foot. Etch a shallow groove at the base to cradle the vow-scroll."
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "branch (birch)",
+          "output": "wick_line",
+          "note": "Sn\u00ed\u00f0a: Carefully peel the inner bast fibers from the birch. Twist these into a tight cord and press them on the bench; this organic line drinks the fat better than any sinew."
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "emboss",
+          "input": "birch_bark",
+          "output": "etched_vow_scroll",
+          "note": "Grafning: Score the ancient vow into the silver skin of the Bj\u00f6rk: 'At the darkest time, bring light.' The bark preserves the oath even as the candle burns."
+        },
+        {
+          "station": "Mill",
+          "mode": "grind",
+          "input": "juniper_berry",
+          "output": "cleansing_dust",
+          "note": "Mala: Grind the blue berries in the Mylna to a fine powder. This dust purifies the hall and fills the air with the scent of the high mountains."
+        },
+        {
+          "station": "Cauldron",
+          "mode": "seethe",
+          "input": "tallow + cleansing_dust",
+          "output": "scented_fat",
+          "note": "Sj\u00f3\u00f0a: Seethe the tallow in the Ketill and fold in the juniper dust. The heat marries the mountain scent to the fat, creating a slow-burning incense."
+        }
+      ],
+      "assembly": {
+        "inputs": [
+          "oak_pedestal",
+          "scented_fat",
+          "wick_line",
+          "etched_vow_scroll",
+          "pine_needles"
+        ],
+        "output": "light_bringer_candle",
+        "note": "Blanda: Suspend the birch wick in the oak socket and pour the fat in slow watches. Press pine needles into the soft top for forest scent. Tuck the vow into the oak's base. Read aloud before lighting."
+      },
+      "tech": [],
+      "flavor_text": "At the darkest time, bring light. At the coldest time, bring warmth. At the hungriest time, bring gifts. A beacon of juniper and heart-oak to guide the Gift-Bringer through the January rime.",
+      "final_visual": {
+        "The Pedestal": "Heavy, dark Oak with a hand-carved soul. It sits with the weight of tradition.",
+        "The Candle": "A cream-colored pillar of tallow, textured with green needles like spears in the snow.",
+        "The Wick": "A twisted birch-bast cord that burns with a tall, steady, and clean golden flame.",
+        "The Scent": "Sharp juniper, fresh pine, and the deep, earthy honey-smell of rendered tallow.",
+        "The Ritual": "As the flame melts the fat, the room is cleansed. The birch scroll at the base reminds all that the cycle of light always returns."
+      }
+    },
+    "nisse_offering_basket": {
+      "id": "nisse_offering_basket",
+      "name": "Nisse Offering Basket",
+      "tier": 2,
+      "era": 1,
+      "parts": 5,
+      "processing": [
+        {
+          "station": "Mill",
+          "mode": "grind",
+          "input": "rowan_berry",
+          "output": "orange_pigment",
+          "note": "Rowan berries grind to a warm orange powder\u2014the Nisse's favorite color"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "mix",
+          "input": "orange_pigment + tallow + lye",
+          "output": "orange_soap",
+          "note": "Cheerful orange soap, fragrant and festive. A small luxury."
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "fold_and_stitch",
+          "input": "birch_bark + sinew",
+          "output": "small_basket",
+          "note": "Falda ok Sauma: Soften bark by hearth, fold into box, pierce corners with bone awl, stitch with wet sinew. As sinew dries, basket becomes drum-tight."
+        }
+      ],
+      "assembly": {
+        "inputs": [
+          "small_basket",
+          "orange_soap",
+          "pine_needles",
+          "lingonberry"
+        ],
+        "output": "nisse_offering_basket",
+        "note": "Line the basket bottom with pine_needles for cushioning and scent. Nestle the orange_soap bar in the center. Scatter lingonberries around it\u2014bright red against the white bark. The basket is ready to leave by the hearth on the longest night."
+      },
+      "tech": [
+        "Pigment"
+      ],
+      "flavor_text": "Children learn to leave a basket to the household Nisse each winter. The old bargain is simple: small gifts ensure small blessings. Neglect breeds mischief.",
+      "final_visual": {
+        "The Basket": "Small birch bark container, about palm-sized. White bark with visible lenticels, corners neatly stitched.",
+        "The Soap": "Orange bar nestled in pine needles. Carved with a simple Nisse face or rune.",
+        "The Berries": "Lingonberries scattered like rubies around the soap.",
+        "The Bedding": "Pine needles line the bottom\u2014green against white bark.",
+        "The Scent": "Pine, rowan, and the clean sharp smell of lye soap.",
+        "The Tradition": "Left by the hearth on Yule Eve. Gone by morning, if the Nisse is pleased."
+      }
+    },
+    "grand_lineage_chess_set": {
+      "id": "grand_lineage_chess_set",
+      "name": "Grand-Lineage Chess Set",
+      "tier": 1,
+      "era": 1,
+      "parts": 7,
+      "processing": [
+        {
+          "station": "Hewing Bench",
+          "mode": "hew",
+          "input": "log (birch) + log (oak)",
+          "output": "chess_billets",
+          "note": "H\u00f6ggva: On the H\u00f6ggvabekkr, hew the logs into long, squared-off bars. It is far easier to turn a square than a round log, and removing the bark protects the lathe-cord from grit."
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "turn",
+          "input": "chess_billets",
+          "output": "chess_pieces_raw",
+          "note": "Renna: On the Rennubekkr, spin the squared billets into the 32 pieces of the armies. We turn them in 'strings' (multiple pieces on one bar) before cutting them apart."
+        },
+        {
+          "station": "Hewing Bench",
+          "mode": "hew",
+          "input": "log (birch) + log (oak)",
+          "output": "board_planks",
+          "note": "H\u00f6ggva: Hew thin, flat planks from both woods. These must be planed perfectly flat to ensure the battlefield is level."
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "join",
+          "input": "board_planks",
+          "output": "chess_board",
+          "note": "\u00der\u00fdsta: Cut the planks into 64 squares and join them edge-to-edge. Use the Press method with wedges to lock the birch and oak into their checkered marriage."
+        },
+        {
+          "station": "Cauldron",
+          "mode": "mix",
+          "input": "milk + birch_ash",
+          "output": "whitewash",
+          "note": "Blanda: Seethe (Sj\u00f3\u00f0a) the milk and ash into a thick kalk-white. This is the 'Armor of Light' for the birch army."
+        },
+        {
+          "station": "Cauldron",
+          "mode": "mix",
+          "input": "pine_resin + tallow",
+          "output": "resin_seal",
+          "note": "Blanda: Our amber Run-lakk. It binds the grain of the board so it does not pull apart when the hall grows dry in winter."
+        }
+      ],
+      "assembly": {
+        "inputs": [
+          "chess_board",
+          "chess_pieces_raw",
+          "whitewash",
+          "resin_seal"
+        ],
+        "output": "grand_lineage_chess_set",
+        "note": "Whitewash the birch army (Hv\u00edta-her). Seal the entire battlefield and all warriors in warm resin. The oak warriors (Myrkr-her) will glow like honey against the chalky white of their enemies."
+      },
+      "tech": [],
+      "flavor_text": "Light against shadow, patience against cunning. A board for kings, carved by the hands of a master who respects the grain.",
+      "final_visual": {
+        "The Board": "A heavy checkered slab of birch and oak, encased in a thick oak frame. No gap can be felt between the squares.",
+        "The Armies": "32 hand-turned pieces. The Birch is bone-white; the Oak is deep, textured brown. They 'clack' with authority when moved.",
+        "The Finish": "A rich, amber satin glow. It smells of the deep forest and the clean hearth.",
+        "The Heirloom": "This set will outlast your hall. It is wood made immortal by the joiner's skill."
+      }
+    },
+    "wool_warden_effigy": {
+      "id": "wool_warden_effigy",
+      "name": "Wool-Warden Effigy",
+      "tier": 2,
+      "era": 1,
+      "parts": 3,
+      "processing": [
+        {
+          "station": "Wash Basin",
+          "mode": "felt",
+          "input": "wool_fiber",
+          "output": "wool_felt",
+          "note": "Hot water and agitation mat the fibers into thick, seamless felt\u2014no edges to fray, no seams to split"
+        },
+        {
+          "station": "Spinning Wheel",
+          "mode": "spin",
+          "input": "wool_fiber",
+          "output": "wool_spool",
+          "note": "Strong thread for stitching features and reinforcing stress points"
+        }
+      ],
+      "assembly": {
+        "inputs": [
+          "wool_felt",
+          "wool_fiber",
+          "wool_spool"
+        ],
+        "output": "wool_warden_effigy",
+        "note": "Cut two body shapes from wool_felt\u2014front and back. Stitch edges with wool_spool thread, leaving a gap. Stuff firmly with loose wool_fiber until the figure holds its shape. Close the gap. Add simple stitched features: two dots for eyes, a line for mouth. The face should be kind but watchful."
+      },
+      "tech": [
+        "Wool"
+      ],
+      "flavor_text": "A small guardian for small sleepers. Place it in the cradle and the winter spirits will pass by. Generations of children have clutched these through fever and nightmare alike.",
+      "final_visual": {
+        "The Shape": "Simple humanoid form, about 6 inches tall. Round head, stubby arms, no legs\u2014a swaddled figure.",
+        "The Material": "Cream-colored wool felt, soft but dense. Visible fiber texture.",
+        "The Face": "Two dark stitched dots for eyes, a gentle curved line for mouth. Watching, not staring.",
+        "The Stuffing": "Firmly packed wool_fiber inside\u2014squeezable but holds its shape.",
+        "The Feel": "Warm even when cold. Soft enough for a sleeping child's grip.",
+        "The Wear": "Meant to be loved hard. Edges soften with use, not unravel."
+      }
+    },
+    "great_bear_sentry": {
+      "id": "great_bear_sentry",
+      "name": "Great-Bear Sentry",
+      "tier": 2,
+      "era": 1,
+      "parts": 3,
+      "processing": [
+        {
+          "station": "Spinning Wheel",
+          "mode": "spin",
+          "input": "wool_fiber",
+          "output": "wool_spool",
+          "note": "Strong thread for seams that must survive years of hugging"
+        },
+        {
+          "station": "Loom",
+          "mode": "weave",
+          "input": "wool_spool (\u00d73)",
+          "output": "wool_fabric",
+          "note": "Dense plain-weave fabric\u2014sturdy shell that won't tear or pill"
+        }
+      ],
+      "assembly": {
+        "inputs": [
+          "wool_fabric",
+          "wool_fiber",
+          "wool_spool"
+        ],
+        "output": "great_bear_sentry",
+        "note": "Cut bear pattern from wool_fabric: body (\u00d72), head (\u00d72), ears (\u00d74), arms (\u00d74), legs (\u00d74). Stitch pieces inside-out, then flip. Stuff each limb with wool_fiber before attaching to body. Stuff body and head firmly. Attach head last. Embroider simple eyes and nose with dark wool_spool. Leave seams visible\u2014this is honest craft, not factory perfection."
+      },
+      "tech": [
+        "Wool"
+      ],
+      "flavor_text": "Set him at the foot of the bed and nothing will disturb your sleep. The great bear watches through the night, soaking up bad dreams and breathing out warmth.",
+      "final_visual": {
+        "The Shape": "Classic teddy bear silhouette, about 10 inches seated. Round belly, stubby limbs, circular ears.",
+        "The Fabric": "Cream or grey wool_fabric with visible weave texture. Not plush\u2014this is woven wool, sturdy and honest.",
+        "The Face": "Embroidered features: two small dark eyes, triangular nose, simple mouth line. Expression is calm, watchful.",
+        "The Joints": "Arms and legs are attached but not articulated\u2014the bear sits naturally, stands with support.",
+        "The Weight": "Satisfyingly heavy from dense wool_fiber stuffing. A solid presence.",
+        "The Scent": "Clean wool\u2014lanolin and warmth."
+      }
+    },
+    "rune_singer_blocks": {
+      "id": "rune_singer_blocks",
+      "name": "Rune-Singer Blocks",
+      "tier": 2,
+      "era": 1,
+      "parts": 3,
+      "processing": [
+        {
+          "station": "Hewing Bench",
+          "mode": "hew",
+          "input": "log (oak)",
+          "output": "set_of_blocks (oak)",
+          "note": "H\u00f6ggva: Hew oak log into identical cubes; each face ready for carving"
+        },
+        {
+          "station": "Mill",
+          "mode": "grind",
+          "input": "rowan_berry",
+          "output": "orange_pigment",
+          "note": "Rowan orange\u2014the color of firelight and protection"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "mix",
+          "input": "orange_pigment + tallow",
+          "output": "orange_tallow_raw",
+          "note": "Vibrant tallow paint that soaks into carved grooves"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "mix",
+          "input": "pine_resin + tallow",
+          "output": "resin_seal",
+          "note": "Protective seal that hardens the painted runes"
+        }
+      ],
+      "assembly": {
+        "inputs": [
+          "set_of_blocks (oak)",
+          "orange_tallow_raw",
+          "resin_seal"
+        ],
+        "output": "rune_singer_blocks",
+        "note": "Carve a different Elder Futhark rune into each block face (6 faces \u00d7 multiple blocks = full alphabet). Fill carved grooves with orange_tallow_raw\u2014wipe excess, leaving paint only in the carved lines. Seal all surfaces with resin_seal. The orange runes glow against honey-gold oak. Children trace the shapes with fingers before they know the sounds."
+      },
+      "tech": [
+        "Pigment"
+      ],
+      "flavor_text": "Before a child can speak, they must learn to stack. Before they can read, they must learn the runes. These blocks carry the first marks\u2014the shapes that bind thought to memory.",
+      "final_visual": {
+        "The Blocks": "Oak cubes, honey-gold with tight grain. Heavier than they look.",
+        "The Runes": "Each face carved with a single Elder Futhark rune. Orange paint fills the grooves\u2014the symbols pop against the wood.",
+        "The Set": "24 blocks for the full Elder Futhark, plus 6 blanks for building.",
+        "The Finish": "Resin seal gives a satin sheen. The runes are protected but tactile\u2014small fingers trace them naturally.",
+        "The Stack": "These are building blocks first, alphabet second. Towers and walls, then words.",
+        "The Sound": "Solid oak clicks when stacked. Satisfying clatter when they fall."
+      }
+    },
+    "borealis_birds": {
+      "id": "borealis_birds",
+      "name": "Borealis Birds",
+      "tier": 2,
+      "era": 1,
+      "parts": 7,
+      "processing": [
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "log (pine)",
+          "output": "swan_body",
+          "note": "Pine floats naturally; mother swan carved with graceful neck and hollow belly for stability"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "log (pine)",
+          "output": "cygnet_bodies",
+          "note": "Three small cygnets\u2014simple teardrop shapes that bob upright in water"
+        },
+        {
+          "station": "Mill",
+          "mode": "grind",
+          "input": "birch_ash",
+          "output": "white_pigment",
+          "note": "Pure white base from birch ash"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "mix",
+          "input": "white_pigment + tallow",
+          "output": "white_tallow_raw",
+          "note": "Opaque white base coat\u2014the snow beneath the aurora"
+        },
+        {
+          "station": "Mill",
+          "mode": "grind",
+          "input": "rowan_berry",
+          "output": "orange_pigment",
+          "note": "Warm orange from rowan\u2014the fire curtains of the aurora"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "mix",
+          "input": "orange_pigment + tallow",
+          "output": "orange_tallow_raw",
+          "note": "Aurora fire paint\u2014applied in streaks over white"
+        },
+        {
+          "station": "Mill",
+          "mode": "grind",
+          "input": "juniper_berry",
+          "output": "blue_pigment",
+          "note": "Cool blue from juniper\u2014the shimmer between the flames"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "mix",
+          "input": "blue_pigment + tallow",
+          "output": "blue_tallow_raw",
+          "note": "Aurora shimmer paint\u2014blended into orange edges"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "mix",
+          "input": "pine_resin + tallow",
+          "output": "resin_seal",
+          "note": "Final waterproof coat for bath use"
+        }
+      ],
+      "assembly": {
+        "inputs": [
+          "swan_body",
+          "cygnet_bodies",
+          "white_tallow_raw",
+          "orange_tallow_raw",
+          "blue_tallow_raw",
+          "resin_seal"
+        ],
+        "output": "borealis_birds",
+        "note": "Base coat all bodies in white_tallow_raw\u2014two coats for full opacity. While tacky, streak orange_tallow_raw across wings and backs in sweeping arcs. Blend blue_tallow_raw into the orange edges while wet, creating the aurora's characteristic color-dance. Let dry completely. Seal everything with resin_seal for waterproofing. The mother's wings get the most color; cygnets are mostly white with hints of color."
+      },
+      "tech": [
+        "Pigment"
+      ],
+      "flavor_text": "The swans that escaped the ice carry the dancing sky on their feathers forever. White base, orange fire, blue shimmer\u2014when children play with these in the bath, the aurora follows.",
+      "final_visual": {
+        "Mother Swan": "Graceful arched neck, wings suggested by carved ridges. White base with dramatic orange and blue aurora streaks across the back and wings.",
+        "The Cygnets": "Three small teardrops with upturned heads. Mostly white with subtle aurora hints\u2014they haven't earned their full colors yet.",
+        "The Colors": "White snow-base, orange fire-streaks, blue shimmer at the edges. The aurora captured in paint.",
+        "The Finish": "Glossy from resin_seal. Waterproof and bath-ready.",
+        "In Water": "They float upright, pine's buoyancy keeping them stable. The colors dance on the water's surface.",
+        "The Set": "Mother and three cygnets. They cluster together naturally when floating."
+      }
+    },
+    "rag_doll": {
+      "id": "rag_doll",
+      "name": "Rag Doll",
+      "tier": 2,
+      "era": 2,
+      "parts": 3,
+      "processing": [
+        {
+          "station": "Hackle",
+          "input": "scutched_flax",
+          "output": "line_flax + tow",
+          "note": "Metal teeth comb retted flax; long line_flax for thread, short tow for stuffing"
+        },
+        {
+          "station": "Spinning Wheel",
+          "mode": "spin",
+          "input": "line_flax",
+          "output": "linen_spool",
+          "note": "Fine linen thread\u2014stronger than wool, smoother to the touch"
+        },
+        {
+          "station": "Loom",
+          "mode": "weave",
+          "input": "linen_spool (\u00d73)",
+          "output": "linen_fabric",
+          "note": "Plain weave linen\u2014cool, crisp, durable"
+        }
+      ],
+      "assembly": {
+        "inputs": [
+          "linen_fabric",
+          "stuffing",
+          "linen_spool"
+        ],
+        "output": "rag_doll",
+        "note": "Cut simple body shape from linen_fabric\u2014head, torso, and limbs as one piece (\u00d72). Stitch edges with linen_spool, leaving gap. Stuff with tow (the hackle byproduct) for authentic rag-doll softness. Close gap. Embroider simple face: two dots, curved smile. Hair is loose tow strands stitched to scalp. No fancy clothes\u2014the linen itself is the beauty."
+      },
+      "tech": [
+        "Flax"
+      ],
+      "flavor_text": "Woven from the first flax of summer, stuffed with the chaff of the harvest. She carries the warmth of the growing season into the frozen months.",
+      "final_visual": {
+        "The Shape": "Simple humanoid form, about 8 inches tall. Arms and legs extend from a single body piece\u2014no separate limbs.",
+        "The Fabric": "Natural linen\u2014pale cream with subtle texture. Cool to the touch.",
+        "The Face": "Two embroidered dots for eyes, a gentle curved smile. Simple and timeless.",
+        "The Hair": "Loose tow fibers stitched to the head\u2014straw-gold, slightly wild.",
+        "The Stuffing": "Tow chaff inside\u2014soft but with body. She bends but holds her shape.",
+        "The Feel": "Cool linen exterior, giving softness within. Lighter than wool dolls."
+      }
+    },
+    "sun_whirler": {
+      "id": "sun_whirler",
+      "name": "Sun-Whirler",
+      "tier": 2,
+      "era": 2,
+      "parts": 4,
+      "processing": [
+        {
+          "station": "Joiner's Bench",
+          "mode": "turn",
+          "input": "log (oak)",
+          "output": "heavy_spinner_disc",
+          "note": "Dense oak disc, about 4 inches diameter\u2014the mass stores momentum"
+        },
+        {
+          "station": "Hackle",
+          "input": "scutched_flax",
+          "output": "line_flax + tow",
+          "note": "Long fibers separated for cord-making"
+        },
+        {
+          "station": "Twisting",
+          "input": "line_flax",
+          "output": "linen_cord",
+          "note": "Strong twisted cord that won't snap under spinning tension"
+        }
+      ],
+      "assembly": {
+        "inputs": [
+          "heavy_spinner_disc",
+          "linen_cord",
+          "tallow",
+          "rowan_berry"
+        ],
+        "output": "sun_whirler",
+        "note": "Drill two holes near disc center. Thread linen_cord through both holes, tie ends to form a loop. Rub tallow into the cord holes to prevent wear. Press crushed rowan_berry into decorative grooves on the disc face\u2014orange sun-rays against oak. To play: loop cord around fingers, wind the disc, pull hands apart rhythmically. The disc spins and hums."
+      },
+      "tech": [
+        "Flax"
+      ],
+      "flavor_text": "Pull the cord and the disc sings. The faster it spins, the louder it calls. Children spin these during the darkest days to remind the sky what warmth sounds like.",
+      "final_visual": {
+        "The Disc": "Heavy oak circle, 4 inches diameter. Decorative grooves radiate from center like sun rays, stained orange with rowan.",
+        "The Cord": "Natural linen loop, about 2 feet total. Twisted tight for strength.",
+        "The Holes": "Two small holes near center, tallow-smoothed to prevent cord wear.",
+        "The Motion": "Pull-release rhythm makes the disc spin and reverse. At speed, it blurs into a golden sun.",
+        "The Sound": "A rising hum that changes pitch with speed\u2014the voice of the returning light.",
+        "The Feel": "Satisfying tension in the cord, gyroscopic pull from the spinning disc."
+      }
+    },
+    "antler_clacker": {
+      "id": "antler_clacker",
+      "name": "Antler Clacker",
+      "tier": 2,
+      "era": 2,
+      "parts": 5,
+      "processing": [
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "antler",
+          "output": "antler_y_frame",
+          "note": "Natural forked tine trimmed to a handle with two arms\u2014antler's dense structure amplifies sound"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "bone",
+          "output": "bone_disc",
+          "qty": 4,
+          "note": "Flat bone discs with center holes\u2014two pairs that clack against each other"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "mix",
+          "input": "pine_resin + tallow",
+          "output": "resin_seal",
+          "note": "Seals sinew knots to prevent unraveling"
+        }
+      ],
+      "assembly": {
+        "inputs": [
+          "antler_y_frame",
+          "bone_disc (\u00d74)",
+          "sinew",
+          "resin_seal"
+        ],
+        "output": "antler_clacker",
+        "note": "Thread sinew through each bone_disc pair, tie to the antler fork arms\u2014two discs per arm, spaced to clack against each other. Dab resin_seal on all knots. When shaken, the disc pairs strike together, then strike the antler arms. The rhythm mimics galloping hooves."
+      },
+      "tech": [
+        "Bone"
+      ],
+      "flavor_text": "The clatter of bones on antler mimics the sound of reindeer hooves on frozen ground. Shake it during the longest night, and the Gift-Bringer's sleigh will always find your home.",
+      "final_visual": {
+        "The Frame": "Natural antler fork, cream-white with subtle grain. Handle is the main beam, two tines form the arms.",
+        "The Discs": "Four bone circles, slightly dished, strung in pairs. Polished smooth from handling.",
+        "The Stringing": "Sinew loops connect discs to antler arms, sealed with amber resin.",
+        "The Sound": "Sharp clatter of bone-on-bone, deeper thunk when discs hit antler. Rhythmic when shaken properly.",
+        "The Motion": "Grip handle, shake side-to-side. The discs swing and strike in syncopated rhythm.",
+        "The Feel": "Light but solid. The antler handle is warm and smooth."
+      }
+    },
+    "fortunes_bones": {
+      "id": "fortunes_bones",
+      "name": "Fortune's Bones",
+      "tier": 2,
+      "era": 2,
+      "parts": 6,
+      "processing": [
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "bone",
+          "output": "bone_dice",
+          "qty": 6,
+          "note": "Six bone cubes carved from dense leg bone\u2014each face marked with runes 1-6"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "log (birch)",
+          "output": "throwing_cup",
+          "note": "Hollowed birch cylinder, palm-sized\u2014the dice rattle satisfyingly inside"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "bone",
+          "output": "score_peg",
+          "qty": 10,
+          "note": "Small bone pegs for tracking wagers and scores"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "fold_and_stitch",
+          "input": "birch_bark + sinew",
+          "output": "dice_pouch",
+          "note": "Falda ok Sauma: Fold bark into drawstring pouch, stitch with sinew to keep the set together"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "mix",
+          "input": "pine_resin + tallow",
+          "output": "resin_seal",
+          "note": "Seals rune marks and protects bone surfaces"
+        }
+      ],
+      "assembly": {
+        "inputs": [
+          "bone_dice (\u00d76)",
+          "throwing_cup",
+          "score_peg (\u00d710)",
+          "dice_pouch",
+          "resin_seal"
+        ],
+        "output": "fortunes_bones",
+        "note": "Carve rune numerals into each die face, fill marks with dark ash for visibility, seal with resin_seal. The cup's interior is left rough for good dice tumbling. Score_pegs store in small loops inside the pouch. Everything nests: dice in cup, cup and pegs in pouch. A complete game in a palm-sized package."
+      },
+      "tech": [
+        "Bone"
+      ],
+      "flavor_text": "The V\u00f6lva cast these to read the will of the gods. Children cast them to win each other's desserts. Shake the cup, spill the bones, and let fate decide.",
+      "final_visual": {
+        "The Dice": "Six bone cubes, cream-white with dark rune numerals. Slightly irregular\u2014hand-carved, not factory-perfect.",
+        "The Cup": "Birch cylinder, open at top, palm-sized. Pale bark exterior, smooth interior.",
+        "The Pegs": "Ten small bone pins, pointed at one end. Used to track scores in soft wood or earth.",
+        "The Pouch": "Birch bark folded into a drawstring bag, sinew closure. Everything fits inside.",
+        "The Sound": "Sharp rattle of bone on wood when shaking. Satisfying clatter when dice spill.",
+        "The Ritual": "Shake the cup. Slam it down. Lift to reveal fate."
+      }
+    },
+    "tale_weaver_set": {
+      "id": "tale_weaver_set",
+      "name": "Tale-Weaver's Set",
+      "tier": 2,
+      "era": 2,
+      "parts": 5,
+      "processing": [
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "log (ash)",
+          "output": "ash_blade",
+          "note": "Ash flexes on impact\u2014safe for play-fighting. Carved with fuller groove for authenticity."
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "board (birch)",
+          "output": "scabbard_shell",
+          "note": "Two birch halves hollowed to fit the blade"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "tan",
+          "input": "hide + birch_bark + lye",
+          "output": "leather",
+          "note": "Sturdy leather for scabbard covering and belt"
+        },
+        {
+          "station": "Hewing Bench",
+          "mode": "cut",
+          "input": "leather",
+          "output": "leather_hangers",
+          "note": "Belt loop and throat strap for the scabbard"
+        }
+      ],
+      "assembly": {
+        "inputs": [
+          "ash_blade",
+          "scabbard_shell",
+          "leather_hangers",
+          "leather",
+          "sinew"
+        ],
+        "output": "tale_weaver_set",
+        "note": "Glue scabbard halves together with hide_glue, wrap in leather for a professional finish. Attach leather_hangers for belt carry. The blade should slide in and out smoothly with a satisfying 'shick.' Wrap the blade handle in leather strips, secured with sinew. The crossguard is carved integral to the blade\u2014no metal needed."
+      },
+      "tech": [
+        "Hide"
+      ],
+      "flavor_text": "Every saga needs a hero, and every hero needs a blade. This set transforms the nursery into Valhalla, the woodpile into a dragon's hoard.",
+      "final_visual": {
+        "The Blade": "Pale ash sword, about 20 inches. Viking-style profile with gentle taper. Fuller groove carved down the flat. Rounded edges\u2014safe but authentic.",
+        "The Handle": "Leather-wrapped grip, crossguard carved from the same ash blank. Pommel is a simple dome.",
+        "The Scabbard": "Birch core wrapped in brown leather. Brass-colored birch bark accent at throat.",
+        "The Carry": "Leather belt loop and strap. Hangs at the hip, saga-ready.",
+        "The Draw": "Smooth slide with a satisfying 'shick' as blade clears scabbard.",
+        "The Weight": "Light enough for a child, substantial enough to feel heroic."
+      }
+    },
+    "jarl_shield_plaque": {
+      "id": "jarl_shield_plaque",
+      "name": "Jarl's Shield-Plaque",
+      "tier": 2,
+      "era": 2,
+      "parts": 6,
+      "processing": [
+        {
+          "station": "Hewing Bench",
+          "mode": "rive",
+          "input": "log (oak)",
+          "output": "shield_backing",
+          "note": "Oak planks edge-joined into a round\u2014authentic construction"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "tan",
+          "input": "hide + birch_bark + lye",
+          "output": "leather",
+          "note": "Leather facing for the shield front"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "render",
+          "input": "hide + sinew",
+          "output": "hide_glue",
+          "note": "G\u00e5rd-L\u00edm: the binder that makes distemper paint"
+        },
+        {
+          "station": "Mill",
+          "mode": "grind",
+          "input": "juniper_berry",
+          "output": "blue_pigment",
+          "note": "Deep blue from juniper"
+        },
+        {
+          "station": "Mill",
+          "mode": "grind",
+          "input": "lingonberry",
+          "output": "crimson_pigment",
+          "note": "Blood red from lingonberry"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "mix",
+          "input": "blue_pigment + crimson_pigment + hide_glue",
+          "output": "purple_distemper",
+          "note": "Royal purple 'Rau\u00f0bl\u00e1r'\u2014mixed blue and crimson in hide_glue binder"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "mix",
+          "input": "pine_resin + tallow",
+          "output": "resin_seal",
+          "note": "Protective topcoat"
+        }
+      ],
+      "assembly": {
+        "inputs": [
+          "shield_backing",
+          "leather",
+          "purple_distemper",
+          "resin_seal",
+          "sinew"
+        ],
+        "output": "jarl_shield_plaque",
+        "note": "Stretch leather over shield_backing, secure at back with sinew lacing through drilled holes. Paint the leather face with purple_distemper\u2014the velvety finish drinks the pigment. Add a simple rune or beast design in natural leather (masked before painting). Seal with resin_seal for protection. Attach sinew loop at back for wall hanging. This is display art, not a play shield."
+      },
+      "tech": [
+        "Hide",
+        "Pigment"
+      ],
+      "flavor_text": "A wall-gift worthy of a chieftain's hall. The purple of 'Rau\u00f0bl\u00e1r' marks this as a treasure beyond price. Hang it with pride where the firelight can find it.",
+      "final_visual": {
+        "The Shape": "Round shield form, about 12 inches diameter. Oak backing, leather face.",
+        "The Color": "Deep royal purple\u2014'Rau\u00f0bl\u00e1r'\u2014velvety matte from the distemper. The color of kings.",
+        "The Design": "Simple rune or beast motif in natural leather, revealed by masking before painting.",
+        "The Edge": "Leather wraps around to the back, secured with visible sinew stitching.",
+        "The Finish": "Resin seal gives subtle sheen without destroying the velvety purple.",
+        "The Hanging": "Sinew loop at back. Meant to catch firelight on a dark winter wall."
+      }
+    },
+    "wool_walker_bunny": {
+      "id": "wool_walker_bunny",
+      "name": "Wool-Walker Bunny",
+      "tier": 3,
+      "era": 2,
+      "parts": 6,
+      "processing": [
+        {
+          "station": "Spinning Wheel",
+          "mode": "spin",
+          "input": "wool_fiber",
+          "output": "wool_spool",
+          "note": "Strong thread for seams and jointing"
+        },
+        {
+          "station": "Loom",
+          "mode": "weave",
+          "input": "wool_spool (\u00d73)",
+          "output": "wool_fabric",
+          "note": "Dense weave for durable shell"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "bone",
+          "output": "bone_toggle",
+          "qty": 2,
+          "note": "Internal anchors sewn into ear bases\u2014allows ears to pose and hold position"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "bone",
+          "output": "bone_button",
+          "note": "Decorative nose button"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "bone",
+          "output": "bone_eyes",
+          "note": "Polished bone discs with carved pupils"
+        }
+      ],
+      "assembly": {
+        "inputs": [
+          "wool_fabric",
+          "wool_fiber",
+          "bone_toggle (\u00d72)",
+          "bone_button",
+          "bone_eyes",
+          "wool_spool",
+          "tallow"
+        ],
+        "output": "wool_walker_bunny",
+        "note": "Cut bunny pattern from wool_fabric: body (\u00d72), ears (\u00d74), arms (\u00d74), legs (\u00d74). Sew ear pieces around bone_toggles\u2014this lets ears bend and hold poses. Stitch limbs, stuff with wool_fiber, attach to body. Stuff body firmly. Sew on bone_eyes, bone_button nose. Rub tallow into seams to soften and protect. The toggles inside make this bunny 'alive'\u2014ears up, ears down, ears flopped to the side."
+      },
+      "tech": [
+        "Wool",
+        "Bone"
+      ],
+      "flavor_text": "More than stuffing\u2014there's a spirit in this one. Squeeze it through a hundred long nights and it only grows stronger, denser, more real.",
+      "final_visual": {
+        "The Shape": "Classic bunny form, about 10 inches tall. Long upright ears, round body, stubby limbs.",
+        "The Ears": "The signature feature\u2014bone toggles inside let them pose. Stand them up, fold them down, flop them sideways.",
+        "The Face": "Polished bone eyes with carved pupils. Bone button nose. Embroidered whiskers and mouth.",
+        "The Body": "Cream or grey wool_fabric, firmly stuffed. Huggable but holds its shape.",
+        "The Feel": "Warm wool exterior, dense stuffing. The ears have satisfying resistance when posed.",
+        "The Wear": "Built for years of love. Seams are reinforced, tallow-treated for durability."
+      }
+    },
+    "linen_lass": {
+      "id": "linen_lass",
+      "name": "Linen Lass",
+      "tier": 3,
+      "era": 2,
+      "parts": 6,
+      "processing": [
+        {
+          "station": "Hackle",
+          "input": "scutched_flax",
+          "output": "line_flax + tow",
+          "note": "Line flax for thread, tow for stuffing\u2014nothing wasted"
+        },
+        {
+          "station": "Spinning Wheel",
+          "mode": "spin",
+          "input": "line_flax",
+          "output": "linen_spool",
+          "note": "Fine linen thread for seams and features"
+        },
+        {
+          "station": "Loom",
+          "mode": "weave",
+          "input": "linen_spool (\u00d73)",
+          "output": "linen_fabric",
+          "note": "Crisp linen shell\u2014cooler than wool"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "bone",
+          "output": "bone_toggle",
+          "qty": 2,
+          "note": "Sewn into shoulder joints\u2014lets arms pose and hold"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "bone",
+          "output": "bone_button",
+          "note": "Decorative buttons for dress front"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "bone",
+          "output": "bone_eyes",
+          "note": "Polished bone with dark-stained pupils"
+        }
+      ],
+      "assembly": {
+        "inputs": [
+          "linen_fabric",
+          "tow",
+          "bone_toggle (\u00d72)",
+          "bone_button",
+          "bone_eyes",
+          "linen_spool",
+          "tallow"
+        ],
+        "output": "linen_lass",
+        "note": "Cut doll body and simple dress from linen_fabric. Sew arms with bone_toggles at shoulders\u2014this allows posing. Stuff body and limbs with tow. Attach bone_eyes, embroider simple features. Dress is sewn integral to body, bone_buttons down the front. Hair is tow strands stitched to scalp, can be braided. Rub tallow into joints to keep them supple. She can wave, hug, or hold a child's hand."
+      },
+      "tech": [
+        "Flax",
+        "Bone"
+      ],
+      "flavor_text": "She can wave, she can hug, she can hold your hand through the fever-dreams of winter sickness. Arms that move on their own, eyes that catch the firelight.",
+      "final_visual": {
+        "The Shape": "Classic rag doll form, about 12 inches. Round head, simple body, poseable arms.",
+        "The Arms": "Bone toggles at shoulders allow full rotation. She can wave, hug, or rest hands in her lap.",
+        "The Face": "Polished bone eyes catch firelight. Embroidered nose and smile. Warm expression.",
+        "The Hair": "Tow fiber stitched to scalp\u2014straw gold, long enough to braid.",
+        "The Dress": "Simple linen shift, integral to body. Bone buttons down the front.",
+        "The Feel": "Cool linen exterior, soft tow stuffing. Arms move smoothly on their bone joints."
+      }
+    },
+    "jingle_tambourine": {
+      "id": "jingle_tambourine",
+      "name": "Jingle Tambourine",
+      "tier": 3,
+      "era": 2,
+      "parts": 5,
+      "processing": [
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "log (ash)",
+          "output": "tambourine_frame",
+          "note": "Ash ring with slots cut for jingles\u2014flexible wood absorbs impact"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "tan",
+          "input": "hide + birch_bark + lye",
+          "output": "leather",
+          "note": "Supple leather for drum head"
+        },
+        {
+          "station": "Hewing Bench",
+          "mode": "cut",
+          "input": "leather",
+          "output": "drum_skin",
+          "note": "Circular head stretched over frame"
+        },
+        {
+          "station": "Hewing Bench",
+          "mode": "cut",
+          "input": "leather",
+          "output": "leather_strap",
+          "note": "Hand grip on back"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "bone",
+          "output": "bone_button",
+          "qty": 4,
+          "note": "Jingle discs\u2014paired in slots to clatter against each other"
+        }
+      ],
+      "assembly": {
+        "inputs": [
+          "tambourine_frame",
+          "drum_skin",
+          "sinew",
+          "leather_strap",
+          "bone_button (\u00d74)"
+        ],
+        "output": "jingle_tambourine",
+        "note": "Stretch drum_skin over frame while wet\u2014it shrinks tight as it dries. Lace edges with sinew through holes drilled in frame. Thread bone_button pairs on sinew through frame slots\u2014they hang loose to jingle. Attach leather_strap to back as hand grip. The drum head can be struck or the whole instrument shaken for the jingles."
+      },
+      "tech": [
+        "Hide",
+        "Bone"
+      ],
+      "flavor_text": "The first instrument of celebration. Shake it and the bones rattle like laughter, like applause, like a hundred small welcomes.",
+      "final_visual": {
+        "The Frame": "Ash ring, about 8 inches diameter. Four slots hold paired bone jingles.",
+        "The Head": "Taut leather drum skin, pale and translucent. Responds to tap or slap.",
+        "The Jingles": "Four pairs of bone buttons on sinew\u2014they clatter against each other and the frame when shaken.",
+        "The Grip": "Leather strap on back for secure one-handed hold.",
+        "The Sound": "Tap the head for a soft thump. Shake for bright bone-clatter. Combine both for rhythm.",
+        "The Feel": "Light and responsive. Natural to shake, slap, or tap."
+      }
+    },
+    "solstice_storm_drum": {
+      "id": "solstice_storm_drum",
+      "name": "Solstice Storm-Drum",
+      "tier": 3,
+      "era": 2,
+      "parts": 8,
+      "processing": [
+        {
+          "station": "Hewing Bench",
+          "mode": "rive",
+          "input": "log (birch)",
+          "output": "board (birch)",
+          "note": "Thin birch board for bending into hoop"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "seethe",
+          "input": "board (birch)",
+          "output": "supple_hoop",
+          "note": "Sj\u00f3\u00f0a: Boil the birch board until pliable\u2014must work fast before it cools"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "buck",
+          "input": "hide + lye",
+          "output": "raw_hide",
+          "note": "Lye removes hair but keeps hide stiff\u2014perfect for drum heads"
+        },
+        {
+          "station": "Hewing Bench",
+          "mode": "cut",
+          "input": "raw_hide",
+          "output": "drum_skin",
+          "note": "Circular head larger than frame\u2014shrinks tight when dried"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "mix",
+          "input": "pine_resin + tallow",
+          "output": "resin_seal",
+          "note": "Seals the hoop's scarf joint"
+        },
+        {
+          "station": "Hackle",
+          "input": "scutched_flax",
+          "output": "line_flax + tow",
+          "note": "Line flax for handle cord, tow for mallet padding"
+        },
+        {
+          "station": "Twisting",
+          "input": "line_flax",
+          "output": "linen_cord",
+          "note": "Sturdy cord for drum handle"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "antler",
+          "output": "mallet_head",
+          "note": "Antler head wrapped in tow for soft strike"
+        }
+      ],
+      "assembly": {
+        "inputs": [
+          "supple_hoop",
+          "drum_skin",
+          "sinew",
+          "linen_cord",
+          "mallet_head",
+          "tow",
+          "resin_seal",
+          "tallow"
+        ],
+        "output": "solstice_storm_drum",
+        "note": "Bend supple_hoop into circle, overlap ends in scarf joint, seal with resin_seal. Stretch wet drum_skin over hoop, lace underneath with sinew through punched holes\u2014it tightens as it dries. Cross linen_cord underneath as handle. Wrap mallet_head in tow padding, bind with sinew, attach to ash stick. Rub tallow into hide edge to prevent cracking. The finished drum is a frame drum\u2014held by the cord, struck with the padded mallet."
+      },
+      "tech": [
+        "Flax",
+        "Hide",
+        "Bone"
+      ],
+      "flavor_text": "Thunder in your hands. Strike it once and the storm answers. The V\u00f6lva use drums like this to walk between worlds\u2014but children just like the boom.",
+      "final_visual": {
+        "The Frame": "Birch hoop, about 14 inches diameter. Pale wood with visible grain.",
+        "The Head": "Raw hide stretched taut\u2014translucent, amber-toned. You can see shadows through it.",
+        "The Lacing": "Sinew criss-crosses underneath, creating the signature pattern. Linen cord handle through the center.",
+        "The Mallet": "Antler head wrapped in tow padding on an ash stick. Produces a deep, resonant boom.",
+        "The Sound": "Deep thunder-boom that sustains and rolls. Strikes the chest as much as the ears.",
+        "The Hold": "Grip the cord handle, drum face outward. Strike and let the sound flow through you."
+      }
+    },
+    "ash_hobbyhorse": {
+      "id": "ash_hobbyhorse",
+      "name": "Ash Hobbyhorse",
+      "tier": 3,
+      "era": 2,
+      "parts": 9,
+      "processing": [
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "log (ash)",
+          "output": "horse_head",
+          "note": "Stylized head with open mouth\u2014ash is light but strong"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "bone",
+          "output": "bone_eyes",
+          "note": "Polished bone discs set into carved sockets"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "bone",
+          "output": "bone_button",
+          "qty": 2,
+          "note": "Bridle cheek pieces\u2014functional decorations"
+        },
+        {
+          "station": "Spinning Wheel",
+          "mode": "spin",
+          "input": "wool_fiber",
+          "output": "wool_spool",
+          "note": "Thread for mane attachment and saddle stitching"
+        },
+        {
+          "station": "Loom",
+          "mode": "weave",
+          "input": "wool_spool (\u00d73)",
+          "output": "wool_fabric",
+          "note": "Colorful saddle blanket draped over stick"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "tan",
+          "input": "hide + birch_bark + lye",
+          "output": "leather",
+          "note": "Bridle straps and reins"
+        },
+        {
+          "station": "Hewing Bench",
+          "mode": "cut",
+          "input": "leather",
+          "output": "leather_strap",
+          "qty": 2,
+          "note": "Bridle and reins"
+        }
+      ],
+      "assembly": {
+        "inputs": [
+          "horse_head",
+          "stick (ash)",
+          "bone_eyes",
+          "bone_button (\u00d72)",
+          "wool_fiber",
+          "wool_fabric",
+          "leather_strap (\u00d72)",
+          "sinew",
+          "tallow"
+        ],
+        "output": "ash_hobbyhorse",
+        "note": "Drill socket in head base, friction-fit onto ash stick. Set bone_eyes into carved sockets. Attach leather_strap bridle with bone_button cheek pieces. Loop wool_fiber strands through drilled holes at crest for mane\u2014the wilder the better. Drape wool_fabric saddle blanket over stick, tie with sinew. The second leather_strap becomes reins. Rub tallow into leather and wood joints. Ready to ride."
+      },
+      "tech": [
+        "Wool",
+        "Hide",
+        "Bone"
+      ],
+      "flavor_text": "The steed of imagination rides through kitchen and hall alike. Gallop it hard enough and you might just outrun the winter itself.",
+      "final_visual": {
+        "The Head": "Carved ash, stylized horse profile with open mouth. Light grey wood with visible grain.",
+        "The Eyes": "Polished bone discs set in sockets\u2014they catch the light with life.",
+        "The Mane": "Shaggy wool_fiber loops along the crest\u2014wild and flowing.",
+        "The Bridle": "Leather straps with bone button cheek pieces. Reins loop around for the rider's hands.",
+        "The Stick": "Ash pole, about 3 feet. Wool saddle blanket draped over it for grip.",
+        "The Ride": "Straddle the stick, grip the reins, and gallop. The head bobs with each stride."
+      }
+    },
+    "frost_wyrm": {
+      "id": "frost_wyrm",
+      "name": "Frost Wyrm",
+      "tier": 3,
+      "era": 2,
+      "parts": 11,
+      "processing": [
+        {
+          "station": "Spinning Wheel",
+          "mode": "spin",
+          "input": "wool_fiber",
+          "output": "wool_spool",
+          "note": "Thread for construction and scale details"
+        },
+        {
+          "station": "Loom",
+          "mode": "weave",
+          "input": "wool_spool (\u00d73)",
+          "output": "wool_fabric",
+          "note": "Body shell\u2014dyed ice-blue"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "tan",
+          "input": "hide + birch_bark + lye",
+          "output": "leather",
+          "note": "Belly scales and wing membranes"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "bone",
+          "output": "bone_toggle",
+          "qty": 4,
+          "note": "Internal spine\u2014allows the body to pose and hold curves"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "bone",
+          "output": "bone_teeth",
+          "qty": 6,
+          "note": "Sharp fangs for the open maw"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "bone",
+          "output": "bone_claws",
+          "qty": 4,
+          "note": "Wicked claws on vestigial legs"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "bone",
+          "output": "bone_eyes",
+          "note": "Glacier-blue painted over white bone"
+        },
+        {
+          "station": "Mill",
+          "mode": "grind",
+          "input": "juniper_berry",
+          "output": "blue_pigment",
+          "note": "Ice-blue for scales and eyes"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "mix",
+          "input": "blue_pigment + tallow",
+          "output": "blue_tallow_raw",
+          "note": "Dye for wool and leather"
+        }
+      ],
+      "assembly": {
+        "inputs": [
+          "wool_fabric",
+          "wool_fiber",
+          "leather",
+          "bone_toggle (\u00d74)",
+          "bone_teeth (\u00d76)",
+          "bone_claws (\u00d74)",
+          "bone_eyes",
+          "blue_tallow_raw",
+          "sinew",
+          "tallow"
+        ],
+        "output": "frost_wyrm",
+        "note": "Dye wool_fabric ice-blue with blue_tallow_raw. Cut serpentine body pattern, sew with bone_toggles inside at intervals\u2014this creates the poseable spine. Stuff with wool_fiber. Cut leather belly scales in overlapping strips, stitch underneath. Add leather wing stubs at shoulders. Set bone_teeth in open mouth, bone_eyes in sockets, bone_claws on small legs. The wyrm can coil, strike, or drape around a child's arm. About 24 inches fully extended."
+      },
+      "tech": [
+        "Wool",
+        "Hide",
+        "Bone",
+        "Pigment"
+      ],
+      "flavor_text": "The serpent of the frozen sky, coiled and waiting. Pose it to strike or curl it around your arm like a living thing. The old sagas say wyrms sleep beneath the glaciers.",
+      "final_visual": {
+        "The Body": "Serpentine form in ice-blue wool, about 24 inches long. Internal bone spine allows posing.",
+        "The Scales": "Overlapping leather strips on belly\u2014natural brown against blue wool.",
+        "The Head": "Open maw with six bone fangs. Glacier-blue eyes. Menacing but huggable.",
+        "The Wings": "Vestigial leather wing stubs at shoulders\u2014too small to fly, perfect for drama.",
+        "The Claws": "Four bone claws on small legs\u2014positioned for gripping when wrapped around an arm.",
+        "The Pose": "Coil it, drape it, pose it to strike. The bone spine holds any position."
+      }
+    },
+    "great_north_sleigh": {
+      "id": "great_north_sleigh",
+      "name": "Great North Sleigh",
+      "tier": 3,
+      "era": 2,
+      "parts": 13,
+      "processing": [
+        {
+          "station": "Hewing Bench",
+          "mode": "rive",
+          "input": "log (ash)",
+          "output": "board (ash)",
+          "note": "Thin ash boards for runners\u2014ash bends without breaking"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "seethe",
+          "input": "board (ash)",
+          "output": "supple_board",
+          "note": "Sj\u00f3\u00f0a: Boil the ash board until pliable. \u23f1 30s timer\u2014must bend before it cools"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "bend",
+          "input": "supple_board",
+          "output": "sleigh_runner",
+          "qty": 2,
+          "note": "Curved at front to ride over snow\u2014the classic sleigh profile"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "log (oak)",
+          "output": "sleigh_frame",
+          "note": "Heavy oak box frame for cargo\u2014mortise-and-tenon joints"
+        },
+        {
+          "station": "Spinning Wheel",
+          "mode": "spin",
+          "input": "wool_fiber",
+          "output": "wool_spool",
+          "note": "Thread for blanket attachment"
+        },
+        {
+          "station": "Loom",
+          "mode": "weave",
+          "input": "wool_spool (\u00d73)",
+          "output": "wool_fabric",
+          "note": "Crimson blanket for the seat"
+        },
+        {
+          "station": "Hackle",
+          "input": "scutched_flax",
+          "output": "line_flax + tow",
+          "note": "Line flax for pull cord"
+        },
+        {
+          "station": "Twisting",
+          "input": "line_flax",
+          "output": "linen_cord",
+          "note": "Strong pull rope attached at front"
+        },
+        {
+          "station": "Mill",
+          "mode": "grind",
+          "input": "lingonberry",
+          "output": "crimson_pigment",
+          "note": "Red for the frame\u2014Gift-Bringer's color"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "mix",
+          "input": "crimson_pigment + tallow",
+          "output": "crimson_tallow_raw",
+          "note": "Crimson paint for frame"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "mix",
+          "input": "pine_resin + tallow",
+          "output": "resin_seal",
+          "note": "Waterproof seal for runners"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "antler",
+          "output": "antler_finials",
+          "qty": 2,
+          "note": "Decorative finials at front\u2014the reindeer connection"
+        }
+      ],
+      "assembly": {
+        "inputs": [
+          "sleigh_runner (\u00d72)",
+          "sleigh_frame",
+          "wool_fabric",
+          "linen_cord",
+          "crimson_tallow_raw",
+          "resin_seal",
+          "antler_finials (\u00d72)",
+          "sinew"
+        ],
+        "output": "great_north_sleigh",
+        "note": "Attach sleigh_frame to runners with mortise joints, reinforce with sinew lashing. Paint frame crimson with crimson_tallow_raw\u2014let it soak into the oak. Seal runners with resin_seal for smooth glide. Set antler_finials at front corners as decorative posts. Dye wool_fabric crimson to match, drape as seat blanket. Attach linen_cord pull rope at front. Big enough for a doll passenger and a load of tiny gifts."
+      },
+      "tech": [
+        "Wool",
+        "Flax",
+        "Pigment",
+        "Bone"
+      ],
+      "flavor_text": "Worthy of the Gift-Bringer himself. Load it with treasures and fly across the snow. This sleigh brings hope that no child will be forgotten, no hearth too distant to find.",
+      "final_visual": {
+        "The Runners": "Bent ash with classic upturned fronts. Sealed smooth for gliding.",
+        "The Frame": "Oak cargo box painted crimson\u2014the Gift-Bringer's signature color.",
+        "The Finials": "Antler points at front corners\u2014a nod to the reindeer team.",
+        "The Blanket": "Crimson wool draped over the seat. Warm and festive.",
+        "The Rope": "Linen pull cord at front for towing across the snow.",
+        "The Scale": "About 12 inches long\u2014perfect for doll passengers and tiny gift loads.",
+        "The Glide": "Actually slides on smooth surfaces. Load it up and pull."
+      }
+    },
+    "storm_wing_kite": {
+      "id": "storm_wing_kite",
+      "name": "Storm-Wing Kite",
+      "tier": 3,
+      "era": 3,
+      "parts": 6,
+      "processing": [
+        {
+          "station": "Spinning Wheel",
+          "input": "wool_fiber",
+          "output": "wool_spool",
+          "qty": 3,
+          "note": "Heavy thread for dense weave"
+        },
+        {
+          "station": "Loom",
+          "mode": "weave",
+          "input": "wool_spool (\u00d73)",
+          "output": "wool_fabric",
+          "note": "Tight weave traps air\u2014the sail that catches winter"
+        },
+        {
+          "station": "Hackle",
+          "input": "scutched_flax",
+          "output": "line_flax + tow",
+          "note": "Line flax for flight cord, tow for tail"
+        },
+        {
+          "station": "Twisting",
+          "input": "line_flax",
+          "output": "linen_cord",
+          "note": "High-tensile flight line\u2014won't snap in strong winds"
+        },
+        {
+          "station": "Twisting",
+          "input": "tow",
+          "output": "tow_cord",
+          "note": "Rough twisted tail for stability"
+        }
+      ],
+      "assembly": {
+        "inputs": [
+          "stick (birch) (\u00d72)",
+          "wool_fabric",
+          "linen_cord",
+          "tow_cord",
+          "pine_tar",
+          "tallow",
+          "sinew"
+        ],
+        "output": "storm_wing_kite",
+        "note": "Lash birch sticks into cross frame with sinew. Stretch wool_fabric over frame, stitch edges. Apply hot sm\u00f6rring (pine_tar + tallow mixed) to the sail\u2014it stiffens the wool into a rigid, wind-proof surface. Tie linen_cord bridle to frame cross-point. Attach tow_cord tail strips for stability. The treated sail is black from the tar, gleaming in wind."
+      },
+      "tech": [
+        "Distillation",
+        "Wool",
+        "Flax"
+      ],
+      "flavor_text": "To fly the Storm-Wing is to feel the raw pulse of the winter sky. The woolen sail is treated with a hot sm\u00f6rring of pine_tar and tallow, petrifying the soft fabric into a rigid, wind-proof wing.",
+      "final_visual": {
+        "The Frame": "Crossed birch sticks, pale wood against dark sail. Classic diamond kite shape.",
+        "The Sail": "Wool fabric stiffened with pine_tar sm\u00f6rring\u2014black and gleaming, rigid as leather.",
+        "The Bridle": "Linen cord meeting at the kite's center of lift. Strong enough for winter gales.",
+        "The Tail": "Tow cord strips trailing behind\u2014shaggy and wild, stabilizing in turbulence.",
+        "In Flight": "The black diamond against grey winter sky. It pulls hard in wind, alive on the line.",
+        "The Scent": "Pine tar and sheep\u2014the smell of Nordic winters."
+      }
+    },
+    "puppet_theater": {
+      "id": "puppet_theater",
+      "name": "Puppet Theater",
+      "tier": 3,
+      "era": 3,
+      "parts": 8,
+      "processing": [
+        {
+          "station": "Hewing Bench",
+          "mode": "rive",
+          "input": "log (pine)",
+          "output": "board (pine)",
+          "qty": 4,
+          "note": "Light pine for portable theater"
+        },
+        {
+          "station": "Joinery Bench",
+          "mode": "join",
+          "input": "board (pine) (\u00d72) + sinew",
+          "output": "proscenium_arch",
+          "note": "Front frame with decorative arch\u2014the stage window"
+        },
+        {
+          "station": "Joinery Bench",
+          "mode": "join",
+          "input": "board (pine) (\u00d72) + sinew",
+          "output": "stage_back",
+          "note": "Solid backdrop panel\u2014hides the puppeteer"
+        },
+        {
+          "station": "Spinning Wheel",
+          "input": "wool_fiber",
+          "output": "wool_spool",
+          "note": "Thread for weaving the grand curtain"
+        },
+        {
+          "station": "Loom",
+          "input": "wool_spool (\u00d72)",
+          "output": "wool_fabric",
+          "note": "Wide fabric for the stage curtain"
+        },
+        {
+          "station": "Mill",
+          "mode": "grind",
+          "input": "lingonberry",
+          "output": "crimson_pigment",
+          "note": "Blood-red for dramatic effect"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "mix",
+          "input": "crimson_pigment + tallow",
+          "output": "crimson_tallow_raw",
+          "note": "Tallow dye bonds to wool's lanolin"
+        }
+      ],
+      "assembly": {
+        "inputs": [
+          "proscenium_arch",
+          "stage_back",
+          "wool_fabric",
+          "crimson_tallow_raw",
+          "sinew",
+          "stick (birch) (\u00d72)"
+        ],
+        "output": "puppet_theater",
+        "note": "Hinge proscenium_arch to stage_back with sinew loops\u2014folds flat for storage. Dye wool_fabric crimson with crimson_tallow_raw. Hang curtain on birch stick rod across the top of the arch\u2014it pulls aside for reveals. The back panel has a hand-hole for the puppeteer. Decorate the arch frame with carved knotwork. Table-top scale, about 18 inches tall."
+      },
+      "tech": [
+        "Framing",
+        "Wool",
+        "Pigment"
+      ],
+      "flavor_text": "Every child is a Skald. This stage transforms the hearth-corner into Valhalla, Niflheim, or wherever the tale demands. The crimson curtain rises, and the old stories walk again.",
+      "final_visual": {
+        "The Arch": "Pine proscenium with carved knotwork. The stage window is about 12 inches wide.",
+        "The Curtain": "Crimson wool hanging from birch rod. Pulls aside dramatically for the show.",
+        "The Back": "Solid pine panel hides puppeteer hands. Cut-out at bottom for access.",
+        "The Fold": "Hinges flat for storage\u2014takes up no more space than a book.",
+        "The Scale": "Table-top theater, about 18 inches tall. Perfect for finger puppets or stick figures.",
+        "The Drama": "Open curtain. Begin tale. The old stories live in the red-lit shadow."
+      }
+    },
+    "stream_mill": {
+      "id": "stream_mill",
+      "name": "Stream Mill",
+      "tier": 3,
+      "era": 3,
+      "parts": 8,
+      "processing": [
+        {
+          "station": "Joiner's Bench",
+          "mode": "turn",
+          "input": "log (maple)",
+          "output": "mill_wheel",
+          "note": "Paddle wheel with carved vanes\u2014catches stream current or hand cranking"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "turn",
+          "input": "log (maple)",
+          "output": "grind_disc",
+          "note": "Rotating grindstone with textured face"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "bone",
+          "output": "grind_plate",
+          "note": "Stationary bone grinding surface\u2014harder than wood"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "log (oak)",
+          "output": "mill_housing",
+          "note": "Hollowed oak block for stability and heft"
+        },
+        {
+          "station": "Subassembly Bench",
+          "input": "mill_wheel + grind_disc + stick (oak)",
+          "output": "grinder_mechanism",
+          "note": "Axle transfers paddle rotation to grinding disc"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "fold_and_stitch",
+          "input": "birch_bark + sinew",
+          "output": "hopper_cone",
+          "note": "Falda ok Sauma: Fold bark into funnel shape, stitch seam with sinew to feed material to grinder"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "mix",
+          "input": "pine_resin + tallow",
+          "output": "resin_seal",
+          "note": "Waterproofs housing for stream placement"
+        }
+      ],
+      "assembly": {
+        "inputs": [
+          "mill_housing",
+          "grinder_mechanism",
+          "grind_plate",
+          "hopper_cone",
+          "resin_seal",
+          "sinew"
+        ],
+        "output": "stream_mill",
+        "note": "Set grind_plate in housing base. Mount grinder_mechanism above with axle through housing walls\u2014the grind_disc should nearly touch the plate. Attach hopper_cone above the gap. Seal all joints with resin_seal for water use. Place in a stream with paddle wheel in current, or turn by hand. Drop berries in hopper, collect crushed pulp from the outlet. A working machine in miniature."
+      },
+      "tech": [
+        "Subassembly",
+        "Bone"
+      ],
+      "flavor_text": "Drop a berry in the hopper, watch the wheels churn, and catch the juice of the forest. Learn a pattern of the cycle, the world is full of energy, if you know how to catch it.",
+      "final_visual": {
+        "The Housing": "Heavy oak block, hollowed inside. About 8 inches long, stable in stream current.",
+        "The Wheel": "Maple paddle wheel on one side\u2014catches water flow or hand power.",
+        "The Grinder": "Maple disc spinning above bone plate. Narrow gap crushes whatever passes through.",
+        "The Hopper": "Birch bark cone funneling into the grinder gap from above.",
+        "The Action": "Water turns wheel, wheel turns grinder, hopper feeds berries, pulp exits below.",
+        "The Lesson": "Energy capture. Power transfer. The fundamental physics of the mill, toy-sized."
+      }
+    },
+    "bergelmir_ark": {
+      "id": "bergelmir_ark",
+      "name": "Bergelmir's Ark",
+      "tier": 3,
+      "era": 3,
+      "parts": 8,
+      "processing": [
+        {
+          "station": "Hewing Bench",
+          "mode": "rive",
+          "input": "log (pine)",
+          "output": "board (pine)",
+          "qty": 4,
+          "note": "Buoyant pine planks for hull sides"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "log (oak)",
+          "output": "ark_keel",
+          "note": "Heavy oak cradle provides ballast\u2014the ark rights itself"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "tan",
+          "input": "hide + birch_bark + lye",
+          "output": "leather",
+          "note": "Supple leather for the square sail"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "curdle",
+          "input": "milk + wood_vinegar",
+          "output": "quark_curds + liquid_whey",
+          "note": "Casein preparation"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "mix",
+          "input": "quark_curds + lye",
+          "output": "cheese_glue",
+          "note": "Beina-mj\u00f3lk binder for durable paint"
+        },
+        {
+          "station": "Mill",
+          "mode": "grind",
+          "input": "lingonberry",
+          "output": "crimson_pigment",
+          "note": "Blood-red like Ymir's flood"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "mix",
+          "input": "crimson_pigment + cheese_glue",
+          "output": "crimson_casein",
+          "note": "Water-resistant crimson paint for the sail"
+        }
+      ],
+      "assembly": {
+        "inputs": [
+          "ark_keel",
+          "board (pine) (\u00d74)",
+          "pine_tar",
+          "leather",
+          "crimson_casein",
+          "tallow",
+          "sinew"
+        ],
+        "output": "bergelmir_ark",
+        "note": "Peg pine boards to oak keel, forming the classic coffin-boat shape (l\u00fa\u00f0r). Caulk all seams with hot pine_tar\u2014the 'Black Blood' makes it watertight. Set mast in keel socket. Dye leather sail crimson with crimson_casein. Rig sail to mast with sinew lines. Rub tallow into hull exterior for smooth sailing. It actually floats and sails with the wind."
+      },
+      "tech": [
+        "Distillation",
+        "Hide",
+        "Pigment"
+      ],
+      "flavor_text": "A vessel of the Primordial Deluge. This ark mimics the l\u00fa\u00f0r that saved Bergelmir from the drowning blood of Ymir. Pine_tar\u2014the Black Blood\u2014caulks the seams to be 'blood-tight.'",
+      "final_visual": {
+        "The Hull": "Coffin-boat shape (l\u00fa\u00f0r)\u2014pine sides on oak keel. Seams black with pine_tar caulking.",
+        "The Keel": "Heavy oak provides ballast. The ark self-rights when tipped.",
+        "The Sail": "Square leather sail dyed blood-crimson. Rigged Nordic style.",
+        "The Tar": "Black seams where pine_tar caulks the joints\u2014the 'blood-tight' seal.",
+        "In Water": "It floats, it sails, it carries small figures through the deluge.",
+        "The Myth": "Bergelmir's escape vessel, when Ymir's blood drowned the world."
+      }
+    },
+    "treasure_chest": {
+      "id": "treasure_chest",
+      "name": "Treasure Chest",
+      "tier": 3,
+      "era": 3,
+      "parts": 9,
+      "processing": [
+        {
+          "station": "Hewing Bench",
+          "mode": "rive",
+          "input": "log (oak)",
+          "output": "board (oak)",
+          "qty": 6,
+          "note": "Heavy oak boards for a chest that lasts generations"
+        },
+        {
+          "station": "Joinery Bench",
+          "mode": "join",
+          "input": "board (oak) (\u00d76) + sinew",
+          "output": "chest_box",
+          "note": "Sealed box construction\u2014no gaps, no peeking"
+        },
+        {
+          "station": "Hewing Bench",
+          "mode": "cut",
+          "input": "chest_box",
+          "output": "chest_body + chest_lid",
+          "note": "Sawn horizontally after assembly\u2014grain matches perfectly"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "tan",
+          "input": "hide + birch_bark + lye",
+          "output": "leather",
+          "note": "Sturdy leather for hinges and closure"
+        },
+        {
+          "station": "Hewing Bench",
+          "mode": "cut",
+          "input": "leather",
+          "output": "leather_strap",
+          "qty": 3,
+          "note": "Two hinges at back, one closure strap at front"
+        },
+        {
+          "station": "Hackle",
+          "input": "scutched_flax",
+          "output": "line_flax + tow",
+          "note": "Line flax for lining thread"
+        },
+        {
+          "station": "Spinning Wheel",
+          "input": "line_flax",
+          "output": "linen_spool",
+          "note": "Fine thread for stitching lining"
+        },
+        {
+          "station": "Loom",
+          "input": "linen_spool (\u00d72)",
+          "output": "linen_fabric",
+          "note": "Soft linen to cushion treasures"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "mix",
+          "input": "pine_resin + tallow",
+          "output": "resin_seal",
+          "note": "Protective finish for the exterior"
+        }
+      ],
+      "assembly": {
+        "inputs": [
+          "chest_body",
+          "chest_lid",
+          "leather_strap (\u00d73)",
+          "linen_fabric",
+          "resin_seal",
+          "tallow",
+          "sinew"
+        ],
+        "output": "treasure_chest",
+        "note": "Attach leather_strap hinges at back with sinew stitching through drilled holes. Front strap becomes the closure\u2014wraps around bone toggle or wooden peg. Line interior with linen_fabric, glued and stitched at edges. Seal exterior with resin_seal, buff with tallow. Carve owner's initials or rune into the lid. About 6 inches long\u2014sized for a child's small treasures."
+      },
+      "tech": [
+        "Framing",
+        "Hide",
+        "Flax"
+      ],
+      "flavor_text": "Every child needs a place for secrets. Oak walls, leather hinges, and a linen bed for their most precious things. What goes inside is none of your business.",
+      "final_visual": {
+        "The Box": "Heavy oak chest, about 6 inches long. Grain matches between lid and body\u2014proof of quality craft.",
+        "The Hinges": "Leather straps at back, stitched through wood. They flex but don't wear.",
+        "The Closure": "Front leather strap wraps around a bone toggle or wooden peg.",
+        "The Interior": "Soft linen lining cushions the treasures within.",
+        "The Finish": "Resin-sealed exterior gleams with amber warmth. Smooth to the touch.",
+        "The Weight": "Satisfyingly heavy. Oak doesn't make flimsy furniture."
+      }
+    },
+    "yule_boar": {
+      "id": "yule_boar",
+      "name": "Yule Boar",
+      "tier": 3,
+      "era": 3,
+      "parts": 11,
+      "processing": [
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "log (oak)",
+          "output": "boar_body",
+          "note": "Stocky oak body with bristled back ridge and proud snout"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "bone",
+          "output": "tusk",
+          "qty": 2,
+          "note": "Curved tusks flanking the snout\u2014Freyr's sacred beast"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "bone",
+          "output": "bone_eyes",
+          "qty": 2,
+          "note": "Small but fierce watchful eyes"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "turn",
+          "input": "log (maple)",
+          "output": "wheel",
+          "qty": 4,
+          "note": "Smooth maple wheels for rolling"
+        },
+        {
+          "station": "Joinery Bench",
+          "input": "wheel (\u00d74) + stick (oak) (\u00d72)",
+          "output": "axle_set",
+          "qty": 2,
+          "note": "Front and rear axles pinned to body"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "tan",
+          "input": "hide + birch_bark + lye",
+          "output": "leather",
+          "note": "Pull strap leather"
+        },
+        {
+          "station": "Hewing Bench",
+          "mode": "cut",
+          "input": "leather",
+          "output": "pull_strap",
+          "note": "Loop for towing the boar to feast"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "mix",
+          "input": "pine_resin + tallow",
+          "output": "resin_seal",
+          "note": "Protective finish"
+        }
+      ],
+      "assembly": {
+        "inputs": [
+          "boar_body",
+          "tusk (\u00d72)",
+          "bone_eyes (\u00d72)",
+          "axle_set (\u00d72)",
+          "pull_strap",
+          "resin_seal",
+          "tallow",
+          "sinew"
+        ],
+        "output": "yule_boar",
+        "note": "Drill axle channels through boar belly. Mount axle_sets with sinew lashing for free rotation. Set bone tusks in drilled snout sockets, bone_eyes in face sockets. Attach pull_strap at neck with sinew loop. Seal entire body with resin_seal, buff with tallow for sheen. The boar rolls smoothly and pulls behind a walking child. About 10 inches long."
+      },
+      "tech": [
+        "Subassembly",
+        "Bone",
+        "Hide"
+      ],
+      "flavor_text": "Freyr's sacred beast, rolling to the feast. In the old days, families swore oaths on the Yule Boar's back. This one carries smaller promises\u2014but they still count.",
+      "final_visual": {
+        "The Body": "Stocky oak boar with carved bristle ridge along the back. Proud stance even on wheels.",
+        "The Tusks": "Curved bone tusks flanking the snout. The mark of Freyr's beast.",
+        "The Eyes": "Small fierce bone discs set in sockets. Watchful and wise.",
+        "The Wheels": "Four maple wheels on oak axles. The boar rolls smoothly after its owner.",
+        "The Strap": "Leather pull loop at neck. Drag the boar to the Yule feast.",
+        "The Oath": "In the old tradition, touch the boar's back when you make a promise. It still works."
+      }
+    },
+    "nisse_boundary_levitator": {
+      "id": "nisse_boundary_levitator",
+      "name": "Nisse Boundary Levitator",
+      "tier": 4,
+      "era": 3,
+      "parts": 11,
+      "processing": [
+        {
+          "station": "Hewing Bench",
+          "mode": "rive",
+          "input": "log (oak)",
+          "output": "board (oak)",
+          "qty": 5,
+          "note": "Heavy oak for the cart's stability"
+        },
+        {
+          "station": "Joinery Bench",
+          "mode": "join",
+          "input": "board (oak) (\u00d75) + sinew",
+          "output": "cart_body",
+          "note": "Open-top cargo box\u2014the rolling farmstead in miniature"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "turn",
+          "input": "log (maple)",
+          "output": "wheel",
+          "qty": 4,
+          "note": "Smooth maple wheels roll true"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "turn",
+          "input": "log (maple)",
+          "output": "cord_drum",
+          "note": "Maple drum on drive axle wraps the suspension line"
+        },
+        {
+          "station": "Hackle",
+          "input": "scutched_flax",
+          "output": "line_flax + tow",
+          "note": "Line flax for high-tensile cord, tow for friction wrap"
+        },
+        {
+          "station": "Twisting",
+          "input": "line_flax",
+          "output": "linen_cord",
+          "note": "Strong cord suspends the Nisse figure"
+        },
+        {
+          "station": "Subassembly Bench",
+          "input": "wheel (\u00d72) + stick (oak) + cord_drum + tow",
+          "output": "drive_axle",
+          "note": "Tow friction wrap on drum\u2014wheels turn, drum turns, cord rises"
+        },
+        {
+          "station": "Subassembly Bench",
+          "input": "wheel (\u00d72) + stick (oak)",
+          "output": "rear_axle",
+          "note": "Simple trailing axle"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "log (oak)",
+          "output": "sentinel_pole",
+          "note": "Vertical mast with pulley channel at top"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "log (birch)",
+          "output": "nisse_figure",
+          "note": "Light birch guardian\u2014small enough to levitate on thin cord"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "mix",
+          "input": "pine_resin + tallow",
+          "output": "resin_seal",
+          "note": "Weather sealer for outdoor patrol"
+        }
+      ],
+      "assembly": {
+        "inputs": [
+          "cart_body",
+          "drive_axle",
+          "rear_axle",
+          "sentinel_pole",
+          "nisse_figure",
+          "linen_cord",
+          "resin_seal",
+          "sinew"
+        ],
+        "output": "nisse_boundary_levitator",
+        "note": "Mount drive_axle at front, rear_axle at back. Set sentinel_pole upright in cart center, lashed with sinew. Thread linen_cord from cord_drum, up through pole channel, down to nisse_figure loop. As cart rolls forward, drum turns and winds cord\u2014the Nisse rises. Pull back, he descends. Seal all exposed wood with resin_seal. The guardian never touches the ground."
+      },
+      "tech": [
+        "Framing",
+        "Subassembly",
+        "Flax"
+      ],
+      "flavor_text": "A farmstead requires a watchful eye. Pull the cart and the Nisse levitates, patrolling the borders of your domain while never touching the ground.",
+      "final_visual": {
+        "The Cart": "Oak cargo box on four maple wheels. Heavy and stable, like a farm wagon.",
+        "The Mast": "Vertical oak pole rising from the cart center with cord channel at top.",
+        "The Mechanism": "Cord_drum on front axle\u2014when wheels turn, drum winds the suspension cord.",
+        "The Guardian": "Light birch Nisse figure, arms outstretched, hanging from linen_cord.",
+        "The Magic": "Push the cart: Nisse rises. Pull back: Nisse descends. Always floating, never grounded.",
+        "The Patrol": "A child pulls the cart around the room's border. The Nisse watches over all."
+      }
+    },
+    "dragon_scale_slicks": {
+      "id": "dragon_scale_slicks",
+      "name": "Dragon Scale Storm Slicks",
+      "tier": 4,
+      "era": 3,
+      "parts": 10,
+      "processing": [
+        {
+          "station": "Cauldron",
+          "mode": "tan",
+          "input": "hide + birch_bark + lye",
+          "output": "leather",
+          "qty": 3,
+          "note": "Three full hides\u2014one each for jacket, hat, boots"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "dress",
+          "input": "leather + birch_tar + tallow",
+          "output": "juften_leather",
+          "qty": 3,
+          "note": "Smoky black waterproof leather, supple and breathable"
+        },
+        {
+          "station": "Hewing Bench",
+          "mode": "rive",
+          "input": "log (oak)",
+          "output": "board (oak)",
+          "qty": 5,
+          "note": "Four boards for frame, one for the press die"
+        },
+        {
+          "station": "Joinery Bench",
+          "mode": "join",
+          "input": "board (oak) (\u00d74) + sinew",
+          "output": "stretching_frame",
+          "note": "Taut frame holds wet leather flat during pressing"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "board (oak)",
+          "output": "scale_press",
+          "note": "Diamond grooves carved deep\u2014Nidhogg's scale pattern"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "emboss",
+          "input": "juften_leather (\u00d73) + stretching_frame + scale_press",
+          "output": "dragon_scale_leather",
+          "qty": 3,
+          "note": "Wet leather pressed hard; grooves become permanent scales"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "bone",
+          "output": "bone_toggle",
+          "qty": 6,
+          "note": "Toggle closures\u2014two per garment piece"
+        }
+      ],
+      "assembly": {
+        "inputs": [
+          "dragon_scale_leather (\u00d73)",
+          "bone_toggle (\u00d76)",
+          "sinew"
+        ],
+        "output": "dragon_scale_slicks",
+        "note": "Cut dragon_scale_leather into pattern pieces. Stitch with sinew: jacket with overlapping front panels, rain hat with wide brim, ankle boots with fold-over cuff. Attach bone_toggles with sinew loops for closures. The scale pattern sheds water like a dragon's hide. Full storm kit for a child adventurer."
+      },
+      "tech": [
+        "Framing",
+        "Distillation",
+        "Hide",
+        "Bone"
+      ],
+      "flavor_text": "Nidhogg gnaws the World Tree, but his scales shed into the hands of clever craftsmen. This armor protects against rain, sleet, and the judgmental stares of the unprepared.",
+      "final_visual": {
+        "The Jacket": "Knee-length juften leather coat with embossed dragon scales. Overlapping front panels shed rain.",
+        "The Hat": "Wide-brimmed rain hat, scales radiating from crown. Water runs off the back.",
+        "The Boots": "Ankle boots with fold-over cuff. Same scale pattern, same smoky black.",
+        "The Texture": "Each diamond scale stands in relief\u2014run your fingers across and feel Nidhogg's hide.",
+        "The Scent": "Birch tar smoke\u2014the unmistakable perfume of juften leather.",
+        "The Promise": "Stay dry in the storm. Look like a dragon doing it."
+      }
+    },
+    "jormungandr_drift": {
+      "id": "jormungandr_drift",
+      "name": "Jormungandr Drift",
+      "tier": 4,
+      "era": 3,
+      "parts": 12,
+      "processing": [
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "log (oak)",
+          "output": "ocean_base",
+          "note": "Heavy oak block carved with roller channel below, serpent slot above"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "turn",
+          "input": "log (maple)",
+          "output": "traction_roller",
+          "note": "Bottom roller contacts table surface"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "turn",
+          "input": "log (maple)",
+          "output": "lift_cam",
+          "note": "Eccentric disc\u2014off-center rotation pushes serpent up and down"
+        },
+        {
+          "station": "Subassembly Bench",
+          "input": "traction_roller + stick (oak) + lift_cam",
+          "output": "drive_mechanism",
+          "note": "Roller-axle-cam assembly: push forward, cam rotates, serpent rises"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "log (birch)",
+          "output": "serpent_head",
+          "note": "Light birch Jormungandr head with open jaws\u2014rides up through the slot"
+        },
+        {
+          "station": "Spinning Wheel",
+          "input": "wool_fiber",
+          "output": "wool_spool",
+          "note": "Thread for friction washer"
+        },
+        {
+          "station": "Loom",
+          "input": "wool_spool (\u00d72)",
+          "output": "wool_fabric",
+          "note": "Cut into felt washer\u2014dampens cam motion for smooth rise"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "curdle",
+          "input": "milk + wood_vinegar",
+          "output": "quark_curds + liquid_whey",
+          "note": "Casein separation"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "mix",
+          "input": "quark_curds + lye",
+          "output": "cheese_glue",
+          "note": "Structural bonds and paint binder"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "render",
+          "input": "hide + sinew",
+          "output": "hide_glue",
+          "note": "Flexible joints for cam assembly"
+        },
+        {
+          "station": "Mill",
+          "mode": "grind",
+          "input": "juniper_berry",
+          "output": "blue_pigment",
+          "note": "Deep ocean blue"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "mix",
+          "input": "blue_pigment + cheese_glue",
+          "output": "blue_casein",
+          "note": "Durable wave paint"
+        }
+      ],
+      "assembly": {
+        "inputs": [
+          "ocean_base",
+          "drive_mechanism",
+          "serpent_head",
+          "wool_fabric",
+          "pine_tar",
+          "tallow",
+          "cheese_glue",
+          "hide_glue",
+          "blue_casein",
+          "sinew"
+        ],
+        "output": "jormungandr_drift",
+        "note": "Install drive_mechanism in base channel with hide_glue (repairable). Set wool washer under cam for silent operation. Insert serpent_head in slot, resting on cam top. Paint ocean_base with blue_casein waves\u2014white crests carved in relief. Tar serpent scales black with pine_tar, buff with tallow. Push the ocean across the table: the World Serpent rises and falls through the painted sea."
+      },
+      "tech": [
+        "Subassembly",
+        "Distillation",
+        "Wool",
+        "Pigment"
+      ],
+      "flavor_text": "The World Serpent rises from the depths. Push the ocean-block and a hidden cam draws Jormungandr through the painted waves.",
+      "final_visual": {
+        "The Ocean": "Heavy oak block painted deep blue with white wave crests. About 8 inches long.",
+        "The Serpent": "Birch Jormungandr head, jaws open, scales black with pine_tar. Emerges from slot in the waves.",
+        "The Mechanism": "Hidden below\u2014traction roller on table, eccentric cam lifts serpent as you push.",
+        "The Motion": "Push forward: serpent rises through the waves. Pull back: it descends into the depths.",
+        "The Silence": "Wool washer dampens the cam. The rise is smooth and mysterious.",
+        "The Myth": "Jormungandr encircles Midgard. This toy shows his head breaking the surface."
+      }
+    },
+    "ember_hauler": {
+      "id": "ember_hauler",
+      "name": "Ember Hauler",
+      "tier": 4,
+      "era": 3,
+      "parts": 10,
+      "processing": [
+        {
+          "station": "Cauldron",
+          "mode": "curdle",
+          "input": "milk + wood_vinegar",
+          "output": "quark_curds + liquid_whey",
+          "note": "Acid separates casein protein"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "mix",
+          "input": "quark_curds + lye",
+          "output": "cheese_glue",
+          "note": "Beina-mj\u00f3lk: stone-hard bond for permanent joints"
+        },
+        {
+          "station": "Hewing Bench",
+          "mode": "rive",
+          "input": "log (pine)",
+          "output": "board (pine)",
+          "qty": 5,
+          "note": "Light pine for the cargo bed"
+        },
+        {
+          "station": "Joinery Bench",
+          "input": "board (pine) (\u00d75) + cheese_glue",
+          "output": "cargo_bed",
+          "note": "Five-board box with petrified joints\u2014won't loosen"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "turn",
+          "input": "log (maple)",
+          "output": "wheel",
+          "qty": 4,
+          "note": "Smooth maple wheels for easy rolling"
+        },
+        {
+          "station": "Joinery Bench",
+          "input": "wheel (\u00d74) + stick (oak) (\u00d72) + cheese_glue",
+          "output": "axle_set",
+          "qty": 2,
+          "note": "Front and rear axles\u2014wheels spin freely"
+        },
+        {
+          "station": "Mill",
+          "mode": "grind",
+          "input": "rowan_berry",
+          "output": "orange_pigment",
+          "note": "Ember-orange from rowan"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "mix",
+          "input": "orange_pigment + tallow + pine_resin",
+          "output": "orange_tallow_sealed",
+          "note": "Waterproof ember coating\u2014color of dying coals"
+        }
+      ],
+      "assembly": {
+        "inputs": [
+          "cargo_bed",
+          "axle_set (\u00d72)",
+          "stick (ash)",
+          "orange_tallow_sealed",
+          "pine_tar",
+          "sinew"
+        ],
+        "output": "ember_hauler",
+        "note": "Mount axle_sets under cargo_bed with sinew lashing\u2014wheels roll freely. Attach ash pull-handle at front. Coat entire wagon with orange_tallow_sealed\u2014the ember color glows warm. Tar the undercarriage with pine_tar for ground contact protection. A miniature Svart\u00e1lfar ore wagon, ready to haul charcoal or treasure."
+      },
+      "tech": [
+        "Framing",
+        "Subassembly",
+        "Distillation",
+        "Pigment"
+      ],
+      "flavor_text": "A mimic of the heavy wagons of the Svart\u00e1lfar, it is the color of the last spark in a dying fire, a tribute to the longest night and endless cycle.",
+      "final_visual": {
+        "The Bed": "Pine cargo box with high sides. Open top for loading charcoal, ore, or toys.",
+        "The Color": "Ember orange coating\u2014warm like dying coals, glowing in firelight.",
+        "The Wheels": "Four maple wheels on oak axles. They roll true and smooth.",
+        "The Handle": "Ash pull-stick at front. Flexible ash bends with the tug.",
+        "The Undercarriage": "Black pine_tar seals the bottom against wet and wear.",
+        "The Cargo": "Fill it with blocks, rocks, or pretend charcoal. The Svart\u00e1lfar haul the dark harvest."
+      }
+    },
+    "anglers_set": {
+      "id": "anglers_set",
+      "name": "Angler's Set",
+      "tier": 4,
+      "era": 3,
+      "parts": 12,
+      "processing": [
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "log (ash)",
+          "output": "rod_shaft",
+          "note": "Single-piece ash tapered tip to butt\u2014Yggdrasil-stuff bends but never breaks"
+        },
+        {
+          "station": "Hackle",
+          "input": "scutched_flax",
+          "output": "line_flax + tow",
+          "note": "Line flax for cord, tow for fly bodies"
+        },
+        {
+          "station": "Twisting",
+          "input": "line_flax",
+          "output": "linen_cord",
+          "note": "High-tensile fishing line\u2014smooth and strong"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "curdle",
+          "input": "milk + wood_vinegar",
+          "output": "quark_curds + liquid_whey",
+          "note": "Casein separation"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "mix",
+          "input": "quark_curds + lye",
+          "output": "cheese_glue",
+          "note": "Stone-bond for permanent joints"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "bone",
+          "output": "bone_guide",
+          "note": "Polished line guides\u2014bone is self-lubricating"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "turn",
+          "input": "log (maple)",
+          "output": "reel_spool",
+          "note": "Wide centerpin disc\u2014line wraps smoothly"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "bone",
+          "output": "bone_axle",
+          "note": "Reel spindle\u2014tallow-lubed for free spin"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "antler",
+          "output": "click_pawl",
+          "note": "Flexible antler click-check\u2014prevents backlash, makes satisfying clicks"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "stick (oak)",
+          "output": "reel_seat",
+          "note": "Curved bracket clamps reel to rod shaft"
+        },
+        {
+          "station": "Subassembly Bench",
+          "input": "reel_spool + bone_axle + click_pawl + reel_seat",
+          "output": "fishing_reel",
+          "note": "Working centerpin reel with click drag"
+        },
+        {
+          "station": "Hewing Bench",
+          "mode": "rive",
+          "input": "log (pine)",
+          "output": "box_boards",
+          "note": "Pine boards for tackle storage"
+        },
+        {
+          "station": "Joinery Bench",
+          "mode": "join",
+          "input": "box_boards",
+          "output": "tackle_box",
+          "note": "Dovetailed corners\u2014a craftsman's calling card"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "bone",
+          "output": "bone_latch",
+          "note": "Pivot hinge and toggle closure in one elegant piece"
+        }
+      ],
+      "assembly": {
+        "inputs": [
+          "rod_shaft",
+          "cheese_glue",
+          "bone_guide",
+          "fishing_reel",
+          "linen_cord",
+          "tackle_box",
+          "tow",
+          "bone_latch",
+          "tallow",
+          "pine_tar"
+        ],
+        "output": "anglers_set",
+        "note": "Glue bone_guides along rod_shaft with cheese_glue\u2014spacing matters for line flow. Clamp fishing_reel to shaft at balance point. Thread linen_cord through guides, tie to spool. Tie tow fly bodies as simple lures\u2014store in tackle_box. Attach bone_latch to box lid. Seal tackle_box with pine_tar, buff rod with tallow. A complete fishing kit: rod, reel, line, flies, and box."
+      },
+      "tech": [
+        "Framing",
+        "Subassembly",
+        "Distillation",
+        "Flax",
+        "Bone"
+      ],
+      "flavor_text": "A masterwork for those who hunt the fjord-depths. It is a set built for the long watch, sealed in a resinous pine box that smells of the forest and the hearth.",
+      "final_visual": {
+        "The Rod": "Tapered ash shaft about 3 feet long. Flexible tip, solid butt. Bone guides gleam white.",
+        "The Reel": "Maple centerpin with bone axle and antler click-pawl. Smooth spin with satisfying clicks.",
+        "The Line": "Linen cord wound on spool. Strong enough for real fish (small ones).",
+        "The Flies": "Tow fiber tied around bone hooks. Simple but effective lures.",
+        "The Box": "Pine tackle box with dovetailed corners. Bone latch clicks shut. Smells of pine_tar.",
+        "The Set": "Everything a young angler needs. Sized for small hands but built for real use."
+      }
+    },
+    "riding_horse": {
+      "id": "riding_horse",
+      "name": "Riding Horse",
+      "tier": 4,
+      "era": 3,
+      "parts": 13,
+      "processing": [
+        {
+          "station": "Hewing Bench",
+          "mode": "rive",
+          "input": "log (oak)",
+          "output": "board (oak)",
+          "qty": 4,
+          "note": "Split panels for the barrel-shaped body"
+        },
+        {
+          "station": "Joinery Bench",
+          "mode": "join",
+          "input": "board (oak) (\u00d74)",
+          "output": "horse_body",
+          "note": "Hollow barrel torso\u2014light enough to rock, strong enough to ride"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "log (oak)",
+          "output": "horse_head",
+          "note": "Proud profile with alert ears and flared nostrils"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "log (maple)",
+          "output": "curved_runner",
+          "qty": 2,
+          "note": "Seek curved grain for smooth rocking arc"
+        },
+        {
+          "station": "Subassembly Bench",
+          "input": "curved_runner (\u00d72) + stick (oak) (\u00d72)",
+          "output": "rocker_base",
+          "note": "Two runners joined by oak crossbars\u2014stable platform"
+        },
+        {
+          "station": "Spinning Wheel",
+          "input": "wool_fiber",
+          "output": "wool_spool",
+          "note": "Thread for weaving and loose strands for mane"
+        },
+        {
+          "station": "Loom",
+          "input": "wool_spool (\u00d72)",
+          "output": "wool_fabric",
+          "note": "Thick saddle blanket cushions the ride"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "tan",
+          "input": "hide + birch_bark + lye",
+          "output": "leather",
+          "note": "Supple brown leather for straps"
+        },
+        {
+          "station": "Hewing Bench",
+          "mode": "cut",
+          "input": "leather",
+          "output": "leather_strap",
+          "qty": 2,
+          "note": "Reins and stirrup loops"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "dress",
+          "input": "leather + birch_tar + tallow",
+          "output": "juften_leather",
+          "note": "Smoky black saddle\u2014breathable and waterproof"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "curdle",
+          "input": "milk + wood_vinegar",
+          "output": "quark_curds + liquid_whey",
+          "note": "Casein preparation"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "mix",
+          "input": "quark_curds + lye",
+          "output": "cheese_glue",
+          "note": "Permanent structural bonds"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "render",
+          "input": "hide + sinew",
+          "output": "hide_glue",
+          "note": "G\u00e5rd-L\u00edm: reversible bond for saddle attachment (repairable)"
+        },
+        {
+          "station": "Mill",
+          "mode": "grind",
+          "input": "rowan_berry",
+          "output": "crimson_pigment",
+          "note": "Deep red for harness details"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "mix",
+          "input": "crimson_pigment + cheese_glue",
+          "output": "crimson_casein",
+          "note": "Permanent red paint for eyes, nostrils, harness trim"
+        }
+      ],
+      "assembly": {
+        "inputs": [
+          "horse_body",
+          "horse_head",
+          "rocker_base",
+          "wool_fabric",
+          "wool_spool",
+          "juften_leather",
+          "leather_strap",
+          "cheese_glue",
+          "hide_glue",
+          "pine_tar",
+          "crimson_casein"
+        ],
+        "output": "riding_horse",
+        "note": "Bond horse_body to rocker_base with cheese_glue\u2014permanent structural joint. Attach horse_head at front with cheese_glue. Tie wool_spool strands through drilled holes for mane and tail. Lay wool_fabric blanket on back, then juften_leather saddle (attached with hide_glue for future repair). Strap reins to mouth, stirrup loops to sides. Seal all oak with pine_tar. Paint crimson_casein details: eyes, nostrils, harness trim. The horse rocks and creaks like a living thing."
+      },
+      "tech": [
+        "Framing",
+        "Subassembly",
+        "Distillation",
+        "Wool",
+        "Hide",
+        "Pigment"
+      ],
+      "flavor_text": "Beneath the aromatic Juften leather and the crimson harness, a hollow oak frame hums with every rock. It is a nursery heirloom built for a hero's first journey.",
+      "final_visual": {
+        "The Frame": "Hollow oak barrel body on maple curved runners. Rocks smoothly with gentle creak.",
+        "The Head": "Carved oak with alert ears, flared nostrils painted crimson, proud profile.",
+        "The Mane": "Wool yarn strands tied through drilled holes\u2014flows with the rocking motion.",
+        "The Saddle": "Juften leather over wool blanket. Smoky black with the scent of birch tar.",
+        "The Details": "Crimson casein paint on eyes, nostrils, and harness trim. Leather reins and stirrup loops.",
+        "The Ride": "Sized for a toddler's first adventure. Rocks with satisfying weight and rhythm.",
+        "The Legacy": "Built to last generations. Your grandchildren will ride this horse."
+      }
+    },
+    "polar_express": {
+      "id": "polar_express",
+      "name": "The Polar Express",
+      "tier": 4,
+      "era": 3,
+      "parts": 14,
+      "processing": [
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "log (oak)",
+          "output": "locomotive_body",
+          "note": "Heavy oak; boiler barrel + cab. Carve 'POLAR EXPRESS' in reverse\u2014letters stay natural oak"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "turn",
+          "input": "log (oak)",
+          "output": "smokestack",
+          "note": "Turned funnel; flared at rim"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "turn",
+          "input": "log (maple)",
+          "output": "train_wheel",
+          "qty": 8,
+          "note": "Smooth maple discs; 8 total (loco + car)"
+        },
+        {
+          "station": "Hewing Bench",
+          "mode": "rive",
+          "input": "log (oak)",
+          "output": "truck_board",
+          "qty": 2,
+          "note": "Small boards for wheel truck frames"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "turn",
+          "input": "log (oak)",
+          "output": "axle",
+          "qty": 4,
+          "note": "Turned oak axle rods"
+        },
+        {
+          "station": "Subassembly Bench",
+          "input": "truck_board + train_wheel (\u00d74) + axle (\u00d72)",
+          "output": "wheel_truck",
+          "qty": 2,
+          "note": "Board frame holds 2 axles; wheels roll freely"
+        },
+        {
+          "station": "Hewing Bench",
+          "mode": "rive",
+          "input": "log (pine)",
+          "output": "board (pine)",
+          "qty": 5,
+          "note": "Light pine for car box (4 walls + floor)"
+        },
+        {
+          "station": "Joinery Bench",
+          "mode": "join",
+          "input": "board (pine) (\u00d75)",
+          "output": "car_box",
+          "note": "5-sided open-top box; no roof"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "car_box",
+          "output": "passenger_car_body",
+          "note": "Carve lattice windows into sides; kids see the riders"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "log (pine)",
+          "output": "car_roof",
+          "note": "Curved roof; lifts off for play"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "tan",
+          "input": "hide + birch_bark + lye",
+          "output": "leather",
+          "note": "Brown base leather"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "dress",
+          "input": "leather + birch_tar + tallow",
+          "output": "juften_leather",
+          "note": "Deep mahogany; smoky scent. Interior wall and seat padding."
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "bone",
+          "output": "passenger_figure",
+          "qty": 2,
+          "note": "2 carved children figures"
+        },
+        {
+          "station": "Joiner's Bench",
+          "mode": "carve",
+          "input": "antler",
+          "output": "conductor_figure",
+          "note": "Conductor figure carved from Antler"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "curdle",
+          "input": "milk + wood_vinegar",
+          "output": "quark_curds + liquid_whey",
+          "note": "Casein base"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "mix",
+          "input": "quark_curds + lye",
+          "output": "cheese_glue",
+          "note": "Structural bonds"
+        },
+        {
+          "station": "Mill",
+          "mode": "grind",
+          "input": "juniper_berry",
+          "output": "blue_pigment",
+          "note": "Deep midnight powder"
+        },
+        {
+          "station": "Mill",
+          "mode": "grind",
+          "input": "lingonberry",
+          "output": "crimson_pigment",
+          "note": "Rich red"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "mix",
+          "input": "blue_pigment + cheese_glue",
+          "output": "midnight_casein",
+          "note": "Car body blue"
+        },
+        {
+          "station": "Cauldron",
+          "mode": "mix",
+          "input": "crimson_pigment + cheese_glue",
+          "output": "crimson_casein",
+          "note": "Window frames"
+        }
+      ],
+      "assembly": {
+        "inputs": [
+          "locomotive_body",
+          "smokestack",
+          "wheel_truck (\u00d72)",
+          "passenger_car_body",
+          "car_roof",
+          "juften_leather",
+          "passenger_figure (\u00d72)",
+          "conductor_figure",
+          "cheese_glue",
+          "pine_tar",
+          "midnight_casein",
+          "crimson_casein"
+        ],
+        "output": "polar_express",
+        "note": "Locomotive: soak in pine_tar until jet black; carved letters stay natural oak gold. Smokestack glued on top. Passenger car: midnight blue box, crimson window frames, roof lifts off for play. Interior: juften seats. Bone children seated inside, conductor stands at door. Carved hook-and-pin couples loco to car. The wheels roll."
+      },
+      "tech": [
+        "Framing",
+        "Subassembly",
+        "Distillation",
+        "Hide",
+        "Bone",
+        "Pigment"
+      ],
+      "flavor_text": "The bell rings thrice: for the Lost, the Hopeful, and the Believing. It is the train that finds the children who almost stopped listening.",
+      "final_visual": {
+        "Locomotive": "Jet black oak soaked in pine_tar until it looks like cast iron. The 'POLAR EXPRESS' lettering glows natural oak through the black\u2014reverse stencil, no paint needed.",
+        "Passenger Car": "Midnight blue box with crimson window frames. Curved roof lifts off\u2014inside: juften-black seats, bone figures.",
+        "The Figures": "Two bone children sit facing the windows. The antler conductor stands at the vestibule door, ticket punch raised forever.",
+        "The Scent": "Pine_tar and birch-smoke juften."
+      }
+    }
+  }
+}

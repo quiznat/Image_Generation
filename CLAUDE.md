@@ -30,6 +30,29 @@ python src/game_asset_generator.py --assets game_assets/my_game.json
 # Animation Creator - Visualize evolution chains as GIFs
 python scripts/create_evolution_animation.py
 python scripts/create_evolution_animation.py --max-iterations 15
+
+# Style Reference Generator - Generate assets matching a reference image style
+python src/style_reference_generator.py \
+  --reference game_assets/ironwood_totems_card.png \
+  --catalog game_assets/nordic_toys_catalog.json
+
+# Intermediate Generator - Generate intermediate crafting objects using toy as reference
+python src/intermediate_generator.py --toy ironwood_totems --reference path/to/toy.png
+python src/intermediate_generator.py --all --manifest game_assets/toy_references.json
+python src/intermediate_generator.py --list-only  # Dry run
+```
+
+### Catalog Builders
+
+```bash
+# Build Nordic toys catalog from toys.json
+python scripts/build_nordic_catalog.py
+
+# Build station catalog with lineage mapping
+python scripts/build_station_catalog.py
+
+# Build intermediate crafting objects catalog
+python scripts/build_intermediate_catalog.py
 ```
 
 ### Testing and Debugging
@@ -56,7 +79,7 @@ Requires `OPENAI_API_KEY` in `.env` file.
 
 ## Architecture
 
-### Five Main Pipelines
+### Seven Main Pipelines
 
 1. **V1 Vision Pipeline** (`src/openai_image_generator.py`)
    - Flow: Input Image → GPT-4o Analysis → Wrap in Style Template → DALL-E 3 Generation
@@ -88,6 +111,25 @@ Requires `OPENAI_API_KEY` in `.env` file.
    - Supports crossfade and morph interpolation modes
    - Uses `config/animation_config.json`
    - Auto-detects iteration count and creates dynamic grid layouts
+
+6. **Style Reference Generator** (`src/style_reference_generator.py`)
+   - Flow: Reference Image + Catalog JSON → GPT-4o style matching → Consistent asset generation
+   - Uses reference image to enforce visual style consistency across all generated assets
+   - Reads asset definitions from catalog JSON files
+   - Single-worker processing to respect API rate limits
+
+7. **Intermediate Generator** (`src/intermediate_generator.py`)
+   - Flow: Finished Toy Image → Intermediate crafting components in matching style
+   - Uses toys.json recipes to extract intermediate objects per toy
+   - Each intermediate matches its parent toy's visual style
+   - Supports single toy (`--toy`) or batch mode (`--all --manifest`)
+   - Handles shared intermediates (used by multiple toys) vs toy-specific ones
+
+### Catalog Builders
+
+- `scripts/build_nordic_catalog.py` - Builds toy catalog from toys.json with visual descriptions
+- `scripts/build_station_catalog.py` - Maps stations to lineages (Nisse, Svartálfar, etc.)
+- `scripts/build_intermediate_catalog.py` - Extracts intermediate objects from toy recipes
 
 ### Configuration Files
 
@@ -125,10 +167,20 @@ Define game assets in `game_assets/*.json`:
 - `test/` - Default input directory
 - `test_output/` - Default output directory (preserves nested folder structure)
 - `test_loop/` - Loop processor input/output (iterations in `1/`, `2/`, etc.)
-- `game_assets/` - Game asset JSON definitions
+- `game_assets/` - Game asset JSON definitions and catalogs
+  - `toys.json` - Toy recipes with processing steps
+  - `stations.json` - Crafting station definitions
+  - `items.json` - All game items (raw, processed, toys)
+  - `nordic_toys_catalog.json` - Generated toy catalog for image generation
+  - `nordic_stations_catalog.json` - Generated station catalog with lineage mapping
+  - `intermediate_catalog.json` - Generated intermediate objects catalog
 - `game_output/` - Generated game assets (organized by project/category)
+  - `Santas_Nordic_Workshop/toys/` - Finished toy images
+  - `Santas_Nordic_Workshop/materials/` - Material images
+  - `Santas_Nordic_Workshop/intermediates/` - Intermediate crafting objects
+  - `Santas_Nordic_Workshop_Stations/` - Station images by lineage
 - `evolution_animations/` - Animation output
-- `test_logs/` - Log files
+- `generation_logs/` - Log files from generation runs
 
 ### Key Patterns
 

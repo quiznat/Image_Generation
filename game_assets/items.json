@@ -1,0 +1,1624 @@
+{
+  "version": "1.0",
+  "extracted_from": "santas_nordic_workshop_gdd_v1.md",
+  "scope": "Era 1-3 only",
+  "item_count": 232,
+  "items": {
+    "birch_log": {
+      "id": "birch_log",
+      "class": "RAW",
+      "display_name": "Birch Log",
+      "source_lineage": "ljosalfar",
+      "era": 1
+    },
+    "birch_stick": {
+      "id": "birch_stick",
+      "class": "RAW",
+      "display_name": "Birch Stick",
+      "source_lineage": "ljosalfar",
+      "era": 1
+    },
+    "birch_branch": {
+      "id": "birch_branch",
+      "class": "RAW",
+      "display_name": "Birch Branch",
+      "source_lineage": "ljosalfar",
+      "era": 1
+    },
+    "oak_log": {
+      "id": "oak_log",
+      "class": "RAW",
+      "display_name": "Oak Log",
+      "source_lineage": "ljosalfar",
+      "era": 1
+    },
+    "oak_stick": {
+      "id": "oak_stick",
+      "class": "RAW",
+      "display_name": "Oak Stick",
+      "source_lineage": "ljosalfar",
+      "era": 1
+    },
+    "oak_branch": {
+      "id": "oak_branch",
+      "class": "RAW",
+      "display_name": "Oak Branch",
+      "source_lineage": "ljosalfar",
+      "era": 1
+    },
+    "pine_log": {
+      "id": "pine_log",
+      "class": "RAW",
+      "display_name": "Pine Log",
+      "source_lineage": "ljosalfar",
+      "era": 1
+    },
+    "pine_stick": {
+      "id": "pine_stick",
+      "class": "RAW",
+      "display_name": "Pine Stick",
+      "source_lineage": "ljosalfar",
+      "era": 1
+    },
+    "pine_branch": {
+      "id": "pine_branch",
+      "class": "RAW",
+      "display_name": "Pine Branch",
+      "source_lineage": "ljosalfar",
+      "era": 1
+    },
+    "ash_log": {
+      "id": "ash_log",
+      "class": "RAW",
+      "display_name": "Ash Log",
+      "source_lineage": "ljosalfar",
+      "era": 1
+    },
+    "ash_stick": {
+      "id": "ash_stick",
+      "class": "RAW",
+      "display_name": "Ash Stick",
+      "source_lineage": "ljosalfar",
+      "era": 1
+    },
+    "ash_branch": {
+      "id": "ash_branch",
+      "class": "RAW",
+      "display_name": "Ash Branch",
+      "source_lineage": "ljosalfar",
+      "era": 1
+    },
+    "maple_log": {
+      "id": "maple_log",
+      "class": "RAW",
+      "display_name": "Maple Log",
+      "source_lineage": "ljosalfar",
+      "era": 1
+    },
+    "maple_stick": {
+      "id": "maple_stick",
+      "class": "RAW",
+      "display_name": "Maple Stick",
+      "source_lineage": "ljosalfar",
+      "era": 1
+    },
+    "maple_branch": {
+      "id": "maple_branch",
+      "class": "RAW",
+      "display_name": "Maple Branch",
+      "source_lineage": "ljosalfar",
+      "era": 1
+    },
+    "birch_bark": {
+      "id": "birch_bark",
+      "class": "RAW",
+      "display_name": "Birch Bark",
+      "description": "Flexible, waterproof. H\u00fa\u00f0-lj\u00f3s (Skin-of-Light)",
+      "source_lineage": "ljosalfar",
+      "era": 1
+    },
+    "oak_bark": {
+      "id": "oak_bark",
+      "class": "RAW",
+      "display_name": "Oak Bark",
+      "description": "Tannin-rich bark for leather",
+      "source_lineage": "ljosalfar",
+      "era": 2
+    },
+    "pine_resin": {
+      "id": "pine_resin",
+      "class": "RAW",
+      "display_name": "Pine Resin",
+      "description": "Golden Tears of the Sun - sticky, antimicrobial",
+      "source_lineage": "ljosalfar",
+      "era": 1
+    },
+    "pine_needles": {
+      "id": "pine_needles",
+      "class": "RAW",
+      "display_name": "Pine Needles",
+      "description": "Soft, fragrant stuffing (FREE!)",
+      "source_lineage": "ljosalfar",
+      "era": 1
+    },
+    "pinecone": {
+      "id": "pinecone",
+      "class": "RAW",
+      "display_name": "Pinecone",
+      "description": "Decorative forest seed",
+      "source_lineage": "ljosalfar",
+      "era": 1
+    },
+    "rowan_berry": {
+      "id": "rowan_berry",
+      "class": "RAW",
+      "display_name": "Rowan Berries",
+      "description": "Bright orange-red for pigment",
+      "source_lineage": "ljosalfar",
+      "era": 2
+    },
+    "lingonberry": {
+      "id": "lingonberry",
+      "class": "RAW",
+      "display_name": "Lingonberries",
+      "description": "Deep crimson for pigment",
+      "source_lineage": "ljosalfar",
+      "era": 2
+    },
+    "juniper_berry": {
+      "id": "juniper_berry",
+      "class": "RAW",
+      "display_name": "Juniper Berries",
+      "description": "Blue-purple for pigment",
+      "source_lineage": "ljosalfar",
+      "era": 2
+    },
+    "oak_acorns": {
+      "id": "oak_acorns",
+      "class": "RAW",
+      "display_name": "Oak Acorns",
+      "description": "Forest seeds",
+      "source_lineage": "ljosalfar",
+      "era": 1
+    },
+    "tallow": {
+      "id": "tallow",
+      "class": "RAW",
+      "display_name": "Tallow",
+      "description": "Rendered fat - The Peace-Maker",
+      "source_lineage": "nisse",
+      "era": 1
+    },
+    "sinew": {
+      "id": "sinew",
+      "class": "RAW",
+      "display_name": "Sinew",
+      "description": "Sin - strong binding tendons",
+      "source_lineage": "nisse",
+      "era": 1
+    },
+    "lye": {
+      "id": "lye",
+      "class": "RAW",
+      "display_name": "Lye",
+      "description": "\u00d6sku-Vatn (Ash-Water) - caustic, cleansing",
+      "source_lineage": "nisse",
+      "era": 1
+    },
+    "milk": {
+      "id": "milk",
+      "class": "RAW",
+      "display_name": "Milk",
+      "description": "Mj\u00f3lk - protein-rich liquid",
+      "source_lineage": "nisse",
+      "era": 1
+    },
+    "birch_ash": {
+      "id": "birch_ash",
+      "class": "RAW",
+      "display_name": "Birch Ash",
+      "description": "Bjarkar-Aska - white powder for whitewash",
+      "source_lineage": "nisse",
+      "era": 1
+    },
+    "wool_fiber": {
+      "id": "wool_fiber",
+      "class": "RAW",
+      "display_name": "Wool Fiber",
+      "description": "Ull-Sk\u00fd (Wool-Cloud) - fluffy stuffing",
+      "source_lineage": "nisse",
+      "era": 2
+    },
+    "hide": {
+      "id": "hide",
+      "class": "RAW",
+      "display_name": "Hide",
+      "description": "H\u00fa\u00f0 - thick, flexible cattle hide",
+      "source_lineage": "nisse",
+      "era": 2
+    },
+    "bone": {
+      "id": "bone",
+      "class": "RAW",
+      "display_name": "Bone",
+      "description": "Bein - hard, workable",
+      "source_lineage": "nisse",
+      "era": 2
+    },
+    "antler": {
+      "id": "antler",
+      "class": "RAW",
+      "display_name": "Antler",
+      "description": "Geir - branching, decorative",
+      "source_lineage": "nisse",
+      "era": 2
+    },
+    "scutched_flax": {
+      "id": "scutched_flax",
+      "class": "RAW",
+      "display_name": "Scutched Flax",
+      "description": "H\u00f6r - pre-processed stalks ready for hackling",
+      "source_lineage": "nisse",
+      "era": 2
+    },
+    "flax_seeds": {
+      "id": "flax_seeds",
+      "class": "RAW",
+      "display_name": "Flax Seeds",
+      "description": "H\u00f6rfr\u00e6 - for linseed oil",
+      "source_lineage": "nisse",
+      "era": 2
+    },
+    "horn": {
+      "id": "horn",
+      "class": "RAW",
+      "display_name": "Horn",
+      "description": "Pliable when hot",
+      "source_lineage": "nisse",
+      "era": 2
+    },
+    "charcoal": {
+      "id": "charcoal",
+      "class": "RAW",
+      "display_name": "Charcoal",
+      "description": "Svart-Gull (Black-Gold) - fuel, carbon source",
+      "source_lineage": "svartalfar",
+      "era": 3
+    },
+    "wood_vinegar": {
+      "id": "wood_vinegar",
+      "class": "RAW",
+      "display_name": "Wood Vinegar",
+      "description": "Surtur-S\u00fdra (Surtur's Acid) - acetic acid",
+      "source_lineage": "svartalfar",
+      "era": 3
+    },
+    "pine_tar": {
+      "id": "pine_tar",
+      "class": "RAW",
+      "display_name": "Pine Tar",
+      "description": "Jar\u00f0-Bl\u00f3\u00f0 (Earth-Blood) - deep black, penetrating",
+      "source_lineage": "svartalfar",
+      "era": 3
+    },
+    "birch_tar": {
+      "id": "birch_tar",
+      "class": "RAW",
+      "display_name": "Birch Tar",
+      "description": "Bj\u00f6rk-Tjara - breathable, antifungal",
+      "source_lineage": "svartalfar",
+      "era": 3
+    },
+    "set_of_blocks": {
+      "id": "set_of_blocks",
+      "class": "PROCESSED",
+      "display_name": "Set of Blocks",
+      "description": "3 cubes ready for finishing",
+      "era": 1
+    },
+    "resin_seal": {
+      "id": "resin_seal",
+      "class": "PROCESSED",
+      "display_name": "Resin Seal",
+      "description": "pine_resin + tallow - soft sealant",
+      "era": 1
+    },
+    "lye_soap": {
+      "id": "lye_soap",
+      "class": "PROCESSED",
+      "display_name": "Lye Soap",
+      "description": "lye + tallow - pure white finish for wood",
+      "era": 1
+    },
+    "supple_rod": {
+      "id": "supple_rod",
+      "class": "PROCESSED",
+      "display_name": "Supple Rod",
+      "description": "Steam-softened ash, pliable for bending",
+      "era": 1
+    },
+    "squared_rod": {
+      "id": "squared_rod",
+      "class": "PROCESSED",
+      "display_name": "Squared Rod",
+      "description": "Hewn ash rod ready for seething",
+      "era": 1
+    },
+    "ash_hoop": {
+      "id": "ash_hoop",
+      "class": "PROCESSED",
+      "display_name": "Ash Hoop",
+      "description": "Bent ash wood formed into a rolling wheel",
+      "era": 1
+    },
+    "guide_stick": {
+      "id": "guide_stick",
+      "class": "PROCESSED",
+      "display_name": "Guide Stick",
+      "description": "Forked birch stick for guiding the wheel",
+      "era": 1
+    },
+    "small_basket": {
+      "id": "small_basket",
+      "class": "PROCESSED",
+      "display_name": "Small Basket",
+      "description": "Birch bark folded into a container",
+      "era": 1
+    },
+    "wreath_base": {
+      "id": "wreath_base",
+      "class": "PROCESSED",
+      "display_name": "Wreath Base",
+      "description": "Birch branches woven into a ring",
+      "era": 1
+    },
+    "top_rough_out": {
+      "id": "top_rough_out",
+      "class": "PROCESSED",
+      "display_name": "Top Rough-Out",
+      "description": "Blocky maple blank ready for turning",
+      "era": 1
+    },
+    "top_carved": {
+      "id": "top_carved",
+      "class": "PROCESSED",
+      "display_name": "Top Carved",
+      "description": "Lathe-turned maple top with integral stem",
+      "era": 1
+    },
+    "top_bleached": {
+      "id": "top_bleached",
+      "class": "PROCESSED",
+      "display_name": "Top Bleached",
+      "description": "Brilliant white top from lye-milk soak",
+      "era": 1
+    },
+    "swan_family_rough_outs": {
+      "id": "swan_family_rough_outs",
+      "class": "PROCESSED",
+      "display_name": "Swan Family Rough-Outs",
+      "description": "Blocky 8-sided pine shapes",
+      "era": 1
+    },
+    "swan_family_carved": {
+      "id": "swan_family_carved",
+      "class": "PROCESSED",
+      "display_name": "Swan Family Carved",
+      "description": "Refined pine swans ready for bleaching",
+      "era": 1
+    },
+    "swan_family_bleached": {
+      "id": "swan_family_bleached",
+      "class": "PROCESSED",
+      "display_name": "Swan Family Bleached",
+      "description": "Frost-white swans from lye-milk soak",
+      "era": 1
+    },
+    "leather": {
+      "id": "leather",
+      "class": "PROCESSED",
+      "display_name": "Leather",
+      "description": "Tanned hide",
+      "era": 2
+    },
+    "felt": {
+      "id": "felt",
+      "class": "PROCESSED",
+      "display_name": "Felt",
+      "description": "Compressed wool",
+      "era": 2
+    },
+    "wool_spool": {
+      "id": "wool_spool",
+      "class": "PROCESSED",
+      "display_name": "Wool Spool",
+      "description": "Spun wool thread",
+      "era": 2
+    },
+    "wool_fabric": {
+      "id": "wool_fabric",
+      "class": "PROCESSED",
+      "display_name": "Wool Fabric",
+      "description": "Woven wool cloth",
+      "era": 2
+    },
+    "wool_cord": {
+      "id": "wool_cord",
+      "class": "PROCESSED",
+      "display_name": "Wool Cord",
+      "description": "Twisted wool rope",
+      "era": 2
+    },
+    "line_flax": {
+      "id": "line_flax",
+      "class": "PROCESSED",
+      "display_name": "Line Flax",
+      "description": "Long fibers from hackle",
+      "era": 2
+    },
+    "tow": {
+      "id": "tow",
+      "class": "PROCESSED",
+      "display_name": "Tow",
+      "description": "Short fibers from hackle - stuffing",
+      "era": 2
+    },
+    "linen_spool": {
+      "id": "linen_spool",
+      "class": "PROCESSED",
+      "display_name": "Linen Spool",
+      "description": "Spun linen thread",
+      "era": 2
+    },
+    "linen_fabric": {
+      "id": "linen_fabric",
+      "class": "PROCESSED",
+      "display_name": "Linen Fabric",
+      "description": "Woven linen cloth",
+      "era": 2
+    },
+    "linen_cord": {
+      "id": "linen_cord",
+      "class": "PROCESSED",
+      "display_name": "Linen Cord",
+      "description": "Twisted linen rope",
+      "era": 2
+    },
+    "tow_cord": {
+      "id": "tow_cord",
+      "class": "PROCESSED",
+      "display_name": "Tow Cord",
+      "description": "Rough cord from tow",
+      "era": 2
+    },
+    "hide_glue": {
+      "id": "hide_glue",
+      "class": "PROCESSED",
+      "display_name": "Hide Glue",
+      "description": "Thermoplastic adhesive from hide + sinew",
+      "era": 2
+    },
+    "bone_toggle": {
+      "id": "bone_toggle",
+      "class": "PROCESSED",
+      "display_name": "Bone Toggle",
+      "description": "Carved bone fastener",
+      "era": 2
+    },
+    "bone_button": {
+      "id": "bone_button",
+      "class": "PROCESSED",
+      "display_name": "Bone Button",
+      "description": "Carved bone button",
+      "era": 2
+    },
+    "bone_eyes": {
+      "id": "bone_eyes",
+      "class": "PROCESSED",
+      "display_name": "Bone Eyes",
+      "description": "Carved bone doll eyes",
+      "era": 2
+    },
+    "orange_pigment": {
+      "id": "orange_pigment",
+      "class": "PROCESSED",
+      "display_name": "Orange Pigment",
+      "description": "Ground rowan berries",
+      "era": 2
+    },
+    "crimson_pigment": {
+      "id": "crimson_pigment",
+      "class": "PROCESSED",
+      "display_name": "Crimson Pigment",
+      "description": "Ground lingonberries",
+      "era": 2
+    },
+    "blue_pigment": {
+      "id": "blue_pigment",
+      "class": "PROCESSED",
+      "display_name": "Blue Pigment",
+      "description": "Ground juniper berries",
+      "era": 2
+    },
+    "cheese_glue": {
+      "id": "cheese_glue",
+      "class": "PROCESSED",
+      "display_name": "Cheese Glue",
+      "description": "Stone-hard adhesive from quark + lye",
+      "era": 3
+    },
+    "quark_curds": {
+      "id": "quark_curds",
+      "class": "PROCESSED",
+      "display_name": "Quark Curds",
+      "description": "Curdled milk solids",
+      "era": 3
+    },
+    "juften_leather": {
+      "id": "juften_leather",
+      "class": "PROCESSED",
+      "display_name": "Juften Leather",
+      "description": "Breathable waterproof leather",
+      "era": 3
+    },
+    "whitewash": {
+      "id": "whitewash",
+      "class": "PROCESSED",
+      "display_name": "Whitewash",
+      "description": "milk + birch_ash - white finish",
+      "era": 3
+    },
+    "distemper": {
+      "id": "distemper",
+      "class": "PROCESSED",
+      "display_name": "Distemper",
+      "description": "Pigmented whitewash paint",
+      "era": 3
+    },
+    "component": {
+      "id": "component",
+      "class": "PROCESSED",
+      "display_name": "Component",
+      "era": 1
+    },
+    "tuned_bars": {
+      "id": "tuned_bars",
+      "class": "PROCESSED",
+      "display_name": "Tuned Bars",
+      "era": 1
+    },
+    "sound_box": {
+      "id": "sound_box",
+      "class": "PROCESSED",
+      "display_name": "Sound Box",
+      "era": 1
+    },
+    "pedestal_blank": {
+      "id": "pedestal_blank",
+      "class": "PROCESSED",
+      "display_name": "Pedestal Blank",
+      "era": 1
+    },
+    "oak_pedestal": {
+      "id": "oak_pedestal",
+      "class": "PROCESSED",
+      "display_name": "Oak Pedestal",
+      "era": 1
+    },
+    "wick_line": {
+      "id": "wick_line",
+      "class": "PROCESSED",
+      "display_name": "Wick Line",
+      "era": 1
+    },
+    "etched_vow_scroll": {
+      "id": "etched_vow_scroll",
+      "class": "PROCESSED",
+      "display_name": "Etched Vow Scroll",
+      "era": 1
+    },
+    "cleansing_dust": {
+      "id": "cleansing_dust",
+      "class": "PROCESSED",
+      "display_name": "Cleansing Dust",
+      "era": 1
+    },
+    "scented_fat": {
+      "id": "scented_fat",
+      "class": "PROCESSED",
+      "display_name": "Scented Fat",
+      "era": 1
+    },
+    "orange_soap": {
+      "id": "orange_soap",
+      "class": "PROCESSED",
+      "display_name": "Orange Soap",
+      "era": 1
+    },
+    "chess_billets": {
+      "id": "chess_billets",
+      "class": "PROCESSED",
+      "display_name": "Chess Billets",
+      "era": 1
+    },
+    "chess_pieces_raw": {
+      "id": "chess_pieces_raw",
+      "class": "PROCESSED",
+      "display_name": "Chess Pieces Raw",
+      "era": 1
+    },
+    "board_planks": {
+      "id": "board_planks",
+      "class": "PROCESSED",
+      "display_name": "Board Planks",
+      "era": 1
+    },
+    "chess_board": {
+      "id": "chess_board",
+      "class": "PROCESSED",
+      "display_name": "Chess Board",
+      "era": 1
+    },
+    "wool_felt": {
+      "id": "wool_felt",
+      "class": "PROCESSED",
+      "display_name": "Wool Felt",
+      "era": 1
+    },
+    "set_of_blocks (oak)": {
+      "id": "set_of_blocks (oak)",
+      "class": "PROCESSED",
+      "display_name": "Set Of Blocks (Oak)",
+      "era": 1
+    },
+    "orange_tallow_raw": {
+      "id": "orange_tallow_raw",
+      "class": "PROCESSED",
+      "display_name": "Orange Tallow Raw",
+      "era": 1
+    },
+    "swan_body": {
+      "id": "swan_body",
+      "class": "PROCESSED",
+      "display_name": "Swan Body",
+      "era": 1
+    },
+    "cygnet_bodies": {
+      "id": "cygnet_bodies",
+      "class": "PROCESSED",
+      "display_name": "Cygnet Bodies",
+      "era": 1
+    },
+    "white_pigment": {
+      "id": "white_pigment",
+      "class": "PROCESSED",
+      "display_name": "White Pigment",
+      "era": 1
+    },
+    "white_tallow_raw": {
+      "id": "white_tallow_raw",
+      "class": "PROCESSED",
+      "display_name": "White Tallow Raw",
+      "era": 1
+    },
+    "blue_tallow_raw": {
+      "id": "blue_tallow_raw",
+      "class": "PROCESSED",
+      "display_name": "Blue Tallow Raw",
+      "era": 1
+    },
+    "line_flax + tow": {
+      "id": "line_flax + tow",
+      "class": "PROCESSED",
+      "display_name": "Line Flax + Tow",
+      "era": 2
+    },
+    "heavy_spinner_disc": {
+      "id": "heavy_spinner_disc",
+      "class": "PROCESSED",
+      "display_name": "Heavy Spinner Disc",
+      "era": 2
+    },
+    "antler_y_frame": {
+      "id": "antler_y_frame",
+      "class": "PROCESSED",
+      "display_name": "Antler Y Frame",
+      "era": 2
+    },
+    "bone_disc": {
+      "id": "bone_disc",
+      "class": "PROCESSED",
+      "display_name": "Bone Disc",
+      "era": 2
+    },
+    "bone_dice": {
+      "id": "bone_dice",
+      "class": "PROCESSED",
+      "display_name": "Bone Dice",
+      "era": 2
+    },
+    "throwing_cup": {
+      "id": "throwing_cup",
+      "class": "PROCESSED",
+      "display_name": "Throwing Cup",
+      "era": 2
+    },
+    "score_peg": {
+      "id": "score_peg",
+      "class": "PROCESSED",
+      "display_name": "Score Peg",
+      "era": 2
+    },
+    "dice_pouch": {
+      "id": "dice_pouch",
+      "class": "PROCESSED",
+      "display_name": "Dice Pouch",
+      "era": 2
+    },
+    "ash_blade": {
+      "id": "ash_blade",
+      "class": "PROCESSED",
+      "display_name": "Ash Blade",
+      "era": 2
+    },
+    "scabbard_shell": {
+      "id": "scabbard_shell",
+      "class": "PROCESSED",
+      "display_name": "Scabbard Shell",
+      "era": 2
+    },
+    "leather_hangers": {
+      "id": "leather_hangers",
+      "class": "PROCESSED",
+      "display_name": "Leather Hangers",
+      "era": 2
+    },
+    "shield_backing": {
+      "id": "shield_backing",
+      "class": "PROCESSED",
+      "display_name": "Shield Backing",
+      "era": 2
+    },
+    "purple_distemper": {
+      "id": "purple_distemper",
+      "class": "PROCESSED",
+      "display_name": "Purple Distemper",
+      "era": 2
+    },
+    "tambourine_frame": {
+      "id": "tambourine_frame",
+      "class": "PROCESSED",
+      "display_name": "Tambourine Frame",
+      "era": 2
+    },
+    "drum_skin": {
+      "id": "drum_skin",
+      "class": "PROCESSED",
+      "display_name": "Drum Skin",
+      "era": 2
+    },
+    "leather_strap": {
+      "id": "leather_strap",
+      "class": "PROCESSED",
+      "display_name": "Leather Strap",
+      "era": 2
+    },
+    "board (birch)": {
+      "id": "board (birch)",
+      "class": "PROCESSED",
+      "display_name": "Board (Birch)",
+      "era": 2
+    },
+    "supple_hoop": {
+      "id": "supple_hoop",
+      "class": "PROCESSED",
+      "display_name": "Supple Hoop",
+      "era": 2
+    },
+    "raw_hide": {
+      "id": "raw_hide",
+      "class": "PROCESSED",
+      "display_name": "Raw Hide",
+      "era": 2
+    },
+    "mallet_head": {
+      "id": "mallet_head",
+      "class": "PROCESSED",
+      "display_name": "Mallet Head",
+      "era": 2
+    },
+    "horse_head": {
+      "id": "horse_head",
+      "class": "PROCESSED",
+      "display_name": "Horse Head",
+      "era": 2
+    },
+    "bone_teeth": {
+      "id": "bone_teeth",
+      "class": "PROCESSED",
+      "display_name": "Bone Teeth",
+      "era": 2
+    },
+    "bone_claws": {
+      "id": "bone_claws",
+      "class": "PROCESSED",
+      "display_name": "Bone Claws",
+      "era": 2
+    },
+    "board (ash)": {
+      "id": "board (ash)",
+      "class": "PROCESSED",
+      "display_name": "Board (Ash)",
+      "era": 2
+    },
+    "supple_board": {
+      "id": "supple_board",
+      "class": "PROCESSED",
+      "display_name": "Supple Board",
+      "era": 2
+    },
+    "sleigh_runner": {
+      "id": "sleigh_runner",
+      "class": "PROCESSED",
+      "display_name": "Sleigh Runner",
+      "era": 2
+    },
+    "sleigh_frame": {
+      "id": "sleigh_frame",
+      "class": "PROCESSED",
+      "display_name": "Sleigh Frame",
+      "era": 2
+    },
+    "crimson_tallow_raw": {
+      "id": "crimson_tallow_raw",
+      "class": "PROCESSED",
+      "display_name": "Crimson Tallow Raw",
+      "era": 2
+    },
+    "antler_finials": {
+      "id": "antler_finials",
+      "class": "PROCESSED",
+      "display_name": "Antler Finials",
+      "era": 2
+    },
+    "board (pine)": {
+      "id": "board (pine)",
+      "class": "PROCESSED",
+      "display_name": "Board (Pine)",
+      "era": 3
+    },
+    "proscenium_arch": {
+      "id": "proscenium_arch",
+      "class": "PROCESSED",
+      "display_name": "Proscenium Arch",
+      "era": 3
+    },
+    "stage_back": {
+      "id": "stage_back",
+      "class": "PROCESSED",
+      "display_name": "Stage Back",
+      "era": 3
+    },
+    "mill_wheel": {
+      "id": "mill_wheel",
+      "class": "PROCESSED",
+      "display_name": "Mill Wheel",
+      "era": 3
+    },
+    "grind_disc": {
+      "id": "grind_disc",
+      "class": "PROCESSED",
+      "display_name": "Grind Disc",
+      "era": 3
+    },
+    "grind_plate": {
+      "id": "grind_plate",
+      "class": "PROCESSED",
+      "display_name": "Grind Plate",
+      "era": 3
+    },
+    "mill_housing": {
+      "id": "mill_housing",
+      "class": "PROCESSED",
+      "display_name": "Mill Housing",
+      "era": 3
+    },
+    "grinder_mechanism": {
+      "id": "grinder_mechanism",
+      "class": "PROCESSED",
+      "display_name": "Grinder Mechanism",
+      "era": 3
+    },
+    "hopper_cone": {
+      "id": "hopper_cone",
+      "class": "PROCESSED",
+      "display_name": "Hopper Cone",
+      "era": 3
+    },
+    "ark_keel": {
+      "id": "ark_keel",
+      "class": "PROCESSED",
+      "display_name": "Ark Keel",
+      "era": 3
+    },
+    "quark_curds + liquid_whey": {
+      "id": "quark_curds + liquid_whey",
+      "class": "PROCESSED",
+      "display_name": "Quark Curds + Liquid Whey",
+      "era": 3
+    },
+    "crimson_casein": {
+      "id": "crimson_casein",
+      "class": "PROCESSED",
+      "display_name": "Crimson Casein",
+      "era": 3
+    },
+    "board (oak)": {
+      "id": "board (oak)",
+      "class": "PROCESSED",
+      "display_name": "Board (Oak)",
+      "era": 3
+    },
+    "chest_box": {
+      "id": "chest_box",
+      "class": "PROCESSED",
+      "display_name": "Chest Box",
+      "era": 3
+    },
+    "chest_body + chest_lid": {
+      "id": "chest_body + chest_lid",
+      "class": "PROCESSED",
+      "display_name": "Chest Body + Chest Lid",
+      "era": 3
+    },
+    "boar_body": {
+      "id": "boar_body",
+      "class": "PROCESSED",
+      "display_name": "Boar Body",
+      "era": 3
+    },
+    "tusk": {
+      "id": "tusk",
+      "class": "PROCESSED",
+      "display_name": "Tusk",
+      "era": 3
+    },
+    "wheel": {
+      "id": "wheel",
+      "class": "PROCESSED",
+      "display_name": "Wheel",
+      "era": 3
+    },
+    "axle_set": {
+      "id": "axle_set",
+      "class": "PROCESSED",
+      "display_name": "Axle Set",
+      "era": 3
+    },
+    "pull_strap": {
+      "id": "pull_strap",
+      "class": "PROCESSED",
+      "display_name": "Pull Strap",
+      "era": 3
+    },
+    "cart_body": {
+      "id": "cart_body",
+      "class": "PROCESSED",
+      "display_name": "Cart Body",
+      "era": 3
+    },
+    "cord_drum": {
+      "id": "cord_drum",
+      "class": "PROCESSED",
+      "display_name": "Cord Drum",
+      "era": 3
+    },
+    "drive_axle": {
+      "id": "drive_axle",
+      "class": "PROCESSED",
+      "display_name": "Drive Axle",
+      "era": 3
+    },
+    "rear_axle": {
+      "id": "rear_axle",
+      "class": "PROCESSED",
+      "display_name": "Rear Axle",
+      "era": 3
+    },
+    "sentinel_pole": {
+      "id": "sentinel_pole",
+      "class": "PROCESSED",
+      "display_name": "Sentinel Pole",
+      "era": 3
+    },
+    "nisse_figure": {
+      "id": "nisse_figure",
+      "class": "PROCESSED",
+      "display_name": "Nisse Figure",
+      "era": 3
+    },
+    "stretching_frame": {
+      "id": "stretching_frame",
+      "class": "PROCESSED",
+      "display_name": "Stretching Frame",
+      "era": 3
+    },
+    "scale_press": {
+      "id": "scale_press",
+      "class": "PROCESSED",
+      "display_name": "Scale Press",
+      "era": 3
+    },
+    "dragon_scale_leather": {
+      "id": "dragon_scale_leather",
+      "class": "PROCESSED",
+      "display_name": "Dragon Scale Leather",
+      "era": 3
+    },
+    "ocean_base": {
+      "id": "ocean_base",
+      "class": "PROCESSED",
+      "display_name": "Ocean Base",
+      "era": 3
+    },
+    "traction_roller": {
+      "id": "traction_roller",
+      "class": "PROCESSED",
+      "display_name": "Traction Roller",
+      "era": 3
+    },
+    "lift_cam": {
+      "id": "lift_cam",
+      "class": "PROCESSED",
+      "display_name": "Lift Cam",
+      "era": 3
+    },
+    "drive_mechanism": {
+      "id": "drive_mechanism",
+      "class": "PROCESSED",
+      "display_name": "Drive Mechanism",
+      "era": 3
+    },
+    "serpent_head": {
+      "id": "serpent_head",
+      "class": "PROCESSED",
+      "display_name": "Serpent Head",
+      "era": 3
+    },
+    "blue_casein": {
+      "id": "blue_casein",
+      "class": "PROCESSED",
+      "display_name": "Blue Casein",
+      "era": 3
+    },
+    "cargo_bed": {
+      "id": "cargo_bed",
+      "class": "PROCESSED",
+      "display_name": "Cargo Bed",
+      "era": 3
+    },
+    "orange_tallow_sealed": {
+      "id": "orange_tallow_sealed",
+      "class": "PROCESSED",
+      "display_name": "Orange Tallow Sealed",
+      "era": 3
+    },
+    "rod_shaft": {
+      "id": "rod_shaft",
+      "class": "PROCESSED",
+      "display_name": "Rod Shaft",
+      "era": 3
+    },
+    "bone_guide": {
+      "id": "bone_guide",
+      "class": "PROCESSED",
+      "display_name": "Bone Guide",
+      "era": 3
+    },
+    "reel_spool": {
+      "id": "reel_spool",
+      "class": "PROCESSED",
+      "display_name": "Reel Spool",
+      "era": 3
+    },
+    "bone_axle": {
+      "id": "bone_axle",
+      "class": "PROCESSED",
+      "display_name": "Bone Axle",
+      "era": 3
+    },
+    "click_pawl": {
+      "id": "click_pawl",
+      "class": "PROCESSED",
+      "display_name": "Click Pawl",
+      "era": 3
+    },
+    "reel_seat": {
+      "id": "reel_seat",
+      "class": "PROCESSED",
+      "display_name": "Reel Seat",
+      "era": 3
+    },
+    "fishing_reel": {
+      "id": "fishing_reel",
+      "class": "PROCESSED",
+      "display_name": "Fishing Reel",
+      "era": 3
+    },
+    "box_boards": {
+      "id": "box_boards",
+      "class": "PROCESSED",
+      "display_name": "Box Boards",
+      "era": 3
+    },
+    "tackle_box": {
+      "id": "tackle_box",
+      "class": "PROCESSED",
+      "display_name": "Tackle Box",
+      "era": 3
+    },
+    "bone_latch": {
+      "id": "bone_latch",
+      "class": "PROCESSED",
+      "display_name": "Bone Latch",
+      "era": 3
+    },
+    "horse_body": {
+      "id": "horse_body",
+      "class": "PROCESSED",
+      "display_name": "Horse Body",
+      "era": 3
+    },
+    "curved_runner": {
+      "id": "curved_runner",
+      "class": "PROCESSED",
+      "display_name": "Curved Runner",
+      "era": 3
+    },
+    "rocker_base": {
+      "id": "rocker_base",
+      "class": "PROCESSED",
+      "display_name": "Rocker Base",
+      "era": 3
+    },
+    "locomotive_body": {
+      "id": "locomotive_body",
+      "class": "PROCESSED",
+      "display_name": "Locomotive Body",
+      "era": 3
+    },
+    "smokestack": {
+      "id": "smokestack",
+      "class": "PROCESSED",
+      "display_name": "Smokestack",
+      "era": 3
+    },
+    "train_wheel": {
+      "id": "train_wheel",
+      "class": "PROCESSED",
+      "display_name": "Train Wheel",
+      "era": 3
+    },
+    "truck_board": {
+      "id": "truck_board",
+      "class": "PROCESSED",
+      "display_name": "Truck Board",
+      "era": 3
+    },
+    "axle": {
+      "id": "axle",
+      "class": "PROCESSED",
+      "display_name": "Axle",
+      "era": 3
+    },
+    "wheel_truck": {
+      "id": "wheel_truck",
+      "class": "PROCESSED",
+      "display_name": "Wheel Truck",
+      "era": 3
+    },
+    "car_box": {
+      "id": "car_box",
+      "class": "PROCESSED",
+      "display_name": "Car Box",
+      "era": 3
+    },
+    "passenger_car_body": {
+      "id": "passenger_car_body",
+      "class": "PROCESSED",
+      "display_name": "Passenger Car Body",
+      "era": 3
+    },
+    "car_roof": {
+      "id": "car_roof",
+      "class": "PROCESSED",
+      "display_name": "Car Roof",
+      "era": 3
+    },
+    "passenger_figure": {
+      "id": "passenger_figure",
+      "class": "PROCESSED",
+      "display_name": "Passenger Figure",
+      "era": 3
+    },
+    "conductor_figure": {
+      "id": "conductor_figure",
+      "class": "PROCESSED",
+      "display_name": "Conductor Figure",
+      "era": 3
+    },
+    "midnight_casein": {
+      "id": "midnight_casein",
+      "class": "PROCESSED",
+      "display_name": "Midnight Casein",
+      "era": 3
+    },
+    "toy_id": {
+      "id": "toy_id",
+      "class": "TOY",
+      "display_name": "Toy Name",
+      "description": "Design rationale and gameplay implications",
+      "tier": 1,
+      "era": 1,
+      "stars": 1
+    },
+    "ironwood_totems": {
+      "id": "ironwood_totems",
+      "class": "TOY",
+      "display_name": "Ironwood Totems",
+      "description": "Every fortress begins with a single stone. A child who masters these blocks learns the first law of ",
+      "tier": 1,
+      "era": 1,
+      "stars": 1
+    },
+    "sun_wheel_chaser": {
+      "id": "sun_wheel_chaser",
+      "class": "TOY",
+      "display_name": "Sun-Wheel Chaser (S\u00f3lhj\u00f3l)",
+      "description": "The Sun-Wheel is the ghost of the summer sun. By chasing it across the winter rime, the children kee",
+      "tier": 1,
+      "era": 1,
+      "stars": 1
+    },
+    "yule_wreath": {
+      "id": "yule_wreath",
+      "class": "TOY",
+      "display_name": "Yule Wreath",
+      "description": "The wreath is a physical manifestation of the Endless Cycle. It signals the Gift-Bringer will once a",
+      "tier": 1,
+      "era": 1,
+      "stars": 1
+    },
+    "north_wind_whirler": {
+      "id": "north_wind_whirler",
+      "class": "TOY",
+      "display_name": "North-Wind Whirler",
+      "description": "When the whirler hums, the winter spirits are listening. Children race these across frozen lakes to ",
+      "tier": 1,
+      "era": 1,
+      "stars": 1
+    },
+    "aurora_callers": {
+      "id": "aurora_callers",
+      "class": "TOY",
+      "display_name": "Aurora Callers",
+      "description": "Legend says the Northern Lights were born from swans trapped in the ice\u2014their frantic wings painting",
+      "tier": 1,
+      "era": 1,
+      "stars": 1
+    },
+    "frost_voice_chime": {
+      "id": "frost_voice_chime",
+      "class": "TOY",
+      "display_name": "Frost-Voice Chime",
+      "description": "The sound of cracking ice, captured in wood. The children play songs that keep the darkness at bay, ",
+      "tier": 1,
+      "era": 1,
+      "stars": 1
+    },
+    "light_bringer_candle": {
+      "id": "light_bringer_candle",
+      "class": "TOY",
+      "display_name": "Light-Bringer Candle",
+      "description": "At the darkest time, bring light. At the coldest time, bring warmth. At the hungriest time, bring gi",
+      "tier": 2,
+      "era": 1,
+      "stars": 2
+    },
+    "nisse_offering_basket": {
+      "id": "nisse_offering_basket",
+      "class": "TOY",
+      "display_name": "Nisse Offering Basket",
+      "description": "Children learn to leave a basket to the household Nisse each winter. The old bargain is simple: smal",
+      "tier": 2,
+      "era": 1,
+      "stars": 2
+    },
+    "grand_lineage_chess_set": {
+      "id": "grand_lineage_chess_set",
+      "class": "TOY",
+      "display_name": "Grand-Lineage Chess Set",
+      "description": "Light against shadow, patience against cunning. A board for kings, carved by the hands of a master w",
+      "tier": 1,
+      "era": 1,
+      "stars": 1
+    },
+    "wool_warden_effigy": {
+      "id": "wool_warden_effigy",
+      "class": "TOY",
+      "display_name": "Wool-Warden Effigy",
+      "description": "A small guardian for small sleepers. Place it in the cradle and the winter spirits will pass by. Gen",
+      "tier": 2,
+      "era": 1,
+      "stars": 2
+    },
+    "great_bear_sentry": {
+      "id": "great_bear_sentry",
+      "class": "TOY",
+      "display_name": "Great-Bear Sentry",
+      "description": "Set him at the foot of the bed and nothing will disturb your sleep. The great bear watches through t",
+      "tier": 2,
+      "era": 1,
+      "stars": 2
+    },
+    "rune_singer_blocks": {
+      "id": "rune_singer_blocks",
+      "class": "TOY",
+      "display_name": "Rune-Singer Blocks",
+      "description": "Before a child can speak, they must learn to stack. Before they can read, they must learn the runes.",
+      "tier": 2,
+      "era": 1,
+      "stars": 2
+    },
+    "borealis_birds": {
+      "id": "borealis_birds",
+      "class": "TOY",
+      "display_name": "Borealis Birds",
+      "description": "The swans that escaped the ice carry the dancing sky on their feathers forever. White base, orange f",
+      "tier": 2,
+      "era": 1,
+      "stars": 2
+    },
+    "rag_doll": {
+      "id": "rag_doll",
+      "class": "TOY",
+      "display_name": "Rag Doll",
+      "description": "Woven from the first flax of summer, stuffed with the chaff of the harvest. She carries the warmth o",
+      "tier": 2,
+      "era": 2,
+      "stars": 2
+    },
+    "sun_whirler": {
+      "id": "sun_whirler",
+      "class": "TOY",
+      "display_name": "Sun-Whirler",
+      "description": "Pull the cord and the disc sings. The faster it spins, the louder it calls. Children spin these duri",
+      "tier": 2,
+      "era": 2,
+      "stars": 2
+    },
+    "antler_clacker": {
+      "id": "antler_clacker",
+      "class": "TOY",
+      "display_name": "Antler Clacker",
+      "description": "The clatter of bones on antler mimics the sound of reindeer hooves on frozen ground. Shake it during",
+      "tier": 2,
+      "era": 2,
+      "stars": 2
+    },
+    "fortunes_bones": {
+      "id": "fortunes_bones",
+      "class": "TOY",
+      "display_name": "Fortune's Bones",
+      "description": "The V\u00f6lva cast these to read the will of the gods. Children cast them to win each other's desserts. ",
+      "tier": 2,
+      "era": 2,
+      "stars": 2
+    },
+    "tale_weaver_set": {
+      "id": "tale_weaver_set",
+      "class": "TOY",
+      "display_name": "Tale-Weaver's Set",
+      "description": "Every saga needs a hero, and every hero needs a blade. This set transforms the nursery into Valhalla",
+      "tier": 2,
+      "era": 2,
+      "stars": 2
+    },
+    "jarl_shield_plaque": {
+      "id": "jarl_shield_plaque",
+      "class": "TOY",
+      "display_name": "Jarl's Shield-Plaque",
+      "description": "A wall-gift worthy of a chieftain's hall. The purple of 'Rau\u00f0bl\u00e1r' marks this as a treasure beyond p",
+      "tier": 2,
+      "era": 2,
+      "stars": 2
+    },
+    "wool_walker_bunny": {
+      "id": "wool_walker_bunny",
+      "class": "TOY",
+      "display_name": "Wool-Walker Bunny",
+      "description": "More than stuffing\u2014there's a spirit in this one. Squeeze it through a hundred long nights and it onl",
+      "tier": 3,
+      "era": 2,
+      "stars": 3
+    },
+    "linen_lass": {
+      "id": "linen_lass",
+      "class": "TOY",
+      "display_name": "Linen Lass",
+      "description": "She can wave, she can hug, she can hold your hand through the fever-dreams of winter sickness. Arms ",
+      "tier": 3,
+      "era": 2,
+      "stars": 3
+    },
+    "jingle_tambourine": {
+      "id": "jingle_tambourine",
+      "class": "TOY",
+      "display_name": "Jingle Tambourine",
+      "description": "The first instrument of celebration. Shake it and the bones rattle like laughter, like applause, lik",
+      "tier": 3,
+      "era": 2,
+      "stars": 3
+    },
+    "solstice_storm_drum": {
+      "id": "solstice_storm_drum",
+      "class": "TOY",
+      "display_name": "Solstice Storm-Drum",
+      "description": "Thunder in your hands. Strike it once and the storm answers. The V\u00f6lva use drums like this to walk b",
+      "tier": 3,
+      "era": 2,
+      "stars": 3
+    },
+    "ash_hobbyhorse": {
+      "id": "ash_hobbyhorse",
+      "class": "TOY",
+      "display_name": "Ash Hobbyhorse",
+      "description": "The steed of imagination rides through kitchen and hall alike. Gallop it hard enough and you might j",
+      "tier": 3,
+      "era": 2,
+      "stars": 3
+    },
+    "frost_wyrm": {
+      "id": "frost_wyrm",
+      "class": "TOY",
+      "display_name": "Frost Wyrm",
+      "description": "The serpent of the frozen sky, coiled and waiting. Pose it to strike or curl it around your arm like",
+      "tier": 3,
+      "era": 2,
+      "stars": 3
+    },
+    "great_north_sleigh": {
+      "id": "great_north_sleigh",
+      "class": "TOY",
+      "display_name": "Great North Sleigh",
+      "description": "Worthy of the Gift-Bringer himself. Load it with treasures and fly across the snow. This sleigh brin",
+      "tier": 3,
+      "era": 2,
+      "stars": 3
+    },
+    "storm_wing_kite": {
+      "id": "storm_wing_kite",
+      "class": "TOY",
+      "display_name": "Storm-Wing Kite",
+      "description": "To fly the Storm-Wing is to feel the raw pulse of the winter sky. The woolen sail is treated with a ",
+      "tier": 3,
+      "era": 3,
+      "stars": 3
+    },
+    "puppet_theater": {
+      "id": "puppet_theater",
+      "class": "TOY",
+      "display_name": "Puppet Theater",
+      "description": "Every child is a Skald. This stage transforms the hearth-corner into Valhalla, Niflheim, or wherever",
+      "tier": 3,
+      "era": 3,
+      "stars": 3
+    },
+    "stream_mill": {
+      "id": "stream_mill",
+      "class": "TOY",
+      "display_name": "Stream Mill",
+      "description": "Drop a berry in the hopper, watch the wheels churn, and catch the juice of the forest. Learn a patte",
+      "tier": 3,
+      "era": 3,
+      "stars": 3
+    },
+    "bergelmir_ark": {
+      "id": "bergelmir_ark",
+      "class": "TOY",
+      "display_name": "Bergelmir's Ark",
+      "description": "A vessel of the Primordial Deluge. This ark mimics the l\u00fa\u00f0r that saved Bergelmir from the drowning b",
+      "tier": 3,
+      "era": 3,
+      "stars": 3
+    },
+    "treasure_chest": {
+      "id": "treasure_chest",
+      "class": "TOY",
+      "display_name": "Treasure Chest",
+      "description": "Every child needs a place for secrets. Oak walls, leather hinges, and a linen bed for their most pre",
+      "tier": 3,
+      "era": 3,
+      "stars": 3
+    },
+    "yule_boar": {
+      "id": "yule_boar",
+      "class": "TOY",
+      "display_name": "Yule Boar",
+      "description": "Freyr's sacred beast, rolling to the feast. In the old days, families swore oaths on the Yule Boar's",
+      "tier": 3,
+      "era": 3,
+      "stars": 3
+    },
+    "nisse_boundary_levitator": {
+      "id": "nisse_boundary_levitator",
+      "class": "TOY",
+      "display_name": "Nisse Boundary Levitator",
+      "description": "A farmstead requires a watchful eye. Pull the cart and the Nisse levitates, patrolling the borders o",
+      "tier": 4,
+      "era": 3,
+      "stars": 4
+    },
+    "dragon_scale_slicks": {
+      "id": "dragon_scale_slicks",
+      "class": "TOY",
+      "display_name": "Dragon Scale Storm Slicks",
+      "description": "Nidhogg gnaws the World Tree, but his scales shed into the hands of clever craftsmen. This armor pro",
+      "tier": 4,
+      "era": 3,
+      "stars": 4
+    },
+    "jormungandr_drift": {
+      "id": "jormungandr_drift",
+      "class": "TOY",
+      "display_name": "Jormungandr Drift",
+      "description": "The World Serpent rises from the depths. Push the ocean-block and a hidden cam draws Jormungandr thr",
+      "tier": 4,
+      "era": 3,
+      "stars": 4
+    },
+    "ember_hauler": {
+      "id": "ember_hauler",
+      "class": "TOY",
+      "display_name": "Ember Hauler",
+      "description": "A mimic of the heavy wagons of the Svart\u00e1lfar, it is the color of the last spark in a dying fire, a ",
+      "tier": 4,
+      "era": 3,
+      "stars": 4
+    },
+    "anglers_set": {
+      "id": "anglers_set",
+      "class": "TOY",
+      "display_name": "Angler's Set",
+      "description": "A masterwork for those who hunt the fjord-depths. It is a set built for the long watch, sealed in a ",
+      "tier": 4,
+      "era": 3,
+      "stars": 4
+    },
+    "riding_horse": {
+      "id": "riding_horse",
+      "class": "TOY",
+      "display_name": "Riding Horse",
+      "description": "Beneath the aromatic Juften leather and the crimson harness, a hollow oak frame hums with every rock",
+      "tier": 4,
+      "era": 3,
+      "stars": 4
+    },
+    "polar_express": {
+      "id": "polar_express",
+      "class": "TOY",
+      "display_name": "The Polar Express",
+      "description": "The bell rings thrice: for the Lost, the Hopeful, and the Believing. It is the train that finds the ",
+      "tier": 4,
+      "era": 3,
+      "stars": 4
+    },
+    "wrapped_gift": {
+      "id": "wrapped_gift",
+      "class": "GIFT",
+      "display_name": "Wrapped Gift",
+      "description": "Ready for the sleigh!",
+      "era": 1
+    }
+  }
+}

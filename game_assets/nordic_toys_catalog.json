@@ -1,0 +1,1540 @@
+{
+  "project": "Santas Nordic Workshop",
+  "art_direction": {
+    "style": "Scandinavian storybook illustration; watercolor and gouache on textured paper; fine ink linework; soft ambient light; muted natural colors; medium detail",
+    "palette": "Pine greens, birch whites, oak browns, soot blacks, wool greys, stone neutrals, ice blues",
+    "lighting": "Ambient first; warm hearth light or diffuse arctic daylight",
+    "avoid": "photorealism, 3D render, neon colors, hyper-detail, extreme contrast, glossy plastic, modern materials"
+  },
+  "categories": {
+    "toys": {
+      "category_style": "Card format with rustic wooden title banner at top displaying the toy name, misty Nordic pine forest background, storybook illustration feel, the toy centered and prominent",
+      "assets": [
+        {
+          "id": "wool_warden_effigy",
+          "name": "Wool-Warden Effigy",
+          "description": "The Shape: Simple humanoid form, about 6 inches tall. Round head, stubby arms, no legs—a swaddled figure. The Material: Cream-colored wool felt, soft but dense. Visible fiber texture. The Face: Two dark stitched dots for eyes, a gentle curved line for mouth. Watching, not staring. The Stuffing: Firmly packed wool_fiber inside—squeezable but holds its shape. The Feel: Warm even when cold. Soft enough for a sleeping child's grip. The Wear: Meant to be loved hard. Edges soften with use, not unravel.",
+          "size": "1024x1024",
+          "tier": 2
+        },
+        {
+          "id": "rune_singer_blocks",
+          "name": "Rune-Singer Blocks",
+          "description": "The Blocks: Oak cubes, honey-gold with tight grain. Heavier than they look. The Runes: Each face carved with a single Elder Futhark rune. Orange paint fills the grooves—the symbols pop against the wood. The Set: 24 blocks for the full Elder Futhark, plus 6 blanks for building. The Finish: Resin seal gives a satin sheen. The runes are protected but tactile—small fingers trace them naturally. The Stack: These are building blocks first, alphabet second. Towers and walls, then words. The Sound: Solid oak clicks when stacked. Satisfying clatter when they fall.",
+          "size": "1024x1024",
+          "tier": 2
+        },
+        {
+          "id": "borealis_birds",
+          "name": "Borealis Birds",
+          "description": "Mother Swan: Graceful arched neck, wings suggested by carved ridges. White base with dramatic orange and blue aurora streaks across the back and wings. The Cygnets: Three small teardrops with upturned heads. Mostly white with subtle aurora hints—they haven't earned their full colors yet. The Colors: White snow-base, orange fire-streaks, blue shimmer at the edges. The aurora captured in paint. The Finish: Glossy from resin_seal. Waterproof and bath-ready. In Water: They float upright, pine's buoyancy keeping them stable. The colors dance on the water's surface. The Set: Mother and three cygnets. They cluster together naturally when floating.",
+          "size": "1024x1024",
+          "tier": 2
+        },
+        {
+          "id": "rag_doll",
+          "name": "Rag Doll",
+          "description": "The Shape: Simple humanoid form, about 8 inches tall. Arms and legs extend from a single body piece—no separate limbs. The Fabric: Natural linen—pale cream with subtle texture. Cool to the touch. The Face: Two embroidered dots for eyes, a gentle curved smile. Simple and timeless. The Hair: Loose tow fibers stitched to the head—straw-gold, slightly wild. The Stuffing: Tow chaff inside—soft but with body. She bends but holds her shape. The Feel: Cool linen exterior, giving softness within. Lighter than wool dolls.",
+          "size": "1024x1024",
+          "tier": 2
+        },
+        {
+          "id": "sun_whirler",
+          "name": "Sun-Whirler",
+          "description": "The Disc: Heavy oak circle, 4 inches diameter. Decorative grooves radiate from center like sun rays, stained orange with rowan. The Cord: Natural linen loop, about 2 feet total. Twisted tight for strength. The Holes: Two small holes near center, tallow-smoothed to prevent cord wear. The Motion: Pull-release rhythm makes the disc spin and reverse. At speed, it blurs into a golden sun. The Sound: A rising hum that changes pitch with speed—the voice of the returning light. The Feel: Satisfying tension in the cord, gyroscopic pull from the spinning disc.",
+          "size": "1024x1024",
+          "tier": 2
+        },
+        {
+          "id": "antler_clacker",
+          "name": "Antler Clacker",
+          "description": "The Frame: Natural antler fork, cream-white with subtle grain. Handle is the main beam, two tines form the arms. The Discs: Four bone circles, slightly dished, strung in pairs. Polished smooth from handling. The Stringing: Sinew loops connect discs to antler arms, sealed with amber resin. The Sound: Sharp clatter of bone-on-bone, deeper thunk when discs hit antler. Rhythmic when shaken properly. The Motion: Grip handle, shake side-to-side. The discs swing and strike in syncopated rhythm. The Feel: Light but solid. The antler handle is warm and smooth.",
+          "size": "1024x1024",
+          "tier": 2
+        },
+        {
+          "id": "fortunes_bones",
+          "name": "Fortune's Bones",
+          "description": "The Dice: Six bone cubes, cream-white with dark rune numerals. Slightly irregular—hand-carved, not factory-perfect. The Cup: Birch cylinder, open at top, palm-sized. Pale bark exterior, smooth interior. The Pegs: Ten small bone pins, pointed at one end. Used to track scores in soft wood or earth. The Pouch: Birch bark folded into a drawstring bag, sinew closure. Everything fits inside. The Sound: Sharp rattle of bone on wood when shaking. Satisfying clatter when dice spill. The Ritual: Shake the cup. Slam it down. Lift to reveal fate.",
+          "size": "1024x1024",
+          "tier": 2
+        },
+        {
+          "id": "tale_weaver_set",
+          "name": "Tale-Weaver's Set",
+          "description": "The Blade: Pale ash sword, about 20 inches. Viking-style profile with gentle taper. Fuller groove carved down the flat. Rounded edges—safe but authentic. The Handle: Leather-wrapped grip, crossguard carved from the same ash blank. Pommel is a simple dome. The Scabbard: Birch core wrapped in brown leather. Brass-colored birch bark accent at throat. The Carry: Leather belt loop and strap. Hangs at the hip, saga-ready. The Draw: Smooth slide with a satisfying 'shick' as blade clears scabbard. The Weight: Light enough for a child, substantial enough to feel heroic.",
+          "size": "1024x1024",
+          "tier": 2
+        },
+        {
+          "id": "jarl_shield_plaque",
+          "name": "Jarl's Shield-Plaque",
+          "description": "The Shape: Round shield form, about 12 inches diameter. Oak backing, leather face. The Color: Deep royal purple—'Rauðblár'—velvety matte from the distemper. The color of kings. The Design: Simple rune or beast motif in natural leather, revealed by masking before painting. The Edge: Leather wraps around to the back, secured with visible sinew stitching. The Finish: Resin seal gives subtle sheen without destroying the velvety purple. The Hanging: Sinew loop at back. Meant to catch firelight on a dark winter wall.",
+          "size": "1024x1024",
+          "tier": 2
+        },
+        {
+          "id": "wool_walker_bunny",
+          "name": "Wool-Walker Bunny",
+          "description": "The Shape: Classic bunny form, about 10 inches tall. Long upright ears, round body, stubby limbs. The Ears: The signature feature—bone toggles inside let them pose. Stand them up, fold them down, flop them sideways. The Face: Polished bone eyes with carved pupils. Bone button nose. Embroidered whiskers and mouth. The Body: Cream or grey wool_fabric, firmly stuffed. Huggable but holds its shape. The Feel: Warm wool exterior, dense stuffing. The ears have satisfying resistance when posed. The Wear: Built for years of love. Seams are reinforced, tallow-treated for durability.",
+          "size": "1024x1024",
+          "tier": 3
+        },
+        {
+          "id": "linen_lass",
+          "name": "Linen Lass",
+          "description": "The Shape: Classic rag doll form, about 12 inches. Round head, simple body, poseable arms. The Arms: Bone toggles at shoulders allow full rotation. She can wave, hug, or rest hands in her lap. The Face: Polished bone eyes catch firelight. Embroidered nose and smile. Warm expression. The Hair: Tow fiber stitched to scalp—straw gold, long enough to braid. The Dress: Simple linen shift, integral to body. Bone buttons down the front. The Feel: Cool linen exterior, soft tow stuffing. Arms move smoothly on their bone joints.",
+          "size": "1024x1024",
+          "tier": 3
+        },
+        {
+          "id": "jingle_tambourine",
+          "name": "Jingle Tambourine",
+          "description": "The Frame: Ash ring, about 8 inches diameter. Four slots hold paired bone jingles. The Head: Taut leather drum skin, pale and translucent. Responds to tap or slap. The Jingles: Four pairs of bone buttons on sinew—they clatter against each other and the frame when shaken. The Grip: Leather strap on back for secure one-handed hold. The Sound: Tap the head for a soft thump. Shake for bright bone-clatter. Combine both for rhythm. The Feel: Light and responsive. Natural to shake, slap, or tap.",
+          "size": "1024x1024",
+          "tier": 3
+        },
+        {
+          "id": "solstice_storm_drum",
+          "name": "Solstice Storm-Drum",
+          "description": "The Frame: Birch hoop, about 14 inches diameter. Pale wood with visible grain. The Head: Raw hide stretched taut—translucent, amber-toned. You can see shadows through it. The Lacing: Sinew criss-crosses underneath, creating the signature pattern. Linen cord handle through the center. The Mallet: Antler head wrapped in tow padding on an ash stick. Produces a deep, resonant boom. The Sound: Deep thunder-boom that sustains and rolls. Strikes the chest as much as the ears. The Hold: Grip the cord handle, drum face outward. Strike and let the sound flow through you.",
+          "size": "1024x1024",
+          "tier": 3
+        },
+        {
+          "id": "ash_hobbyhorse",
+          "name": "Ash Hobbyhorse",
+          "description": "The Head: Carved ash, stylized horse profile with open mouth. Light grey wood with visible grain. The Eyes: Polished bone discs set in sockets—they catch the light with life. The Mane: Shaggy wool_fiber loops along the crest—wild and flowing. The Bridle: Leather straps with bone button cheek pieces. Reins loop around for the rider's hands. The Stick: Ash pole, about 3 feet. Wool saddle blanket draped over it for grip. The Ride: Straddle the stick, grip the reins, and gallop. The head bobs with each stride.",
+          "size": "1024x1024",
+          "tier": 3
+        },
+        {
+          "id": "frost_wyrm",
+          "name": "Frost Wyrm",
+          "description": "The Body: Serpentine form in ice-blue wool, about 24 inches long. Internal bone spine allows posing. The Scales: Overlapping leather strips on belly—natural brown against blue wool. The Head: Open maw with six bone fangs. Glacier-blue eyes. Menacing but huggable. The Wings: Vestigial leather wing stubs at shoulders—too small to fly, perfect for drama. The Claws: Four bone claws on small legs—positioned for gripping when wrapped around an arm. The Pose: Coil it, drape it, pose it to strike. The bone spine holds any position.",
+          "size": "1024x1024",
+          "tier": 3
+        },
+        {
+          "id": "great_north_sleigh",
+          "name": "Great North Sleigh",
+          "description": "The Runners: Bent ash with classic upturned fronts. Sealed smooth for gliding. The Frame: Oak cargo box painted crimson—the Gift-Bringer's signature color. The Finials: Antler points at front corners—a nod to the reindeer team. The Blanket: Crimson wool draped over the seat. Warm and festive. The Rope: Linen pull cord at front for towing across the snow. The Scale: About 12 inches long—perfect for doll passengers and tiny gift loads. The Glide: Actually slides on smooth surfaces. Load it up and pull.",
+          "size": "1024x1024",
+          "tier": 3
+        },
+        {
+          "id": "storm_wing_kite",
+          "name": "Storm-Wing Kite",
+          "description": "The Frame: Crossed birch sticks, pale wood against dark sail. Classic diamond kite shape. The Sail: Wool fabric stiffened with pine_tar smörring—black and gleaming, rigid as leather. The Bridle: Linen cord meeting at the kite's center of lift. Strong enough for winter gales. The Tail: Tow cord strips trailing behind—shaggy and wild, stabilizing in turbulence. In Flight: The black diamond against grey winter sky. It pulls hard in wind, alive on the line. The Scent: Pine tar and sheep—the smell of Nordic winters.",
+          "size": "1024x1024",
+          "tier": 3
+        },
+        {
+          "id": "puppet_theater",
+          "name": "Puppet Theater",
+          "description": "The Arch: Pine proscenium with carved knotwork. The stage window is about 12 inches wide. The Curtain: Crimson wool hanging from birch rod. Pulls aside dramatically for the show. The Back: Solid pine panel hides puppeteer hands. Cut-out at bottom for access. The Fold: Hinges flat for storage—takes up no more space than a book. The Scale: Table-top theater, about 18 inches tall. Perfect for finger puppets or stick figures. The Drama: Open curtain. Begin tale. The old stories live in the red-lit shadow.",
+          "size": "1024x1024",
+          "tier": 3
+        },
+        {
+          "id": "stream_mill",
+          "name": "Stream Mill",
+          "description": "The Housing: Heavy oak block, hollowed inside. About 8 inches long, stable in stream current. The Wheel: Maple paddle wheel on one side—catches water flow or hand power. The Grinder: Maple disc spinning above bone plate. Narrow gap crushes whatever passes through. The Hopper: Birch bark cone funneling into the grinder gap from above. The Action: Water turns wheel, wheel turns grinder, hopper feeds berries, pulp exits below. The Lesson: Energy capture. Power transfer. The fundamental physics of the mill, toy-sized.",
+          "size": "1024x1024",
+          "tier": 3
+        },
+        {
+          "id": "bergelmir_ark",
+          "name": "Bergelmir's Ark",
+          "description": "The Hull: Coffin-boat shape (lúðr)—pine sides on oak keel. Seams black with pine_tar caulking. The Keel: Heavy oak provides ballast. The ark self-rights when tipped. The Sail: Square leather sail dyed blood-crimson. Rigged Nordic style. The Tar: Black seams where pine_tar caulks the joints—the 'blood-tight' seal. In Water: It floats, it sails, it carries small figures through the deluge. The Myth: Bergelmir's escape vessel, when Ymir's blood drowned the world.",
+          "size": "1024x1024",
+          "tier": 3
+        },
+        {
+          "id": "treasure_chest",
+          "name": "Treasure Chest",
+          "description": "The Box: Heavy oak chest, about 6 inches long. Grain matches between lid and body—proof of quality craft. The Hinges: Leather straps at back, stitched through wood. They flex but don't wear. The Closure: Front leather strap wraps around a bone toggle or wooden peg. The Interior: Soft linen lining cushions the treasures within. The Finish: Resin-sealed exterior gleams with amber warmth. Smooth to the touch. The Weight: Satisfyingly heavy. Oak doesn't make flimsy furniture.",
+          "size": "1024x1024",
+          "tier": 3
+        },
+        {
+          "id": "yule_boar",
+          "name": "Yule Boar",
+          "description": "The Body: Stocky oak boar with carved bristle ridge along the back. Proud stance even on wheels. The Tusks: Curved bone tusks flanking the snout. The mark of Freyr's beast. The Eyes: Small fierce bone discs set in sockets. Watchful and wise. The Wheels: Four maple wheels on oak axles. The boar rolls smoothly after its owner. The Strap: Leather pull loop at neck. Drag the boar to the Yule feast. The Oath: In the old tradition, touch the boar's back when you make a promise. It still works.",
+          "size": "1024x1024",
+          "tier": 3
+        },
+        {
+          "id": "nisse_boundary_levitator",
+          "name": "Nisse Boundary Levitator",
+          "description": "The Cart: Oak cargo box on four maple wheels. Heavy and stable, like a farm wagon. The Mast: Vertical oak pole rising from the cart center with cord channel at top. The Mechanism: Cord_drum on front axle—when wheels turn, drum winds the suspension cord. The Guardian: Light birch Nisse figure, arms outstretched, hanging from linen_cord. The Magic: Push the cart: Nisse rises. Pull back: Nisse descends. Always floating, never grounded. The Patrol: A child pulls the cart around the room's border. The Nisse watches over all.",
+          "size": "1024x1024",
+          "tier": 4
+        },
+        {
+          "id": "dragon_scale_slicks",
+          "name": "Dragon Scale Storm Slicks",
+          "description": "The Jacket: Knee-length juften leather coat with embossed dragon scales. Overlapping front panels shed rain. The Hat: Wide-brimmed rain hat, scales radiating from crown. Water runs off the back. The Boots: Ankle boots with fold-over cuff. Same scale pattern, same smoky black. The Texture: Each diamond scale stands in relief—run your fingers across and feel Nidhogg's hide. The Scent: Birch tar smoke—the unmistakable perfume of juften leather. The Promise: Stay dry in the storm. Look like a dragon doing it.",
+          "size": "1024x1024",
+          "tier": 4
+        },
+        {
+          "id": "jormungandr_drift",
+          "name": "Jormungandr Drift",
+          "description": "The Ocean: Heavy oak block painted deep blue with white wave crests. About 8 inches long. The Serpent: Birch Jormungandr head, jaws open, scales black with pine_tar. Emerges from slot in the waves. The Mechanism: Hidden below—traction roller on table, eccentric cam lifts serpent as you push. The Motion: Push forward: serpent rises through the waves. Pull back: it descends into the depths. The Silence: Wool washer dampens the cam. The rise is smooth and mysterious. The Myth: Jormungandr encircles Midgard. This toy shows his head breaking the surface.",
+          "size": "1024x1024",
+          "tier": 4
+        },
+        {
+          "id": "ember_hauler",
+          "name": "Ember Hauler",
+          "description": "The Bed: Pine cargo box with high sides. Open top for loading charcoal, ore, or toys. The Color: Ember orange coating—warm like dying coals, glowing in firelight. The Wheels: Four maple wheels on oak axles. They roll true and smooth. The Handle: Ash pull-stick at front. Flexible ash bends with the tug. The Undercarriage: Black pine_tar seals the bottom against wet and wear. The Cargo: Fill it with blocks, rocks, or pretend charcoal. The Svartálfar haul the dark harvest.",
+          "size": "1024x1024",
+          "tier": 4
+        },
+        {
+          "id": "riding_horse",
+          "name": "Riding Horse",
+          "description": "The Frame: Hollow oak barrel body on maple curved runners. Rocks smoothly with gentle creak. The Head: Carved oak with alert ears, flared nostrils painted crimson, proud profile. The Mane: Wool yarn strands tied through drilled holes—flows with the rocking motion. The Saddle: Juften leather over wool blanket. Smoky black with the scent of birch tar. The Details: Crimson casein paint on eyes, nostrils, and harness trim. Leather reins and stirrup loops. The Ride: Sized for a toddler's first adventure. Rocks with satisfying weight and rhythm. The Legacy: Built to last generations. Your grandchildren will ride this horse.",
+          "size": "1024x1024",
+          "tier": 4
+        },
+        {
+          "id": "polar_express",
+          "name": "The Polar Express",
+          "description": "Locomotive: Jet black oak soaked in pine_tar until it looks like cast iron. The 'POLAR EXPRESS' lettering glows natural oak through the black—reverse stencil, no paint needed. Passenger Car: Midnight blue box with crimson window frames. Curved roof lifts off—inside: juften-black seats, bone figures. The Figures: Two bone children sit facing the windows. The antler conductor stands at the vestibule door, ticket punch raised forever. The Scent: Pine_tar and birch-smoke juften.",
+          "size": "1024x1024",
+          "tier": 4
+        }
+      ]
+    },
+    "materials": {
+      "category_style": "Icon inventory style on clean parchment-colored background, item centered, no title banner, suitable for game crafting UI, clear silhouette",
+      "assets": [
+        {
+          "id": "log_oak",
+          "name": "Oak Log",
+          "description": "A freshly hewn oak log with rich honey-gold heartwood showing through the bark. Heavy and dense, with visible grain patterns running lengthwise.",
+          "size": "512x512",
+          "material_type": "raw"
+        },
+        {
+          "id": "log_ash",
+          "name": "Ash Log",
+          "description": "A pale ash log with smooth grey bark. The wood is elastic and strong, prized for items that must bend without breaking.",
+          "size": "512x512",
+          "material_type": "raw"
+        },
+        {
+          "id": "log_birch",
+          "name": "Birch Log",
+          "description": "A white birch log with distinctive papery bark marked with dark lenticels. The pale wood beneath is close-grained and workable.",
+          "size": "512x512",
+          "material_type": "raw"
+        },
+        {
+          "id": "log_pine",
+          "name": "Pine Log",
+          "description": "A fragrant pine log with reddish bark and visible resin beads. Knotty and aromatic, the wood releases the scent of the northern forest.",
+          "size": "512x512",
+          "material_type": "raw"
+        },
+        {
+          "id": "log_maple",
+          "name": "Maple Log",
+          "description": "A dense maple log with tight, swirling grain. The hardwood is prized for items requiring weight and durability.",
+          "size": "512x512",
+          "material_type": "raw"
+        },
+        {
+          "id": "wool_fiber",
+          "name": "Raw Wool",
+          "description": "A bundle of raw sheep wool, creamy white with natural lanolin sheen. Soft and springy, ready for carding and spinning.",
+          "size": "512x512",
+          "material_type": "raw"
+        },
+        {
+          "id": "flax",
+          "name": "Flax Bundle",
+          "description": "Dried flax stalks tied in a bundle. The golden stems contain strong fibers that will become linen thread.",
+          "size": "512x512",
+          "material_type": "raw"
+        },
+        {
+          "id": "hide",
+          "name": "Raw Hide",
+          "description": "A stretched animal hide, pale and stiff. The surface shows the texture of the original skin, ready for tanning.",
+          "size": "512x512",
+          "material_type": "raw"
+        },
+        {
+          "id": "sinew",
+          "name": "Dried Sinew",
+          "description": "Bundles of dried animal sinew, pale and stringy. When wetted it becomes pliable; when dried it shrinks tight as iron.",
+          "size": "512x512",
+          "material_type": "raw"
+        },
+        {
+          "id": "bone",
+          "name": "Bone Pieces",
+          "description": "Clean white bone pieces, smooth and chalky. The dense material takes carving well and polishes to a warm ivory sheen.",
+          "size": "512x512",
+          "material_type": "raw"
+        },
+        {
+          "id": "antler",
+          "name": "Antler",
+          "description": "A shed deer antler with multiple tines. The surface is rough and textured, the core dense and workable.",
+          "size": "512x512",
+          "material_type": "raw"
+        },
+        {
+          "id": "tallow",
+          "name": "Rendered Tallow",
+          "description": "A block of rendered animal fat, creamy white and waxy. It melts smoothly and carries scents well.",
+          "size": "512x512",
+          "material_type": "raw"
+        },
+        {
+          "id": "pine_resin",
+          "name": "Pine Resin",
+          "description": "Amber lumps of hardened pine sap. Translucent and sticky when warmed, it smells of deep forest and seals wood against moisture.",
+          "size": "512x512",
+          "material_type": "raw"
+        },
+        {
+          "id": "birch_bark",
+          "name": "Birch Bark Sheets",
+          "description": "Peeled birch bark in thin, flexible sheets. The papery material is white with dark markings and naturally waterproof.",
+          "size": "512x512",
+          "material_type": "raw"
+        },
+        {
+          "id": "lye",
+          "name": "Lye Crystals",
+          "description": "Coarse white crystals of wood ash lye in a ceramic pot. Caustic and powerful, used for bleaching and soap-making.",
+          "size": "512x512",
+          "material_type": "raw"
+        },
+        {
+          "id": "milk",
+          "name": "Fresh Milk",
+          "description": "A wooden pail of fresh milk, creamy white with a thin layer of cream rising to the top.",
+          "size": "512x512",
+          "material_type": "raw"
+        },
+        {
+          "id": "birch_tar",
+          "name": "Birch Tar",
+          "description": "A pot of thick, dark birch tar. The viscous liquid gleams like black honey and smells of smoke and forest.",
+          "size": "512x512",
+          "material_type": "raw"
+        },
+        {
+          "id": "rowan_berry",
+          "name": "Rowan Berries",
+          "description": "Clusters of bright red rowan berries on their stems. The vivid color stands out like drops of blood against the snow.",
+          "size": "512x512",
+          "material_type": "raw"
+        },
+        {
+          "id": "juniper_berry",
+          "name": "Juniper Berries",
+          "description": "Small blue-black juniper berries with a dusty bloom. They smell sharp and clean, like mountain air.",
+          "size": "512x512",
+          "material_type": "raw"
+        },
+        {
+          "id": "lingonberry",
+          "name": "Lingonberries",
+          "description": "Tiny red lingonberries in a wooden bowl. Tart and bright, they gleam like scattered rubies.",
+          "size": "512x512",
+          "material_type": "raw"
+        },
+        {
+          "id": "pine_needles",
+          "name": "Pine Needles",
+          "description": "Fresh green pine needles bundled together. They release a sharp, resinous scent when crushed.",
+          "size": "512x512",
+          "material_type": "raw"
+        },
+        {
+          "id": "resin_seal",
+          "name": "Resin Seal",
+          "description": "A crafted component: Resin Seal. Made from pine_resin + tallow. Soft seal protects corners from chipping, safe for small hands",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 15
+        },
+        {
+          "id": "leather",
+          "name": "Leather",
+          "description": "A crafted component: Leather. Made from hide + birch_bark + lye. Sturdy leather for scabbard covering and belt",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 11
+        },
+        {
+          "id": "wool_spool",
+          "name": "Wool Spool",
+          "description": "A crafted component: Wool Spool. Made from wool_fiber. Strong thread for stitching features and reinforcing stress points",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 10
+        },
+        {
+          "id": "wool_fabric",
+          "name": "Wool Fabric",
+          "description": "A crafted component: Wool Fabric. Made from wool_spool (×3). Dense plain-weave fabric—sturdy shell that won't tear or pill",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 9
+        },
+        {
+          "id": "line_flax",
+          "name": "Line Flax",
+          "description": "A crafted component: Line Flax. Made from scutched_flax. Metal teeth comb retted flax; long line_flax for thread, short tow for stuffing",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 9
+        },
+        {
+          "id": "tow",
+          "name": "Tow",
+          "description": "A crafted component: Tow. Made from scutched_flax. Metal teeth comb retted flax; long line_flax for thread, short tow for stuffing",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 9
+        },
+        {
+          "id": "linen_cord",
+          "name": "Linen Cord",
+          "description": "A crafted component: Linen Cord. Made from line_flax. Strong twisted cord that won't snap under spinning tension",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 6
+        },
+        {
+          "id": "crimson_pigment",
+          "name": "Crimson Pigment",
+          "description": "A crafted component: Crimson Pigment. Made from lingonberry. Blood red from lingonberry",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 6
+        },
+        {
+          "id": "quark_curds",
+          "name": "Quark Curds",
+          "description": "A crafted component: Quark Curds. Made from milk + wood_vinegar. Casein preparation",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 6
+        },
+        {
+          "id": "liquid_whey",
+          "name": "Liquid Whey",
+          "description": "A crafted component: Liquid Whey. Made from milk + wood_vinegar. Casein preparation",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 6
+        },
+        {
+          "id": "cheese_glue",
+          "name": "Cheese Glue",
+          "description": "A crafted component: Cheese Glue. Made from quark_curds + lye. Beina-mjólk binder for durable paint",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 6
+        },
+        {
+          "id": "blue_pigment",
+          "name": "Blue Pigment",
+          "description": "A crafted component: Blue Pigment. Made from juniper_berry. Cool blue from juniper—the shimmer between the flames",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 5
+        },
+        {
+          "id": "bone_eyes",
+          "name": "Bone Eyes",
+          "description": "A crafted component: Bone Eyes. Made from bone. Polished bone discs with carved pupils",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 5
+        },
+        {
+          "id": "orange_pigment",
+          "name": "Orange Pigment",
+          "description": "A crafted component: Orange Pigment. Made from rowan_berry. Rowan berries grind to a warm orange powder—the Nisse's favorite color",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 4
+        },
+        {
+          "id": "bone_toggle",
+          "name": "Bone Toggle",
+          "description": "A crafted component: Bone Toggle. Made from bone. Internal anchors sewn into ear bases—allows ears to pose and hold position",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 4
+        },
+        {
+          "id": "bone_button",
+          "name": "Bone Button",
+          "description": "A crafted component: Bone Button. Made from bone. Decorative nose button",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 4
+        },
+        {
+          "id": "leather_strap",
+          "name": "Leather Strap",
+          "description": "A crafted component: Leather Strap. Made from leather. Hand grip on back",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 4
+        },
+        {
+          "id": "board (pine)",
+          "name": "Board (Pine)",
+          "description": "A crafted component: Board (Pine). Made from log (pine). Light pine for portable theater",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 4
+        },
+        {
+          "id": "board (oak)",
+          "name": "Board (Oak)",
+          "description": "A crafted component: Board (Oak). Made from log (oak). Heavy oak boards for a chest that lasts generations",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 4
+        },
+        {
+          "id": "linen_spool",
+          "name": "Linen Spool",
+          "description": "A crafted component: Linen Spool. Made from line_flax. Fine linen thread—stronger than wool, smoother to the touch",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 3
+        },
+        {
+          "id": "linen_fabric",
+          "name": "Linen Fabric",
+          "description": "A crafted component: Linen Fabric. Made from linen_spool (×3). Plain weave linen—cool, crisp, durable",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 3
+        },
+        {
+          "id": "hide_glue",
+          "name": "Hide Glue",
+          "description": "A crafted component: Hide Glue. Made from hide + sinew. Gård-Lím: the binder that makes distemper paint",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 3
+        },
+        {
+          "id": "crimson_casein",
+          "name": "Crimson Casein",
+          "description": "A crafted component: Crimson Casein. Made from crimson_pigment + cheese_glue. Water-resistant crimson paint for the sail",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 3
+        },
+        {
+          "id": "wheel",
+          "name": "Wheel",
+          "description": "A crafted component: Wheel. Made from log (maple). Smooth maple wheels for rolling",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 3
+        },
+        {
+          "id": "juften_leather",
+          "name": "Juften Leather",
+          "description": "A crafted component: Juften Leather. Made from leather + birch_tar + tallow. Smoky black waterproof leather, supple and breathable",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 3
+        },
+        {
+          "id": "orange_tallow_raw",
+          "name": "Orange Tallow Raw",
+          "description": "A crafted component: Orange Tallow Raw. Made from orange_pigment + tallow. Vibrant tallow paint that soaks into carved grooves",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 2
+        },
+        {
+          "id": "blue_tallow_raw",
+          "name": "Blue Tallow Raw",
+          "description": "A crafted component: Blue Tallow Raw. Made from blue_pigment + tallow. Aurora shimmer paint—blended into orange edges",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 2
+        },
+        {
+          "id": "drum_skin",
+          "name": "Drum Skin",
+          "description": "A crafted component: Drum Skin. Made from leather. Circular head stretched over frame",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 2
+        },
+        {
+          "id": "horse_head",
+          "name": "Horse Head",
+          "description": "A crafted component: Horse Head. Made from log (ash). Stylized head with open mouth—ash is light but strong",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 2
+        },
+        {
+          "id": "crimson_tallow_raw",
+          "name": "Crimson Tallow Raw",
+          "description": "A crafted component: Crimson Tallow Raw. Made from crimson_pigment + tallow. Crimson paint for frame",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 2
+        },
+        {
+          "id": "axle_set",
+          "name": "Axle Set",
+          "description": "A crafted component: Axle Set. Made from wheel (×4) + stick (oak) (×2). Front and rear axles pinned to body",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 2
+        },
+        {
+          "id": "set_of_blocks",
+          "name": "Set Of Blocks",
+          "description": "A crafted component: Set Of Blocks. Made from log (oak). Höggva: We hew the oak log down to three identical cubes using axe, measuring by eye and hand-span.",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "squared_rod",
+          "name": "Squared Rod",
+          "description": "A crafted component: Squared Rod. Made from log (ash). Höggva: Split and square the ash log in one action. The grain must run continuous—a sawn rod will snap under bending, but a hewn billet will yield to the sun's curve.",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "supple_rod",
+          "name": "Supple Rod",
+          "description": "A crafted component: Supple Rod. Made from squared_rod. Boil the rod in water until the lignin softens. We seethe the wood until it yields like wet leather in the hands.",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "ash_hoop",
+          "name": "Ash Hoop",
+          "description": "A crafted component: Ash Hoop. Made from supple_rod. Sveigja: Pin the hot rod into a circular frame while steam still rises. Force it into its 'memory' before it cools.",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "guide_stick",
+          "name": "Guide Stick",
+          "description": "A crafted component: Guide Stick. Made from stick (birch). Sníða: Carve the birch to a squared grip that won't slip in a frozen mitten, leaving the natural Y-fork at the tip to cradle the hoop.",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "wreath_base",
+          "name": "Wreath Base",
+          "description": "A crafted component: Wreath Base. Made from branch (birch) (×3). Flétta: Braid three green birch wands together while the sap is alive. A single bent branch is weak, but a trinity of braided birch creates a circle that will never lose its heart.",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "top_rough_out",
+          "name": "Top Rough Out",
+          "description": "A crafted component: Top Rough Out. Made from log (maple). Höggva: Hew the dense maple log into a rough octagonal blank on the Höggvabekkr. The mass is there—the body shape with its stem socket waiting to be turned.",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "top_carved",
+          "name": "Top Carved",
+          "description": "A crafted component: Top Carved. Made from top_rough_out. Renna: Shape the spinning blank on the pole lathe (Rennubekkr) at the Snikkarabekkr. Wide at equator, tapered to needle-point, with the stem socket carved at crown.",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "top_bleached",
+          "name": "Top Bleached",
+          "description": "A crafted component: Top Bleached. Made from top_carved + lye + milk. Hvíta: Submerge the wood in the Ketill to bleach it white. We use the action of Sjóða (seething) to drive the milk into the grain.",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "swan_family_rough_outs",
+          "name": "Swan Family Rough Outs",
+          "description": "A crafted component: Swan Family Rough Outs. Made from log (pine). Höggva: Hew the pine log into blocky rough-outs—one mother swan shape, three cygnet masses. The skíð still holds the bark but shows the forms waiting within.",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "swan_family_carved",
+          "name": "Swan Family Carved",
+          "description": "A crafted component: Swan Family Carved. Made from swan_family_rough_outs. Sníða: On the shaving horse, pull the drawknife to release the graceful curves. The mother's arched neck, the cygnets' teardrop bodies—pine yields easily to the blade.",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "swan_family_bleached",
+          "name": "Swan Family Bleached",
+          "description": "A crafted component: Swan Family Bleached. Made from swan_family_carved + lye + milk. Hvíta: Submerge the carved swans in lye and milk. The alkaline solution bleaches pine to frost-white while milk proteins soften the grain for a matte finish.",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "tuned_bars",
+          "name": "Tuned Bars",
+          "description": "A crafted component: Tuned Bars. Made from log (birch). Birch is a resonant tonewood; five bars carved to graduated lengths, notched underneath to tune each pitch",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "sound_box",
+          "name": "Sound Box",
+          "description": "A crafted component: Sound Box. Made from log (pine). Pine rived into a shallow trough—the hollow amplifies and warms the tone",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "lye_soap",
+          "name": "Lye Soap",
+          "description": "A crafted component: Lye Soap. Made from lye + tallow. Thin coating seals the bars without dampening vibration",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "pedestal_blank",
+          "name": "Pedestal Blank",
+          "description": "A crafted component: Pedestal Blank. Made from log (oak). Höggva: On the Höggvabekkr, rive the oak to find the straight heart-grain and hew it into a heavy, squared block. This ensures the base will never crack from the candle's heat.",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "oak_pedestal",
+          "name": "Oak Pedestal",
+          "description": "A crafted component: Oak Pedestal. Made from pedestal_blank. Sníða: At the Snikkarabekkr, carve the deep socket to hold the tallow and a wide, steady foot. Etch a shallow groove at the base to cradle the vow-scroll.",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "wick_line",
+          "name": "Wick Line",
+          "description": "A crafted component: Wick Line. Made from branch (birch). Sníða: Carefully peel the inner bast fibers from the birch. Twist these into a tight cord and press them on the bench; this organic line drinks the fat better than any sinew.",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "etched_vow_scroll",
+          "name": "Etched Vow Scroll",
+          "description": "A crafted component: Etched Vow Scroll. Made from birch_bark. Grafning: Score the ancient vow into the silver skin of the Björk: 'At the darkest time, bring light.' The bark preserves the oath even as the candle burns.",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "cleansing_dust",
+          "name": "Cleansing Dust",
+          "description": "A crafted component: Cleansing Dust. Made from juniper_berry. Mala: Grind the blue berries in the Mylna to a fine powder. This dust purifies the hall and fills the air with the scent of the high mountains.",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "scented_fat",
+          "name": "Scented Fat",
+          "description": "A crafted component: Scented Fat. Made from tallow + cleansing_dust. Sjóða: Seethe the tallow in the Ketill and fold in the juniper dust. The heat marries the mountain scent to the fat, creating a slow-burning incense.",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "orange_soap",
+          "name": "Orange Soap",
+          "description": "A crafted component: Orange Soap. Made from orange_pigment + tallow + lye. Cheerful orange soap, fragrant and festive. A small luxury.",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "small_basket",
+          "name": "Small Basket",
+          "description": "A crafted component: Small Basket. Made from birch_bark + sinew. Falda ok Sauma: Soften bark by hearth, fold into box, pierce corners with bone awl, stitch with wet sinew. As sinew dries, basket becomes drum-tight.",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "chess_billets",
+          "name": "Chess Billets",
+          "description": "A crafted component: Chess Billets. Made from log (birch) + log (oak). Höggva: On the Höggvabekkr, hew the logs into long, squared-off bars. It is far easier to turn a square than a round log, and removing the bark protects the lathe-cord from grit.",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "chess_pieces_raw",
+          "name": "Chess Pieces Raw",
+          "description": "A crafted component: Chess Pieces Raw. Made from chess_billets. Renna: On the Rennubekkr, spin the squared billets into the 32 pieces of the armies. We turn them in 'strings' (multiple pieces on one bar) before cutting them apart.",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "board_planks",
+          "name": "Board Planks",
+          "description": "A crafted component: Board Planks. Made from log (birch) + log (oak). Höggva: Hew thin, flat planks from both woods. These must be planed perfectly flat to ensure the battlefield is level.",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "chess_board",
+          "name": "Chess Board",
+          "description": "A crafted component: Chess Board. Made from board_planks. Þrýsta: Cut the planks into 64 squares and join them edge-to-edge. Use the Press method with wedges to lock the birch and oak into their checkered marriage.",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "whitewash",
+          "name": "Whitewash",
+          "description": "A crafted component: Whitewash. Made from milk + birch_ash. Blanda: Seethe (Sjóða) the milk and ash into a thick kalk-white. This is the 'Armor of Light' for the birch army.",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "wool_felt",
+          "name": "Wool Felt",
+          "description": "A crafted component: Wool Felt. Made from wool_fiber. Hot water and agitation mat the fibers into thick, seamless felt—no edges to fray, no seams to split",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "set_of_blocks (oak)",
+          "name": "Set Of Blocks (Oak)",
+          "description": "A crafted component: Set Of Blocks (Oak). Made from log (oak). Höggva: Hew oak log into identical cubes; each face ready for carving",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "swan_body",
+          "name": "Swan Body",
+          "description": "A crafted component: Swan Body. Made from log (pine). Pine floats naturally; mother swan carved with graceful neck and hollow belly for stability",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "cygnet_bodies",
+          "name": "Cygnet Bodies",
+          "description": "A crafted component: Cygnet Bodies. Made from log (pine). Three small cygnets—simple teardrop shapes that bob upright in water",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "white_pigment",
+          "name": "White Pigment",
+          "description": "A crafted component: White Pigment. Made from birch_ash. Pure white base from birch ash",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "white_tallow_raw",
+          "name": "White Tallow Raw",
+          "description": "A crafted component: White Tallow Raw. Made from white_pigment + tallow. Opaque white base coat—the snow beneath the aurora",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "heavy_spinner_disc",
+          "name": "Heavy Spinner Disc",
+          "description": "A crafted component: Heavy Spinner Disc. Made from log (oak). Dense oak disc, about 4 inches diameter—the mass stores momentum",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "antler_y_frame",
+          "name": "Antler Y Frame",
+          "description": "A crafted component: Antler Y Frame. Made from antler. Natural forked tine trimmed to a handle with two arms—antler's dense structure amplifies sound",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "bone_disc",
+          "name": "Bone Disc",
+          "description": "A crafted component: Bone Disc. Made from bone. Flat bone discs with center holes—two pairs that clack against each other",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "bone_dice",
+          "name": "Bone Dice",
+          "description": "A crafted component: Bone Dice. Made from bone. Six bone cubes carved from dense leg bone—each face marked with runes 1-6",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "throwing_cup",
+          "name": "Throwing Cup",
+          "description": "A crafted component: Throwing Cup. Made from log (birch). Hollowed birch cylinder, palm-sized—the dice rattle satisfyingly inside",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "score_peg",
+          "name": "Score Peg",
+          "description": "A crafted component: Score Peg. Made from bone. Small bone pegs for tracking wagers and scores",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "dice_pouch",
+          "name": "Dice Pouch",
+          "description": "A crafted component: Dice Pouch. Made from birch_bark + sinew. Falda ok Sauma: Fold bark into drawstring pouch, stitch with sinew to keep the set together",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "ash_blade",
+          "name": "Ash Blade",
+          "description": "A crafted component: Ash Blade. Made from log (ash). Ash flexes on impact—safe for play-fighting. Carved with fuller groove for authenticity.",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "scabbard_shell",
+          "name": "Scabbard Shell",
+          "description": "A crafted component: Scabbard Shell. Made from board (birch). Two birch halves hollowed to fit the blade",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "leather_hangers",
+          "name": "Leather Hangers",
+          "description": "A crafted component: Leather Hangers. Made from leather. Belt loop and throat strap for the scabbard",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "shield_backing",
+          "name": "Shield Backing",
+          "description": "A crafted component: Shield Backing. Made from log (oak). Oak planks edge-joined into a round—authentic construction",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "purple_distemper",
+          "name": "Purple Distemper",
+          "description": "A crafted component: Purple Distemper. Made from blue_pigment + crimson_pigment + hide_glue. Royal purple 'Rauðblár'—mixed blue and crimson in hide_glue binder",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "tambourine_frame",
+          "name": "Tambourine Frame",
+          "description": "A crafted component: Tambourine Frame. Made from log (ash). Ash ring with slots cut for jingles—flexible wood absorbs impact",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "board (birch)",
+          "name": "Board (Birch)",
+          "description": "A crafted component: Board (Birch). Made from log (birch). Thin birch board for bending into hoop",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "supple_hoop",
+          "name": "Supple Hoop",
+          "description": "A crafted component: Supple Hoop. Made from board (birch). Sjóða: Boil the birch board until pliable—must work fast before it cools",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "raw_hide",
+          "name": "Raw Hide",
+          "description": "A crafted component: Raw Hide. Made from hide + lye. Lye removes hair but keeps hide stiff—perfect for drum heads",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "mallet_head",
+          "name": "Mallet Head",
+          "description": "A crafted component: Mallet Head. Made from antler. Antler head wrapped in tow for soft strike",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "bone_teeth",
+          "name": "Bone Teeth",
+          "description": "A crafted component: Bone Teeth. Made from bone. Sharp fangs for the open maw",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "bone_claws",
+          "name": "Bone Claws",
+          "description": "A crafted component: Bone Claws. Made from bone. Wicked claws on vestigial legs",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "board (ash)",
+          "name": "Board (Ash)",
+          "description": "A crafted component: Board (Ash). Made from log (ash). Thin ash boards for runners—ash bends without breaking",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "supple_board",
+          "name": "Supple Board",
+          "description": "A crafted component: Supple Board. Made from board (ash). Sjóða: Boil the ash board until pliable. ⏱ 30s timer—must bend before it cools",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "sleigh_runner",
+          "name": "Sleigh Runner",
+          "description": "A crafted component: Sleigh Runner. Made from supple_board. Curved at front to ride over snow—the classic sleigh profile",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "sleigh_frame",
+          "name": "Sleigh Frame",
+          "description": "A crafted component: Sleigh Frame. Made from log (oak). Heavy oak box frame for cargo—mortise-and-tenon joints",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "antler_finials",
+          "name": "Antler Finials",
+          "description": "A crafted component: Antler Finials. Made from antler. Decorative finials at front—the reindeer connection",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "tow_cord",
+          "name": "Tow Cord",
+          "description": "A crafted component: Tow Cord. Made from tow. Rough twisted tail for stability",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "proscenium_arch",
+          "name": "Proscenium Arch",
+          "description": "A crafted component: Proscenium Arch. Made from board (pine) (×2) + sinew. Front frame with decorative arch—the stage window",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "stage_back",
+          "name": "Stage Back",
+          "description": "A crafted component: Stage Back. Made from board (pine) (×2) + sinew. Solid backdrop panel—hides the puppeteer",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "mill_wheel",
+          "name": "Mill Wheel",
+          "description": "A crafted component: Mill Wheel. Made from log (maple). Paddle wheel with carved vanes—catches stream current or hand cranking",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "grind_disc",
+          "name": "Grind Disc",
+          "description": "A crafted component: Grind Disc. Made from log (maple). Rotating grindstone with textured face",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "grind_plate",
+          "name": "Grind Plate",
+          "description": "A crafted component: Grind Plate. Made from bone. Stationary bone grinding surface—harder than wood",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "mill_housing",
+          "name": "Mill Housing",
+          "description": "A crafted component: Mill Housing. Made from log (oak). Hollowed oak block for stability and heft",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "grinder_mechanism",
+          "name": "Grinder Mechanism",
+          "description": "A crafted component: Grinder Mechanism. Made from mill_wheel + grind_disc + stick (oak). Axle transfers paddle rotation to grinding disc",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "hopper_cone",
+          "name": "Hopper Cone",
+          "description": "A crafted component: Hopper Cone. Made from birch_bark + sinew. Falda ok Sauma: Fold bark into funnel shape, stitch seam with sinew to feed material to grinder",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "ark_keel",
+          "name": "Ark Keel",
+          "description": "A crafted component: Ark Keel. Made from log (oak). Heavy oak cradle provides ballast—the ark rights itself",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "chest_box",
+          "name": "Chest Box",
+          "description": "A crafted component: Chest Box. Made from board (oak) (×6) + sinew. Sealed box construction—no gaps, no peeking",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "chest_body",
+          "name": "Chest Body",
+          "description": "A crafted component: Chest Body. Made from chest_box. Sawn horizontally after assembly—grain matches perfectly",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "chest_lid",
+          "name": "Chest Lid",
+          "description": "A crafted component: Chest Lid. Made from chest_box. Sawn horizontally after assembly—grain matches perfectly",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "boar_body",
+          "name": "Boar Body",
+          "description": "A crafted component: Boar Body. Made from log (oak). Stocky oak body with bristled back ridge and proud snout",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "tusk",
+          "name": "Tusk",
+          "description": "A crafted component: Tusk. Made from bone. Curved tusks flanking the snout—Freyr's sacred beast",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "pull_strap",
+          "name": "Pull Strap",
+          "description": "A crafted component: Pull Strap. Made from leather. Loop for towing the boar to feast",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "cart_body",
+          "name": "Cart Body",
+          "description": "A crafted component: Cart Body. Made from board (oak) (×5) + sinew. Open-top cargo box—the rolling farmstead in miniature",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "cord_drum",
+          "name": "Cord Drum",
+          "description": "A crafted component: Cord Drum. Made from log (maple). Maple drum on drive axle wraps the suspension line",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "drive_axle",
+          "name": "Drive Axle",
+          "description": "A crafted component: Drive Axle. Made from wheel (×2) + stick (oak) + cord_drum + tow. Tow friction wrap on drum—wheels turn, drum turns, cord rises",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "rear_axle",
+          "name": "Rear Axle",
+          "description": "A crafted component: Rear Axle. Made from wheel (×2) + stick (oak). Simple trailing axle",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "sentinel_pole",
+          "name": "Sentinel Pole",
+          "description": "A crafted component: Sentinel Pole. Made from log (oak). Vertical mast with pulley channel at top",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "nisse_figure",
+          "name": "Nisse Figure",
+          "description": "A crafted component: Nisse Figure. Made from log (birch). Light birch guardian—small enough to levitate on thin cord",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "stretching_frame",
+          "name": "Stretching Frame",
+          "description": "A crafted component: Stretching Frame. Made from board (oak) (×4) + sinew. Taut frame holds wet leather flat during pressing",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "scale_press",
+          "name": "Scale Press",
+          "description": "A crafted component: Scale Press. Made from board (oak). Diamond grooves carved deep—Nidhogg's scale pattern",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "dragon_scale_leather",
+          "name": "Dragon Scale Leather",
+          "description": "A crafted component: Dragon Scale Leather. Made from juften_leather (×3) + stretching_frame + scale_press. Wet leather pressed hard; grooves become permanent scales",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "ocean_base",
+          "name": "Ocean Base",
+          "description": "A crafted component: Ocean Base. Made from log (oak). Heavy oak block carved with roller channel below, serpent slot above",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "traction_roller",
+          "name": "Traction Roller",
+          "description": "A crafted component: Traction Roller. Made from log (maple). Bottom roller contacts table surface",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "lift_cam",
+          "name": "Lift Cam",
+          "description": "A crafted component: Lift Cam. Made from log (maple). Eccentric disc—off-center rotation pushes serpent up and down",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "drive_mechanism",
+          "name": "Drive Mechanism",
+          "description": "A crafted component: Drive Mechanism. Made from traction_roller + stick (oak) + lift_cam. Roller-axle-cam assembly: push forward, cam rotates, serpent rises",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "serpent_head",
+          "name": "Serpent Head",
+          "description": "A crafted component: Serpent Head. Made from log (birch). Light birch Jormungandr head with open jaws—rides up through the slot",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "blue_casein",
+          "name": "Blue Casein",
+          "description": "A crafted component: Blue Casein. Made from blue_pigment + cheese_glue. Durable wave paint",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "cargo_bed",
+          "name": "Cargo Bed",
+          "description": "A crafted component: Cargo Bed. Made from board (pine) (×5) + cheese_glue. Five-board box with petrified joints—won't loosen",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "orange_tallow_sealed",
+          "name": "Orange Tallow Sealed",
+          "description": "A crafted component: Orange Tallow Sealed. Made from orange_pigment + tallow + pine_resin. Waterproof ember coating—color of dying coals",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "rod_shaft",
+          "name": "Rod Shaft",
+          "description": "A crafted component: Rod Shaft. Made from log (ash). Single-piece ash tapered tip to butt—Yggdrasil-stuff bends but never breaks",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "bone_guide",
+          "name": "Bone Guide",
+          "description": "A crafted component: Bone Guide. Made from bone. Polished line guides—bone is self-lubricating",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "reel_spool",
+          "name": "Reel Spool",
+          "description": "A crafted component: Reel Spool. Made from log (maple). Wide centerpin disc—line wraps smoothly",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "bone_axle",
+          "name": "Bone Axle",
+          "description": "A crafted component: Bone Axle. Made from bone. Reel spindle—tallow-lubed for free spin",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "click_pawl",
+          "name": "Click Pawl",
+          "description": "A crafted component: Click Pawl. Made from antler. Flexible antler click-check—prevents backlash, makes satisfying clicks",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "reel_seat",
+          "name": "Reel Seat",
+          "description": "A crafted component: Reel Seat. Made from stick (oak). Curved bracket clamps reel to rod shaft",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "fishing_reel",
+          "name": "Fishing Reel",
+          "description": "A crafted component: Fishing Reel. Made from reel_spool + bone_axle + click_pawl + reel_seat. Working centerpin reel with click drag",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "box_boards",
+          "name": "Box Boards",
+          "description": "A crafted component: Box Boards. Made from log (pine). Pine boards for tackle storage",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "tackle_box",
+          "name": "Tackle Box",
+          "description": "A crafted component: Tackle Box. Made from box_boards. Dovetailed corners—a craftsman's calling card",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "bone_latch",
+          "name": "Bone Latch",
+          "description": "A crafted component: Bone Latch. Made from bone. Pivot hinge and toggle closure in one elegant piece",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "horse_body",
+          "name": "Horse Body",
+          "description": "A crafted component: Horse Body. Made from board (oak) (×4). Hollow barrel torso—light enough to rock, strong enough to ride",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "curved_runner",
+          "name": "Curved Runner",
+          "description": "A crafted component: Curved Runner. Made from log (maple). Seek curved grain for smooth rocking arc",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "rocker_base",
+          "name": "Rocker Base",
+          "description": "A crafted component: Rocker Base. Made from curved_runner (×2) + stick (oak) (×2). Two runners joined by oak crossbars—stable platform",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "locomotive_body",
+          "name": "Locomotive Body",
+          "description": "A crafted component: Locomotive Body. Made from log (oak). Heavy oak; boiler barrel + cab. Carve 'POLAR EXPRESS' in reverse—letters stay natural oak",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "smokestack",
+          "name": "Smokestack",
+          "description": "A crafted component: Smokestack. Made from log (oak). Turned funnel; flared at rim",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "train_wheel",
+          "name": "Train Wheel",
+          "description": "A crafted component: Train Wheel. Made from log (maple). Smooth maple discs; 8 total (loco + car)",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "truck_board",
+          "name": "Truck Board",
+          "description": "A crafted component: Truck Board. Made from log (oak). Small boards for wheel truck frames",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "axle",
+          "name": "Axle",
+          "description": "A crafted component: Axle. Made from log (oak). Turned oak axle rods",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "wheel_truck",
+          "name": "Wheel Truck",
+          "description": "A crafted component: Wheel Truck. Made from truck_board + train_wheel (×4) + axle (×2). Board frame holds 2 axles; wheels roll freely",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "car_box",
+          "name": "Car Box",
+          "description": "A crafted component: Car Box. Made from board (pine) (×5). 5-sided open-top box; no roof",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "passenger_car_body",
+          "name": "Passenger Car Body",
+          "description": "A crafted component: Passenger Car Body. Made from car_box. Carve lattice windows into sides; kids see the riders",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "car_roof",
+          "name": "Car Roof",
+          "description": "A crafted component: Car Roof. Made from log (pine). Curved roof; lifts off for play",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "passenger_figure",
+          "name": "Passenger Figure",
+          "description": "A crafted component: Passenger Figure. Made from bone. 2 carved children figures",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "conductor_figure",
+          "name": "Conductor Figure",
+          "description": "A crafted component: Conductor Figure. Made from antler. Conductor figure carved from Antler",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        },
+        {
+          "id": "midnight_casein",
+          "name": "Midnight Casein",
+          "description": "A crafted component: Midnight Casein. Made from blue_pigment + cheese_glue. Car body blue",
+          "size": "512x512",
+          "material_type": "intermediate",
+          "usage_count": 1
+        }
+      ]
+    }
+  }
+}

@@ -111,43 +111,63 @@ class GameAssetGenerator:
             return None
 
     def build_prompt(self, asset: Dict, category_style: str, project_art_direction: Dict) -> str:
-        """Build a complete prompt with art direction for an asset."""
+        """Build a complete prompt with art direction for an asset.
+
+        Supports Art.md template structure with fields:
+        - style: Overall art style description
+        - palette/color_palette: Color palette guidance
+        - lighting: Lighting direction
+        - mood: Emotional tone
+        - avoid: Things to avoid (negative prompt elements)
+        """
         # Global style from config
         global_style = self.config["art_direction"]["global_style"]
         global_requirements = self.config["art_direction"]["global_requirements"]
 
-        # Project-level art direction
+        # Project-level art direction (support both old and new field names)
         project_style = project_art_direction.get("style", "")
-        project_palette = project_art_direction.get("color_palette", "")
+        project_palette = project_art_direction.get("palette", project_art_direction.get("color_palette", ""))
+        project_lighting = project_art_direction.get("lighting", "")
         project_mood = project_art_direction.get("mood", "")
+        project_avoid = project_art_direction.get("avoid", "")
 
         # Build the prompt
         prompt_parts = []
 
-        # Asset description (most important)
-        prompt_parts.append(f"Create: {asset['description']}")
-
-        # Style layers (from most specific to most general)
-        if category_style:
-            prompt_parts.append(f"Category style: {category_style}")
+        # Style first (sets the overall tone)
         if project_style:
-            prompt_parts.append(f"Art style: {project_style}")
-        if global_style:
-            prompt_parts.append(f"Overall style: {global_style}")
+            prompt_parts.append(f"STYLE: {project_style}")
 
-        # Additional direction
+        # Category-specific presentation
+        if category_style:
+            prompt_parts.append(f"PRESENTATION: {category_style}")
+
+        # Asset description (the subject - most important content)
+        prompt_parts.append(f"SUBJECT: {asset['description']}")
+
+        # Color/Palette direction
         if project_palette:
-            prompt_parts.append(f"Color palette: {project_palette}")
+            prompt_parts.append(f"PALETTE: {project_palette}")
+
+        # Lighting
+        if project_lighting:
+            prompt_parts.append(f"LIGHTING: {project_lighting}")
+
+        # Mood
         if project_mood:
-            prompt_parts.append(f"Mood: {project_mood}")
+            prompt_parts.append(f"MOOD: {project_mood}")
 
         # Global requirements
         if global_requirements:
-            prompt_parts.append("Requirements: " + "; ".join(global_requirements))
+            prompt_parts.append("REQUIREMENTS: " + "; ".join(global_requirements))
 
-        # Size hint
-        if "size" in asset:
-            prompt_parts.append(f"Target resolution: {asset['size']}")
+        # Negative prompt / things to avoid
+        if project_avoid:
+            prompt_parts.append(f"AVOID: {project_avoid}")
+
+        # Global style fallback
+        if global_style and not project_style:
+            prompt_parts.append(f"OVERALL STYLE: {global_style}")
 
         return "\n".join(prompt_parts)
 

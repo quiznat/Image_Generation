@@ -1,0 +1,1267 @@
+{
+  "_meta": {
+    "source": "santas_nordic_workshop_gdd_v1.md",
+    "generated_by": "extract_stations_from_gdd.py",
+    "count": 24
+  },
+  "stations": {
+    "hewing_bench": {
+      "id": "hewing_bench",
+      "name": "Hewing Bench",
+      "norse_name": "Höggvabekkr",
+      "function": "Hew material to working size using rive (split) and hew (square) techniques",
+      "norse": "Höggva means 'to hew' - the rhythmic bite of the bearded axe against the grain",
+      "summary": "",
+      "era": 1,
+      "tech_pack": "hearth",
+      "modes": [
+        "rive",
+        "hew",
+        "cut"
+      ],
+      "mode_details": [
+        {
+          "mode": "rive",
+          "input": [
+            "log"
+          ],
+          "output": "board",
+          "timing": "FAST",
+          "notes": "Split along grain for boards, panels, frames"
+        },
+        {
+          "mode": "rive",
+          "input": [
+            "log"
+          ],
+          "output": "narrow_board",
+          "timing": "FAST",
+          "notes": "Thin rived strips for lattice work"
+        },
+        {
+          "mode": "hew",
+          "input": [
+            "log"
+          ],
+          "output": "set_of_blocks",
+          "qty": 3,
+          "timing": "FAST",
+          "norse": "Höggva",
+          "notes": "Hew log into 3 cubes using axe, measuring by eye and hand-span"
+        },
+        {
+          "mode": "cut",
+          "input": [
+            "narrow_board"
+          ],
+          "output": "lattice_panel",
+          "timing": "MED",
+          "notes": "Cross-cut pattern for decorative inserts"
+        },
+        {
+          "mode": "cut",
+          "input": [
+            "leather",
+            "sinew",
+            "branch",
+            "assembled_box"
+          ],
+          "output": "leather_strap | drum_skin | wick_line | wood_beads | body_and_lid",
+          "timing": "FAST",
+          "notes": "Cut materials to size (straps, skins, cords, discs, chest lids)"
+        }
+      ],
+      "timing": "",
+      "notes": "",
+      "era_unlock": "",
+      "is_store": false,
+      "icon_path": "res://art/icons/stations/hewing_bench.png"
+    },
+    "joiners_bench": {
+      "id": "joiners_bench",
+      "name": "Joiner's Bench",
+      "norse_name": "Snikkarabekkr",
+      "function": "Give form to material through carving (Sníða), turning (Renna), bending (Sveigja), pressing (Þrýsta), and embossing (Grafning)",
+      "norse": "Snikkar is the master joiner - one who transforms rough billets into objects of beauty",
+      "summary": "All shaping at one bench. Mode = action. Input = material. Output = shaped part.",
+      "era": 1,
+      "tech_pack": "hearth",
+      "modes": [
+        "carve",
+        "turn",
+        "inlay",
+        "bend",
+        "plait",
+        "fold_and_stitch",
+        "press",
+        "emboss"
+      ],
+      "mode_details": [
+        {
+          "mode": "carve",
+          "input": [
+            "log",
+            "block",
+            "board"
+          ],
+          "output": "carved_body",
+          "timing": "MED",
+          "notes": "Freeform shapes (swan, figure, housing)"
+        },
+        {
+          "mode": "carve",
+          "input": [
+            "bone"
+          ],
+          "output": "bone_button | bone_disc | bone_toggle | bone_eyes",
+          "timing": "FAST",
+          "notes": "Small bone parts"
+        },
+        {
+          "mode": "carve",
+          "input": [
+            "antler"
+          ],
+          "output": "antler_piece | antler_y_frame",
+          "timing": "MED",
+          "notes": "Uses natural fork shapes"
+        },
+        {
+          "mode": "carve",
+          "input": [
+            "soapstone"
+          ],
+          "output": "soapstone_lamp | soapstone_vessel",
+          "timing": "MED",
+          "notes": "Heat-safe carved stone [Era IV+]"
+        },
+        {
+          "mode": "carve",
+          "input": [
+            "whale_bone"
+          ],
+          "output": "whale_carving",
+          "timing": "MED",
+          "notes": "Dense, white prestige pieces [Era IV+]"
+        },
+        {
+          "mode": "carve",
+          "input": [
+            "walrus_ivory"
+          ],
+          "output": "ivory_piece",
+          "timing": "MED",
+          "notes": "Prestige carvings [Era IV+]"
+        },
+        {
+          "mode": "carve",
+          "input": [
+            "narwhal_tusk"
+          ],
+          "output": "narwhal_piece",
+          "timing": "SLOW",
+          "notes": "Ultra-prestige legendary [Era VI]"
+        },
+        {
+          "mode": "carve",
+          "input": [
+            "baleen"
+          ],
+          "output": "baleen_spring",
+          "timing": "MED",
+          "notes": "Flexible springs, ribs [Era IV+]"
+        },
+        {
+          "mode": "turn",
+          "input": [
+            "log"
+          ],
+          "output": "turned_body",
+          "timing": "MED",
+          "notes": "Round components (wheels, spindles, tops)"
+        },
+        {
+          "mode": "inlay",
+          "input": [
+            "board",
+            "board"
+          ],
+          "output": "inlaid_board",
+          "timing": "MED",
+          "notes": "Combine contrasting woods (chess board)"
+        },
+        {
+          "mode": "bend",
+          "input": [
+            "supple_rod",
+            "supple_board"
+          ],
+          "output": "bent_frame | hoop",
+          "timing": "FAST",
+          "norse": "Sveigja",
+          "notes": "Steam-bend softened wood into curves (hoops, runners)"
+        },
+        {
+          "mode": "plait",
+          "input": [
+            "branch"
+          ],
+          "output": "plaited_ring",
+          "timing": "MED",
+          "norse": "Flétta",
+          "notes": "Braid multiple green branches together to form wreaths"
+        },
+        {
+          "mode": "fold_and_stitch",
+          "input": [
+            "birch_bark",
+            "sinew"
+          ],
+          "output": "bark_container",
+          "timing": "MED",
+          "norse": "Falda ok Sauma",
+          "notes": "Soften bark by hearth, fold into box, pierce with awl, stitch with wet sinew"
+        },
+        {
+          "mode": "press",
+          "input": [
+            "soft_horn"
+          ],
+          "output": "horn_sheet | horn_comb",
+          "timing": "MED",
+          "notes": "Pressed thin, translucent [Era IV+]"
+        },
+        {
+          "mode": "emboss",
+          "input": [
+            "juften_leather",
+            "frame",
+            "press"
+          ],
+          "output": "embossed_leather",
+          "timing": "SLOW",
+          "notes": "Pattern transfer to wet leather [Era III]"
+        }
+      ],
+      "timing": "",
+      "notes": "",
+      "era_unlock": "",
+      "is_store": false,
+      "icon_path": "res://art/icons/stations/joiners_bench.png"
+    },
+    "mill": {
+      "id": "mill",
+      "name": "Mill",
+      "norse_name": "",
+      "function": "Mechanical processing—pressing and grinding",
+      "norse": "",
+      "summary": "Mechanical work: crushing seeds, grinding pigments. No heat required. Pigment come from both lineages—botanical (Ljósálfar) and mineral (Svartálfar).",
+      "era": 1,
+      "tech_pack": "pigment",
+      "modes": [
+        "grind",
+        "press"
+      ],
+      "mode_details": [
+        {
+          "mode": "grind",
+          "input": [
+            "flax_seeds"
+          ],
+          "output": "flax_meal",
+          "timing": "FAST",
+          "notes": "Crushing seeds [Era IV, Bog Iron]"
+        },
+        {
+          "mode": "press",
+          "input": [
+            "flax_meal"
+          ],
+          "output": "raw_linseed_oil + linseed_cake",
+          "timing": "MED",
+          "notes": "Iron press extraction [Era IV, Bog Iron]"
+        },
+        {
+          "mode": "grind",
+          "input": [
+            "rowan_berry"
+          ],
+          "output": "orange_pigment",
+          "timing": "FAST",
+          "notes": "Warm, cheerful (Ljósálfar)"
+        },
+        {
+          "mode": "grind",
+          "input": [
+            "lingonberry"
+          ],
+          "output": "crimson_pigment",
+          "timing": "FAST",
+          "notes": "Deep, earthy (Ljósálfar)"
+        },
+        {
+          "mode": "grind",
+          "input": [
+            "juniper_berry"
+          ],
+          "output": "blue_pigment",
+          "timing": "FAST",
+          "notes": "Blue-purple (Ljósálfar)"
+        },
+        {
+          "mode": "grind",
+          "input": [
+            "birch_ash"
+          ],
+          "output": "white_pigment",
+          "timing": "FAST",
+          "notes": "Prestige white (Ljósálfar)"
+        },
+        {
+          "mode": "grind",
+          "input": [
+            "red_ochre"
+          ],
+          "output": "red_pigment",
+          "timing": "FAST",
+          "notes": "Bold earth (Svartálfar)"
+        },
+        {
+          "mode": "grind",
+          "input": [
+            "yellow_ochre"
+          ],
+          "output": "yellow_pigment",
+          "timing": "FAST",
+          "notes": "Earth tone (Svartálfar)"
+        },
+        {
+          "mode": "grind",
+          "input": [
+            "verdigris"
+          ],
+          "output": "green_pigment",
+          "timing": "FAST",
+          "notes": "Copper salts (Svartálfar)"
+        },
+        {
+          "mode": "grind",
+          "input": [
+            "chalk"
+          ],
+          "output": "white_pigment",
+          "timing": "FAST",
+          "notes": "Limestone (Svartálfar)"
+        },
+        {
+          "mode": "grind",
+          "input": [
+            "charcoal"
+          ],
+          "output": "black_pigment",
+          "timing": "FAST",
+          "notes": "Soot black (Svartálfar)"
+        }
+      ],
+      "timing": "",
+      "notes": "",
+      "era_unlock": "",
+      "is_store": false,
+      "icon_path": "res://art/icons/stations/mill.png"
+    },
+    "wash_basin": {
+      "id": "wash_basin",
+      "name": "Wash Basin",
+      "norse_name": "",
+      "function": "Water processing—hot or cold water transforms materials",
+      "norse": "",
+      "summary": "Multi-chain workhorse: wool, horn, glass, steel all pass through here.",
+      "era": 1,
+      "tech_pack": "wool",
+      "modes": [
+        "felt",
+        "soften",
+        "anneal",
+        "quench"
+      ],
+      "mode_details": [
+        {
+          "mode": "felt",
+          "input": [
+            "wool_fiber"
+          ],
+          "output": "wool_felt",
+          "timing": "FAST",
+          "notes": "Hot water + agitation mats fibers"
+        },
+        {
+          "mode": "soften",
+          "input": [
+            "horn"
+          ],
+          "output": "soft_horn",
+          "timing": "MED",
+          "notes": "Hot water softens keratin"
+        },
+        {
+          "mode": "anneal",
+          "input": [
+            "hot_glass_bead"
+          ],
+          "output": "glass_bead",
+          "timing": "FAST",
+          "notes": "Cold water prevents cracking"
+        },
+        {
+          "mode": "quench",
+          "input": [
+            "steel_shape"
+          ],
+          "output": "hardened_steel",
+          "timing": "FAST",
+          "notes": "Plunge red-hot steel into cold water—glass-hard but brittle"
+        }
+      ],
+      "timing": "",
+      "notes": "",
+      "era_unlock": "",
+      "is_store": false,
+      "icon_path": "res://art/icons/stations/wash_basin.png"
+    },
+    "cauldron": {
+      "id": "cauldron",
+      "name": "Cauldron",
+      "norse_name": "",
+      "function": "Heat and liquid transformations—rendering, tanning, mixing",
+      "norse": "",
+      "summary": "All heat/liquid work: glues, pitch, tanning, paint mixing. Era I uses tallow paint; Era II adds distemper (hide_glue); Era III adds casein (cheese_glue); Era IV adds oil paint (requires Bog Iron for press).",
+      "era": 1,
+      "tech_pack": "hearth",
+      "modes": [
+        "melt",
+        "seethe",
+        "bleach",
+        "render",
+        "reduce",
+        "temper",
+        "boil",
+        "buck",
+        "tan",
+        "dress",
+        "mix",
+        "curdle"
+      ],
+      "mode_details": [
+        {
+          "mode": "melt",
+          "input": [
+            "tallow"
+          ],
+          "output": "liquid_fat",
+          "timing": "FAST",
+          "notes": "Renders fat for candles, lubricant"
+        },
+        {
+          "mode": "seethe",
+          "input": [
+            "stick",
+            "rod"
+          ],
+          "output": "supple_rod",
+          "timing": "MED",
+          "norse": "Sjóða",
+          "notes": "Boil wood until lignin softens. ⏱ **30s timer**—reverts if not bent"
+        },
+        {
+          "mode": "seethe",
+          "input": [
+            "board"
+          ],
+          "output": "supple_board",
+          "timing": "MED",
+          "norse": "Sjóða",
+          "notes": "Boil boards until pliable. ⏱ **30s timer**—reverts if not bent"
+        },
+        {
+          "mode": "bleach",
+          "input": [
+            "carved_wood",
+            "lye",
+            "milk"
+          ],
+          "output": "bleached_wood",
+          "timing": "MED",
+          "norse": "Hvíta",
+          "notes": "Lye and milk bath pulls color from wood, leaving frost-white finish"
+        },
+        {
+          "mode": "render",
+          "input": [
+            "hide",
+            "sinew"
+          ],
+          "output": "hide_glue",
+          "timing": "MED",
+          "notes": "Gård-Lím: Nisse render farm scraps into golden, honey-like glue [Era II, Hide]"
+        },
+        {
+          "mode": "render",
+          "input": [
+            "sturgeon_bladder"
+          ],
+          "output": "isinglass",
+          "timing": "MED",
+          "notes": "Extracting fish glue [Era IV, Sea]"
+        },
+        {
+          "mode": "reduce",
+          "input": [
+            "pine_resin",
+            "charcoal"
+          ],
+          "qty_input": [
+            3,
+            1
+          ],
+          "output": "pine_pitch",
+          "timing": "MED",
+          "notes": "Cooking resin into hard pitch"
+        },
+        {
+          "mode": "temper",
+          "input": [
+            "pine_pitch",
+            "tallow"
+          ],
+          "output": "pitch_stick",
+          "timing": "MED",
+          "notes": "Adding fat for flexibility"
+        },
+        {
+          "mode": "boil",
+          "input": [
+            "raw_linseed_oil"
+          ],
+          "output": "boiled_linseed_oil",
+          "timing": "MED",
+          "notes": "Heat polymerizes oil [Era IV, Bog Iron]"
+        },
+        {
+          "mode": "buck",
+          "input": [
+            "hide",
+            "lye"
+          ],
+          "output": "raw_hide",
+          "timing": "FAST",
+          "notes": "Buckling—lye removes hair, no tanning (for drum heads)"
+        },
+        {
+          "mode": "tan",
+          "input": [
+            "hide",
+            "birch_bark",
+            "lye"
+          ],
+          "output": "leather",
+          "timing": "SLOW",
+          "notes": "Lye unhairs, bark tans"
+        },
+        {
+          "mode": "tan",
+          "input": [
+            "seal_hide",
+            "birch_bark",
+            "lye"
+          ],
+          "output": "seal_leather",
+          "timing": "SLOW",
+          "notes": "Waterproof leather"
+        },
+        {
+          "mode": "dress",
+          "input": [
+            "leather",
+            "birch_tar",
+            "tallow"
+          ],
+          "output": "juften_leather",
+          "timing": "MED",
+          "notes": "Tar-dressing for breathable waterproofing [Era III, Distillation]"
+        },
+        {
+          "mode": "mix",
+          "input": [
+            "[color]_pigment",
+            "tallow"
+          ],
+          "output": "[color]_tallow_raw",
+          "timing": "MED",
+          "notes": "Soft, greasy (Era I indoor) [Pigment]"
+        },
+        {
+          "mode": "mix",
+          "input": [
+            "[color]_pigment",
+            "tallow",
+            "pine_resin"
+          ],
+          "output": "[color]_tallow_sealed",
+          "timing": "MED",
+          "notes": "Waterproof (Era I outdoor) [Pigment]"
+        },
+        {
+          "mode": "mix",
+          "input": [
+            "[color]_pigment",
+            "hide_glue"
+          ],
+          "output": "[color]_distemper",
+          "timing": "MED",
+          "notes": "Soft, velvety, reversible [Pigment + Hide]"
+        },
+        {
+          "mode": "mix",
+          "input": [
+            "[color]_pigment",
+            "cheese_glue"
+          ],
+          "output": "[color]_casein",
+          "timing": "MED",
+          "notes": "Hard, durable, permanent [Pigment + Adhesive]"
+        },
+        {
+          "mode": "mix",
+          "input": [
+            "[color]_pigment",
+            "boiled_linseed_oil"
+          ],
+          "output": "[color]_oil_satin",
+          "timing": "MED",
+          "notes": "Durable, flexible [Era IV, Pigment + Bog Iron]"
+        },
+        {
+          "mode": "mix",
+          "input": [
+            "[color]_pigment",
+            "tallow",
+            "lye"
+          ],
+          "output": "[color]_soap",
+          "timing": "MED",
+          "notes": "Colored soap cake [Pigment]"
+        },
+        {
+          "mode": "mix",
+          "input": [
+            "pine_resin",
+            "tallow"
+          ],
+          "output": "resin_seal",
+          "timing": "FAST",
+          "notes": "Soft sealant for sinew, leather (no charcoal needed)"
+        },
+        {
+          "mode": "mix",
+          "input": [
+            "lye",
+            "tallow"
+          ],
+          "output": "lye_soap",
+          "timing": "FAST",
+          "notes": "Saponification—cleaning agent, wood finish"
+        },
+        {
+          "mode": "mix",
+          "input": [
+            "milk",
+            "birch_ash"
+          ],
+          "output": "whitewash",
+          "timing": "FAST",
+          "notes": "Simple chalky white coating (Era I, Hearth)"
+        },
+        {
+          "mode": "curdle",
+          "input": [
+            "milk",
+            "wood_vinegar"
+          ],
+          "output": "quark_curds + liquid_whey",
+          "timing": "MED",
+          "notes": "Acid-separation of casein protein [Era III, Distillation]"
+        },
+        {
+          "mode": "mix",
+          "input": [
+            "quark_curds",
+            "lye"
+          ],
+          "output": "cheese_glue",
+          "timing": "FAST",
+          "notes": "Stone-bond adhesive, 4hr pot life [Era III, Distillation]"
+        }
+      ],
+      "timing": "",
+      "notes": "",
+      "era_unlock": "",
+      "is_store": false,
+      "icon_path": "res://art/icons/stations/cauldron.png"
+    },
+    "spinning_wheel": {
+      "id": "spinning_wheel",
+      "name": "Spinning Wheel",
+      "norse_name": "",
+      "function": "Spin fiber into thread/spool",
+      "norse": "",
+      "summary": "Both wool and flax chains pass through here.",
+      "era": 1,
+      "tech_pack": "wool",
+      "modes": [
+        "spin"
+      ],
+      "mode_details": [
+        {
+          "mode": "spin",
+          "input": [
+            "wool_fiber"
+          ],
+          "output": "wool_spool",
+          "timing": "MED",
+          "notes": "Wool for stitching, ties, weaving"
+        },
+        {
+          "mode": "spin",
+          "input": [
+            "line_flax"
+          ],
+          "output": "linen_spool",
+          "timing": "MED",
+          "notes": "Linen for weaving and sewing"
+        }
+      ],
+      "timing": "",
+      "notes": "",
+      "era_unlock": "",
+      "is_store": false,
+      "icon_path": "res://art/icons/stations/spinning_wheel.png"
+    },
+    "loom": {
+      "id": "loom",
+      "name": "Loom",
+      "norse_name": "",
+      "function": "Weave thread into cloth",
+      "norse": "",
+      "summary": "Both wool and flax chains pass through here.",
+      "era": 1,
+      "tech_pack": "wool",
+      "modes": [
+        "weave"
+      ],
+      "mode_details": [
+        {
+          "mode": "weave",
+          "input": [
+            "wool_spool"
+          ],
+          "qty_input": 3,
+          "output": "wool_fabric",
+          "timing": "SLOW",
+          "notes": "Woven wool cloth"
+        },
+        {
+          "mode": "weave",
+          "input": [
+            "linen_spool"
+          ],
+          "qty_input": 3,
+          "output": "linen_fabric",
+          "timing": "SLOW",
+          "notes": "Fine linen cloth, sails"
+        }
+      ],
+      "timing": "",
+      "notes": "",
+      "era_unlock": "",
+      "is_store": false,
+      "icon_path": "res://art/icons/stations/loom.png"
+    },
+    "forge": {
+      "id": "forge",
+      "name": "Forge",
+      "norse_name": "",
+      "function": "High-heat work—metal shaping, case-hardening, tempering, and glass melting",
+      "norse": "",
+      "summary": "The Steel Loop: Draw (shape) → Case-Harden (add carbon) → Quench at Wash Basin (harden) → Temper (spring-ify)",
+      "era": 4,
+      "tech_pack": "bog_iron",
+      "modes": [
+        "draw",
+        "case-harden",
+        "temper",
+        "glass"
+      ],
+      "mode_details": [
+        {
+          "mode": "draw",
+          "input": [
+            "wrought_iron"
+          ],
+          "output": "iron_axle",
+          "timing": "MED",
+          "notes": "Hot-hammer into spindles, axles"
+        },
+        {
+          "mode": "draw",
+          "input": [
+            "wrought_iron"
+          ],
+          "output": "iron_gear",
+          "timing": "MED",
+          "notes": "Hot-hammer into gear shapes"
+        },
+        {
+          "mode": "draw",
+          "input": [
+            "wrought_iron"
+          ],
+          "output": "iron_rod",
+          "timing": "MED",
+          "notes": "Hot-hammer into glass tools"
+        },
+        {
+          "mode": "case-harden",
+          "input": [
+            "iron_shape",
+            "hide"
+          ],
+          "output": "steel_shape",
+          "timing": "SLOW",
+          "notes": "Pack with carbon source, heat—carbon migrates into surface"
+        },
+        {
+          "mode": "temper",
+          "input": [
+            "hardened_steel"
+          ],
+          "output": "steel_spring",
+          "timing": "MED",
+          "notes": "Reheat to \"spring blue\"—brittleness leaves, elasticity enters"
+        },
+        {
+          "mode": "glass",
+          "input": [
+            "sand",
+            "lye"
+          ],
+          "output": "molten_glass",
+          "timing": "SLOW",
+          "notes": "Melts silica with flux"
+        }
+      ],
+      "timing": "",
+      "notes": "",
+      "era_unlock": "",
+      "is_store": false,
+      "icon_path": "res://art/icons/stations/forge.png"
+    },
+    "hackle": {
+      "id": "hackle",
+      "name": "Hackle",
+      "norse_name": "",
+      "function": "Comb flax fibers to separate fine from coarse",
+      "norse": "",
+      "summary": "The hackle's iron teeth split the flax into silky line_flax and rough tow.",
+      "era": 2,
+      "tech_pack": "flax",
+      "modes": [
+        "hackle"
+      ],
+      "mode_details": [
+        {
+          "mode": "hackle",
+          "input": [
+            "scutched_flax"
+          ],
+          "output": "line_flax + tow",
+          "timing": "MED",
+          "notes": "TWO outputs! Fine fiber + coarse tow"
+        }
+      ],
+      "timing": "",
+      "notes": "",
+      "era_unlock": "",
+      "is_store": false,
+      "icon_path": "res://art/icons/stations/hackle.png"
+    },
+    "twisting": {
+      "id": "twisting",
+      "name": "Twisting",
+      "norse_name": "",
+      "function": "Twist fibers into cord",
+      "norse": "",
+      "summary": "Simple twist-and-ply cordage. Stronger than raw fiber, weaker than spun thread.",
+      "era": 2,
+      "tech_pack": "flax",
+      "modes": [
+        "twist"
+      ],
+      "mode_details": [
+        {
+          "mode": "twist",
+          "input": [
+            "wool_fiber"
+          ],
+          "output": "wool_cord",
+          "timing": "MED",
+          "notes": "Soft, stretchy cord [Wool]"
+        },
+        {
+          "mode": "twist",
+          "input": [
+            "tow"
+          ],
+          "output": "tow_cord",
+          "timing": "MED",
+          "notes": "Rough rope for binding, pulling [Flax]"
+        },
+        {
+          "mode": "twist",
+          "input": [
+            "line_flax"
+          ],
+          "output": "linen_cord",
+          "timing": "MED",
+          "notes": "Strong cord for tension toys [Flax]"
+        }
+      ],
+      "timing": "",
+      "notes": "",
+      "era_unlock": "",
+      "is_store": false,
+      "icon_path": "res://art/icons/stations/twisting.png"
+    },
+    "bloomery": {
+      "id": "bloomery",
+      "name": "Bloomery",
+      "norse_name": "",
+      "function": "Smelt bog iron ore into workable metal",
+      "norse": "",
+      "summary": "The Svartálfar's first fire. Charcoal burns hot enough to reduce ore.",
+      "era": 4,
+      "tech_pack": "bog_iron",
+      "modes": [
+        "smelt"
+      ],
+      "mode_details": [
+        {
+          "mode": "smelt",
+          "input": [
+            "dried_ore",
+            "charcoal"
+          ],
+          "output": "iron_bloom",
+          "timing": "SLOW",
+          "notes": "Reducing ore to spongy metal [Era IV]"
+        }
+      ],
+      "timing": "",
+      "notes": "",
+      "era_unlock": "",
+      "is_store": false,
+      "icon_path": "res://art/icons/stations/bloomery.png"
+    },
+    "anvil": {
+      "id": "anvil",
+      "name": "Anvil",
+      "norse_name": "",
+      "function": "Cold-work iron bloom into bar stock",
+      "norse": "",
+      "summary": "Beating out slag, compacting the iron. No heat needed yet.",
+      "era": 4,
+      "tech_pack": "bog_iron",
+      "modes": [
+        "hammer"
+      ],
+      "mode_details": [
+        {
+          "mode": "hammer",
+          "input": [
+            "iron_bloom"
+          ],
+          "output": "wrought_iron",
+          "timing": "SLOW",
+          "notes": "Cold hammering consolidates the bloom [Era IV]"
+        }
+      ],
+      "timing": "",
+      "notes": "",
+      "era_unlock": "",
+      "is_store": false,
+      "icon_path": "res://art/icons/stations/anvil.png"
+    },
+    "marvering_stone": {
+      "id": "marvering_stone",
+      "name": "Marvering Stone",
+      "norse_name": "",
+      "function": "Shape hot glass on a cool stone surface",
+      "norse": "",
+      "summary": "The glassmaker's palette. Cool stone shapes the molten drop.",
+      "era": 4,
+      "tech_pack": "glass",
+      "modes": [
+        "roll"
+      ],
+      "mode_details": [
+        {
+          "mode": "roll",
+          "input": [
+            "molten_glass",
+            "iron_rod"
+          ],
+          "output": "hot_glass_bead",
+          "timing": "MED",
+          "notes": "Rolling hot glass into shape [Era IV]"
+        }
+      ],
+      "timing": "",
+      "notes": "",
+      "era_unlock": "",
+      "is_store": false,
+      "icon_path": "res://art/icons/stations/marvering_stone.png"
+    },
+    "joinery_bench": {
+      "id": "joinery_bench",
+      "name": "Joinery Bench",
+      "norse_name": "",
+      "function": "Join boards and panels with adhesive",
+      "norse": "",
+      "summary": "",
+      "era": 3,
+      "tech_pack": "framing",
+      "modes": [
+        "join"
+      ],
+      "mode_details": [
+        {
+          "mode": "join",
+          "input": [
+            "boards",
+            "adhesive"
+          ],
+          "qty_input": [
+            4,
+            1
+          ],
+          "output": "hollow_frame",
+          "timing": "MED",
+          "notes": "4-sided open frame (horse bodies, cart chassis)"
+        },
+        {
+          "mode": "join",
+          "input": [
+            "boards",
+            "adhesive"
+          ],
+          "qty_input": [
+            5,
+            1
+          ],
+          "output": "box_frame",
+          "timing": "MED",
+          "notes": "5-6 sided box (tackle boxes, train cars, chests)"
+        },
+        {
+          "mode": "join",
+          "input": [
+            "boards",
+            "adhesive"
+          ],
+          "qty_input": [
+            2,
+            1
+          ],
+          "output": "joined_panel",
+          "timing": "FAST",
+          "notes": "Edge-joined flat panels"
+        },
+        {
+          "mode": "join",
+          "input": [
+            "boards",
+            "lattice_panel",
+            "adhesive"
+          ],
+          "qty_input": [
+            4,
+            1,
+            1
+          ],
+          "output": "lattice_frame",
+          "timing": "MED",
+          "notes": "Frame with decorative lattice insert (one step)"
+        }
+      ],
+      "timing": "",
+      "notes": "",
+      "era_unlock": "Era III, Framing",
+      "is_store": false,
+      "icon_path": "res://art/icons/stations/joinery_bench.png"
+    },
+    "subassembly_bench": {
+      "id": "subassembly_bench",
+      "name": "Subassembly Bench",
+      "norse_name": "",
+      "function": "Pre-build modules for complex toys",
+      "norse": "",
+      "summary": "Subassemblies are pre-built modules that become inputs to final assembly.",
+      "era": 3,
+      "tech_pack": "subassembly",
+      "modes": [
+        "assemble"
+      ],
+      "mode_details": [
+        {
+          "mode": "assemble",
+          "input": [
+            "components",
+            "adhesive"
+          ],
+          "output": "subassembly",
+          "timing": "SKU",
+          "notes": "Wheel trucks, reels, gear trains, drive systems"
+        }
+      ],
+      "timing": "",
+      "notes": "",
+      "era_unlock": "Era III, Subassembly",
+      "is_store": false,
+      "icon_path": "res://art/icons/stations/subassembly_bench.png"
+    },
+    "assembly_bench": {
+      "id": "assembly_bench",
+      "name": "Assembly Bench",
+      "norse_name": "",
+      "function": "Final toy assembly with paint application",
+      "norse": "",
+      "summary": "",
+      "era": 1,
+      "tech_pack": "hearth",
+      "modes": [],
+      "mode_details": [],
+      "timing": "SKU-Dependent",
+      "notes": "Paint application happens here—paint is just another input alongside parts.",
+      "era_unlock": "",
+      "is_store": false,
+      "icon_path": "res://art/icons/stations/assembly_bench.png"
+    },
+    "clockwork_bench": {
+      "id": "clockwork_bench",
+      "name": "Clockwork Bench",
+      "norse_name": "",
+      "function": "Assemble clockwork cores",
+      "norse": "",
+      "summary": "",
+      "era": 5,
+      "tech_pack": "clockwork",
+      "modes": [],
+      "mode_details": [],
+      "timing": "SKU-Dependent",
+      "notes": "Subassemblies → Clockwork core",
+      "era_unlock": "Era V+",
+      "is_store": false,
+      "icon_path": "res://art/icons/stations/clockwork_bench.png"
+    },
+    "wrap_station": {
+      "id": "wrap_station",
+      "name": "Wrap Station",
+      "norse_name": "",
+      "function": "Package finished toys",
+      "norse": "",
+      "summary": "",
+      "era": 1,
+      "tech_pack": "hearth",
+      "modes": [],
+      "mode_details": [],
+      "timing": "FAST",
+      "notes": "Toy → Wrapped gift",
+      "era_unlock": "",
+      "is_store": false,
+      "icon_path": "res://art/icons/stations/wrap_station.png"
+    },
+    "santas_sleigh": {
+      "id": "santas_sleigh",
+      "name": "Santa's Sleigh",
+      "norse_name": "",
+      "function": "Deliver wrapped gifts",
+      "norse": "",
+      "summary": "",
+      "era": 1,
+      "tech_pack": "hearth",
+      "modes": [],
+      "mode_details": [],
+      "timing": "INSTANT",
+      "notes": "",
+      "era_unlock": "",
+      "is_store": false,
+      "icon_path": "res://art/icons/stations/santas_sleigh.png"
+    },
+    "reclamation_bin": {
+      "id": "reclamation_bin",
+      "name": "Reclamation Bin",
+      "norse_name": "",
+      "function": "Disassemble toys and return materials to stock",
+      "norse": "",
+      "summary": "",
+      "era": 1,
+      "tech_pack": "hearth",
+      "modes": [],
+      "mode_details": [],
+      "timing": "INSTANT",
+      "notes": "",
+      "era_unlock": "",
+      "is_store": false,
+      "icon_path": "res://art/icons/stations/reclamation_bin.png"
+    },
+    "ljosalfar": {
+      "id": "ljosalfar",
+      "name": "Ljosalfar Haven",
+      "norse_name": "Ljosalfar Hofn",
+      "function": "Wood, resin, berries, and forest materials from the Light Elves",
+      "era": 1,
+      "tech_pack": "hearth",
+      "is_store": true,
+      "icon_path": "res://art/icons/stores/ljosalfar_haven.png"
+    },
+    "nisse": {
+      "id": "nisse",
+      "name": "Nisse Pantry",
+      "norse_name": "Nisse Bur",
+      "function": "Animal products, dairy, and farm goods from the Barn Spirits",
+      "era": 1,
+      "tech_pack": "hearth",
+      "is_store": true,
+      "icon_path": "res://art/icons/stores/nisse_pantry.png"
+    },
+    "svartalfar": {
+      "id": "svartalfar",
+      "name": "Svartalfar Vault",
+      "norse_name": "Svartalfar Hvelr",
+      "function": "Earth minerals, ores, and deep materials from the Dark Elves",
+      "era": 3,
+      "tech_pack": "distillation",
+      "is_store": true,
+      "icon_path": "res://art/icons/stores/svartalfar_vault.png"
+    },
+    "marmennill": {
+      "id": "marmennill",
+      "name": "Marmennill Sea-Larder",
+      "norse_name": "Marmennill Sjobuor",
+      "function": "Sea materials, fish products, and coastal resources from the Mermen",
+      "era": 4,
+      "tech_pack": "sea",
+      "is_store": true,
+      "icon_path": "res://art/icons/stores/marmennill_sea_larder.png"
+    }
+  }
+}

@@ -1,0 +1,2682 @@
+{
+  "project": "Santas Nordic Workshop Intermediates",
+  "art_direction": {
+    "style": "Scandinavian storybook illustration; watercolor + gouache on textured paper; fine ink linework; soft ambient light; muted natural colors; medium detail",
+    "palette": "Pine greens, birch whites, oak browns, soot blacks, wool greys, ice blues",
+    "size": "512x512",
+    "note": "Each intermediate should match the style of its parent toy"
+  },
+  "summary": {
+    "total_intermediates": 144,
+    "shared_count": 29,
+    "unique_count": 115,
+    "total_toys": 39
+  },
+  "intermediates": {
+    "set_of_blocks": {
+      "id": "set_of_blocks",
+      "name": "Set Of Blocks",
+      "description": "Höggva: We hew the oak log down to three identical cubes using axe, measuring by eye and hand-span.",
+      "input": "log (oak)",
+      "station": "Hewing Bench",
+      "mode": "hew",
+      "used_by": [
+        "ironwood_totems"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "resin_seal": {
+      "id": "resin_seal",
+      "name": "Resin Seal",
+      "description": "Soft seal protects corners from chipping, safe for small hands",
+      "input": "pine_resin + tallow",
+      "station": "Cauldron",
+      "mode": "mix",
+      "used_by": [
+        "antler_clacker",
+        "aurora_callers",
+        "borealis_birds",
+        "fortunes_bones",
+        "grand_lineage_chess_set",
+        "great_north_sleigh",
+        "ironwood_totems",
+        "jarl_shield_plaque",
+        "nisse_boundary_levitator",
+        "north_wind_whirler",
+        "rune_singer_blocks",
+        "solstice_storm_drum",
+        "stream_mill",
+        "treasure_chest",
+        "yule_boar"
+      ],
+      "shared": true,
+      "usage_count": 15
+    },
+    "squared_rod": {
+      "id": "squared_rod",
+      "name": "Squared Rod",
+      "description": "Höggva: Split and square the ash log in one action. The grain must run continuous—a sawn rod will snap under bending, but a hewn billet will yield to the sun's curve.",
+      "input": "log (ash)",
+      "station": "Hewing Bench",
+      "mode": "hew",
+      "used_by": [
+        "sun_wheel_chaser"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "supple_rod": {
+      "id": "supple_rod",
+      "name": "Supple Rod",
+      "description": "Boil the rod in water until the lignin softens. We seethe the wood until it yields like wet leather in the hands.",
+      "input": "squared_rod",
+      "station": "Cauldron",
+      "mode": "seethe",
+      "used_by": [
+        "sun_wheel_chaser"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "ash_hoop": {
+      "id": "ash_hoop",
+      "name": "Ash Hoop",
+      "description": "Sveigja: Pin the hot rod into a circular frame while steam still rises. Force it into its 'memory' before it cools.",
+      "input": "supple_rod",
+      "station": "Joiner's Bench",
+      "mode": "bend",
+      "used_by": [
+        "sun_wheel_chaser"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "guide_stick": {
+      "id": "guide_stick",
+      "name": "Guide Stick",
+      "description": "Sníða: Carve the birch to a squared grip that won't slip in a frozen mitten, leaving the natural Y-fork at the tip to cradle the hoop.",
+      "input": "stick (birch)",
+      "station": "Joiner's Bench",
+      "mode": "carve",
+      "used_by": [
+        "sun_wheel_chaser"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "wreath_base": {
+      "id": "wreath_base",
+      "name": "Wreath Base",
+      "description": "Flétta: Braid three green birch wands together while the sap is alive. A single bent branch is weak, but a trinity of braided birch creates a circle that will never lose its heart.",
+      "input": "branch (birch) (×3)",
+      "station": "Joiner's Bench",
+      "mode": "plait",
+      "used_by": [
+        "yule_wreath"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "top_rough_out": {
+      "id": "top_rough_out",
+      "name": "Top Rough Out",
+      "description": "Höggva: Hew the dense maple log into a rough octagonal blank on the Höggvabekkr. The mass is there—the body shape with its stem socket waiting to be turned.",
+      "input": "log (maple)",
+      "station": "Hewing Bench",
+      "mode": "hew",
+      "used_by": [
+        "north_wind_whirler"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "top_carved": {
+      "id": "top_carved",
+      "name": "Top Carved",
+      "description": "Renna: Shape the spinning blank on the pole lathe (Rennubekkr) at the Snikkarabekkr. Wide at equator, tapered to needle-point, with the stem socket carved at crown.",
+      "input": "top_rough_out",
+      "station": "Joiner's Bench",
+      "mode": "turn",
+      "used_by": [
+        "north_wind_whirler"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "top_bleached": {
+      "id": "top_bleached",
+      "name": "Top Bleached",
+      "description": "Hvíta: Submerge the wood in the Ketill to bleach it white. We use the action of Sjóða (seething) to drive the milk into the grain.",
+      "input": "top_carved + lye + milk",
+      "station": "Cauldron",
+      "mode": "bleach",
+      "used_by": [
+        "north_wind_whirler"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "swan_family_rough_outs": {
+      "id": "swan_family_rough_outs",
+      "name": "Swan Family Rough Outs",
+      "description": "Höggva: Hew the pine log into blocky rough-outs—one mother swan shape, three cygnet masses. The skíð still holds the bark but shows the forms waiting within.",
+      "input": "log (pine)",
+      "station": "Hewing Bench",
+      "mode": "hew",
+      "used_by": [
+        "aurora_callers"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "swan_family_carved": {
+      "id": "swan_family_carved",
+      "name": "Swan Family Carved",
+      "description": "Sníða: On the shaving horse, pull the drawknife to release the graceful curves. The mother's arched neck, the cygnets' teardrop bodies—pine yields easily to the blade.",
+      "input": "swan_family_rough_outs",
+      "station": "Joiner's Bench",
+      "mode": "carve",
+      "used_by": [
+        "aurora_callers"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "swan_family_bleached": {
+      "id": "swan_family_bleached",
+      "name": "Swan Family Bleached",
+      "description": "Hvíta: Submerge the carved swans in lye and milk. The alkaline solution bleaches pine to frost-white while milk proteins soften the grain for a matte finish.",
+      "input": "swan_family_carved + lye + milk",
+      "station": "Cauldron",
+      "mode": "bleach",
+      "used_by": [
+        "aurora_callers"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "tuned_bars": {
+      "id": "tuned_bars",
+      "name": "Tuned Bars",
+      "description": "Birch is a resonant tonewood; five bars carved to graduated lengths, notched underneath to tune each pitch",
+      "input": "log (birch)",
+      "station": "Joiner's Bench",
+      "mode": "carve",
+      "used_by": [
+        "frost_voice_chime"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "sound_box": {
+      "id": "sound_box",
+      "name": "Sound Box",
+      "description": "Pine rived into a shallow trough—the hollow amplifies and warms the tone",
+      "input": "log (pine)",
+      "station": "Hewing Bench",
+      "mode": "rive",
+      "used_by": [
+        "frost_voice_chime"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "lye_soap": {
+      "id": "lye_soap",
+      "name": "Lye Soap",
+      "description": "Thin coating seals the bars without dampening vibration",
+      "input": "lye + tallow",
+      "station": "Cauldron",
+      "mode": "mix",
+      "used_by": [
+        "frost_voice_chime"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "pedestal_blank": {
+      "id": "pedestal_blank",
+      "name": "Pedestal Blank",
+      "description": "Höggva: On the Höggvabekkr, rive the oak to find the straight heart-grain and hew it into a heavy, squared block. This ensures the base will never crack from the candle's heat.",
+      "input": "log (oak)",
+      "station": "Hewing Bench",
+      "mode": "hew",
+      "used_by": [
+        "light_bringer_candle"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "oak_pedestal": {
+      "id": "oak_pedestal",
+      "name": "Oak Pedestal",
+      "description": "Sníða: At the Snikkarabekkr, carve the deep socket to hold the tallow and a wide, steady foot. Etch a shallow groove at the base to cradle the vow-scroll.",
+      "input": "pedestal_blank",
+      "station": "Joiner's Bench",
+      "mode": "carve",
+      "used_by": [
+        "light_bringer_candle"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "wick_line": {
+      "id": "wick_line",
+      "name": "Wick Line",
+      "description": "Sníða: Carefully peel the inner bast fibers from the birch. Twist these into a tight cord and press them on the bench; this organic line drinks the fat better than any sinew.",
+      "input": "branch (birch)",
+      "station": "Joiner's Bench",
+      "mode": "carve",
+      "used_by": [
+        "light_bringer_candle"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "etched_vow_scroll": {
+      "id": "etched_vow_scroll",
+      "name": "Etched Vow Scroll",
+      "description": "Grafning: Score the ancient vow into the silver skin of the Björk: 'At the darkest time, bring light.' The bark preserves the oath even as the candle burns.",
+      "input": "birch_bark",
+      "station": "Joiner's Bench",
+      "mode": "emboss",
+      "used_by": [
+        "light_bringer_candle"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "cleansing_dust": {
+      "id": "cleansing_dust",
+      "name": "Cleansing Dust",
+      "description": "Mala: Grind the blue berries in the Mylna to a fine powder. This dust purifies the hall and fills the air with the scent of the high mountains.",
+      "input": "juniper_berry",
+      "station": "Mill",
+      "mode": "grind",
+      "used_by": [
+        "light_bringer_candle"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "scented_fat": {
+      "id": "scented_fat",
+      "name": "Scented Fat",
+      "description": "Sjóða: Seethe the tallow in the Ketill and fold in the juniper dust. The heat marries the mountain scent to the fat, creating a slow-burning incense.",
+      "input": "tallow + cleansing_dust",
+      "station": "Cauldron",
+      "mode": "seethe",
+      "used_by": [
+        "light_bringer_candle"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "orange_pigment": {
+      "id": "orange_pigment",
+      "name": "Orange Pigment",
+      "description": "Rowan berries grind to a warm orange powder—the Nisse's favorite color",
+      "input": "rowan_berry",
+      "station": "Mill",
+      "mode": "grind",
+      "used_by": [
+        "borealis_birds",
+        "ember_hauler",
+        "nisse_offering_basket",
+        "rune_singer_blocks"
+      ],
+      "shared": true,
+      "usage_count": 4
+    },
+    "orange_soap": {
+      "id": "orange_soap",
+      "name": "Orange Soap",
+      "description": "Cheerful orange soap, fragrant and festive. A small luxury.",
+      "input": "orange_pigment + tallow + lye",
+      "station": "Cauldron",
+      "mode": "mix",
+      "used_by": [
+        "nisse_offering_basket"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "small_basket": {
+      "id": "small_basket",
+      "name": "Small Basket",
+      "description": "Falda ok Sauma: Soften bark by hearth, fold into box, pierce corners with bone awl, stitch with wet sinew. As sinew dries, basket becomes drum-tight.",
+      "input": "birch_bark + sinew",
+      "station": "Joiner's Bench",
+      "mode": "fold_and_stitch",
+      "used_by": [
+        "nisse_offering_basket"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "chess_billets": {
+      "id": "chess_billets",
+      "name": "Chess Billets",
+      "description": "Höggva: On the Höggvabekkr, hew the logs into long, squared-off bars. It is far easier to turn a square than a round log, and removing the bark protects the lathe-cord from grit.",
+      "input": "log (birch) + log (oak)",
+      "station": "Hewing Bench",
+      "mode": "hew",
+      "used_by": [
+        "grand_lineage_chess_set"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "chess_pieces_raw": {
+      "id": "chess_pieces_raw",
+      "name": "Chess Pieces Raw",
+      "description": "Renna: On the Rennubekkr, spin the squared billets into the 32 pieces of the armies. We turn them in 'strings' (multiple pieces on one bar) before cutting them apart.",
+      "input": "chess_billets",
+      "station": "Joiner's Bench",
+      "mode": "turn",
+      "used_by": [
+        "grand_lineage_chess_set"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "board_planks": {
+      "id": "board_planks",
+      "name": "Board Planks",
+      "description": "Höggva: Hew thin, flat planks from both woods. These must be planed perfectly flat to ensure the battlefield is level.",
+      "input": "log (birch) + log (oak)",
+      "station": "Hewing Bench",
+      "mode": "hew",
+      "used_by": [
+        "grand_lineage_chess_set"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "chess_board": {
+      "id": "chess_board",
+      "name": "Chess Board",
+      "description": "Þrýsta: Cut the planks into 64 squares and join them edge-to-edge. Use the Press method with wedges to lock the birch and oak into their checkered marriage.",
+      "input": "board_planks",
+      "station": "Joiner's Bench",
+      "mode": "join",
+      "used_by": [
+        "grand_lineage_chess_set"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "whitewash": {
+      "id": "whitewash",
+      "name": "Whitewash",
+      "description": "Blanda: Seethe (Sjóða) the milk and ash into a thick kalk-white. This is the 'Armor of Light' for the birch army.",
+      "input": "milk + birch_ash",
+      "station": "Cauldron",
+      "mode": "mix",
+      "used_by": [
+        "grand_lineage_chess_set"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "wool_felt": {
+      "id": "wool_felt",
+      "name": "Wool Felt",
+      "description": "Hot water and agitation mat the fibers into thick, seamless felt—no edges to fray, no seams to split",
+      "input": "wool_fiber",
+      "station": "Wash Basin",
+      "mode": "felt",
+      "used_by": [
+        "wool_warden_effigy"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "wool_spool": {
+      "id": "wool_spool",
+      "name": "Wool Spool",
+      "description": "Strong thread for stitching features and reinforcing stress points",
+      "input": "wool_fiber",
+      "station": "Spinning Wheel",
+      "mode": "spin",
+      "used_by": [
+        "ash_hobbyhorse",
+        "frost_wyrm",
+        "great_bear_sentry",
+        "great_north_sleigh",
+        "jormungandr_drift",
+        "puppet_theater",
+        "riding_horse",
+        "storm_wing_kite",
+        "wool_walker_bunny",
+        "wool_warden_effigy"
+      ],
+      "shared": true,
+      "usage_count": 10
+    },
+    "wool_fabric": {
+      "id": "wool_fabric",
+      "name": "Wool Fabric",
+      "description": "Dense plain-weave fabric—sturdy shell that won't tear or pill",
+      "input": "wool_spool (×3)",
+      "station": "Loom",
+      "mode": "weave",
+      "used_by": [
+        "ash_hobbyhorse",
+        "frost_wyrm",
+        "great_bear_sentry",
+        "great_north_sleigh",
+        "jormungandr_drift",
+        "puppet_theater",
+        "riding_horse",
+        "storm_wing_kite",
+        "wool_walker_bunny"
+      ],
+      "shared": true,
+      "usage_count": 9
+    },
+    "set_of_blocks (oak)": {
+      "id": "set_of_blocks (oak)",
+      "name": "Set Of Blocks (Oak)",
+      "description": "Höggva: Hew oak log into identical cubes; each face ready for carving",
+      "input": "log (oak)",
+      "station": "Hewing Bench",
+      "mode": "hew",
+      "used_by": [
+        "rune_singer_blocks"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "orange_tallow_raw": {
+      "id": "orange_tallow_raw",
+      "name": "Orange Tallow Raw",
+      "description": "Vibrant tallow paint that soaks into carved grooves",
+      "input": "orange_pigment + tallow",
+      "station": "Cauldron",
+      "mode": "mix",
+      "used_by": [
+        "borealis_birds",
+        "rune_singer_blocks"
+      ],
+      "shared": true,
+      "usage_count": 2
+    },
+    "swan_body": {
+      "id": "swan_body",
+      "name": "Swan Body",
+      "description": "Pine floats naturally; mother swan carved with graceful neck and hollow belly for stability",
+      "input": "log (pine)",
+      "station": "Joiner's Bench",
+      "mode": "carve",
+      "used_by": [
+        "borealis_birds"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "cygnet_bodies": {
+      "id": "cygnet_bodies",
+      "name": "Cygnet Bodies",
+      "description": "Three small cygnets—simple teardrop shapes that bob upright in water",
+      "input": "log (pine)",
+      "station": "Joiner's Bench",
+      "mode": "carve",
+      "used_by": [
+        "borealis_birds"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "white_pigment": {
+      "id": "white_pigment",
+      "name": "White Pigment",
+      "description": "Pure white base from birch ash",
+      "input": "birch_ash",
+      "station": "Mill",
+      "mode": "grind",
+      "used_by": [
+        "borealis_birds"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "white_tallow_raw": {
+      "id": "white_tallow_raw",
+      "name": "White Tallow Raw",
+      "description": "Opaque white base coat—the snow beneath the aurora",
+      "input": "white_pigment + tallow",
+      "station": "Cauldron",
+      "mode": "mix",
+      "used_by": [
+        "borealis_birds"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "blue_pigment": {
+      "id": "blue_pigment",
+      "name": "Blue Pigment",
+      "description": "Cool blue from juniper—the shimmer between the flames",
+      "input": "juniper_berry",
+      "station": "Mill",
+      "mode": "grind",
+      "used_by": [
+        "borealis_birds",
+        "frost_wyrm",
+        "jarl_shield_plaque",
+        "jormungandr_drift",
+        "polar_express"
+      ],
+      "shared": true,
+      "usage_count": 5
+    },
+    "blue_tallow_raw": {
+      "id": "blue_tallow_raw",
+      "name": "Blue Tallow Raw",
+      "description": "Aurora shimmer paint—blended into orange edges",
+      "input": "blue_pigment + tallow",
+      "station": "Cauldron",
+      "mode": "mix",
+      "used_by": [
+        "borealis_birds",
+        "frost_wyrm"
+      ],
+      "shared": true,
+      "usage_count": 2
+    },
+    "line_flax + tow": {
+      "id": "line_flax + tow",
+      "name": "Line Flax + Tow",
+      "description": "Metal teeth comb retted flax; long line_flax for thread, short tow for stuffing",
+      "input": "scutched_flax",
+      "station": "Hackle",
+      "mode": "",
+      "used_by": [
+        "anglers_set",
+        "great_north_sleigh",
+        "linen_lass",
+        "nisse_boundary_levitator",
+        "rag_doll",
+        "solstice_storm_drum",
+        "storm_wing_kite",
+        "sun_whirler",
+        "treasure_chest"
+      ],
+      "shared": true,
+      "usage_count": 9
+    },
+    "linen_spool": {
+      "id": "linen_spool",
+      "name": "Linen Spool",
+      "description": "Fine linen thread—stronger than wool, smoother to the touch",
+      "input": "line_flax",
+      "station": "Spinning Wheel",
+      "mode": "spin",
+      "used_by": [
+        "linen_lass",
+        "rag_doll",
+        "treasure_chest"
+      ],
+      "shared": true,
+      "usage_count": 3
+    },
+    "linen_fabric": {
+      "id": "linen_fabric",
+      "name": "Linen Fabric",
+      "description": "Plain weave linen—cool, crisp, durable",
+      "input": "linen_spool (×3)",
+      "station": "Loom",
+      "mode": "weave",
+      "used_by": [
+        "linen_lass",
+        "rag_doll",
+        "treasure_chest"
+      ],
+      "shared": true,
+      "usage_count": 3
+    },
+    "heavy_spinner_disc": {
+      "id": "heavy_spinner_disc",
+      "name": "Heavy Spinner Disc",
+      "description": "Dense oak disc, about 4 inches diameter—the mass stores momentum",
+      "input": "log (oak)",
+      "station": "Joiner's Bench",
+      "mode": "turn",
+      "used_by": [
+        "sun_whirler"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "linen_cord": {
+      "id": "linen_cord",
+      "name": "Linen Cord",
+      "description": "Strong twisted cord that won't snap under spinning tension",
+      "input": "line_flax",
+      "station": "Twisting",
+      "mode": "",
+      "used_by": [
+        "anglers_set",
+        "great_north_sleigh",
+        "nisse_boundary_levitator",
+        "solstice_storm_drum",
+        "storm_wing_kite",
+        "sun_whirler"
+      ],
+      "shared": true,
+      "usage_count": 6
+    },
+    "antler_y_frame": {
+      "id": "antler_y_frame",
+      "name": "Antler Y Frame",
+      "description": "Natural forked tine trimmed to a handle with two arms—antler's dense structure amplifies sound",
+      "input": "antler",
+      "station": "Joiner's Bench",
+      "mode": "carve",
+      "used_by": [
+        "antler_clacker"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "bone_disc": {
+      "id": "bone_disc",
+      "name": "Bone Disc",
+      "description": "Flat bone discs with center holes—two pairs that clack against each other",
+      "input": "bone",
+      "station": "Joiner's Bench",
+      "mode": "carve",
+      "used_by": [
+        "antler_clacker"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "bone_dice": {
+      "id": "bone_dice",
+      "name": "Bone Dice",
+      "description": "Six bone cubes carved from dense leg bone—each face marked with runes 1-6",
+      "input": "bone",
+      "station": "Joiner's Bench",
+      "mode": "carve",
+      "used_by": [
+        "fortunes_bones"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "throwing_cup": {
+      "id": "throwing_cup",
+      "name": "Throwing Cup",
+      "description": "Hollowed birch cylinder, palm-sized—the dice rattle satisfyingly inside",
+      "input": "log (birch)",
+      "station": "Joiner's Bench",
+      "mode": "carve",
+      "used_by": [
+        "fortunes_bones"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "score_peg": {
+      "id": "score_peg",
+      "name": "Score Peg",
+      "description": "Small bone pegs for tracking wagers and scores",
+      "input": "bone",
+      "station": "Joiner's Bench",
+      "mode": "carve",
+      "used_by": [
+        "fortunes_bones"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "dice_pouch": {
+      "id": "dice_pouch",
+      "name": "Dice Pouch",
+      "description": "Falda ok Sauma: Fold bark into drawstring pouch, stitch with sinew to keep the set together",
+      "input": "birch_bark + sinew",
+      "station": "Joiner's Bench",
+      "mode": "fold_and_stitch",
+      "used_by": [
+        "fortunes_bones"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "ash_blade": {
+      "id": "ash_blade",
+      "name": "Ash Blade",
+      "description": "Ash flexes on impact—safe for play-fighting. Carved with fuller groove for authenticity.",
+      "input": "log (ash)",
+      "station": "Joiner's Bench",
+      "mode": "carve",
+      "used_by": [
+        "tale_weaver_set"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "scabbard_shell": {
+      "id": "scabbard_shell",
+      "name": "Scabbard Shell",
+      "description": "Two birch halves hollowed to fit the blade",
+      "input": "board (birch)",
+      "station": "Joiner's Bench",
+      "mode": "carve",
+      "used_by": [
+        "tale_weaver_set"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "leather": {
+      "id": "leather",
+      "name": "Leather",
+      "description": "Sturdy leather for scabbard covering and belt",
+      "input": "hide + birch_bark + lye",
+      "station": "Cauldron",
+      "mode": "tan",
+      "used_by": [
+        "ash_hobbyhorse",
+        "bergelmir_ark",
+        "dragon_scale_slicks",
+        "frost_wyrm",
+        "jarl_shield_plaque",
+        "jingle_tambourine",
+        "polar_express",
+        "riding_horse",
+        "tale_weaver_set",
+        "treasure_chest",
+        "yule_boar"
+      ],
+      "shared": true,
+      "usage_count": 11
+    },
+    "leather_hangers": {
+      "id": "leather_hangers",
+      "name": "Leather Hangers",
+      "description": "Belt loop and throat strap for the scabbard",
+      "input": "leather",
+      "station": "Hewing Bench",
+      "mode": "cut",
+      "used_by": [
+        "tale_weaver_set"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "shield_backing": {
+      "id": "shield_backing",
+      "name": "Shield Backing",
+      "description": "Oak planks edge-joined into a round—authentic construction",
+      "input": "log (oak)",
+      "station": "Hewing Bench",
+      "mode": "rive",
+      "used_by": [
+        "jarl_shield_plaque"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "hide_glue": {
+      "id": "hide_glue",
+      "name": "Hide Glue",
+      "description": "Gård-Lím: the binder that makes distemper paint",
+      "input": "hide + sinew",
+      "station": "Cauldron",
+      "mode": "render",
+      "used_by": [
+        "jarl_shield_plaque",
+        "jormungandr_drift",
+        "riding_horse"
+      ],
+      "shared": true,
+      "usage_count": 3
+    },
+    "crimson_pigment": {
+      "id": "crimson_pigment",
+      "name": "Crimson Pigment",
+      "description": "Blood red from lingonberry",
+      "input": "lingonberry",
+      "station": "Mill",
+      "mode": "grind",
+      "used_by": [
+        "bergelmir_ark",
+        "great_north_sleigh",
+        "jarl_shield_plaque",
+        "polar_express",
+        "puppet_theater",
+        "riding_horse"
+      ],
+      "shared": true,
+      "usage_count": 6
+    },
+    "purple_distemper": {
+      "id": "purple_distemper",
+      "name": "Purple Distemper",
+      "description": "Royal purple 'Rauðblár'—mixed blue and crimson in hide_glue binder",
+      "input": "blue_pigment + crimson_pigment + hide_glue",
+      "station": "Cauldron",
+      "mode": "mix",
+      "used_by": [
+        "jarl_shield_plaque"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "bone_toggle": {
+      "id": "bone_toggle",
+      "name": "Bone Toggle",
+      "description": "Internal anchors sewn into ear bases—allows ears to pose and hold position",
+      "input": "bone",
+      "station": "Joiner's Bench",
+      "mode": "carve",
+      "used_by": [
+        "dragon_scale_slicks",
+        "frost_wyrm",
+        "linen_lass",
+        "wool_walker_bunny"
+      ],
+      "shared": true,
+      "usage_count": 4
+    },
+    "bone_button": {
+      "id": "bone_button",
+      "name": "Bone Button",
+      "description": "Decorative nose button",
+      "input": "bone",
+      "station": "Joiner's Bench",
+      "mode": "carve",
+      "used_by": [
+        "ash_hobbyhorse",
+        "jingle_tambourine",
+        "linen_lass",
+        "wool_walker_bunny"
+      ],
+      "shared": true,
+      "usage_count": 4
+    },
+    "bone_eyes": {
+      "id": "bone_eyes",
+      "name": "Bone Eyes",
+      "description": "Polished bone discs with carved pupils",
+      "input": "bone",
+      "station": "Joiner's Bench",
+      "mode": "carve",
+      "used_by": [
+        "ash_hobbyhorse",
+        "frost_wyrm",
+        "linen_lass",
+        "wool_walker_bunny",
+        "yule_boar"
+      ],
+      "shared": true,
+      "usage_count": 5
+    },
+    "tambourine_frame": {
+      "id": "tambourine_frame",
+      "name": "Tambourine Frame",
+      "description": "Ash ring with slots cut for jingles—flexible wood absorbs impact",
+      "input": "log (ash)",
+      "station": "Joiner's Bench",
+      "mode": "carve",
+      "used_by": [
+        "jingle_tambourine"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "drum_skin": {
+      "id": "drum_skin",
+      "name": "Drum Skin",
+      "description": "Circular head stretched over frame",
+      "input": "leather",
+      "station": "Hewing Bench",
+      "mode": "cut",
+      "used_by": [
+        "jingle_tambourine",
+        "solstice_storm_drum"
+      ],
+      "shared": true,
+      "usage_count": 2
+    },
+    "leather_strap": {
+      "id": "leather_strap",
+      "name": "Leather Strap",
+      "description": "Hand grip on back",
+      "input": "leather",
+      "station": "Hewing Bench",
+      "mode": "cut",
+      "used_by": [
+        "ash_hobbyhorse",
+        "jingle_tambourine",
+        "riding_horse",
+        "treasure_chest"
+      ],
+      "shared": true,
+      "usage_count": 4
+    },
+    "board (birch)": {
+      "id": "board (birch)",
+      "name": "Board (Birch)",
+      "description": "Thin birch board for bending into hoop",
+      "input": "log (birch)",
+      "station": "Hewing Bench",
+      "mode": "rive",
+      "used_by": [
+        "solstice_storm_drum"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "supple_hoop": {
+      "id": "supple_hoop",
+      "name": "Supple Hoop",
+      "description": "Sjóða: Boil the birch board until pliable—must work fast before it cools",
+      "input": "board (birch)",
+      "station": "Cauldron",
+      "mode": "seethe",
+      "used_by": [
+        "solstice_storm_drum"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "raw_hide": {
+      "id": "raw_hide",
+      "name": "Raw Hide",
+      "description": "Lye removes hair but keeps hide stiff—perfect for drum heads",
+      "input": "hide + lye",
+      "station": "Cauldron",
+      "mode": "buck",
+      "used_by": [
+        "solstice_storm_drum"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "mallet_head": {
+      "id": "mallet_head",
+      "name": "Mallet Head",
+      "description": "Antler head wrapped in tow for soft strike",
+      "input": "antler",
+      "station": "Joiner's Bench",
+      "mode": "carve",
+      "used_by": [
+        "solstice_storm_drum"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "horse_head": {
+      "id": "horse_head",
+      "name": "Horse Head",
+      "description": "Stylized head with open mouth—ash is light but strong",
+      "input": "log (ash)",
+      "station": "Joiner's Bench",
+      "mode": "carve",
+      "used_by": [
+        "ash_hobbyhorse",
+        "riding_horse"
+      ],
+      "shared": true,
+      "usage_count": 2
+    },
+    "bone_teeth": {
+      "id": "bone_teeth",
+      "name": "Bone Teeth",
+      "description": "Sharp fangs for the open maw",
+      "input": "bone",
+      "station": "Joiner's Bench",
+      "mode": "carve",
+      "used_by": [
+        "frost_wyrm"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "bone_claws": {
+      "id": "bone_claws",
+      "name": "Bone Claws",
+      "description": "Wicked claws on vestigial legs",
+      "input": "bone",
+      "station": "Joiner's Bench",
+      "mode": "carve",
+      "used_by": [
+        "frost_wyrm"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "board (ash)": {
+      "id": "board (ash)",
+      "name": "Board (Ash)",
+      "description": "Thin ash boards for runners—ash bends without breaking",
+      "input": "log (ash)",
+      "station": "Hewing Bench",
+      "mode": "rive",
+      "used_by": [
+        "great_north_sleigh"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "supple_board": {
+      "id": "supple_board",
+      "name": "Supple Board",
+      "description": "Sjóða: Boil the ash board until pliable. ⏱ 30s timer—must bend before it cools",
+      "input": "board (ash)",
+      "station": "Cauldron",
+      "mode": "seethe",
+      "used_by": [
+        "great_north_sleigh"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "sleigh_runner": {
+      "id": "sleigh_runner",
+      "name": "Sleigh Runner",
+      "description": "Curved at front to ride over snow—the classic sleigh profile",
+      "input": "supple_board",
+      "station": "Joiner's Bench",
+      "mode": "bend",
+      "used_by": [
+        "great_north_sleigh"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "sleigh_frame": {
+      "id": "sleigh_frame",
+      "name": "Sleigh Frame",
+      "description": "Heavy oak box frame for cargo—mortise-and-tenon joints",
+      "input": "log (oak)",
+      "station": "Joiner's Bench",
+      "mode": "carve",
+      "used_by": [
+        "great_north_sleigh"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "crimson_tallow_raw": {
+      "id": "crimson_tallow_raw",
+      "name": "Crimson Tallow Raw",
+      "description": "Crimson paint for frame",
+      "input": "crimson_pigment + tallow",
+      "station": "Cauldron",
+      "mode": "mix",
+      "used_by": [
+        "great_north_sleigh",
+        "puppet_theater"
+      ],
+      "shared": true,
+      "usage_count": 2
+    },
+    "antler_finials": {
+      "id": "antler_finials",
+      "name": "Antler Finials",
+      "description": "Decorative finials at front—the reindeer connection",
+      "input": "antler",
+      "station": "Joiner's Bench",
+      "mode": "carve",
+      "used_by": [
+        "great_north_sleigh"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "tow_cord": {
+      "id": "tow_cord",
+      "name": "Tow Cord",
+      "description": "Rough twisted tail for stability",
+      "input": "tow",
+      "station": "Twisting",
+      "mode": "",
+      "used_by": [
+        "storm_wing_kite"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "board (pine)": {
+      "id": "board (pine)",
+      "name": "Board (Pine)",
+      "description": "Light pine for portable theater",
+      "input": "log (pine)",
+      "station": "Hewing Bench",
+      "mode": "rive",
+      "used_by": [
+        "bergelmir_ark",
+        "ember_hauler",
+        "polar_express",
+        "puppet_theater"
+      ],
+      "shared": true,
+      "usage_count": 4
+    },
+    "proscenium_arch": {
+      "id": "proscenium_arch",
+      "name": "Proscenium Arch",
+      "description": "Front frame with decorative arch—the stage window",
+      "input": "board (pine) (×2) + sinew",
+      "station": "Joinery Bench",
+      "mode": "join",
+      "used_by": [
+        "puppet_theater"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "stage_back": {
+      "id": "stage_back",
+      "name": "Stage Back",
+      "description": "Solid backdrop panel—hides the puppeteer",
+      "input": "board (pine) (×2) + sinew",
+      "station": "Joinery Bench",
+      "mode": "join",
+      "used_by": [
+        "puppet_theater"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "mill_wheel": {
+      "id": "mill_wheel",
+      "name": "Mill Wheel",
+      "description": "Paddle wheel with carved vanes—catches stream current or hand cranking",
+      "input": "log (maple)",
+      "station": "Joiner's Bench",
+      "mode": "turn",
+      "used_by": [
+        "stream_mill"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "grind_disc": {
+      "id": "grind_disc",
+      "name": "Grind Disc",
+      "description": "Rotating grindstone with textured face",
+      "input": "log (maple)",
+      "station": "Joiner's Bench",
+      "mode": "turn",
+      "used_by": [
+        "stream_mill"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "grind_plate": {
+      "id": "grind_plate",
+      "name": "Grind Plate",
+      "description": "Stationary bone grinding surface—harder than wood",
+      "input": "bone",
+      "station": "Joiner's Bench",
+      "mode": "carve",
+      "used_by": [
+        "stream_mill"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "mill_housing": {
+      "id": "mill_housing",
+      "name": "Mill Housing",
+      "description": "Hollowed oak block for stability and heft",
+      "input": "log (oak)",
+      "station": "Joiner's Bench",
+      "mode": "carve",
+      "used_by": [
+        "stream_mill"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "grinder_mechanism": {
+      "id": "grinder_mechanism",
+      "name": "Grinder Mechanism",
+      "description": "Axle transfers paddle rotation to grinding disc",
+      "input": "mill_wheel + grind_disc + stick (oak)",
+      "station": "Subassembly Bench",
+      "mode": "",
+      "used_by": [
+        "stream_mill"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "hopper_cone": {
+      "id": "hopper_cone",
+      "name": "Hopper Cone",
+      "description": "Falda ok Sauma: Fold bark into funnel shape, stitch seam with sinew to feed material to grinder",
+      "input": "birch_bark + sinew",
+      "station": "Joiner's Bench",
+      "mode": "fold_and_stitch",
+      "used_by": [
+        "stream_mill"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "ark_keel": {
+      "id": "ark_keel",
+      "name": "Ark Keel",
+      "description": "Heavy oak cradle provides ballast—the ark rights itself",
+      "input": "log (oak)",
+      "station": "Joiner's Bench",
+      "mode": "carve",
+      "used_by": [
+        "bergelmir_ark"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "quark_curds + liquid_whey": {
+      "id": "quark_curds + liquid_whey",
+      "name": "Quark Curds + Liquid Whey",
+      "description": "Casein preparation",
+      "input": "milk + wood_vinegar",
+      "station": "Cauldron",
+      "mode": "curdle",
+      "used_by": [
+        "anglers_set",
+        "bergelmir_ark",
+        "ember_hauler",
+        "jormungandr_drift",
+        "polar_express",
+        "riding_horse"
+      ],
+      "shared": true,
+      "usage_count": 6
+    },
+    "cheese_glue": {
+      "id": "cheese_glue",
+      "name": "Cheese Glue",
+      "description": "Beina-mjólk binder for durable paint",
+      "input": "quark_curds + lye",
+      "station": "Cauldron",
+      "mode": "mix",
+      "used_by": [
+        "anglers_set",
+        "bergelmir_ark",
+        "ember_hauler",
+        "jormungandr_drift",
+        "polar_express",
+        "riding_horse"
+      ],
+      "shared": true,
+      "usage_count": 6
+    },
+    "crimson_casein": {
+      "id": "crimson_casein",
+      "name": "Crimson Casein",
+      "description": "Water-resistant crimson paint for the sail",
+      "input": "crimson_pigment + cheese_glue",
+      "station": "Cauldron",
+      "mode": "mix",
+      "used_by": [
+        "bergelmir_ark",
+        "polar_express",
+        "riding_horse"
+      ],
+      "shared": true,
+      "usage_count": 3
+    },
+    "board (oak)": {
+      "id": "board (oak)",
+      "name": "Board (Oak)",
+      "description": "Heavy oak boards for a chest that lasts generations",
+      "input": "log (oak)",
+      "station": "Hewing Bench",
+      "mode": "rive",
+      "used_by": [
+        "dragon_scale_slicks",
+        "nisse_boundary_levitator",
+        "riding_horse",
+        "treasure_chest"
+      ],
+      "shared": true,
+      "usage_count": 4
+    },
+    "chest_box": {
+      "id": "chest_box",
+      "name": "Chest Box",
+      "description": "Sealed box construction—no gaps, no peeking",
+      "input": "board (oak) (×6) + sinew",
+      "station": "Joinery Bench",
+      "mode": "join",
+      "used_by": [
+        "treasure_chest"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "chest_body + chest_lid": {
+      "id": "chest_body + chest_lid",
+      "name": "Chest Body + Chest Lid",
+      "description": "Sawn horizontally after assembly—grain matches perfectly",
+      "input": "chest_box",
+      "station": "Hewing Bench",
+      "mode": "cut",
+      "used_by": [
+        "treasure_chest"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "boar_body": {
+      "id": "boar_body",
+      "name": "Boar Body",
+      "description": "Stocky oak body with bristled back ridge and proud snout",
+      "input": "log (oak)",
+      "station": "Joiner's Bench",
+      "mode": "carve",
+      "used_by": [
+        "yule_boar"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "tusk": {
+      "id": "tusk",
+      "name": "Tusk",
+      "description": "Curved tusks flanking the snout—Freyr's sacred beast",
+      "input": "bone",
+      "station": "Joiner's Bench",
+      "mode": "carve",
+      "used_by": [
+        "yule_boar"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "wheel": {
+      "id": "wheel",
+      "name": "Wheel",
+      "description": "Smooth maple wheels for rolling",
+      "input": "log (maple)",
+      "station": "Joiner's Bench",
+      "mode": "turn",
+      "used_by": [
+        "ember_hauler",
+        "nisse_boundary_levitator",
+        "yule_boar"
+      ],
+      "shared": true,
+      "usage_count": 3
+    },
+    "axle_set": {
+      "id": "axle_set",
+      "name": "Axle Set",
+      "description": "Front and rear axles pinned to body",
+      "input": "wheel (×4) + stick (oak) (×2)",
+      "station": "Joinery Bench",
+      "mode": "",
+      "used_by": [
+        "ember_hauler",
+        "yule_boar"
+      ],
+      "shared": true,
+      "usage_count": 2
+    },
+    "pull_strap": {
+      "id": "pull_strap",
+      "name": "Pull Strap",
+      "description": "Loop for towing the boar to feast",
+      "input": "leather",
+      "station": "Hewing Bench",
+      "mode": "cut",
+      "used_by": [
+        "yule_boar"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "cart_body": {
+      "id": "cart_body",
+      "name": "Cart Body",
+      "description": "Open-top cargo box—the rolling farmstead in miniature",
+      "input": "board (oak) (×5) + sinew",
+      "station": "Joinery Bench",
+      "mode": "join",
+      "used_by": [
+        "nisse_boundary_levitator"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "cord_drum": {
+      "id": "cord_drum",
+      "name": "Cord Drum",
+      "description": "Maple drum on drive axle wraps the suspension line",
+      "input": "log (maple)",
+      "station": "Joiner's Bench",
+      "mode": "turn",
+      "used_by": [
+        "nisse_boundary_levitator"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "drive_axle": {
+      "id": "drive_axle",
+      "name": "Drive Axle",
+      "description": "Tow friction wrap on drum—wheels turn, drum turns, cord rises",
+      "input": "wheel (×2) + stick (oak) + cord_drum + tow",
+      "station": "Subassembly Bench",
+      "mode": "",
+      "used_by": [
+        "nisse_boundary_levitator"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "rear_axle": {
+      "id": "rear_axle",
+      "name": "Rear Axle",
+      "description": "Simple trailing axle",
+      "input": "wheel (×2) + stick (oak)",
+      "station": "Subassembly Bench",
+      "mode": "",
+      "used_by": [
+        "nisse_boundary_levitator"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "sentinel_pole": {
+      "id": "sentinel_pole",
+      "name": "Sentinel Pole",
+      "description": "Vertical mast with pulley channel at top",
+      "input": "log (oak)",
+      "station": "Joiner's Bench",
+      "mode": "carve",
+      "used_by": [
+        "nisse_boundary_levitator"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "nisse_figure": {
+      "id": "nisse_figure",
+      "name": "Nisse Figure",
+      "description": "Light birch guardian—small enough to levitate on thin cord",
+      "input": "log (birch)",
+      "station": "Joiner's Bench",
+      "mode": "carve",
+      "used_by": [
+        "nisse_boundary_levitator"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "juften_leather": {
+      "id": "juften_leather",
+      "name": "Juften Leather",
+      "description": "Smoky black waterproof leather, supple and breathable",
+      "input": "leather + birch_tar + tallow",
+      "station": "Cauldron",
+      "mode": "dress",
+      "used_by": [
+        "dragon_scale_slicks",
+        "polar_express",
+        "riding_horse"
+      ],
+      "shared": true,
+      "usage_count": 3
+    },
+    "stretching_frame": {
+      "id": "stretching_frame",
+      "name": "Stretching Frame",
+      "description": "Taut frame holds wet leather flat during pressing",
+      "input": "board (oak) (×4) + sinew",
+      "station": "Joinery Bench",
+      "mode": "join",
+      "used_by": [
+        "dragon_scale_slicks"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "scale_press": {
+      "id": "scale_press",
+      "name": "Scale Press",
+      "description": "Diamond grooves carved deep—Nidhogg's scale pattern",
+      "input": "board (oak)",
+      "station": "Joiner's Bench",
+      "mode": "carve",
+      "used_by": [
+        "dragon_scale_slicks"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "dragon_scale_leather": {
+      "id": "dragon_scale_leather",
+      "name": "Dragon Scale Leather",
+      "description": "Wet leather pressed hard; grooves become permanent scales",
+      "input": "juften_leather (×3) + stretching_frame + scale_press",
+      "station": "Joiner's Bench",
+      "mode": "emboss",
+      "used_by": [
+        "dragon_scale_slicks"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "ocean_base": {
+      "id": "ocean_base",
+      "name": "Ocean Base",
+      "description": "Heavy oak block carved with roller channel below, serpent slot above",
+      "input": "log (oak)",
+      "station": "Joiner's Bench",
+      "mode": "carve",
+      "used_by": [
+        "jormungandr_drift"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "traction_roller": {
+      "id": "traction_roller",
+      "name": "Traction Roller",
+      "description": "Bottom roller contacts table surface",
+      "input": "log (maple)",
+      "station": "Joiner's Bench",
+      "mode": "turn",
+      "used_by": [
+        "jormungandr_drift"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "lift_cam": {
+      "id": "lift_cam",
+      "name": "Lift Cam",
+      "description": "Eccentric disc—off-center rotation pushes serpent up and down",
+      "input": "log (maple)",
+      "station": "Joiner's Bench",
+      "mode": "turn",
+      "used_by": [
+        "jormungandr_drift"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "drive_mechanism": {
+      "id": "drive_mechanism",
+      "name": "Drive Mechanism",
+      "description": "Roller-axle-cam assembly: push forward, cam rotates, serpent rises",
+      "input": "traction_roller + stick (oak) + lift_cam",
+      "station": "Subassembly Bench",
+      "mode": "",
+      "used_by": [
+        "jormungandr_drift"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "serpent_head": {
+      "id": "serpent_head",
+      "name": "Serpent Head",
+      "description": "Light birch Jormungandr head with open jaws—rides up through the slot",
+      "input": "log (birch)",
+      "station": "Joiner's Bench",
+      "mode": "carve",
+      "used_by": [
+        "jormungandr_drift"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "blue_casein": {
+      "id": "blue_casein",
+      "name": "Blue Casein",
+      "description": "Durable wave paint",
+      "input": "blue_pigment + cheese_glue",
+      "station": "Cauldron",
+      "mode": "mix",
+      "used_by": [
+        "jormungandr_drift"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "cargo_bed": {
+      "id": "cargo_bed",
+      "name": "Cargo Bed",
+      "description": "Five-board box with petrified joints—won't loosen",
+      "input": "board (pine) (×5) + cheese_glue",
+      "station": "Joinery Bench",
+      "mode": "",
+      "used_by": [
+        "ember_hauler"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "orange_tallow_sealed": {
+      "id": "orange_tallow_sealed",
+      "name": "Orange Tallow Sealed",
+      "description": "Waterproof ember coating—color of dying coals",
+      "input": "orange_pigment + tallow + pine_resin",
+      "station": "Cauldron",
+      "mode": "mix",
+      "used_by": [
+        "ember_hauler"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "rod_shaft": {
+      "id": "rod_shaft",
+      "name": "Rod Shaft",
+      "description": "Single-piece ash tapered tip to butt—Yggdrasil-stuff bends but never breaks",
+      "input": "log (ash)",
+      "station": "Joiner's Bench",
+      "mode": "carve",
+      "used_by": [
+        "anglers_set"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "bone_guide": {
+      "id": "bone_guide",
+      "name": "Bone Guide",
+      "description": "Polished line guides—bone is self-lubricating",
+      "input": "bone",
+      "station": "Joiner's Bench",
+      "mode": "carve",
+      "used_by": [
+        "anglers_set"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "reel_spool": {
+      "id": "reel_spool",
+      "name": "Reel Spool",
+      "description": "Wide centerpin disc—line wraps smoothly",
+      "input": "log (maple)",
+      "station": "Joiner's Bench",
+      "mode": "turn",
+      "used_by": [
+        "anglers_set"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "bone_axle": {
+      "id": "bone_axle",
+      "name": "Bone Axle",
+      "description": "Reel spindle—tallow-lubed for free spin",
+      "input": "bone",
+      "station": "Joiner's Bench",
+      "mode": "carve",
+      "used_by": [
+        "anglers_set"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "click_pawl": {
+      "id": "click_pawl",
+      "name": "Click Pawl",
+      "description": "Flexible antler click-check—prevents backlash, makes satisfying clicks",
+      "input": "antler",
+      "station": "Joiner's Bench",
+      "mode": "carve",
+      "used_by": [
+        "anglers_set"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "reel_seat": {
+      "id": "reel_seat",
+      "name": "Reel Seat",
+      "description": "Curved bracket clamps reel to rod shaft",
+      "input": "stick (oak)",
+      "station": "Joiner's Bench",
+      "mode": "carve",
+      "used_by": [
+        "anglers_set"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "fishing_reel": {
+      "id": "fishing_reel",
+      "name": "Fishing Reel",
+      "description": "Working centerpin reel with click drag",
+      "input": "reel_spool + bone_axle + click_pawl + reel_seat",
+      "station": "Subassembly Bench",
+      "mode": "",
+      "used_by": [
+        "anglers_set"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "box_boards": {
+      "id": "box_boards",
+      "name": "Box Boards",
+      "description": "Pine boards for tackle storage",
+      "input": "log (pine)",
+      "station": "Hewing Bench",
+      "mode": "rive",
+      "used_by": [
+        "anglers_set"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "tackle_box": {
+      "id": "tackle_box",
+      "name": "Tackle Box",
+      "description": "Dovetailed corners—a craftsman's calling card",
+      "input": "box_boards",
+      "station": "Joinery Bench",
+      "mode": "join",
+      "used_by": [
+        "anglers_set"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "bone_latch": {
+      "id": "bone_latch",
+      "name": "Bone Latch",
+      "description": "Pivot hinge and toggle closure in one elegant piece",
+      "input": "bone",
+      "station": "Joiner's Bench",
+      "mode": "carve",
+      "used_by": [
+        "anglers_set"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "horse_body": {
+      "id": "horse_body",
+      "name": "Horse Body",
+      "description": "Hollow barrel torso—light enough to rock, strong enough to ride",
+      "input": "board (oak) (×4)",
+      "station": "Joinery Bench",
+      "mode": "join",
+      "used_by": [
+        "riding_horse"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "curved_runner": {
+      "id": "curved_runner",
+      "name": "Curved Runner",
+      "description": "Seek curved grain for smooth rocking arc",
+      "input": "log (maple)",
+      "station": "Joiner's Bench",
+      "mode": "carve",
+      "used_by": [
+        "riding_horse"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "rocker_base": {
+      "id": "rocker_base",
+      "name": "Rocker Base",
+      "description": "Two runners joined by oak crossbars—stable platform",
+      "input": "curved_runner (×2) + stick (oak) (×2)",
+      "station": "Subassembly Bench",
+      "mode": "",
+      "used_by": [
+        "riding_horse"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "locomotive_body": {
+      "id": "locomotive_body",
+      "name": "Locomotive Body",
+      "description": "Heavy oak; boiler barrel + cab. Carve 'POLAR EXPRESS' in reverse—letters stay natural oak",
+      "input": "log (oak)",
+      "station": "Joiner's Bench",
+      "mode": "carve",
+      "used_by": [
+        "polar_express"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "smokestack": {
+      "id": "smokestack",
+      "name": "Smokestack",
+      "description": "Turned funnel; flared at rim",
+      "input": "log (oak)",
+      "station": "Joiner's Bench",
+      "mode": "turn",
+      "used_by": [
+        "polar_express"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "train_wheel": {
+      "id": "train_wheel",
+      "name": "Train Wheel",
+      "description": "Smooth maple discs; 8 total (loco + car)",
+      "input": "log (maple)",
+      "station": "Joiner's Bench",
+      "mode": "turn",
+      "used_by": [
+        "polar_express"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "truck_board": {
+      "id": "truck_board",
+      "name": "Truck Board",
+      "description": "Small boards for wheel truck frames",
+      "input": "log (oak)",
+      "station": "Hewing Bench",
+      "mode": "rive",
+      "used_by": [
+        "polar_express"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "axle": {
+      "id": "axle",
+      "name": "Axle",
+      "description": "Turned oak axle rods",
+      "input": "log (oak)",
+      "station": "Joiner's Bench",
+      "mode": "turn",
+      "used_by": [
+        "polar_express"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "wheel_truck": {
+      "id": "wheel_truck",
+      "name": "Wheel Truck",
+      "description": "Board frame holds 2 axles; wheels roll freely",
+      "input": "truck_board + train_wheel (×4) + axle (×2)",
+      "station": "Subassembly Bench",
+      "mode": "",
+      "used_by": [
+        "polar_express"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "car_box": {
+      "id": "car_box",
+      "name": "Car Box",
+      "description": "5-sided open-top box; no roof",
+      "input": "board (pine) (×5)",
+      "station": "Joinery Bench",
+      "mode": "join",
+      "used_by": [
+        "polar_express"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "passenger_car_body": {
+      "id": "passenger_car_body",
+      "name": "Passenger Car Body",
+      "description": "Carve lattice windows into sides; kids see the riders",
+      "input": "car_box",
+      "station": "Joiner's Bench",
+      "mode": "carve",
+      "used_by": [
+        "polar_express"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "car_roof": {
+      "id": "car_roof",
+      "name": "Car Roof",
+      "description": "Curved roof; lifts off for play",
+      "input": "log (pine)",
+      "station": "Joiner's Bench",
+      "mode": "carve",
+      "used_by": [
+        "polar_express"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "passenger_figure": {
+      "id": "passenger_figure",
+      "name": "Passenger Figure",
+      "description": "2 carved children figures",
+      "input": "bone",
+      "station": "Joiner's Bench",
+      "mode": "carve",
+      "used_by": [
+        "polar_express"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "conductor_figure": {
+      "id": "conductor_figure",
+      "name": "Conductor Figure",
+      "description": "Conductor figure carved from Antler",
+      "input": "antler",
+      "station": "Joiner's Bench",
+      "mode": "carve",
+      "used_by": [
+        "polar_express"
+      ],
+      "shared": false,
+      "usage_count": 1
+    },
+    "midnight_casein": {
+      "id": "midnight_casein",
+      "name": "Midnight Casein",
+      "description": "Car body blue",
+      "input": "blue_pigment + cheese_glue",
+      "station": "Cauldron",
+      "mode": "mix",
+      "used_by": [
+        "polar_express"
+      ],
+      "shared": false,
+      "usage_count": 1
+    }
+  },
+  "toy_intermediates": {
+    "ironwood_totems": {
+      "name": "Ironwood Totems",
+      "tier": 1,
+      "era": 1,
+      "intermediates": [
+        "set_of_blocks",
+        "resin_seal"
+      ]
+    },
+    "sun_wheel_chaser": {
+      "name": "Sun-Wheel Chaser (Sólhjól)",
+      "tier": 1,
+      "era": 1,
+      "intermediates": [
+        "squared_rod",
+        "supple_rod",
+        "ash_hoop",
+        "guide_stick"
+      ]
+    },
+    "yule_wreath": {
+      "name": "Yule Wreath",
+      "tier": 1,
+      "era": 1,
+      "intermediates": [
+        "wreath_base"
+      ]
+    },
+    "north_wind_whirler": {
+      "name": "North-Wind Whirler",
+      "tier": 1,
+      "era": 1,
+      "intermediates": [
+        "top_rough_out",
+        "top_carved",
+        "top_bleached",
+        "resin_seal"
+      ]
+    },
+    "aurora_callers": {
+      "name": "Aurora Callers",
+      "tier": 1,
+      "era": 1,
+      "intermediates": [
+        "swan_family_rough_outs",
+        "swan_family_carved",
+        "swan_family_bleached",
+        "resin_seal"
+      ]
+    },
+    "frost_voice_chime": {
+      "name": "Frost-Voice Chime",
+      "tier": 1,
+      "era": 1,
+      "intermediates": [
+        "tuned_bars",
+        "sound_box",
+        "lye_soap"
+      ]
+    },
+    "light_bringer_candle": {
+      "name": "Light-Bringer Candle",
+      "tier": 2,
+      "era": 1,
+      "intermediates": [
+        "pedestal_blank",
+        "oak_pedestal",
+        "wick_line",
+        "etched_vow_scroll",
+        "cleansing_dust",
+        "scented_fat"
+      ]
+    },
+    "nisse_offering_basket": {
+      "name": "Nisse Offering Basket",
+      "tier": 2,
+      "era": 1,
+      "intermediates": [
+        "orange_pigment",
+        "orange_soap",
+        "small_basket"
+      ]
+    },
+    "grand_lineage_chess_set": {
+      "name": "Grand-Lineage Chess Set",
+      "tier": 1,
+      "era": 1,
+      "intermediates": [
+        "chess_billets",
+        "chess_pieces_raw",
+        "board_planks",
+        "chess_board",
+        "whitewash",
+        "resin_seal"
+      ]
+    },
+    "wool_warden_effigy": {
+      "name": "Wool-Warden Effigy",
+      "tier": 2,
+      "era": 1,
+      "intermediates": [
+        "wool_felt",
+        "wool_spool"
+      ]
+    },
+    "great_bear_sentry": {
+      "name": "Great-Bear Sentry",
+      "tier": 2,
+      "era": 1,
+      "intermediates": [
+        "wool_spool",
+        "wool_fabric"
+      ]
+    },
+    "rune_singer_blocks": {
+      "name": "Rune-Singer Blocks",
+      "tier": 2,
+      "era": 1,
+      "intermediates": [
+        "set_of_blocks (oak)",
+        "orange_pigment",
+        "orange_tallow_raw",
+        "resin_seal"
+      ]
+    },
+    "borealis_birds": {
+      "name": "Borealis Birds",
+      "tier": 2,
+      "era": 1,
+      "intermediates": [
+        "swan_body",
+        "cygnet_bodies",
+        "white_pigment",
+        "white_tallow_raw",
+        "orange_pigment",
+        "orange_tallow_raw",
+        "blue_pigment",
+        "blue_tallow_raw",
+        "resin_seal"
+      ]
+    },
+    "rag_doll": {
+      "name": "Rag Doll",
+      "tier": 2,
+      "era": 2,
+      "intermediates": [
+        "line_flax + tow",
+        "linen_spool",
+        "linen_fabric"
+      ]
+    },
+    "sun_whirler": {
+      "name": "Sun-Whirler",
+      "tier": 2,
+      "era": 2,
+      "intermediates": [
+        "heavy_spinner_disc",
+        "line_flax + tow",
+        "linen_cord"
+      ]
+    },
+    "antler_clacker": {
+      "name": "Antler Clacker",
+      "tier": 2,
+      "era": 2,
+      "intermediates": [
+        "antler_y_frame",
+        "bone_disc",
+        "resin_seal"
+      ]
+    },
+    "fortunes_bones": {
+      "name": "Fortune's Bones",
+      "tier": 2,
+      "era": 2,
+      "intermediates": [
+        "bone_dice",
+        "throwing_cup",
+        "score_peg",
+        "dice_pouch",
+        "resin_seal"
+      ]
+    },
+    "tale_weaver_set": {
+      "name": "Tale-Weaver's Set",
+      "tier": 2,
+      "era": 2,
+      "intermediates": [
+        "ash_blade",
+        "scabbard_shell",
+        "leather",
+        "leather_hangers"
+      ]
+    },
+    "jarl_shield_plaque": {
+      "name": "Jarl's Shield-Plaque",
+      "tier": 2,
+      "era": 2,
+      "intermediates": [
+        "shield_backing",
+        "leather",
+        "hide_glue",
+        "blue_pigment",
+        "crimson_pigment",
+        "purple_distemper",
+        "resin_seal"
+      ]
+    },
+    "wool_walker_bunny": {
+      "name": "Wool-Walker Bunny",
+      "tier": 3,
+      "era": 2,
+      "intermediates": [
+        "wool_spool",
+        "wool_fabric",
+        "bone_toggle",
+        "bone_button",
+        "bone_eyes"
+      ]
+    },
+    "linen_lass": {
+      "name": "Linen Lass",
+      "tier": 3,
+      "era": 2,
+      "intermediates": [
+        "line_flax + tow",
+        "linen_spool",
+        "linen_fabric",
+        "bone_toggle",
+        "bone_button",
+        "bone_eyes"
+      ]
+    },
+    "jingle_tambourine": {
+      "name": "Jingle Tambourine",
+      "tier": 3,
+      "era": 2,
+      "intermediates": [
+        "tambourine_frame",
+        "leather",
+        "drum_skin",
+        "leather_strap",
+        "bone_button"
+      ]
+    },
+    "solstice_storm_drum": {
+      "name": "Solstice Storm-Drum",
+      "tier": 3,
+      "era": 2,
+      "intermediates": [
+        "board (birch)",
+        "supple_hoop",
+        "raw_hide",
+        "drum_skin",
+        "resin_seal",
+        "line_flax + tow",
+        "linen_cord",
+        "mallet_head"
+      ]
+    },
+    "ash_hobbyhorse": {
+      "name": "Ash Hobbyhorse",
+      "tier": 3,
+      "era": 2,
+      "intermediates": [
+        "horse_head",
+        "bone_eyes",
+        "bone_button",
+        "wool_spool",
+        "wool_fabric",
+        "leather",
+        "leather_strap"
+      ]
+    },
+    "frost_wyrm": {
+      "name": "Frost Wyrm",
+      "tier": 3,
+      "era": 2,
+      "intermediates": [
+        "wool_spool",
+        "wool_fabric",
+        "leather",
+        "bone_toggle",
+        "bone_teeth",
+        "bone_claws",
+        "bone_eyes",
+        "blue_pigment",
+        "blue_tallow_raw"
+      ]
+    },
+    "great_north_sleigh": {
+      "name": "Great North Sleigh",
+      "tier": 3,
+      "era": 2,
+      "intermediates": [
+        "board (ash)",
+        "supple_board",
+        "sleigh_runner",
+        "sleigh_frame",
+        "wool_spool",
+        "wool_fabric",
+        "line_flax + tow",
+        "linen_cord",
+        "crimson_pigment",
+        "crimson_tallow_raw",
+        "resin_seal",
+        "antler_finials"
+      ]
+    },
+    "storm_wing_kite": {
+      "name": "Storm-Wing Kite",
+      "tier": 3,
+      "era": 3,
+      "intermediates": [
+        "wool_spool",
+        "wool_fabric",
+        "line_flax + tow",
+        "linen_cord",
+        "tow_cord"
+      ]
+    },
+    "puppet_theater": {
+      "name": "Puppet Theater",
+      "tier": 3,
+      "era": 3,
+      "intermediates": [
+        "board (pine)",
+        "proscenium_arch",
+        "stage_back",
+        "wool_spool",
+        "wool_fabric",
+        "crimson_pigment",
+        "crimson_tallow_raw"
+      ]
+    },
+    "stream_mill": {
+      "name": "Stream Mill",
+      "tier": 3,
+      "era": 3,
+      "intermediates": [
+        "mill_wheel",
+        "grind_disc",
+        "grind_plate",
+        "mill_housing",
+        "grinder_mechanism",
+        "hopper_cone",
+        "resin_seal"
+      ]
+    },
+    "bergelmir_ark": {
+      "name": "Bergelmir's Ark",
+      "tier": 3,
+      "era": 3,
+      "intermediates": [
+        "board (pine)",
+        "ark_keel",
+        "leather",
+        "quark_curds + liquid_whey",
+        "cheese_glue",
+        "crimson_pigment",
+        "crimson_casein"
+      ]
+    },
+    "treasure_chest": {
+      "name": "Treasure Chest",
+      "tier": 3,
+      "era": 3,
+      "intermediates": [
+        "board (oak)",
+        "chest_box",
+        "chest_body + chest_lid",
+        "leather",
+        "leather_strap",
+        "line_flax + tow",
+        "linen_spool",
+        "linen_fabric",
+        "resin_seal"
+      ]
+    },
+    "yule_boar": {
+      "name": "Yule Boar",
+      "tier": 3,
+      "era": 3,
+      "intermediates": [
+        "boar_body",
+        "tusk",
+        "bone_eyes",
+        "wheel",
+        "axle_set",
+        "leather",
+        "pull_strap",
+        "resin_seal"
+      ]
+    },
+    "nisse_boundary_levitator": {
+      "name": "Nisse Boundary Levitator",
+      "tier": 4,
+      "era": 3,
+      "intermediates": [
+        "board (oak)",
+        "cart_body",
+        "wheel",
+        "cord_drum",
+        "line_flax + tow",
+        "linen_cord",
+        "drive_axle",
+        "rear_axle",
+        "sentinel_pole",
+        "nisse_figure",
+        "resin_seal"
+      ]
+    },
+    "dragon_scale_slicks": {
+      "name": "Dragon Scale Storm Slicks",
+      "tier": 4,
+      "era": 3,
+      "intermediates": [
+        "leather",
+        "juften_leather",
+        "board (oak)",
+        "stretching_frame",
+        "scale_press",
+        "dragon_scale_leather",
+        "bone_toggle"
+      ]
+    },
+    "jormungandr_drift": {
+      "name": "Jormungandr Drift",
+      "tier": 4,
+      "era": 3,
+      "intermediates": [
+        "ocean_base",
+        "traction_roller",
+        "lift_cam",
+        "drive_mechanism",
+        "serpent_head",
+        "wool_spool",
+        "wool_fabric",
+        "quark_curds + liquid_whey",
+        "cheese_glue",
+        "hide_glue",
+        "blue_pigment",
+        "blue_casein"
+      ]
+    },
+    "ember_hauler": {
+      "name": "Ember Hauler",
+      "tier": 4,
+      "era": 3,
+      "intermediates": [
+        "quark_curds + liquid_whey",
+        "cheese_glue",
+        "board (pine)",
+        "cargo_bed",
+        "wheel",
+        "axle_set",
+        "orange_pigment",
+        "orange_tallow_sealed"
+      ]
+    },
+    "anglers_set": {
+      "name": "Angler's Set",
+      "tier": 4,
+      "era": 3,
+      "intermediates": [
+        "rod_shaft",
+        "line_flax + tow",
+        "linen_cord",
+        "quark_curds + liquid_whey",
+        "cheese_glue",
+        "bone_guide",
+        "reel_spool",
+        "bone_axle",
+        "click_pawl",
+        "reel_seat",
+        "fishing_reel",
+        "box_boards",
+        "tackle_box",
+        "bone_latch"
+      ]
+    },
+    "riding_horse": {
+      "name": "Riding Horse",
+      "tier": 4,
+      "era": 3,
+      "intermediates": [
+        "board (oak)",
+        "horse_body",
+        "horse_head",
+        "curved_runner",
+        "rocker_base",
+        "wool_spool",
+        "wool_fabric",
+        "leather",
+        "leather_strap",
+        "juften_leather",
+        "quark_curds + liquid_whey",
+        "cheese_glue",
+        "hide_glue",
+        "crimson_pigment",
+        "crimson_casein"
+      ]
+    },
+    "polar_express": {
+      "name": "The Polar Express",
+      "tier": 4,
+      "era": 3,
+      "intermediates": [
+        "locomotive_body",
+        "smokestack",
+        "train_wheel",
+        "truck_board",
+        "axle",
+        "wheel_truck",
+        "board (pine)",
+        "car_box",
+        "passenger_car_body",
+        "car_roof",
+        "leather",
+        "juften_leather",
+        "passenger_figure",
+        "conductor_figure",
+        "quark_curds + liquid_whey",
+        "cheese_glue",
+        "blue_pigment",
+        "crimson_pigment",
+        "midnight_casein",
+        "crimson_casein"
+      ]
+    }
+  },
+  "shared_intermediates": [
+    "resin_seal",
+    "orange_pigment",
+    "wool_spool",
+    "wool_fabric",
+    "orange_tallow_raw",
+    "blue_pigment",
+    "blue_tallow_raw",
+    "line_flax + tow",
+    "linen_spool",
+    "linen_fabric",
+    "linen_cord",
+    "leather",
+    "hide_glue",
+    "crimson_pigment",
+    "bone_toggle",
+    "bone_button",
+    "bone_eyes",
+    "drum_skin",
+    "leather_strap",
+    "horse_head",
+    "crimson_tallow_raw",
+    "board (pine)",
+    "quark_curds + liquid_whey",
+    "cheese_glue",
+    "crimson_casein",
+    "board (oak)",
+    "wheel",
+    "axle_set",
+    "juften_leather"
+  ],
+  "unique_intermediates": [
+    "set_of_blocks",
+    "squared_rod",
+    "supple_rod",
+    "ash_hoop",
+    "guide_stick",
+    "wreath_base",
+    "top_rough_out",
+    "top_carved",
+    "top_bleached",
+    "swan_family_rough_outs",
+    "swan_family_carved",
+    "swan_family_bleached",
+    "tuned_bars",
+    "sound_box",
+    "lye_soap",
+    "pedestal_blank",
+    "oak_pedestal",
+    "wick_line",
+    "etched_vow_scroll",
+    "cleansing_dust",
+    "scented_fat",
+    "orange_soap",
+    "small_basket",
+    "chess_billets",
+    "chess_pieces_raw",
+    "board_planks",
+    "chess_board",
+    "whitewash",
+    "wool_felt",
+    "set_of_blocks (oak)",
+    "swan_body",
+    "cygnet_bodies",
+    "white_pigment",
+    "white_tallow_raw",
+    "heavy_spinner_disc",
+    "antler_y_frame",
+    "bone_disc",
+    "bone_dice",
+    "throwing_cup",
+    "score_peg",
+    "dice_pouch",
+    "ash_blade",
+    "scabbard_shell",
+    "leather_hangers",
+    "shield_backing",
+    "purple_distemper",
+    "tambourine_frame",
+    "board (birch)",
+    "supple_hoop",
+    "raw_hide",
+    "mallet_head",
+    "bone_teeth",
+    "bone_claws",
+    "board (ash)",
+    "supple_board",
+    "sleigh_runner",
+    "sleigh_frame",
+    "antler_finials",
+    "tow_cord",
+    "proscenium_arch",
+    "stage_back",
+    "mill_wheel",
+    "grind_disc",
+    "grind_plate",
+    "mill_housing",
+    "grinder_mechanism",
+    "hopper_cone",
+    "ark_keel",
+    "chest_box",
+    "chest_body + chest_lid",
+    "boar_body",
+    "tusk",
+    "pull_strap",
+    "cart_body",
+    "cord_drum",
+    "drive_axle",
+    "rear_axle",
+    "sentinel_pole",
+    "nisse_figure",
+    "stretching_frame",
+    "scale_press",
+    "dragon_scale_leather",
+    "ocean_base",
+    "traction_roller",
+    "lift_cam",
+    "drive_mechanism",
+    "serpent_head",
+    "blue_casein",
+    "cargo_bed",
+    "orange_tallow_sealed",
+    "rod_shaft",
+    "bone_guide",
+    "reel_spool",
+    "bone_axle",
+    "click_pawl",
+    "reel_seat",
+    "fishing_reel",
+    "box_boards",
+    "tackle_box",
+    "bone_latch",
+    "horse_body",
+    "curved_runner",
+    "rocker_base",
+    "locomotive_body",
+    "smokestack",
+    "train_wheel",
+    "truck_board",
+    "axle",
+    "wheel_truck",
+    "car_box",
+    "passenger_car_body",
+    "car_roof",
+    "passenger_figure",
+    "conductor_figure",
+    "midnight_casein"
+  ]
+}
