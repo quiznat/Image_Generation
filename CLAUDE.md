@@ -189,3 +189,67 @@ Define game assets in `game_assets/*.json`:
 - **Image Encoding**: Base64 encoding for API calls
 - **Output Naming**: `{original_name}_generated_{timestamp}.png` or `{original_name}_L{iteration}.png`
 - **Art Direction Hierarchy**: Global config → Project JSON → Category → Individual asset
+
+## Current State & Next Steps
+
+### Generated Assets (as of Jan 2026)
+- **Toys**: 73 images (28 unique toys, multiple variants)
+- **Key Materials**: 110 images
+- **Full Materials**: 285 images
+- **Stations**: 48 images (24 stations × 2 runs)
+- **Intermediates**: 0/144 (NOT YET STARTED - blocked by API quota)
+
+### Pending: Intermediate Crafting Objects
+
+The intermediate generator is ready but needs API quota. There are **144 unique intermediates** across 39 toys.
+
+**How to generate intermediates:**
+
+1. **Single toy** (use finished toy image as style reference):
+   ```bash
+   # List what intermediates a toy needs
+   python src/intermediate_generator.py --list-only --toy borealis_birds
+
+   # Generate intermediates for one toy
+   python src/intermediate_generator.py \
+     --toy borealis_birds \
+     --reference game_output/Santas_Nordic_Workshop/toys/borealis_birds_20260106_164928.png
+   ```
+
+2. **Batch mode** (all toys at once):
+   ```bash
+   # First create toy_references.json with your preferred toy images:
+   # {
+   #   "references": {
+   #     "borealis_birds": "game_output/.../borealis_birds_TIMESTAMP.png",
+   #     "ironwood_totems": "game_output/.../ironwood_totems_TIMESTAMP.png",
+   #     ...
+   #   }
+   # }
+
+   python src/intermediate_generator.py --all --manifest game_assets/toy_references.json
+   ```
+
+3. **Key flags**:
+   - `--skip-shared` - Skip intermediates used by multiple toys (generate unique ones only)
+   - `--force-regenerate` - Regenerate even if files exist
+   - `--list-only` - Dry run, just show what would be generated
+
+**Shared vs Unique Intermediates:**
+- 29 shared (used by 2+ toys, e.g., `resin_seal` used by 15 toys)
+- 115 unique (toy-specific)
+- Shared intermediates go to `intermediates/_shared/`
+- Unique intermediates go to `intermediates/{toy_id}/`
+
+**If toy art changes:** Delete its intermediates folder and re-run:
+```bash
+rm -rf game_output/Santas_Nordic_Workshop/intermediates/borealis_birds/
+python src/intermediate_generator.py --toy borealis_birds --reference NEW_IMAGE.png
+```
+
+### Sample Toys to Test With
+Available toy images in `game_output/Santas_Nordic_Workshop/toys/`:
+- `borealis_birds` - 9 intermediates (4 unique, 5 shared)
+- `antler_clacker` - simple toy
+- `polar_express` - 20 intermediates (most complex)
+- `riding_horse` - 15 intermediates
