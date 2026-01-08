@@ -1,0 +1,15 @@
+{
+  "references": {
+    "anglers_set": "game_assets/angler_set_card.png",
+    "aurora_callers": "game_assets/aurora_callers_card.png",
+    "frost_voice_chime": "game_assets/frost_voice_chime_card.png",
+    "grand_lineage_chess_set": "game_assets/grand_lineage_chess_set_card.png",
+    "great_bear_sentry": "game_assets/great_bear_sentry_card.png",
+    "ironwood_totems": "game_assets/ironwood_totems_card.png",
+    "light_bringer_candle": "game_assets/light_bringer_candle_card.png",
+    "nisse_offering_basket": "game_assets/nisse_offering_basket_card.png",
+    "north_wind_whirler": "game_assets/north_wind_whirler_card.png",
+    "sun_wheel_chaser": "game_assets/sun_wheel_chaser_card.png",
+    "yule_wreath": "game_assets/yule_wreath_card.png"
+  }
+}

@@ -97,18 +97,9 @@ class IntermediateGenerator:
         return int_id in self.catalog.get("shared_intermediates", [])
 
     def check_exists(self, int_id: str, toy_id: str, output_base: Path) -> bool:
-        """Check if an intermediate already exists."""
-        # Check toy-specific location
+        """Check if an intermediate already exists in the toy's folder."""
         toy_dir = output_base / toy_id
-        if any(toy_dir.glob(f"{int_id}_*.png")):
-            return True
-
-        # Check shared location
-        shared_dir = output_base / "_shared"
-        if any(shared_dir.glob(f"{int_id}_*.png")):
-            return True
-
-        return False
+        return any(toy_dir.glob(f"{int_id}_*.png"))
 
     def generate_intermediate(
         self,
@@ -132,11 +123,8 @@ class IntermediateGenerator:
 
         self.logger.info(f"Generating: {int_name}")
 
-        # Determine output directory (shared vs toy-specific)
-        if self.is_shared(int_id):
-            output_dir = output_base / "_shared"
-        else:
-            output_dir = output_base / toy_id
+        # All intermediates go into the toy's folder for organization
+        output_dir = output_base / toy_id
 
         output_dir.mkdir(parents=True, exist_ok=True)
 
@@ -311,7 +299,8 @@ DO NOT add title banners or text. Just the component itself in the matching styl
         self,
         manifest_path: str,
         output_dir: str = "./game_output",
-        force_regenerate: bool = False
+        force_regenerate: bool = False,
+        skip_shared: bool = False
     ) -> dict:
         """Process all toys from a manifest file."""
         with open(manifest_path, 'r', encoding='utf-8') as f:
@@ -334,7 +323,8 @@ DO NOT add title banners or text. Just the component itself in the matching styl
                     toy_id=toy_id,
                     reference_image=reference_image,
                     output_dir=output_dir,
-                    force_regenerate=force_regenerate
+                    force_regenerate=force_regenerate,
+                    skip_shared=skip_shared
                 )
                 all_results[toy_id] = results
             except Exception as e:
@@ -404,7 +394,8 @@ def main():
         generator.process_all(
             manifest_path=args.manifest,
             output_dir=args.output,
-            force_regenerate=args.force_regenerate
+            force_regenerate=args.force_regenerate,
+            skip_shared=args.skip_shared
         )
     elif args.toy:
         if not args.reference:
