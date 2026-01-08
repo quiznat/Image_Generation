@@ -129,26 +129,32 @@ class IntermediateGenerator:
         output_dir.mkdir(parents=True, exist_ok=True)
 
         # Build the prompt
-        prompt = f"""Look at this reference image carefully. This is the finished toy "{toy_name}".
-Generate a crafting component in the EXACT same visual style.
+        prompt = f"""STUDY THIS REFERENCE IMAGE EXTREMELY CAREFULLY. This is the finished toy "{toy_name}".
 
-COMPONENT: {int_name}
-DESCRIPTION: {description}
+You must generate ONE of the crafting components that was used to BUILD this exact toy.
+The component you generate must look like it was LITERALLY CUT FROM THIS IMAGE - not similar, IDENTICAL.
+
+COMPONENT TO GENERATE: {int_name}
+WHAT IT IS: {description}
 MADE FROM: {input_materials}
 CRAFTED AT: {station} ({mode} mode)
 
-This component is used to make the toy shown in the reference image.
+ABSOLUTE REQUIREMENTS - NO EXCEPTIONS:
+1. IDENTICAL illustration style - if the toy uses watercolor, use watercolor. If gouache, use gouache.
+2. IDENTICAL color palette - match the EXACT hues, saturation, and values from the reference
+3. IDENTICAL textures - wood grain, fabric weave, metal finish must match EXACTLY
+4. IDENTICAL line weight and artistic treatment
+5. IDENTICAL lighting direction and shadow style
+6. The component must look like it BELONGS to this toy - as if you disassembled the toy and photographed this piece
+7. If you can see this material/component IN the reference toy, match it EXACTLY
 
-CRITICAL REQUIREMENTS:
-1. Match the EXACT same illustration style as the reference toy
-2. Same watercolor/gouache texture and paper feel
-3. Same muted color palette (pine greens, birch whites, oak browns, wool greys)
-4. Same artistic treatment and level of detail
-5. The component should look like it belongs with the finished toy
-6. Clean composition, 512x512, single component on simple background
-7. Show the component as a crafted object, not the raw materials
+Think of it this way: if someone placed your generated component next to the reference toy,
+it should look like they came from the same artist, same session, same piece of art.
 
-DO NOT add title banners or text. Just the component itself in the matching style."""
+OUTPUT: Single component on clean white background, 512x512, no text or labels.
+
+DO NOT deviate from the reference style. DO NOT add your own artistic interpretation.
+COPY the style EXACTLY."""
 
         # Encode reference image
         reference_base64 = self.encode_image(reference_image)
